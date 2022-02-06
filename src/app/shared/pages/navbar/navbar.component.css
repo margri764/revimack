@@ -1,0 +1,279 @@
+
+      @font-face {
+        font-family:'ribeye';
+        src: url(/assets/font/Ribeye-Regular.ttf);
+        
+      }
+
+      .btn{
+        background-color: #1fdddd;;
+        background-image: linear-gradient(30deg, rgb(#59f1f1),rgb(#12b6b6));
+        color: cornsilk;
+        font-size: 1.3vw;
+        box-shadow: 3px 3px 7px rgb(108, 108, 150);
+      }
+      .btn:hover {
+        box-shadow: 6px 6px 14px rgb(150, 148, 148);
+      
+      }
+      .fa-whatsapp{
+      margin-left: 10px;
+      font-size: 3vw;
+      color: green;
+      }
+
+      .material-icons-outlined{
+        margin-top: auto ; 
+        margin-bottom: auto;
+      }
+    
+      input{
+        width: 10vw;
+        font-size: 1vw;
+        font-family:"Verdana";
+        
+      }
+    .navbar-brand{
+      font-size: 2.2vw;
+      color:  #1fdddd;
+      /* font-weight: bold; */
+      text-shadow: 2px 2px 2px #44adad;
+        
+    }
+    .navbar-brand:hover{
+      color: #66FFFF;   
+      text-shadow: 3px 3px 3px #3d9797;      
+    } 
+
+    .navbar-nav{
+      margin-left: auto;
+    }
+  
+  
+    #font .nav-item{
+      font-size: 1.4vw;
+      margin-top: 0.93vw;   
+      
+  }
+  
+   #font .dropdown-menu{
+      font-size: 1.8vw;
+      background-color: rgb(#1fdddd);  
+      width: 30vw;
+      box-shadow: 5px 5px 10px rgb(#1fdddd); 
+   }
+
+
+  mat-icon{
+    --animate-duration: 4000ms;
+
+  }
+  .shopping{
+    margin: 10px;
+  }
+  
+  .suggested{
+    width: 25vw; 
+    margin-top: 1vw;
+    margin-left: 70%;
+  }
+
+  .dropdown-item:hover{
+    box-shadow: 1px 1px 2px rgb(#1fdddd);
+    background-color: rgb(#1fdddd);  
+
+  }
+   
+
+
+   .navbar{
+    font-family: "ribeye";
+    box-shadow: 5px 5px 10px rgb(100, 97, 97);  
+     }
+
+    a.searchResult {
+      cursor: pointer; 
+      color: blue; 
+      font-size: 1.3vw; 
+      font-family: "ribeye"; 
+      font-weight: 100;
+      text-decoration: none;
+    }
+    .navbar-collapse{
+      transition: all 500ms linear;
+      margin-left: 25vw;
+  
+    }
+
+/* ------------------------------------@media------------------------------------- */
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 574px) {
+  
+  input {
+    width:40vw ;
+    font-size: 3.5vw;
+
+  }
+
+  form {
+    margin-left: 26vw;
+  }
+
+  .suggested{
+    width: 100vw; 
+    margin-top: 1vw;
+    margin-left: 2vw;
+  }
+
+  .btn{
+    font-size: 3vw;
+  }
+  a.searchResult {
+    font-size: 3vw; 
+ }
+ .navbar-brand{
+  font-size: 4.6vw;
+   
+  }
+
+  .fa-whatsapp{
+    font-size: 10vw;
+    margin-left: 0;
+    }
+  
+  #font .dropdown-menu{
+    font-size: 4.6vw;
+    width: auto;
+
+  
+ }
+
+ /* #font .dropdown-item:hover{
+  
+  background-color: #1fdddd;;
+  font-weight: bold;
+  width: auto;
+
+
+ 
+ } */
+
+ .whatsapp{
+    font-size: 5vh;
+ } 
+
+ .navbar-collapse{
+  transition: all 500ms linear;
+  margin-left: 0;
+
+}
+
+#font .nav-item{
+  transition: all 500ms linear;
+  font-size: 4.6vw;
+
+ }
+
+ 
+}
+  
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 575px) and (max-width: 768px) {
+  
+    input{
+      width:30vw ;
+      font-size: 2.8vw;
+      
+    }
+   
+    .suggested{
+      width: 50vw; 
+      margin-top: 1vw;
+      margin-left: 2vw;
+    }
+
+    form{
+      margin-left: 30vw;
+    }
+
+    .btn{
+      font-size: 2.5vw;
+    }
+    a.searchResult {
+      font-size: 2.5vw; 
+   }
+   .navbar-brand{
+    font-size: 4vw;
+     
+    }
+
+    .fa-whatsapp{
+      font-size: 8vw;
+      margin-left: 0;
+      }
+    
+    #font .dropdown-menu{
+      font-size: 2.6vw;
+      width: auto;
+ 
+    
+   }
+
+   /* #font .dropdown-item:hover{
+    
+    background-color: #1fdddd;;
+    font-weight: bold;
+    width: auto;
+ 
+
+   
+   }
+ */
+
+   .navbar-collapse{
+    transition: all 500ms linear;
+    margin-left: 0;
+
+  }
+
+  #font .nav-item{
+    transition: all 500ms linear;
+    font-size: 2.6vw;
+
+   }
+
+
+  }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 769px) and (max-width: 1280px) {
+
+    .dropdown-item{
+      font-size: 1.5vw;
+      margin-top: 1vw;
+     }
+     
+  
+}
+  
+
+/* Extra Large devices (laptops/desktops, 1280px and up) */ 
+@media only screen and (min-width: 1281px) {
+    
+ .dropdown-item{
+   font-size: 1.3vw;
+   margin-top: 1vw;
+  }
+  .suggested{
+    width: 30vw; 
+    margin-top: 1vw;
+    margin-left: 65vw;
+  }
+  
+      
+
+
+}
