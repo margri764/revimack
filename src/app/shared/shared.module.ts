@@ -12,6 +12,7 @@ import { StartComponent } from './pages/start/start.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { NavbarComponent } from './pages/navbar/navbar.component';
+import { SliderUpComponent } from './pages/sliderUp/slider-up/slider-up.component';
 
 
 
@@ -25,7 +26,8 @@ import { NavbarComponent } from './pages/navbar/navbar.component';
     ContactUsComponent,
     Page404Component,
     StartComponent,
-    NavbarComponent  
+    NavbarComponent,
+    SliderUpComponent  
     
   ],
   
@@ -46,7 +48,8 @@ import { NavbarComponent } from './pages/navbar/navbar.component';
     ContactUsComponent,
     Page404Component,
     StartComponent,
-    NavbarComponent
+    NavbarComponent,
+    SliderUpComponent
 
   ],
 })

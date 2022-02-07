@@ -1,9 +1,5 @@
-
-      @font-face {
-        font-family:'ribeye';
-        src: url(/assets/font/Ribeye-Regular.ttf);
-        
-      }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,800&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
 
       .btn{
         background-color: #1fdddd;;
@@ -30,19 +26,16 @@
       input{
         width: 10vw;
         font-size: 1vw;
-        font-family:"Verdana";
+        font-family: 'Poppins', sans-serif;
         
       }
     .navbar-brand{
       font-size: 2.2vw;
-      color:  #1fdddd;
-      /* font-weight: bold; */
-      text-shadow: 2px 2px 2px #44adad;
+ 
         
     }
     .navbar-brand:hover{
-      color: #66FFFF;   
-      text-shadow: 3px 3px 3px #3d9797;      
+   
     } 
 
     .navbar-nav{
@@ -87,15 +80,16 @@
 
 
    .navbar{
-    font-family: "ribeye";
-    box-shadow: 5px 5px 10px rgb(100, 97, 97);  
+    font-family: 'Poppins', sans-serif;
+      box-shadow: 5px 5px 10px rgb(100, 97, 97);  
+      height: 70px;
      }
 
     a.searchResult {
       cursor: pointer; 
       color: blue; 
       font-size: 1.3vw; 
-      font-family: "ribeye"; 
+      font-family: 'Poppins', sans-serif;
       font-weight: 100;
       text-decoration: none;
     }
