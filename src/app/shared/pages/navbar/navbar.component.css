@@ -1,17 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,800&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
 
-      .btn{
-        background-color: #1fdddd;;
-        background-image: linear-gradient(30deg, rgb(#59f1f1),rgb(#12b6b6));
-        color: cornsilk;
-        font-size: 1.3vw;
-        box-shadow: 3px 3px 7px rgb(108, 108, 150);
-      }
-      .btn:hover {
-        box-shadow: 6px 6px 14px rgb(150, 148, 148);
-      
-      }
+
+
+  img{
+      width: 90%;
+    }
+     
       .fa-whatsapp{
       margin-left: 10px;
       font-size: 3vw;
@@ -23,12 +18,7 @@
         margin-bottom: auto;
       }
     
-      input{
-        width: 10vw;
-        font-size: 1vw;
-        font-family: 'Poppins', sans-serif;
-        
-      }
+    
     .navbar-brand{
       font-size: 2.2vw;
  
@@ -43,13 +33,13 @@
     }
   
   
-    #font .nav-item{
+   .nav-item{
       font-size: 1.4vw;
       margin-top: 0.93vw;   
       
   }
   
-   #font .dropdown-menu{
+    .dropdown-menu{
       font-size: 1.8vw;
       background-color: rgb(#1fdddd);  
       width: 30vw;
@@ -65,11 +55,7 @@
     margin: 10px;
   }
   
-  .suggested{
-    width: 25vw; 
-    margin-top: 1vw;
-    margin-left: 70%;
-  }
+
 
   .dropdown-item:hover{
     box-shadow: 1px 1px 2px rgb(#1fdddd);
@@ -144,15 +130,23 @@
   
  }
 
- /* #font .dropdown-item:hover{
   
-  background-color: #1fdddd;;
-  font-weight: bold;
-  width: auto;
+ .btnCustom{
+  background-color: #ffffff;
+  border: 2px solid #1ccece;
+  color: rgb(0, 0, 0);
+  font-family:'ribeye';
+  border-radius: 1em;
+  line-height: 2em;
+  font-size: 1.3vw;
+}
 
-
- 
- } */
+.btnCustom:hover {
+  background-color: #1fdddd;
+  border: 2px solid white;
+  color: rgb(255, 255, 255);
+  
+}
 
  .whatsapp{
     font-size: 5vh;

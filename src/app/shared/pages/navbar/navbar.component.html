@@ -17,23 +17,10 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
  
   
-      <li class="nav-item dropdown"  data-target=".navbar-collapse.show">
-        <a class="nav-link dropdown-toggle text-dark animate__animated animate__backInLeft" 
-                id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Productos
-        </a>
-
-        <ul class="dropdown-menu animate__animated animate__fadeIn" aria-labelledby="navbarDropdown" >
-          <li> <a class="dropdown-item" routerLink="/store/wood" >Tanques de agua </a></li>
-          <li> <a class="dropdown-item" routerLink="/store/stencil" >Rodamientos </a> </li>
-  
-          <li> <hr class="dropdown-divider"></li>
-          <li> <a class="dropdown-item " routerLink="../../varios">Varios</a> </li>
-        </ul> 
-        </li> 
+     
           
-        <li class="nav-item">
-            <a class="nav-link text-dark animate__animated animate__backInRight" routerLink="/store/workshop">Taller</a>
+        <li class="nav-item" style="cursor: pointer;">
+            <a class="nav-link text-dark animate__animated animate__backInRight"    data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Productos</a>
         </li>
 
           <li class="nav-item">
@@ -63,24 +50,43 @@
 
 
 
-<!-- PARA CELULARES!!!!!! -->
 
-<!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-    <mat-icon>more_vert</mat-icon>
-</button>
-<mat-menu #menu="matMenu"  >
+
+ 
+
+
+<div class="offcanvas offcanvas-start" tabindex="-1" width="500" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"  >
+
+  
+    <div class="offcanvas-header">
+
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel" style="margin-top: 30px;">PRODUCTOS</h5>
     
-    <button mat-menu-item disabled>
-    <button mat-menu-item class="profile-dropdown" >
-      <mat-icon>dialpad</mat-icon>
-      <span >Productos</span>
-    </button>
-      <mat-icon>voicemail</mat-icon>
-      <span>Check voice mail</span>
-    </button>
-    <button mat-menu-item>
-      <mat-icon>notifications_off</mat-icon>
-      <span>Disable alerts</span>
-    </button>
-  </mat-menu> -->
+      <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    
+    <div class="my-spinner container align-items-center" *ngIf="spinnerOn!; else canvas">
+      <div class="spinner" ></div>
+   </div>
 
+    <ng-template #canvas >
+
+    <div class="offcanvas-body" fxLayout="row wrap" style="margin-top: 100px;">
+    
+      <div>
+          <p><a routerLink="../agro/maquinas" aria-label="Close" data-bs-dismiss="offcanvas">Venta de Maquinaria Agricola</a></p>
+          <p><a routerLink="../implementos/implementos-agricolas" aria-label="Close" data-bs-dismiss="offcanvas">Venta de Implementos</a></p>
+          <p><a routerLink="../eco/plasticos" aria-label="Close" data-bs-dismiss="offcanvas">Linea de plásticos </a></p>
+          <p><a routerLink="../insumos/repuestos-accesorios" aria-label="Close" data-bs-dismiss="offcanvas">Repuestos y accesorios</a></p>
+          <p><a routerLink="../tecno/tecnologia"  aria-label="Close" data-bs-dismiss="offcanvas" >Tecnologia de vanguardia Agropecuaria</a></p>
+
+      </div>  
+    <div fxFlex="90">
+        <img src="assets/revimackBack2.png" alt="">
+    </div>  
+   
+    
+    </div>
+  </ng-template>
+
+</div> 

@@ -18,6 +18,8 @@ export class FooterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    console.log(screen.width)
   }
 
 }

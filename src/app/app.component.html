@@ -17,8 +17,9 @@
             
               <app-navbar></app-navbar>
 
-              <app-slider-up></app-slider-up>
-          
+              <app-slider-up *ngIf="!(router.url === '/agro/maquinas'|| router.url === '/eco/plasticos' 
+              || router.url === '/insumos/repuestos-accesorios' || router.url === '/implementos/implementos-agricolas'
+              || router.url === '/tecno/tecnologia')"></app-slider-up>
              <router-outlet> </router-outlet> 
           
            

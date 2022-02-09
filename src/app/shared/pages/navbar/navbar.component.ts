@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  public navbarOpen:boolean=false;
+  public navbarOpen : boolean = false;
+  public spinnerOn : boolean = false;
 
   constructor() { }
 
