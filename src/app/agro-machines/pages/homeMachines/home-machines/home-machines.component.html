@@ -1,1 +1,99 @@
-<p>home-machines works!</p>
+
+
+ <div fxLayoutAlign="center" fxFlex="100"class="container flex-grow-1 flex-shrink-0 py-0 animate__animated animate__fadeIn" #target >
+ 
+
+
+ <div fxFlex="90" id="stepper1" class="bs-stepper" #bsStepper>
+   <div class="bs-stepper-header" role="tablist">
+     <div class="step" data-target="#test-l-1">
+       <button type="button" class="step-trigger" role="tab" id="stepper1trigger1" aria-controls="test-l-1">
+         <span class="bs-stepper-circle">1</span>
+         <span class="bs-stepper-label">Seleccioná Marca</span>
+       </button>
+     </div>
+     <div class="bs-stepper-line"></div>
+     <div class="step" data-target="#test-l-2" >
+       <button type="button" [disabled]="disabledBrand"  class="step-trigger" role="tab" id="stepper1trigger2" aria-controls="test-l-2">
+         <span class="bs-stepper-circle">2</span>
+         <span class="bs-stepper-label">Elegi tu modelo</span>
+       </button>
+     </div>
+     <div class="bs-stepper-line"></div>
+     <div class="step" data-target="#test-l-3">
+       <button type="button" [disabled]="disabledModel" class="step-trigger" role="tab" id="stepper1trigger3" aria-controls="test-l-3">
+         <span class="bs-stepper-circle">3</span>
+         <span class="bs-stepper-label">Tus datos</span>
+       </button>
+     </div>
+   </div> 
+   <!-- end header -->
+
+   <br><br>
+
+   <div class="bs-stepper-content">
+
+       <div id="test-l-1" role="tabpanel" class="bs-stepper-pane" aria-labelledby="stepper1trigger1">
+
+        <div fxLayout="row wrap" >
+        <div fxLayoutAlign="space-evenly center" fxLayout="row wrap" fxLayoutGap="40px" >
+
+          <img fxFlex="20" (click)="goToBrand('chevrolet'); next()" src="assets/johnDeere.png" id="chevrolet">
+
+        
+        </div>
+        <br><br><br><br>
+      </div>
+
+          
+        
+      </div>
+       <!-- end 1 -->
+
+       <div id="test-l-2" role="tabpanel" class="bs-stepper-pane" aria-labelledby="stepper1trigger2">        
+        
+   
+       <div fxLayout="row" fxLayoutAlign="center space-evenly">
+
+          <span fxFlex="25" (click)="goToModel('car')">Tractores</span>
+ 
+       </div>
+  <br><br>
+    <!-- <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" (click)="toggleNavbar()">
+      Button with data-bs-target
+    </button>
+  
+  <div class="collapse" id="collapseExample"  [ngClass]="{ 'show': navbarOpen}">
+
+  </div> -->
+  <app-machines (triggerToNext)="triggerNext = $event" 
+            (triggerToPrevious)="triggerPrevious = $event"
+            (modelSelect)="carSelect = $event"
+            [brandSelection]="brandSelection"
+            [modelSelection]="modelSelection"  >
+  </app-machines>
+
+    
+      </div>   
+     
+    <!-- end 2 -->
+
+      <div id="test-l-3" role="tabpanel" class="bs-stepper-pane text-center" aria-labelledby="stepper1trigger3">
+       
+i        <app-form  [modelSelection]="carSelect" ></app-form>
+
+        <button class="btn btn-primary mt-0" (click)="previous()">Previous</button>
+        
+    </div>    
+    <!-- end 3 -->
+
+  </div>
+          
+    </div>
+ 
+  </div>
+
+
+        
+    
+

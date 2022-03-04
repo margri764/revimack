@@ -2,72 +2,57 @@
  
   
   
-  <div class="footer">
-        
-    <br><br>
-    
-    <div fxLayout="row"  >
-        <div fxFlex="100" fxLayoutAlign="start" style="margin-right: 20px;">
-            <span class="devs">Revimack Agro</span> 
-        </div>    
+  <div class="footer" fxLayout="row wrap" fxLayoutAlign="center end" style="padding: 10px;">
+      
+      
+      
   
-    </div>
-
-
-   
-
-
-        <div class="cardsFooter" fxLayout="row wrap" fxLayoutGap=""  >
-
-            <div fxFlex="50" fxLayoutAlign=" space-between center"  >    
-         
-                        
-                     
-                        <p ><a href="https://goo.gl/maps/3fDrcSniMPY9TkQE9" target="blank">Ubicacion</a></p>
-                        <p > <a (mouseover)="isHover()" (mouseout)="isHover()"  style="cursor: pointer;" >Redes Sociales</a></p>
-
-                   
-
-                        <div fxLayoutAlign="start center" [ngClass]="isHovering === true ? 'animate__animated animate__fadeIn':'devs'">
-                            
-                            <a  href="https://wa.me/+54230269019?text=Hola!!%20" target="blank" > 
-                            <i class="fab fa-whatsapp" ></i></a>
-                             
-                            <a target="_blank" title="Instagram" href="https://www.instagram.com/feintdevs/?hl=es">
-                            <span id="instagram"><i class="fab fa-instagram"></i></span>
-                            </a>
-
-                            <a target="_blank" title="Facebook" href="https://www.facebook.com/people/FeintdEvs/100075386195305">
-                                <span id="facebook"><i class="fab fa-facebook-f"></i></span>
-                            </a>
-                      </div> 
-                        <br>
-                      <div class="fb-like"  data-href="https://www.facebook.com/people/FeintdEvs/100075386195305/" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
-        
-                
-                     
-  
-            </div>
-
-            <div fxFlex="50" fxLayoutAlign="center center"  >    
-           
-                    
-                    <img fxFlex="50" src="../../../assets/logo.png" alt="" >
-           
-
-
+          <div fxFlex="50" fxLayoutAlign="start " style="margin-top: 10px;" >
                
+            <div fxFlex="20" class="devs"  fxLayoutAlign="center center" >
+                <img src="assets/a2.png" style="border-radius: 70px;">
+            </div> 
+             
+               <div class="copyrigth" fxLayoutAlign="start end">Todos los derechos reservados 2022</div>
+
+          </div>    
+   
+          <div fxFlex="50" fxLayout="row wrap" fxLayoutAlign="center center" style="border: 4px solid brown;">
+               
+            <div  fxFlex="100" class="address">
+                <p>Ruta Nacional 188. Km 489</p>
+           
             </div>
-       
 
-            
-        </div>
-
-        <div fxLayout="row" class="copyrigth" >
-            <div fxFlex="100" fxLayoutAlign="center" >
+            <div fxFlex="100" fxLayoutGap="20px" fxLayoutAlign="start end" >
+                <a  href="https://wa.me/+54230269019?text=Hola!!%20" target="blank" > 
+                 <i class="fab fa-whatsapp" ></i>
+               </a>
                  
-                 <span id="devs">Made by</span> &nbsp;&nbsp;&nbsp;&nbsp; <span class="material-icons">copyright</span> &nbsp;&nbsp; <span id="feint">Feint</span><span id="devs">dEvs 2022</span>
-            </div>    
-        </div>
+                <a target="_blank" title="Instagram" href="https://www.instagram.com/feintdevs/?hl=es">
+                   <i class="fab fa-instagram"></i>
+                </a>
 
-</div>
+                <a target="_blank" title="Facebook" href="https://www.facebook.com/people/FeintdEvs/100075386195305">
+                   <i class="fab fa-facebook-f"></i>
+                </a>
+                
+                <a class="fb-like"  data-href="https://www.facebook.com/people/FeintdEvs/100075386195305/" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true">
+                </a> 
+
+            </div> 
+
+            <!-- revimackventas@gmail.com -->
+
+        </div> 
+          
+         
+
+
+           
+    </div>     
+      
+    
+
+
+

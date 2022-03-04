@@ -1,20 +1,5 @@
 
-/* 
-    .footer{
-        background-color: green;
-        width: 100vw;
-        padding: 20px;
 
-    }
-     */
-
-    
-    .footer label{
-        font-family: "poppins";
-        font-size: 2vw;
-        color: white;
-
-    }
 
 
 
@@ -31,46 +16,10 @@
     }
 
 
-    .cardsFooter{
-        margin-top: 50px;
-    }
+  
 
-    mat-card{
-        background: none;
-    }
-
-    mat-card-title {
-        font-family: "poppins";
-        color: white;
-        font-size: 2.6vw;
-        line-height: 1.5em;
-    }
-
-    mat-card-content p,a{
-            font-family: "poppins";
-            font-size: 2vw;
-            color: white;
-            line-height: 2em;
-            text-decoration: none;
-            transition: all 0.3s ease 0s;
-    }
-
-    mat-card-content p,a:hover{
-        color: rgb(199, 199, 199);
-    }
-
-    .copyrigth #feint{
-        font-family: "poppins";
-        font-size: 2vw;
-        color: #FF6F91;
-   
-    }
     .copyrigth{
-        margin-top: 30px;
-    }
-
-    .copyrigth #devs{
-        font-family: "poppins";
+        /* font-family: "poppins"; */
         font-size: 2vw;
         color: white;
     }
@@ -79,9 +28,10 @@
         color: white;
     }
 
+
     .fa-whatsapp{
-        /* margin-left: 10px; */
-        font-size: 3vw;
+  
+        font-size: 1vw;
         color: blanchedalmond;
     }
 
@@ -90,29 +40,30 @@
     }
 
     .fa-instagram{
-        font-size: 2.7vw;
+        font-size: 1vw;
         color: blanchedalmond;
-        margin-left: 4vw;      }
+        }
     
       .fa-instagram:hover{
         color: white;
     }
 
     .fa-facebook-f{
-        font-size: 2.7vw;
+        font-size: 1vw;
         color: blanchedalmond;
-        margin-left: 4vw;  
+     
     }
 
     .fa-facebook-f:hover{
         color: white;
-    }
+    } 
+
 
 @media  screen and (min-width: 600px){  
 
     .footer{
         background-color: green;
-        height: 50vh;
+        height: 10vh;
     }
     
     img{
@@ -128,26 +79,7 @@
         font-size: 8vw;
     }
 
-    .cardsFooter{
-        margin-top: 20px;
-    }
-
-    mat-card-title p{
-        font-size: 5vw;
-        line-height: 1.5em;
-    }
-    
-    mat-card-content p,a{
-        font-size: 4vw;
-    }
-
-    .copyrigth #feint{
-        font-size: 4vw;
    
-    }
-    .copyrigth #devs{
-        font-size: 4vw;
-    }
 
     .fa-whatsapp{
         font-size: 8vw;     
@@ -169,65 +101,81 @@
 
 
 @media screen and (min-width: 600px) and (max-width: 960px){
+
     .footer{
-        height: 100vh;
+        height: 20vh;
     }
     
 
 }
 
-@media  screen and (min-width: 1280px) {
+@media  screen and (min-width: 960px) and (max-width: 1280px){
     
     .footer{
-        height: 10vh;
+        height:15vh;
+        
     }
     .copyrigth{
-        margin-top: 80px;
-    }
-
-}
-@media  screen and (max-width: 1919px) {
-    
-    .footer{
-        height: 30vh;
-    }
-
-        mat-card-content p{
+         margin-top: 10px;
         font-size: 1.2vw;
     }
 
+    .devs{
+        font-size: 2.3vw;
+    }
 
+    .address{
+        font-size: 1.3vw;
+        color: white;
+    }
+
+    .fa-whatsapp{
+        font-size: 2vw;     
+    }
+
+    .fa-instagram{
+        font-size: 2vw;     
+    }
+    
+    .fa-facebook-f{
+        font-size: 2vw;
+    }
+  
+
+}
+@media  screen and (min-width: 1281px) and (max-width: 1919px){
+  
+    .footer{
+        height:20vh;
+        
+    }
+    .copyrigth{
+         margin-top: 10px;
+        font-size: 1vw;
+    }
+
+    .devs{
+        font-size: 2.3vw;
+    }
+
+    .address{
+        font-size: 1.3vw;
+        color: white;
+    }
+
+    .fa-whatsapp{
+        font-size: 2vw;     
+    }
+
+    .fa-instagram{
+        font-size: 2vw;     
+    }
+    
+    .fa-facebook-f{
+        font-size: 2vw;
+    }
+
+
+
+}
  
-
-
-    @media  screen and (min-width: 1280px) and (max-width: 1919px) {
-    
-        .footer{
-            height: 100vh;
-        }
-    
-            mat-card-content p{
-            font-size: 1.2vw;
-        }
-     
-    }
-       
-}
-@media  screen and (max-width: 1279px) {
-    
-    .footer{
-        height: 30vh;
-    }
-
-        mat-card-content p{
-        font-size: 1.2vw;
-    }
-}
-
-    @media   screen and (min-width: 960px) and (max-width: 1279.99px){
-        .footer{
-            height: 100vh;
-        }
-    
-
-    }
