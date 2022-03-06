@@ -7,6 +7,58 @@
     /* transition: all 600ms cubic-bezier(0.2, 0, 0, 0.8); */
 }
 
-img{
-    width: 100% ;
+.header{
+    /* height: 25vw; */
+    background-image: url(../../../../assets/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 4px solid #82b75c;
+
 }
+
+
+@media  screen and (max-width: 600px){  
+
+    .header{
+        height: 60vw;
+        background-image: url(../../../../assets/logoCel2.png);
+        background-position: center;
+        background-size: cover;
+          
+        box-shadow: 1px 1px 2px 0px #82b75c;
+        -webkit-box-shadow: 1px 1px 2px 0px #82b75c;
+        -moz-box-shadow: 1px 1px 2px 0px #82b75c;
+        
+    }
+ 
+
+}
+
+
+
+
+@media screen and (min-width: 601px) and (max-width: 960px){
+
+ 
+
+}
+
+@media  screen and (min-width: 961px) and (max-width: 1280px){
+    .header{
+        height: 35vw;
+        background-image: url(../../../../assets/logo.png);
+        background-position: center;
+        background-repeat: no-repeat;
+
+    }
+    
+
+
+}
+@media  screen and (min-width: 1281px) and (max-width: 1919px){
+  
+ 
+
+
+}
+ 

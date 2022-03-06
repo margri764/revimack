@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -10,9 +12,16 @@ export class NavbarComponent implements OnInit {
   public navbarOpen : boolean = false;
   public spinnerOn : boolean = false;
 
-  constructor() { }
+  constructor(
+            private router : Router
+  ) { }
 
   ngOnInit(): void {
+    this.router.events
+    .pipe(filter(evt => evt instanceof NavigationEnd))  
+    .subscribe((evt) => {
+      this.navbarOpen = false;
+    });
   }
 
   toggleNavbar() {

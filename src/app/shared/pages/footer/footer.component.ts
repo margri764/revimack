@@ -13,13 +13,12 @@ export class FooterComponent implements OnInit {
 
   constructor() { }
 
-  isHover(){
-    this.isHovering= !this.isHovering;
-  }
+  // isHover(){
+  //   this.isHovering= !this.isHovering;
+  // }
 
   ngOnInit(): void {
 
-    console.log(screen.width)
   }
 
 }
