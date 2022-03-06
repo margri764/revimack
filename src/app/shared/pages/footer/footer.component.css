@@ -3,97 +3,101 @@
 
 
 
+
+  
+
+
+
+
+
+
+@media  screen and (max-width: 600px){  
+
+    .footer{
+        background-color: #82b75c;
+   
+    }
+    
+    img{
+        width: 20vw;
+    }
+
+
+    .devs{
+        font-family: "poppins";
+        color: white;
+        font-size: 8vw;
+    }
+
     .feint{
         font-family: "poppins";
         font-size: 4vw;
         color: #FF6F91;
-   
-    }
-    .devs{
-        font-family: "poppins";
-        font-size: 4vw;
-        color: white;
+        font-size: 6vw;
     }
 
-
-  
-
+    
     .copyrigth{
         /* font-family: "poppins"; */
-        font-size: 2vw;
+        font-size: 3vw;
         color: white;
     }
 
+   
     .material-icons{
         color: white;
     }
 
 
     .fa-whatsapp{
-  
-        font-size: 1vw;
-        color: blanchedalmond;
+        font-size: 8vw;   
+        color: blanchedalmond;  
     }
-
     .fa-whatsapp:hover{   
         color: white;
     }
 
+ 
     .fa-instagram{
-        font-size: 1vw;
+        font-size: 8vw;     
         color: blanchedalmond;
-        }
+    }
     
       .fa-instagram:hover{
         color: white;
     }
 
+    
     .fa-facebook-f{
-        font-size: 1vw;
         color: blanchedalmond;
-     
+        font-size: 8vw;
     }
-
     .fa-facebook-f:hover{
         color: white;
     } 
-
-
-@media  screen and (min-width: 600px){  
-
-    .footer{
-        background-color: green;
-        height: 10vh;
-    }
-    
-    img{
-        width: 80%;
-    }
-
-
-    .devs{
-        font-size: 8vw;
-    }
-
-    .feint{
-        font-size: 8vw;
-    }
-
-   
-
-    .fa-whatsapp{
-        font-size: 8vw;     
-    }
-
-    .fa-instagram{
-        font-size: 8vw;     
-    }
-    
-    .fa-facebook-f{
-        font-size: 8vw;
-    }
-  
  
+    .fa-envelope{
+        color: blanchedalmond;
+        font-size: 8vw;
+    }
+    .fa-envelope:hover{
+        color: white;
+    }
+
+
+    .fa-map-marker-alt{
+        color: blanchedalmond;
+        font-size: 8vw;
+    }
+    .fa-map-marker-alt:hover{
+        color: white;
+    }
+
+
+    .icon-text-footer{
+        font-size: 4vw;
+        color: white;
+    }
 
 }
 
