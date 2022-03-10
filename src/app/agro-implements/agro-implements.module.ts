@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeImplementsComponent } from './pages/homeImplements/home-implements/home-implements.component';
 import { AgroImplementsRoutingModule } from './agro-implements-routing.module';
 import { PesceComponent } from './pages/pesce/pesce/pesce.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -13,7 +14,9 @@ import { PesceComponent } from './pages/pesce/pesce/pesce.component';
   ],
   imports: [
     CommonModule,
-    AgroImplementsRoutingModule
+    AgroImplementsRoutingModule,
+    FlexLayoutModule,
+
   ],
   exports:[
     HomeImplementsComponent
