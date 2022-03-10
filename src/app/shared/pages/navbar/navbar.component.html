@@ -1,8 +1,33 @@
 <br>
+<div fxLayoutAlign="center" fxFlex="100" fxLayout="row wrap">  
+
+<div fxLayout="row wrap"  fxFlex="99" class="textWelcome">  
+
+  <div fxLayout="row wrap" fxLayoutAlign="start" fxLayoutGap="10px" fxFlex="80" >
+      <button type="button" class="btnNav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Productos</button>
+
+      <button type="button" class="btnNav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Promociones</button>
+
+      <button type="button" class="btnNav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Contacto</button>
+
+      <button type="button" class="btnNav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Nosotros</button>
+</div>  
+
+<div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="20">
+  <form class="d-flex">
+    <input class="form-control me-2 btnNav" type="search" placeholder="Search" aria-label="Search">
+   
+    <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+  </form>
+  <!-- <i class="fab fa-magnifying-glass" style="color: antiquewhite;"></i> -->
+</div>
+  <!-- Estamos trabajando para brindarte la mejor plataforma de negocios agropecuarios!!! <br>
+  Te adelantamos algo de lo que se viene... -->
+
+</div>
 
 
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="font" >
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" id="font" >
     <div class="container-fluid">
     <a class="navbar-brand animate__animated animate__bounce "  routerLink="./login"></a>
    
@@ -32,7 +57,7 @@
      
     </div>
   </div>
-</nav>
+</nav> -->
 
 
 <div class="offcanvas offcanvas-start" tabindex="-1" width="500" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"  >
@@ -45,27 +70,21 @@
       <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
     </div>
     
-  <div class="my-spinner container align-items-center" *ngIf="spinnerOn!; else canvas">
+  <!-- <div class="my-spinner container align-items-center" *ngIf="spinnerOn!; else canvas">
       <div class="spinner" ></div>
-   </div> 
+   </div>  -->
 
-    <ng-template #canvas >
+    <!-- <ng-template #canvas > -->
 
     <div class="offcanvas-body" fxLayout="row wrap" style="margin-top: 100px;">
     
       <div>
 
-        <p><a  aria-label="Close" data-bs-dismiss="offcanvas">Venta de Maquinaria Agricola</a></p>
-        <p><a  aria-label="Close" data-bs-dismiss="offcanvas">Venta de Implementos</a></p>
-        <p><a  aria-label="Close" data-bs-dismiss="offcanvas">Linea de plásticos </a></p>
-        <p><a  aria-label="Close" data-bs-dismiss="offcanvas">Repuestos y accesorios</a></p>
-        <p><a  aria-label="Close" data-bs-dismiss="offcanvas" >Tecnologia de vanguardia Agropecuaria</a></p>
-
-          <!-- <p><a routerLink="../agro/maquinas" aria-label="Close" data-bs-dismiss="offcanvas">Venta de Maquinaria Agricola</a></p>
-          <p><a routerLink="../implementos/implementos-agricolas" aria-label="Close" data-bs-dismiss="offcanvas">Venta de Implementos</a></p>
-          <p><a routerLink="../eco/plasticos" aria-label="Close" data-bs-dismiss="offcanvas">Linea de plásticos </a></p>
-          <p><a routerLink="../insumos/repuestos-accesorios" aria-label="Close" data-bs-dismiss="offcanvas">Repuestos y accesorios</a></p>
-          <p><a routerLink="../tecno/tecnologia"  aria-label="Close" data-bs-dismiss="offcanvas" >Tecnologia de vanguardia Agropecuaria</a></p> -->
+          <p><a routerLink="../agro/maquinas">Venta de Maquinaria Agricola</a></p>
+          <p><a routerLink="../implementos/implementos-agricolas" >Venta de Implementos</a></p>
+          <p><a routerLink="../eco/plasticos" >Linea de plásticos </a></p>
+          <p><a routerLink="../insumos/repuestos-accesorios" >Repuestos y accesorios</a></p>
+          <p><a routerLink="../tecno/tecnologia"   >Tecnologia de vanguardia Agropecuaria</a></p>
 
       </div>  
     <div fxFlex="90">
@@ -74,6 +93,7 @@
    
     
     </div>
-  </ng-template>
+  <!-- </ng-template> -->
 
+</div> 
 </div> 

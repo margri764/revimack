@@ -1,13 +1,4 @@
-.textWelcome{
-    margin-top: 10px;
-    font-family:'Roboto Condensed','sans-serif';
-    background-color: rgba(240, 240, 240, 0.37);
-    border-radius: 10px;
-    padding: 20px;
-    color: white;
-    font-size: 6vw;
 
-}
 
 .card{
     border-radius: 10px;
@@ -42,6 +33,14 @@
     -webkit-box-shadow: 10px 10px 35px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 35px 0px rgba(0,0,0,0.75);
 }
+
+
+/* .btn-outline{
+    border-color: white;
+    color: white;
+    font-family:'Roboto Condensed','sans-serif';
+
+} */
 
 h1{
     font-family:'Roboto Condensed','sans-serif';
