@@ -22,7 +22,7 @@ import { FormComponent } from './pages/form/form/form.component';
     CommonModule,
     AgroMachinesRoutingModule,
     FlexLayoutModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports:[
     HomeMachinesComponent,

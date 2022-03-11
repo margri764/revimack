@@ -5,7 +5,7 @@ import { HeaderComponent } from './pages/header/header.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Page404Component } from './pages/page404/page404.component';
 import { SharedRoutingModule } from './shared-routing.module';
 import { StartComponent } from './pages/start/start.component';
@@ -13,6 +13,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { SliderUpComponent } from './pages/sliderUp/slider-up/slider-up.component';
+import { FormCanvasComponent } from './pages/formCanvas/form-canvas/form-canvas.component';
 
 
 
@@ -27,8 +28,8 @@ import { SliderUpComponent } from './pages/sliderUp/slider-up/slider-up.componen
     Page404Component,
     StartComponent,
     NavbarComponent,
-    SliderUpComponent  
-    
+    SliderUpComponent,
+    FormCanvasComponent  
   ],
   
   imports: [
@@ -36,11 +37,9 @@ import { SliderUpComponent } from './pages/sliderUp/slider-up/slider-up.componen
     SharedRoutingModule,  
     FormsModule,
     FlexLayoutModule,
-
-
-
-
+    ReactiveFormsModule
   ],
+  
   exports:[
     HeaderComponent,
     FooterComponent,
@@ -49,8 +48,12 @@ import { SliderUpComponent } from './pages/sliderUp/slider-up/slider-up.componen
     Page404Component,
     StartComponent,
     NavbarComponent,
-    SliderUpComponent
+    SliderUpComponent,
+    FormCanvasComponent,
+
+    
 
   ],
+  // providers:[ FormCanvasComponent]
 })
 export class SharedModule { }

@@ -1,16 +1,16 @@
-<form  autocomplete="off" [formGroup]="myForm"> 
+<form  autocomplete="off" [formGroup]="myForm" (submit)="sendForm()"> 
       
     <div class="form-floating">
-        <input type="text"  class="form-control"  [ngClass]= "{ 'is-invalid': invalidName}" id="floatingInput" formControlName="name" autofocus placeholder="ingrese nombre"> 
+        <input type="text"  class="form-control"  [ngClass]= "{ 'is-invalid': invalidName}" id="floatingInput" formControlName="name" autofocus placeholder="ingrese nombre" > 
             <span class="form-text text-danger animate__animated animate__tada" *ngIf ="validField ('name')">
-                No se permiten numeros ni caracteres especiales
+                Por favor rellena este campo.
             </span> 
         <label  for="floatingInput">Nombre y Apellido</label>
     </div>
       
     <br>
     <div class="form-floating">          
-        <input type="number" class="form-control" [ngClass]= "{ 'is-invalid': invalidPhone}" id="floatphone" formControlName="phone"  placeholder="ingrese telefono">
+        <input type="number" class="form-control" [ngClass]="invalidPhone ? 'is-invalid': '' " id="floatphone" formControlName="phone"  placeholder="ingrese telefono" >
             <span class="form-text text-danger  animate__animated animate__tada" *ngIf ="validField ('phone')">
                 Este campo es obligatorio
             </span> 
@@ -28,9 +28,8 @@
     </div>    
     
   
-   
-        <!-- <button class="btn btn-primary mt-5" (click)="previous()">Previous</button> -->
-        <button type="submit" (click)="onSubmit()" class="btn btn-primary mt-5">Submit</button>
-     
+   <div style="display: block;">
+        <button type="submit"  class="btnSend mt-5" style="width: 100%;">Enviar</button>
+    </div> 
                   
 </form> 

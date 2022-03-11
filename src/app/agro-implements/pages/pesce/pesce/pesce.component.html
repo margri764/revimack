@@ -26,38 +26,60 @@
     </div>
 
 
-    <div fxFlex="98" fxLayout="row wrap" fxLayoutAlign="space-between" fxLayoutGap="20px" style="margin-bottom: 50px;" >
+    <div fxFlex="98" fxLayout="row wrap" fxLayoutAlign="space-between" style="margin-bottom: 20px;" >
 
-        <div fxFlex="30" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#acondicionador" aria-expanded="false" aria-controls="acondicionador">
-
+        <!-- acondicionador -->
+        <div fxFlex="25" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#acondicionador" aria-expanded="false" aria-controls="acondicionador"  >
             <div class="borderdouble">
             <img src="./assets/pesce/acondicionador.png" alt=""   style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
             </div>
 
-            <h3>Acondicionador</h3>
+            <h5>Acondicionador</h5>
         </div>
 
-        <div fxFlex="30" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#abono" aria-expanded="false" aria-controls="abono">
-            <div class="borderdouble2"  >
-                <img src="./assets/pesce/abono.png" alt=""   style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
+        <!-- abono -->
+        <div fxFlex="25" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#abono" aria-expanded="false" aria-controls="abono" >
+                <div class="borderdouble2"  >
+                    <img src="./assets/pesce/abono.png" alt=""   style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
                 </div>
     
-                <h3 >Distribuidor de Abonos y fertilizantes</h3>
+                    <h5 class="text-center">Distribuidor de Abonos y Fertilizantes</h5>
+            </div>
+        
+        <!-- rastron desterronador -->
+        <div fxFlex="25" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#desterronador" aria-expanded="false" aria-controls="desterronador">
+            <div class="borderdouble3"  >
+                <img src="./assets/pesce/rastron-desterronador.png" alt=""   style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
+            </div>
+                <h5 fxLayoutAlign="center">Rastron Desterronador</h5>
+        </div>
+
+         <!-- rolo picador -->
+         <div fxFlex="25" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#desterronador" aria-expanded="false" aria-controls="desterronador" >
+            <div class="borderdouble2"  >
+                <img src="./assets/pesce/rolo-picador.png" alt=""   style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
             </div>
 
-            <div fxFlex="30" fxLayout="row wrap" fxLayoutAlign="center">
-                <div class="borderdouble3"  >
-                    <img src="./assets/pesce/acondicionador.png" alt=""   style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
-                    </div>
-        
-                    <h3 >Acondicionador</h3>
-                </div>
+            <h5 >Rolo picador de rastrojos </h5>
+        </div>
 
 
     </div>
 
+    <!-- COLLAPSES -->
 
-      <div class="collapse" id="acondicionador" fxFlex="98" style="margin-bottom: 50px;">
+
+    <div class="collapse" id="acondicionador" fxFlex="98" style="margin-bottom: 50px;" >
+
+        <div fxLayout="row wrap"  fxLayoutAlign="center "  class="products">
+ 
+            <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-between center" style="margin-top: 80px;">
+                <div fxFlex="40" fxFlex.xs="60" > <h1 >Acondicionador de suelos</h1></div> 
+                <div fxFlex="45" fxFlex.xs="40" class="divider"></div>
+                <div fxFlex="5" fxFlex.xs="40" data-bs-toggle="collapse" data-bs-target="#acondicionador" aria-expanded="false" aria-controls="acondicionador"  ><img src="../assets/cerrar.svg" style="cursor: pointer;"></div>
+            </div>
+        </div>
+  
         <div fxLayout="row wrap"  >
         <div  fxFlex="50">
            
@@ -66,39 +88,57 @@
             </div>
 
 
-        <div  fxFlex="50" >
+            <div  fxFlex="50" fxLayout="row wrap" fxLayoutAlign="start space-between" >
+            
+            <div fxFlex="100">
             
             <li>Acondicionador de suelos multipropósito.</li>
 
-           <li> Ancho de labor: 6,00 metros</li>
+            <li> Ancho de labor: 6,00 metros</li>
             
             <li>Velocidad de trabajo 12-18 km/h</li>
             
-        <li>Discos dentados de 22” con regulación de la separación entre ambos trenes de discos.</li>
-            
-    <li>Accionamiento hidráulico mediante cilindros de 3 1/2” x 12” </li>
-            
-<li>Cubiertas 400 x 600 15.5”</li>
-            
-<li>Potencia requerida:  220 - 240 HP.</li>
-            
-<li>  Ancho de transporte: 3,30 metros.</li>
+            <li>Discos dentados de 22” con regulación de la separación entre ambos trenes de discos.</li>
+                    
+            <li>Accionamiento hidráulico mediante cilindros de 3 1/2” x 12” </li>
+                    
+           <li>Cubiertas 400 x 600 15.5”</li>
+
+           <li>Potencia requerida:  220 - 240 HP.</li>
+                        
+           <li>  Ancho de transporte: 3,30 metros.</li>
+        </div>
+        <div fxFlex="100"> 
+            <div style="margin-top: 15px;"> <button class="btnContact" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Necesito mas información</button></div>
+            <div style="margin-top: 15px;"> <img src="../assets/revimack-texto.png" alt="logo revimack" width="30%"></div>
+        </div>
+
         </div>
       
       </div>
     </div>
 
     <div class="collapse" id="abono" fxFlex="98" style="margin-bottom: 50px;">
+
+        <div fxLayout="row wrap"  fxLayoutAlign="center "  class="products">
+ 
+            <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-between center" style="margin-top: 80px;">
+                <div fxFlex="40" fxFlex.xs="60" > <h1 >Distribuidor de Abonos y Fertilizantes</h1></div> 
+                <div fxFlex="45" fxFlex.xs="40" class="divider"></div>
+                <div fxFlex="5" fxFlex.xs="40" data-bs-toggle="collapse" data-bs-target="#abono" aria-expanded="false" aria-controls="abono"><img src="../assets/cerrar.svg" style="cursor: pointer;"></div>
+            </div>
+        </div>
         <div fxLayout="row wrap"  >
         <div  fxFlex="50">
            
-                <img src="./assets/pesce/abono.png" alt=""   style="padding: 2px;" fxFlex="80" >
+                <img src="./assets/pesce/abono.png" alt=""   style="border-radius: 5px;" fxFlex="80" >
                 
             </div>
 
 
-        <div  fxFlex="50" >
+        <div  fxFlex="50" fxLayout="row wrap" fxLayoutAlign="start space-between" >
             
+         <div fxFlex="100">   
             <h3>DESCRIPCION</h3>
             <li> Volumen de carga 6,5m3. sin colmar.</li>
 
@@ -119,11 +159,173 @@
             
             Opcional:  Boca de descarga regulable mediante cilindro hidráulico.
         </div>
+    
+        <div fxFlex="100"> 
+            <div style="margin-top: 15px;"> <button class="btnContact" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Necesito mas información</button></div>
+            <div style="margin-top: 15px;"> <img src="../assets/revimack-texto.png" alt="logo revimack" width="30%"></div>
+        </div>
+
+        </div>
       
       </div>
     </div>
+
+    <div class="collapse" id="desterronador" fxFlex="98" style="margin-bottom: 50px;" [ngClass]="{ 'show': desterronador}">
+
+        <div fxLayout="row wrap"  fxLayoutAlign="center "  class="products">
+ 
+            <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-between center" style="margin-top: 80px;">
+                <div fxFlex="40" fxFlex.xs="60" > <h1 >Rastron Desterronador</h1></div> 
+                <div fxFlex="45" fxFlex.xs="40" class="divider"></div>
+                <div fxFlex="5" fxFlex.xs="40" data-bs-toggle="collapse" data-bs-target="#desterronador" aria-expanded="false" aria-controls="desterronador"><img src="../assets/cerrar.svg" style="cursor: pointer;"></div>
+            </div>
+        </div>
+        <div fxLayout="row wrap"  >
+        <div  fxFlex="50">
+           
+                <img src="./assets/pesce/rastron-desterronador.png" alt=" rastron desterronador"   style="padding: 2px;" fxFlex="80" >
+                
+            </div>
+            <div  fxFlex="50" fxLayout="row wrap" fxLayoutAlign="start space-between" >
+
+ 
+        
+            <div  fxFlex="100" >
+            
+            <h3>DESCRIPCION</h3>
+            
+            <li>Ancho de trabajo: 6,40 Mts.</li>
+
+            <li>Cilindros  Hidráulicos:</li>
+            
+            <li>2 de 3" x 12"</li>
+            
+            <li>1 de 3 1/2" x 8"</li>
+            
+            <li>PESO: 1.750 kgs.</li>
+            
+            <li>RODADO: cubiertas 650 x 16” x 6 telas.</li>
+            
+            <li>POTENCIA REQUERIDA: 120/140 H.P.</li>
+            
+            <li>Cuchillas de acero cambiables (Opcional)</li>
+            <li>Eje trasero con regulación hidráulica (opcional)</li>
+            <li>Cuchillas removedoras</li>
+            <li>Faldon para mayor arrastre de material</li>
+            </div>
+            <div fxFlex="100"> 
+                <div style="margin-top: 15px;"> <button class="btnContact" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Necesito mas información</button></div>
+                <div style="margin-top: 15px;"> <img src="../assets/revimack-texto.png" alt="logo revimack" width="30%"></div>
+            </div>
+        </div>
+      
+      </div>
+    </div>
+
+    <div class="collapse" id="rolo" fxFlex="98" style="margin-bottom: 50px;" [ngClass]="{ 'show': rolo}">
+
+        <div fxLayout="row wrap"  fxLayoutAlign="center "  class="products">
+ 
+            <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-between center" style="margin-top: 80px;">
+                <div fxFlex="40" fxFlex.xs="60" > <h1 >Rolo picador de rastrojos</h1></div> 
+                <div fxFlex="45" fxFlex.xs="40" class="divider"></div>
+                <div fxFlex="5" fxFlex.xs="40" data-bs-toggle="collapse" data-bs-target="#rolo" aria-expanded="false" aria-controls="rolo"><img src="../assets/cerrar.svg" style="cursor: pointer;"></div>
+            </div>
+        </div>
+        <div fxLayout="row wrap"  >
+        <div  fxFlex="50">
+           
+                <img src="./assets/pesce/rolo-picador.png" alt=" rolo picadorr"   style="padding: 2px;" fxFlex="80" >
+                
+            </div>
+
+
+            <div  fxFlex="50" fxLayout="row wrap" fxLayoutAlign="start space-between" >
+            
+                
+            <div  fxFlex="100">
+            <h3>DESCRIPCION</h3>
+            
+            <li>Ancho de trabajo: 6,00mts</li>
+            <li>Ancho de transporte: 3,60mts</li>
+            <li>Peso: 2900Kgs sin lastre</li>
+            <li>Lastre: capacidad para 1000Lts</li>
+            <li>Alerones rebatibles: 2 cilindros de 3 1/2”x12”</li>
+            <li>Elevación del conjunto: 2 cilindros de 3 1/2”x12”</li>
+            <li>Cubiertas: 12.5Lx15"</li>
+
+            <li>Chasis tubular reforzado, rolos montados sobre doble rodamiento, con sistema de tiro flotante en posición de trabajo y fijo para el transporte.</li>
+            </div>    
+            <div fxFlex="100"> 
+                <div style="margin-top: 15px;"> <button class="btnContact" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Necesito mas información</button></div>
+                <div style="margin-top: 15px;"> <img src="../assets/revimack-texto.png" alt="logo revimack" width="30%"></div>
+            </div>
+        </div>
+      
+      </div>
+    </div>
+
+
 
 </div>
 <!-- <div class="container-video" fxFlex="100">
     <iframe class="responsive-iframe"  src="https://www.youtube.com/embed/dBog0pjSfT0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div> -->
+
+
+
+
+
+<!-- Formulario canvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1"  id="formCanvas" aria-labelledby="offcanvasExampleLabel" style="width: 40%;" >
+   
+    <div    fxLayoutAlign="end" fxLayout="row" style="margin-top: 20px; padding: 20px;">
+          <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+   </div>    
+   
+   <div class="offcanvas-header" fxLayoutAlign="center center" style="margin-top: 20px;">
+
+        <div fxLayout="row wrap" fxFlex="90" fxLayoutAlign="center center" class="consulta">
+            <div fxFlex="60" fxFlex.xs="60" > <h4>Dejanos tu consulta</h4></div> 
+            <div fxFlex="40" fxFlex.xs="40" class="dividerGreen"></div>
+     </div>
+
+    
+    </div>
+    
+    <div class="offcanvas-body" fxLayout="row wrap"  fxLayoutAlign="center start">
+        <div fxFlex="90" style="margin-top: 30px;">
+        <app-form-canvas></app-form-canvas>
+       </div>
+        
+       <div fxFlex="90" style="margin-top: 20px;">
+           <h4> Te ofrecemos mas medios para encontrarnos..</h4>
+
+       </div>
+  
+        <div fxFlex="90" fxLayoutGap.xs="20px" fxLayoutGap="35px"  fxLayoutAlign.xs="start end" fxLayoutAlign="space-between" style="margin-top: 30px;">
+            <a  href="https://wa.me/+542302623444?text=Hola!!%20" target="blank" > 
+             <i class="fab fa-whatsapp" ></i>
+           </a>
+             
+            <a target="_blank" title="Instagram" href="https://www.instagram.com/re.vi.mack_agro/?hl=es">
+               <i class="fab fa-instagram"></i>
+            </a>
+
+            <a target="_blank" title="Facebook" href="https://www.facebook.com/search/top?q=revimack%20agro">
+               <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a target="_blank" title="email" href="mailto:revimackventas@gmail.com">
+              <i class="fa fa-envelope"></i>
+           </a>
+
+           <a target="_blank" title="gps" href="https://goo.gl/maps/4indGx9FR3M1qX5b6">
+            <i class="fas fa-map-marker-alt"></i>
+         </a>
+           
+     
+        </div> 
+    </div>
+
+</div> 

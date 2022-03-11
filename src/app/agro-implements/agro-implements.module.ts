@@ -4,23 +4,31 @@ import { HomeImplementsComponent } from './pages/homeImplements/home-implements/
 import { AgroImplementsRoutingModule } from './agro-implements-routing.module';
 import { PesceComponent } from './pages/pesce/pesce/pesce.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormCanvasComponent } from '../shared/pages/formCanvas/form-canvas/form-canvas.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
 @NgModule({
   declarations: [
     HomeImplementsComponent,
-    PesceComponent
+    PesceComponent,
+    // FormCanvasComponent
   ],
   imports: [
     CommonModule,
     AgroImplementsRoutingModule,
     FlexLayoutModule,
+    SharedModule
+
 
   ],
   exports:[
-    HomeImplementsComponent
+    HomeImplementsComponent,
+    PesceComponent,
 
-  ]
+
+  ],
+  providers:[PesceComponent]
 })
 export class AgroImplementsModule { }
