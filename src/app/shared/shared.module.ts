@@ -14,6 +14,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { SliderUpComponent } from './pages/sliderUp/slider-up/slider-up.component';
 import { FormCanvasComponent } from './pages/formCanvas/form-canvas/form-canvas.component';
+import { SliderBrandComponent } from './pages/sliderBrand/slider-brand/slider-brand.component';
 
 
 
@@ -29,7 +30,8 @@ import { FormCanvasComponent } from './pages/formCanvas/form-canvas/form-canvas.
     StartComponent,
     NavbarComponent,
     SliderUpComponent,
-    FormCanvasComponent  
+    FormCanvasComponent,
+    SliderBrandComponent  
   ],
   
   imports: [
@@ -50,6 +52,7 @@ import { FormCanvasComponent } from './pages/formCanvas/form-canvas/form-canvas.
     NavbarComponent,
     SliderUpComponent,
     FormCanvasComponent,
+    SliderBrandComponent 
 
     
 
