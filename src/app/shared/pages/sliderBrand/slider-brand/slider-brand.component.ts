@@ -9,6 +9,8 @@ export class SliderBrandComponent implements OnInit {
 
   constructor() { }
 
+
+
   ngOnInit(): void {
   }
 

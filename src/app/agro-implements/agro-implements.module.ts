@@ -6,6 +6,7 @@ import { PesceComponent } from './pages/pesce/pesce/pesce.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormCanvasComponent } from '../shared/pages/formCanvas/form-canvas/form-canvas.component';
 import { SharedModule } from '../shared/shared.module';
+import { RotoplasComponent } from './pages/rotoplas/rotoplas/rotoplas.component';
 
 
 
@@ -13,6 +14,7 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     HomeImplementsComponent,
     PesceComponent,
+    RotoplasComponent,
     // FormCanvasComponent
   ],
   imports: [
