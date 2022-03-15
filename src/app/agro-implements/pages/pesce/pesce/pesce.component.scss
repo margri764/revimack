@@ -119,6 +119,22 @@
   opacity: 0.6;
 }
 
+.plus{
+  border-radius: 300px;
+  padding: 2px;
+  cursor: pointer;
+  width: 180px;
+  opacity: 0.2; 
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease;
+ -ms-transition: all 0.3s ease;
+}
+.plus:hover{
+-webkit-transform: rotate(90deg);
+-moz-transform: rotate(90deg);
+-ms-transform: rotate(90deg);
+transform: rotate(90deg);
+}
 
 .borderdouble {
     border: 2px solid;
