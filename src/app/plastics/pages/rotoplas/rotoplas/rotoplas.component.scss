@@ -81,6 +81,7 @@ p{
       font-weight: 500;
       border-radius: 5px;
       border: none;
+
       box-shadow: 1px 1px 5px 0px rgb(226, 226, 226);
       -webkit-box-shadow: 1px 1px 5px 0px rgb(226, 226, 226);
       -moz-box-shadow: 1px 1px 5px 0px rgb(226, 226, 226);
@@ -102,6 +103,8 @@ p{
     cursor: pointer;
     width: 180px;
     opacity: 0.2; 
+
+    
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease;
    -ms-transition: all 0.3s ease;
@@ -142,7 +145,6 @@ p{
     border-bottom: 8px double rgb(37, 150, 190);
     border-left: 8px double rgb(37, 150, 190, .2);
   }
-
 
 
 
@@ -272,6 +274,11 @@ p{
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
   opacity: 0.4;
+
+  // box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+  // -webkit-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+  // -moz-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+
 }
 
 #plus:hover {

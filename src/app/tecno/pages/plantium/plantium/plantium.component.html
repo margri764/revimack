@@ -1,1 +1,178 @@
-<p style="color: whitesmoke;">plantium works!</p>
+
+<!-- <ng-template #showThanks >
+    <div  fxFlex="100" class="animate__animated animate__fadeIn" style="margin-top: 5px;" > 
+        <img src="assets/gracias-1900x1080.png" alt="" class="img-fluid">
+    </div>
+</ng-template> -->
+
+<div  fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center" style=" background-color: white; margin-top: 10px;" >
+
+    <div  fxFlex="100" class="animate__animated animate__fadeIn headerPlantium" fxLayoutAlign="end" #top> </div>
+
+    <img src="assets/arrow.png" (click)="goToTop()" id="up" width="100px" >
+    <img src="assets/plus.png"  data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas"id="plus" width="110px" >
+
+
+    <div  fxFlex="97"  style="margin-top: 50px;" class="titleHeader"  >
+          <h5 class="card-title">La Empresa</h5>
+          <p >Nuestra misión consiste en el trabajo constante, el esfuerzo permanente para ser los proveedores de agricultura de precisión más confiable y prestigioso de América Latina. Basados en la excelencia en nuestros productos y servicios, para la gente con la que convivimos y con el compromiso de nuestro equipo. Siempre con nuestros principios por delante: visión, desafío, innovación y perseverancia.. </p>
+    </div>
+
+    <div fxLayout="row wrap" fxFlex="98" class="products" #top >
+ 
+        <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" style="margin-top: 30px;">
+            <div fxLayout="row wrap" fxFlex="30" fxFlex.xs="60" > 
+                <h1 >Productos</h1> 
+                <label  fxLayoutAlign="center center"> <i class="fa fa-star"></i> </label>
+            </div> 
+            <div fxFlex="70" fxFlex.xs="40" class="divider"></div>
+        </div>
+    </div>
+
+
+    <div fxLayout="row wrap" fxFlex="98">
+        <img src="assets/plantium/ecuRow.png" >
+
+    </div>
+
+   
+  
+ <div fxLayout="row wrap" fxLayout.xs="column" fxFlex="98" fxLayoutAlign="space-between"  style="margin-top: 20px;" >
+
+    <div></div>
+
+    </div>
+
+
+    <!-- cards explain -->
+    <div fxLayout="row wrap" fxLayout.xs="column" fxFlex="98" fxLayoutAlign="space-between"  style="margin-top: 20px;" >
+
+        <div class="card full"  fxFlex="32" fxFlex.xs="100">
+            <img src="assets/plantium/espacio.jpg" class="card-img-top " alt="espaciamiento plantas plantium " >
+           
+            <div class="card-body">
+               
+              <h5 class="card-title">Espaciamiento entre plantas</h5>
+              <hr>
+              <p class="card-text text">El doble de precisión en la separación entre plantas, a la mitad del tiempo que tomaría con un sistema de siembra convencional.</p>
+
+        
+            </div>
+            </div>
+
+            
+            <div class="card full"  fxFlex="32" fxFlex.xs="100">
+            <img src="assets/plantium/positiva-bg.png" class="card-img-top " alt="dsitribucion positiva plantium " >
+
+                <div class="card-body">
+                  <h5 class="card-title">Distribución por presión positiva</h5>
+                  <hr>
+                  <p class="card-text text">El sistema de presión positiva permite transportar las semillas hasta el surco de manera neumática, evitando rebotes y desviaciones en el tubo de bajada.</p>
+                </div>
+                </div>
+
+                
+            <div class="card full "  fxFlex="32" fxFlex.xs="100">
+            <img src="assets/plantium/uec.jpg" class="card-img-top " alt="unidad electronica de control plantium " >
+
+            <div class="card-body">
+                <h5 class="card-title">Unidad electrónica de control</h5>
+                <hr>
+                <p class="card-text text">Unidad electrónica integrada, para el control del motor y detección de semillas. Con indicadores LED de estado.</p>
+            </div>
+        </div>
+
+        <div class="card full "  fxFlex="32" fxFlex.xs="100">
+            <img src="assets/plantium/control-semillas-bg.png" class="card-img-top " alt="Control de semillas plantium " >
+
+            <div class="card-body">
+                <h5 class="card-title">Control de semillas</h5>
+                <hr>
+                <p class="card-text text">Compuerta para apertura y cierre del ingreso de semillas, y regulación del nivel de semillas dentro del dosificador. Fácil accionamiento.</p>
+            </div>
+        </div>
+
+        <div class="card full "  fxFlex="32" fxFlex.xs="100">
+            <img src="assets/plantium/inercial.png" class="card-img-top " alt="Unidad de medición inercial plantium " >
+
+            <div class="card-body">
+                <h5 class="card-title">Unidad de medición inercial</h5>
+                <hr>
+                <p class="card-text text">Módulo inercial de 6 ejes con acelerómetros y giróscopos, para monitorear la dinámica del cuerpo y la profundidad de siembra.</p>
+            </div>
+        </div>
+
+        <div class="card full "  fxFlex="32" fxFlex.xs="100">
+            <img src="assets/plantium/asistencia.jpg" class="card-img-top " alt="asistencia tecnica plantium " >
+
+            <div class="card-body">
+                <h5 class="card-title">Asistencia 24hs los 365 días al año</h5>
+                <hr>
+                <p class="card-text text">Con PlantiumHelp, disponés de asistencia las 24hs del día los 365 días del año.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<!-- Formulario canvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1"  id="formCanvas" aria-labelledby="offcanvasExampleLabel" style="width: 40%;" >
+   
+    <div    fxLayoutAlign="end" fxLayout="row" style="margin-top: 20px; padding: 20px;">
+          <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+   </div>    
+   
+   <div class="offcanvas-header" fxLayoutAlign="center center" style="margin-top: 20px;">
+
+        <div fxLayout="row wrap" fxFlex="90" fxLayoutAlign="center center" class="consulta">
+            <div fxFlex="60" fxFlex.xs="60" > <h4>Dejanos tu consulta</h4></div> 
+            <div fxFlex="40" fxFlex.xs="40" class="dividerGreen"></div>
+     </div>
+
+    
+    </div>
+    
+    <div class="offcanvas-body" fxLayout="row wrap"  fxLayoutAlign="center start">
+        <div fxFlex="90" style="margin-top: 30px;">
+        <app-form-canvas></app-form-canvas>
+       </div>
+        
+       <div fxFlex="90" style="margin-top: 20px;">
+           <h4> Te ofrecemos mas medios para encontrarnos..</h4>
+
+       </div>
+  
+        <div fxFlex="90" fxLayoutGap.xs="20px" fxLayoutGap="35px"  fxLayoutAlign.xs="start end" fxLayoutAlign="space-between" style="margin-top: 30px;">
+            <a  href="https://wa.me/+542302623444?text=Hola!!%20" target="blank" > 
+             <i class="fab fa-whatsapp" ></i>
+           </a>
+             
+            <a target="_blank" title="Instagram" href="https://www.instagram.com/re.vi.mack_agro/?hl=es">
+               <i class="fab fa-instagram"></i>
+            </a>
+
+            <a target="_blank" title="Facebook" href="https://www.facebook.com/search/top?q=revimack%20agro">
+               <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a target="_blank" title="email" href="mailto:revimackventas@gmail.com">
+              <i class="fa fa-envelope"></i>
+           </a>
+
+           <a target="_blank" title="gps" href="https://goo.gl/maps/4indGx9FR3M1qX5b6">
+            <i class="fas fa-map-marker-alt"></i>
+         </a>
+           
+     
+        </div> 
+    </div>
+
+</div> 
+
+
+
+</div>
+
+

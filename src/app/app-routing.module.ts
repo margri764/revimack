@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './shared/pages/home/home.component';
 import { Page404Component } from './shared/pages/page404/page404.component';
+import { ThanksComponent } from './shared/pages/thanks/thanks.component';
 
 const routes: Routes = [
 
@@ -34,6 +35,9 @@ const routes: Routes = [
     path: "", redirectTo: "home", pathMatch: 'full'
   },
   {
+    path: "gracias", component: ThanksComponent
+  },
+  {
     path: '404',
     component: Page404Component
   },
@@ -46,7 +50,9 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
+    // RouterModule.forRoot( routes)
     RouterModule.forRoot( routes, { useHash: true })
+
   ],
   exports: [
     RouterModule

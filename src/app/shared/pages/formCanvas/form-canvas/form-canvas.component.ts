@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-canvas',
@@ -28,6 +29,7 @@ export class FormCanvasComponent implements OnInit {
     
   constructor(
                private fb : FormBuilder,
+               private route : Router
 
   ) { }
 
@@ -71,8 +73,16 @@ export class FormCanvasComponent implements OnInit {
       this.myForm.markAllAsTouched();
       return;
     }
+    
+    setTimeout( ()=>{
+      this.route.navigateByUrl("/gracias")
+
+    },2000)
+  
+
+
     this.clicked=false; 
-    alert(JSON.stringify(this.myForm.value))
+    // alert(JSON.stringify(this.myForm.value))
   }
 
   

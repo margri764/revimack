@@ -1,26 +1,48 @@
-import { Component, OnInit } from '@angular/core';
+import {  AfterViewInit, ChangeDetectionStrategy, Component, OnDestroy, OnInit,  } from '@angular/core';
+import { fromEvent, map, tap } from 'rxjs';
+
 
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy,AfterViewInit {
+
+
+
 
 public imgEcurow : string='';
 
-  constructor() { }
+
+
+
+
+    
+constructor()
+{  }
+   
+
+		
+    	
+  ngAfterViewInit(): void {
+
+ 
+  }
+	
+
+
+	ngOnDestroy(): void {
+	   
+	}
 
   ngOnInit(): void {
 
-    (screen.width<600) ?  this.imgEcurow="./assets/ecuRow_cel.png" :     this.imgEcurow="./assets/ecuRow-desktop.png";
-    // if(screen.width > 961 && screen.width <= 1280){
-    //  this.imgEcurow="./assets/ecuRow-desktop.png";
 
-    //  (screen.width > 300 && screen.width < 700) ?
-    //   [this.bufferX = 100, this.bufferY = 100]         
-    //   :[ this.bufferX = 15, this.bufferY = 15]
+    (screen.width<600) ?  this.imgEcurow="./assets/ecuRow_cel.png" :     this.imgEcurow="./assets/ecuRow-desktop.png";
+  
     
       
 
