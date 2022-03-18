@@ -1,9 +1,4 @@
 
-<!-- <ng-template #showThanks >
-    <div  fxFlex="100" class="animate__animated animate__fadeIn" style="margin-top: 5px;" > 
-        <img src="assets/gracias-1900x1080.png" alt="" class="img-fluid">
-    </div>
-</ng-template> -->
 
 <div  fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center" style=" background-color: white; margin-top: 10px;" >
 
@@ -13,9 +8,11 @@
     <img src="assets/plus.png"  data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas"id="plus" width="110px" >
 
 
-    <div  fxFlex="97"  style="margin-top: 50px;" class="titleHeader"  >
-          <h5 class="card-title">La Empresa</h5>
-          <p >Nuestra misión consiste en el trabajo constante, el esfuerzo permanente para ser los proveedores de agricultura de precisión más confiable y prestigioso de América Latina. Basados en la excelencia en nuestros productos y servicios, para la gente con la que convivimos y con el compromiso de nuestro equipo. Siempre con nuestros principios por delante: visión, desafío, innovación y perseverancia.. </p>
+    <div  fxFlex="90"  style="margin-top: 50px;" class="titleHeader"  >
+          <!-- <h5 class="card-title">La Empresa</h5> -->
+          <blockquote class="blockquote" >" Nuestra misión consiste en el trabajo constante, el esfuerzo permanente para ser los proveedores de agricultura de precisión más confiable y prestigioso de América Latina. Basados en la excelencia en nuestros productos y servicios, para la gente con la que convivimos y con el compromiso de nuestro equipo. Siempre con nuestros principios por delante: visión, desafío, innovación y perseverancia.. " 
+            <footer class="blockquote-footer" style="margin-top: 10px;margin-right: 5px; text-align: end;" >Plantium <cite title="Source Title">Agricultura de precisión.</cite></footer>
+          </blockquote>
     </div>
 
     <div fxLayout="row wrap" fxFlex="98" class="products" #top >
@@ -30,18 +27,29 @@
     </div>
 
 
-    <div fxLayout="row wrap" fxFlex="98">
-        <img src="assets/plantium/ecuRow.png" >
+    <div fxLayout="row wrap" fxFlex="98" >
+ 
+        <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" style="margin-top: 80px; margin-bottom: 80px;">
+            <div fxLayout="row wrap"  > 
+                <h1>Dosificador de siembra adaptable</h1> 
+            </div> 
+        </div>
+    </div>
 
+
+    <div fxLayout="row wrap" fxFlex="98" fxLayoutAlign="center center">
+        <div class="frame" fxFlex="100" fxLayoutAlign="center center" >
+
+              <img src="assets/plantium/ecuRow.png" >
+        <figcaption fxLayout="row wrap" fxLayoutAlign="center center">
+            <button type="button"  class="btnSend mt-5"data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" >Enviar consulta</button>
+        </figcaption>
+    </div>
     </div>
 
    
   
- <div fxLayout="row wrap" fxLayout.xs="column" fxFlex="98" fxLayoutAlign="space-between"  style="margin-top: 20px;" >
 
-    <div></div>
-
-    </div>
 
 
     <!-- cards explain -->
@@ -113,8 +121,25 @@
         </div>
     </div>
 
+    
+    <div fxLayout="row wrap" fxFlex="98" >
+ 
+        <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" style="margin-top: 80px; margin-bottom: 80px;">
+            <div fxLayout="row wrap" class="item" > 
+                <h1>Pilotos automáticos</h1> 
+            </div> 
+        </div>
+    </div>
 
+    <div fxLayout="row wrap" fxFlex="98" fxLayoutAlign="center center" style="margin-top: 80px;">
+        <div class="frame" fxFlex="100" fxLayoutAlign="center center" >
 
+              <img src="assets/plantium/steer.png" >
+        <figcaption fxLayout="row wrap" fxLayoutAlign="center center">
+            <button type="button"  class="btnSend mt-5"data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" >Enviar consulta</button>
+        </figcaption>
+    </div>
+    </div>
 
 
 <!-- Formulario canvas -->
