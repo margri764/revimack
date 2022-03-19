@@ -1,86 +1,54 @@
 <br>
-<div fxLayoutAlign="center" fxFlex="100" fxLayout="row wrap">  
+<div fxLayoutAlign="center" fxFlex="100" fxLayout="row wrap" style="margin-top: 20px;">  
 
-<div fxLayout="row wrap"  fxFlex="99" class="textWelcome">  
+<div fxLayout="row wrap"  fxFlex="99" class="customNavbar">  
 
-  <div fxLayout="row wrap" fxLayoutAlign="start" fxLayoutGap="10px" fxFlex="80" >
-      <button type="button" class="btnNav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Productos</button>
+  <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="10px" fxFlex="80" >
 
-      <button type="button" class="btnNav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Promociones</button>
+      <img src="assets/logo-hojas2-bg.png" alt="logo" fxFlex="7">
+    
+      <label class="btnNav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Productos</label>
 
-      <button type="button" class="btnNav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Contacto</button>
+      <label  class="btnNav" >Promociones</label>
 
-      <button type="button" class="btnNav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Nosotros</button>
+      <label  class="btnNav"> Contactános</label>
+
+      <label  class="btnNav">Nosotros</label>
 </div>  
 
 <div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="20">
   <form class="d-flex">
     <input class="form-control me-2 btnNav" type="search" placeholder="Search" aria-label="Search">
    
-    <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-  </form>
-  <!-- <i class="fab fa-magnifying-glass" style="color: antiquewhite;"></i> -->
-</div>
-  <!-- Estamos trabajando para brindarte la mejor plataforma de negocios agropecuarios!!! <br>
-  Te adelantamos algo de lo que se viene... -->
-
-</div>
-
-
-  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" id="font" >
-    <div class="container-fluid">
-    <a class="navbar-brand animate__animated animate__bounce "  routerLink="./login"></a>
    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  </form>
   
-    <div class=" collapse navbar-collapse text-center" id="navbarSupportedContent" [ngClass]="{ 'show': navbarOpen }">
-    
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          
-        <li class="nav-item" style="cursor: pointer;">
-            <a class="nav-link text-dark animate__animated animate__backInRight"    data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Productos</a>
-        </li>
+</div>
 
-          <li class="nav-item">
-            <a class="nav-link text-dark animate__animated animate__backInDown" routerLink="./contact-us">Contacto</a>
-          </li> 
- 
-           <li class="nav-item animate__animated animate__bounce">
-            <a  href="https://wa.me/+542302416035?text=Hola!!%20" target="blank"> 
-            <i class="fab fa-whatsapp"></i></a>
-          </li>      
 
-      </ul> 
-     
-    </div>
-  </div>
-</nav> -->
+</div>
+
 
 
 <div class="offcanvas offcanvas-start" tabindex="-1" width="500" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"  >
 
   
-    <div class="offcanvas-header">
+    <div class="offcanvas-header" style="margin-top: 30px;">
 
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel" style="margin-top: 30px;">PRODUCTOS</h5>
+      <div fxLayout="row wrap" fxFlex="90" fxLayoutAlign="center center" class="consulta">
+        <div fxFlex="60" fxFlex.xs="60" > <h4>¿Que necesitás?</h4></div> 
+        <div fxFlex="40" fxFlex.xs="40" class="dividerGreen"></div>
+ </div>
     
-      <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+      <label type="label" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></label>
     </div>
+
+
+    <div class="offcanvas-body" fxLayout="row wrap" fxLayoutAlign="center" style="margin-top: 100px;">
     
-  <!-- <div class="my-spinner container align-items-center" *ngIf="spinnerOn!; else canvas">
-      <div class="spinner" ></div>
-   </div>  -->
+      <div fxLayout="row wrap" fxLayoutAlign="start" fxFlexOffset="20px" fxFlex="80">
 
-    <!-- <ng-template #canvas > -->
-
-    <div class="offcanvas-body" fxLayout="row wrap" style="margin-top: 100px;">
-    
-      <div>
-
-          <p><a routerLink="../agro/maquinas"><label data-bs-dismiss="offcanvas">Venta de Maquinaria Agricola</label></a></p>
+          <p ><a routerLink="../agro/maquinas"><label data-bs-dismiss="offcanvas">Venta de Maquinaria Agricola</label></a></p>
           <p><a routerLink="../implementos/implementos-agricolas" > <label data-bs-dismiss="offcanvas"> Venta de Implementos</label></a></p>
           <p><a routerLink="../eco/plasticos" > <label data-bs-dismiss="offcanvas"> Linea de plásticos</label> </a></p>
           <p><a routerLink="../insumos/repuestos-accesorios" > <label data-bs-dismiss="offcanvas">Repuestos y accesorios</label></a></p>
@@ -88,12 +56,12 @@
 
       </div>  
     <div fxFlex="90">
-        <img src="assets/revimackBack2.png" alt="">
+        <img src="assets/revimackBack2.png" alt="logo revimack">
     </div>  
    
     
     </div>
-  <!-- </ng-template> -->
+ 
 
 </div> 
 </div> 

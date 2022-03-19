@@ -14,14 +14,17 @@
 .titleHeader{
   border-left: 12px solid #c1da34d3;
   margin-left: 40px;
-  // padding: 10px;
-  
 }
+
 .titleHeader > h5 {
   margin-left: 30px;
 }
 .titleHeader > .blockquote {
   margin-left: 30px;
+}
+
+.titleHeader > p{
+  margin-left: 40px;
 }
 
 .blockquote{
@@ -31,7 +34,7 @@
 }
 
 
-
+// start main img effect
 
 div.frame {
   font-family:'Roboto Condensed','sans-serif';
@@ -59,6 +62,66 @@ div.frame:hover img {
   opacity: 0.7;
   filter: blur(4px);
 }
+// end main img effect
+
+// start view more effect
+.div-img .img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  transform: scale(1);
+  border-radius: 5px;
+  -ms-transform: scale(1);
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  -o-transform: scale(1);
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+}
+
+.div-img:hover .img {
+  opacity: 0.6;
+  // box-shadow: 5px 5px 10px rgb(100, 97, 97,0.4);
+  // filter:brightness(0.8);
+}
+
+/* es lo q sube */
+.div-img .text{
+  height: 58px;
+  background-color:#82b75c;
+  color: white;
+  display: block;
+  text-align: center;
+  width: 100%;
+  transform: translate(0px);
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  opacity: 0;
+  transition:  transfom opacity 1s;
+  /* transition:ease-in 0.5s; */
+  font-family:'ribeye';
+  cursor: pointer;
+
+}
+
+ .div-img:hover .text {
+  transform: translate(0px, -56px);
+  opacity: 0.8;
+  font-family:'ribeye';
+  font-size: 3vw;
+  text-align: center;
+
+
+}
+
+//end view more effect
+
+
 
 .btnSend{
   background-color: #C2da34;
@@ -261,6 +324,10 @@ p{
 
 }
 
+.steer{
+  margin-top: 50px;
+}
+
 .plus{
     border-radius: 300px;
     padding: 2px;
@@ -369,6 +436,21 @@ p{
 }
 
 #up:hover {
+ transform: scale(1.01);
+}
+
+
+#back {
+  position:absolute; 
+  top: 20px; /* Place the button at the bottom of the page */
+  left: 10px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  // padding:20px; /* Some padding */
+  opacity: 0.6;
+}
+
+#back:hover {
  transform: scale(1.01);
 }
 

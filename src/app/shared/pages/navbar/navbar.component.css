@@ -8,66 +8,38 @@
       width: 90%;
     }
      
-      .fa-whatsapp{
-      margin-left: 10px;
-      font-size: 3vw;
-      color: green;
-      }
-
-      .material-icons-outlined{
-        margin-top: auto ; 
-        margin-bottom: auto;
-      }
-    
-    
-    .navbar-brand{
-      font-size: 2.2vw;
- 
-        
+    .fa-whatsapp{
+    margin-left: 10px;
+    font-size: 3vw;
+    color: green;
     }
-    .navbar-brand:hover{
-   
-    } 
 
-    .navbar-nav{
-      margin-left: auto;
+    .material-icons-outlined{
+      margin-top: auto ; 
+      margin-bottom: auto;
     }
   
-  
-   .nav-item{
-      font-size: 1.4vw;
-      margin-top: 0.93vw;   
-      
-  }
-  
-    .dropdown-menu{
-      font-size: 1.8vw;
-      background-color: rgb(#1fdddd);  
-      width: 30vw;
-      box-shadow: 5px 5px 10px rgb(#1fdddd); 
-   }
 
-   .textWelcome{
+   .customNavbar{
     margin-top: 10px;
-    font-family:'Roboto Condensed','sans-serif';
-    background-color: rgba(240, 240, 240, 0.37);
+    background-color: rgb(17, 17, 17);
     border-radius: 10px;
     padding: 20px;
-    color: white;
-    font-size: 1.8vw;
+
+    box-shadow: 10px 10px 17px -6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 17px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 17px -6px rgba(0,0,0,0.75);
 
   }
   .btnNav{
-    background-color: rgb(245, 245, 245);
-    color: rgb(5, 5, 5);
-    font-family:'Roboto Condensed','sans-serif';
-    font-weight: 500;
+    /* background-color: rgb(245, 245, 245); */
+    color: #edf0f1;
+    font-family: "Monserrat",sans-serif;
+    font-weight: 100;
+    font-size: 1.6vw;
     border-radius: 5px;
-    border: none;
-    box-shadow: 1px 1px 5px 0px rgb(226, 226, 226);
-    -webkit-box-shadow: 1px 1px 5px 0px rgb(226, 226, 226);
-    -moz-box-shadow: 1px 1px 5px 0px rgb(226, 226, 226);
-    transition: 10ms
+    margin-left: 20px;
+    cursor: pointer;
   }
   .btnNav:hover{
     transform: scale(1.01);
@@ -75,7 +47,48 @@
 
  a{
    text-decoration: none;
+   font-family: "Monserrat",sans-serif;
+   font-weight: 100;
+   font-size: 1.4vw;
  }
+
+ label{
+   cursor: pointer;
+ }
+
+ .offcanvas{
+  border-bottom : 4px solid #82b75c;
+  border-right : 4px solid #82b75c;
+  border-top : 4px solid #82b75c;
+
+
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+}
+
+ .offcanvas-title{
+    text-decoration: none;
+    font-family: "Monserrat",sans-serif;
+    font-weight: 200;
+    font-size: 1.4vw;
+}
+
+.consulta{
+  border-radius: 10px; 
+  padding: 10px;
+  background-color: rgb(251, 251, 251);
+
+  box-shadow: 10px 10px 17px -8px rgba(56,56,56,0.45);
+  -webkit-box-shadow: 10px 10px 17px -8px rgba(56,56,56,0.45);
+  -moz-box-shadow: 10px 10px 17px -8px rgba(56,56,56,0.45);
+}
+
+.dividerGreen{
+  height: 3px;
+  background-color: #82b75c; 
+  opacity: 0.6;
+}
 
   mat-icon{
     --animate-duration: 4000ms;
@@ -87,19 +100,7 @@
   
 
 
-  .dropdown-item:hover{
-    box-shadow: 1px 1px 2px rgb(#1fdddd);
-    background-color: rgb(#1fdddd);  
 
-  }
-   
-
-
-   .navbar{
-    font-family: 'Poppins', sans-serif;
-      box-shadow: 5px 5px 10px rgb(100, 97, 97);  
-      height: 70px;
-     }
 
     a.searchResult {
       cursor: pointer; 
@@ -183,19 +184,9 @@
     font-size: 5vh;
  } 
 
- .navbar-collapse{
-  transition: all 500ms linear;
-  margin-left: 0;
 
-}
 
-#font .nav-item{
-  transition: all 500ms linear;
-  font-size: 4.6vw;
 
- }
-
- 
 }
   
 
@@ -218,45 +209,14 @@
       margin-left: 30vw;
     }
 
-    .btn{
-      font-size: 2.5vw;
-    }
+
     a.searchResult {
       font-size: 2.5vw; 
    }
-   .navbar-brand{
-    font-size: 4vw;
-     
-    }
 
-    .fa-whatsapp{
-      font-size: 8vw;
-      margin-left: 0;
-      }
-    
-    #font .dropdown-menu{
-      font-size: 2.6vw;
-      width: auto;
- 
-    
-   }
 
-   /* #font .dropdown-item:hover{
-    
-    background-color: #1fdddd;;
-    font-weight: bold;
-    width: auto;
- 
 
-   
-   }
- */
 
-   .navbar-collapse{
-    transition: all 500ms linear;
-    margin-left: 0;
-
-  }
 
   #font .nav-item{
     transition: all 500ms linear;
@@ -270,11 +230,7 @@
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 769px) and (max-width: 1280px) {
 
-    .dropdown-item{
-      font-size: 1.5vw;
-      margin-top: 1vw;
-     }
-     
+
   
 }
   
@@ -282,10 +238,7 @@
 /* Extra Large devices (laptops/desktops, 1280px and up) */ 
 @media only screen and (min-width: 1281px) {
     
- .dropdown-item{
-   font-size: 1.3vw;
-   margin-top: 1vw;
-  }
+
   .suggested{
     width: 30vw; 
     margin-top: 1vw;

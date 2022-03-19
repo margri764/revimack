@@ -12,8 +12,11 @@
     background-image: url(../../../../assets/logo.png);
     background-position: center;
     background-repeat: no-repeat;
-    border-bottom: 15px solid #82b75c;
+    border-bottom: 35px solid #82b75c;
 
+    box-shadow: 10px 10px 17px -8px rgba(56,56,56,0.45);
+    -webkit-box-shadow: 10px 10px 17px -8px rgba(56,56,56,0.45);
+    -moz-box-shadow: 10px 10px 17px -8px rgba(56,56,56,0.45);
 }
 
 
@@ -25,9 +28,7 @@
         background-position: center;
         background-size: cover;
           
-        box-shadow: 1px 1px 2px 0px #82b75c;
-        -webkit-box-shadow: 1px 1px 2px 0px #82b75c;
-        -moz-box-shadow: 1px 1px 2px 0px #82b75c;
+ 
         
     }
  

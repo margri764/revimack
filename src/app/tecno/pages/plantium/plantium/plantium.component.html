@@ -4,8 +4,12 @@
 
     <div  fxFlex="100" class="animate__animated animate__fadeIn headerPlantium" fxLayoutAlign="end" #top> </div>
 
+    <img src="assets/plantium/back.png" routerLink="../../home" id="back" width="50px" >
     <img src="assets/arrow.png" (click)="goToTop()" id="up" width="100px" >
-    <img src="assets/plus.png"  data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas"id="plus" width="110px" >
+    <!-- <img src="assets/plus.png"  data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas"id="plus" width="110px" > -->
+
+
+    
 
 
     <div  fxFlex="90"  style="margin-top: 50px;" class="titleHeader"  >
@@ -47,12 +51,10 @@
     </div>
     </div>
 
-   
-  
 
 
 
-    <!-- cards explain -->
+    <!-- cards ecurow -->
     <div fxLayout="row wrap" fxLayout.xs="column" fxFlex="98" fxLayoutAlign="space-between"  style="margin-top: 20px;" >
 
         <div class="card full"  fxFlex="32" fxFlex.xs="100">
@@ -136,14 +138,75 @@
 
               <img src="assets/plantium/steer.png" >
         <figcaption fxLayout="row wrap" fxLayoutAlign="center center">
-            <button type="button"  class="btnSend mt-5"data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" >Enviar consulta</button>
+            <button type="button"  class="btnSend mt-5" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" >Enviar consulta</button>
         </figcaption>
     </div>
+    </div>
+
+    <!-- pilotos -->
+    <div fxLayout="row wrap" fxFlex="90" fxLayoutAlign="center center" class="titleHeader" style="margin-bottom: 40px;margin-top: 40px;" >
+    
+            <p class="card-text text">El piloto automático SBOX® Steer consiste en una tecnología simple y portátil que puede instalarse en la mayoría de máquinas agrícolas, nuevas y antiguas. Se trata de un dispositivo de fricción que actúa por medio de un motor acoplado al volante, y que junto a la asistencia del SBOX/LIGHTBAR y de los Terminales SBOX, SBOX7/11 proporcionan una dirección automática muy eficiente. Es ideal para aplicaciones de cultivos donde no es necesaria la máxima precisión.</p>
+
+    </div>
+
+    <!-- cards pilotos -->
+    <div fxLayout="row wrap" fxLayout.xs="column" fxFlex="98" fxLayoutAlign="space-between"  style="margin-top: 40px;">
+
+        <div class="card full"  fxFlex="49" fxFlex.xs="100">
+            <div class="card-body">
+              <h5 class="card-title">Desacople ágil</h5>
+              <hr>
+              <p class="card-text text">Desactive el SBOX Steer simplemente girando el volante manualmente, para un máximo control de su tractor, sembradora o vehículo en uso.</p>
+            </div>
+        </div>
+
+        <div class="card full"  fxFlex="49" fxFlex.xs="100">
+            <div class="card-body">
+                <h5 class="card-title">Reduce la fatiga</h5>
+                <hr>
+                <p class="card-text text">Los pilotos automaticos SBOX son ideales para reducir la fatiga del operario, extendiendo las horas de trabajo sin importar las condiciones.</p>
+        </div>
+        </div>
+
+        <div class="card full"  fxFlex="49" fxFlex.xs="100">
+            <div class="card-body">
+                <h5 class="card-title">Intercambiable</h5>
+                <hr>
+                <p class="card-text text">Puede intercambiarse facilmente entre vehículos, permitiendo amortizar su inversión en todas las etapas de la campaña.</p>
+            </div>
+        </div>
+
+        <div class="card full"  fxFlex="49" fxFlex.xs="100">
+            <div class="card-body">
+                <h5 class="card-title">Trabajo nocturno</h5>
+                <hr>
+                <p class="card-text text">Estos pilotos automáticos no pierde precisión en el trabajo, ni siquiera en momentos de baja o nula visibilidad.</p>
+            </div>
+    </div>
+    
+    
+    </div>
+
+    <div fxLayout="row wrap" fxFlex="98" fxLayoutAlign="space-between center"  style="margin-bottom: 40px;margin-top: 40px;" >
+        <div class="div-img" fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="30">
+            <img src="assets/plantium/steerDD.png" fxFlex="100" class="img" >
+            <p class="text"  data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">+ info</p>
+        </div>
+        <div class="div-img" fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="30">
+            <img src="assets/plantium/steerH.png" fxFlex="100" class="img" >
+            <p class="text"  data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">+ info</p>
+        </div>
+        <div class="div-img" fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="30">
+            <img src="assets/plantium/steerEH.png" fxFlex="100" class="img" >
+            <p class="text"  data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">+ info</p>
+        </div>
     </div>
 
 
 <!-- Formulario canvas -->
 <div class="offcanvas offcanvas-start" tabindex="-1"  id="formCanvas" aria-labelledby="offcanvasExampleLabel" style="width: 40%;" >
+
    
     <div    fxLayoutAlign="end" fxLayout="row" style="margin-top: 20px; padding: 20px;">
           <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
@@ -196,8 +259,8 @@
 
 </div> 
 
-
-
 </div>
+
+
 
 
