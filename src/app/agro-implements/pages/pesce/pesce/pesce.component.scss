@@ -136,6 +136,19 @@
 transform: rotate(90deg);
 }
 
+#back {
+  position:absolute; 
+  top: 20px; /* Place the button at the bottom of the page */
+  left: 10px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  // padding:20px; /* Some padding */
+  opacity: 0.6;
+}
+
+#back:hover {
+ transform: scale(1.01);
+}
 .borderdouble {
     border: 2px solid;
     border-radius: 300px; 
