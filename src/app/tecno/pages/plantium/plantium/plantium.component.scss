@@ -90,6 +90,7 @@ div.frame:hover img {
 /* es lo q sube */
 .div-img .text{
   height: 58px;
+  font-size: 2vw;
   background-color:#82b75c;
   color: white;
   display: block;
@@ -114,18 +115,14 @@ div.frame:hover img {
   font-family:'ribeye';
   font-size: 3vw;
   text-align: center;
-
-
 }
 
 //end view more effect
 
 
-
 .btnSend{
   background-color: #C2da34;
   color: white;
-  font-size: 2.5vw;
   border-radius: 10px;
   border: none;
   padding: 10px;
@@ -138,29 +135,26 @@ div.frame:hover img {
 
 
 
+
+
+// esto sube
 div.frame button {
-  word-spacing: -0.15em;
+  font-family: 'Monserrat', sans-serif;
+  margin: 0 0 5px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s,
+  -webkit-transform 0.35s;
+  transition: opacity 0.35s,
+  -moz-transform 0.35s,
+  -o-transform 0.35s,
+  transform 0.35s;
+
   font-weight: 300;
   -webkit-transform: translate3d(0%, 50%, 0);
   transform: translate3d(0%, 50%, 0);
   -webkit-transition-delay: 0,5s;
   transition-delay: 0,5s;
-  font-weight: 400;
-  font-size: 2vw;
-}
-
-// esto sube
-div.frame button {
-  font-family: 'ribeye';
-  margin: 0 0 5px;
-  opacity: 0;
-  -webkit-transition: opacity 0.35s, 
-  -webkit-transform 0.35s;
-  transition: opacity 0.35s,
-  -webkit-transform 0.35s,
-  -moz-transform 0.35s,
-  -o-transform 0.35s,
-  transform 0.35s;
+  font-size: 1.6vw;
 }
 
 // esto sube
@@ -199,11 +193,6 @@ div.frame:hover figcaption::before {
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
 }
-
-
-
-
-
 
 .backText{
     height: 30vw;
@@ -319,8 +308,6 @@ p{
     font-size: 3vw;
     margin-left: 20px;
     color: #C2da34;
-
-
 }
 
 .steer{
@@ -357,6 +344,7 @@ p{
   .offcanvas{
       border: 4px solid #C2da34;
       border-radius: 20px;
+      width: 40vw;
   }
 
   .fa-whatsapp{
@@ -462,11 +450,6 @@ p{
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
   opacity: 0.4;
-
-  // box-shadow: 10px 10px 29px -8px rgba(#C2da34,0.75);
-  // -webkit-box-shadow: 10px 10px 29px -8px rgba(#C2da34,0.75);
-  // -moz-box-shadow: 10px 10px 29px -8px rgba(#C2da34,0.75);
-
 }
 
 #plus:hover {
@@ -476,7 +459,7 @@ p{
 @media  screen and (max-width: 600px){  
 
 .headerPlantium{
-  height: 60vw;
+  height: 55vw;
   background-image: url(../../../../../assets/plantium/header-plantium-phone.png);
 }
 
@@ -487,18 +470,41 @@ p{
 .titleHeader > h5 {
   margin-left: 30px;
 }
+
 .titleHeader > .blockquote {
   margin-left: 20px;
 }
 
- #up{
-   width: 80px;
- }
+#up{
+  width: 80px;
+}
 
+.fa-star{
+  font-size: 4.5vw;
+}
 
+.card-title{
+  font-size: 5vw;
+}
 
+.card-text{
+  font-size: 4vw;
+}
 .blockquote{
   font-size: 3.5vw;
+}
+
+div.frame button {
+  font-size: 4vw;
+}
+
+.div-img:hover .text{
+  height: 40px;
+  font-size: 6vw
+}
+
+.offcanvas{
+  width: 90vw;
 }
 
 .fa-whatsapp{
@@ -567,10 +573,27 @@ p{
 
 }
 @media  screen and (min-width: 1281px) and (max-width: 1919px){
-  .fa-whatsapp{
-    font-size: 4vw;   
+
+.card-title{
+  font-size: 1.6vw;
 }
 
+.card-text{
+  font-size: 1.4vw;
+}
+
+.div-img:hover .text{
+  height: 40px;
+  font-size: 1.8vw
+}
+
+.fa-star{
+  font-size: 1.8vw;
+}
+
+.fa-whatsapp{
+    font-size: 4vw;   
+}
 
 .fa-instagram{
     font-size: 3vw;     
@@ -588,30 +611,25 @@ p{
     font-size: 3vw;
 }
 
-  .fa-whatsapp{
-      font-size: 4vw;   
-  }
+.fa-whatsapp{
+    font-size: 3vw;   
+}
 
+.fa-instagram{
+    font-size: 3vw;     
+}
 
-  .fa-instagram{
-      font-size: 3vw;     
-  }
-  
-  .fa-facebook-f{
-      font-size: 3vw;
-  }
+.fa-facebook-f{
+    font-size: 3vw;
+}
 
-  .fa-envelope{
-      font-size: 3vw;
-  }
+.fa-envelope{
+    font-size: 3vw;
+}
 
-  .fa-map-marker-alt{
-      font-size: 3vw;
-  }
-
-
- 
-
+.fa-map-marker-alt{
+    font-size: 3vw;
+}
 
 }
  

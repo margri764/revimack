@@ -125,7 +125,6 @@
   input {
     width:40vw ;
     font-size: 3.5vw;
-
   }
 
   form {
@@ -268,6 +267,11 @@
     margin-top: 1vw;
     margin-left: 65vw;
   }
+  
+  .btnNav{
+    font-size: 1.3vw;
+  }
+
   
       
 

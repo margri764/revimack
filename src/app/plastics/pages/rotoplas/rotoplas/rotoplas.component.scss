@@ -296,6 +296,10 @@ opacity: 0.6;
   width: 55px;
 }
 
+.btnNav{
+  font-size: 5vw;
+}
+
 #back{
   width: 35px;
 }
@@ -342,40 +346,45 @@ opacity: 0.6;
 }
 
 @media  screen and (min-width: 961px) and (max-width: 1280px){
-    .headpesce{
-        height: 40vw;
-        background-image: url(../../../../../assets/rotoplas/headerLogo.png);        
-        background-position: center;
-        background-size: cover;
-        border-bottom: 10px solid rgb(151, 10, 10);
-    }
-    
-    .fa-whatsapp{
-      font-size: 3vw;   
-  }
-
-
-  .fa-instagram{
-      font-size: 3vw;     
-  }
-  
-  .fa-facebook-f{
-      font-size: 3vw;
-  }
-
-  .fa-envelope{
-      font-size: 3vw;
-  }
-
-  .fa-map-marker-alt{
-      font-size: 3vw;
-  }
-
-
+.headpesce{
+    height: 40vw;
+    background-image: url(../../../../../assets/rotoplas/headerLogo.png);        
+    background-position: center;
+    background-size: cover;
+    border-bottom: 10px solid rgb(151, 10, 10);
 }
-@media  screen and (min-width: 1281px) and (max-width: 1919px){
-  .fa-whatsapp{
-    font-size: 4vw;   
+
+.offcanvas{
+  width: 90vw;
+}
+
+#up{
+  width: 80px;
+  right: 10px;
+}
+
+#plus{
+  width: 55px;
+}
+
+.btnNav{
+  font-size: 5vw;
+}
+
+#back{
+  width: 35px;
+}
+
+.card-title{
+  font-size: 5vw;
+}
+
+.card-text{
+  font-size: 3.5vw;
+}
+    
+.fa-whatsapp{
+    font-size: 3vw;   
 }
 
 
@@ -395,26 +404,36 @@ opacity: 0.6;
     font-size: 3vw;
 }
 
+
+}
+@media  screen and (min-width: 1281px) and (max-width: 1919px){
   .fa-whatsapp{
-      font-size: 4vw;   
-  }
+    font-size: 4vw;   
+}
 
 
-  .fa-instagram{
-      font-size: 3vw;     
-  }
-  
-  .fa-facebook-f{
-      font-size: 3vw;
-  }
+.fa-instagram{
+    font-size: 2.5vw;     
+}
 
-  .fa-envelope{
-      font-size: 3vw;
-  }
+.fa-facebook-f{
+    font-size: 2.5vw;
+}
 
-  .fa-map-marker-alt{
-      font-size: 3vw;
-  }
+.fa-envelope{
+    font-size: 2vw;
+}
+
+.fa-map-marker-alt{
+    font-size: 2.5vw;
+}
+
+.fa-whatsapp{
+    font-size: 2.6vw;   
+}
+
+
+
 
 
  

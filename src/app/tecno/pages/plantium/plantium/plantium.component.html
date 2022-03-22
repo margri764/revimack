@@ -1,8 +1,13 @@
 
+<div  fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center">
+
+    <div fxFlex="100" #top>
+        <app-navbar></app-navbar>
+    </div>
 
 <div  fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center" style=" background-color: white; margin-top: 10px;" >
 
-    <div  fxFlex="100" class="animate__animated animate__fadeIn headerPlantium" fxLayoutAlign="end" #top> </div>
+    <div  fxFlex="100" class="animate__animated animate__fadeIn headerPlantium" fxLayoutAlign="end" > </div>
 
     <img src="assets/plantium/back.png" routerLink="../../home" id="back" >
     <img src="assets/arrow.png" (click)="goToTop()" id="up">
@@ -13,10 +18,11 @@
 
 
     <div  fxFlex="90"  style="margin-top: 50px;" class="titleHeader"  >
-          <!-- <h5 class="card-title">La Empresa</h5> -->
+
           <blockquote class="blockquote" fxFlex="100" >" Nuestra misión consiste en el trabajo constante, el esfuerzo permanente para ser los proveedores de agricultura de precisión más confiable y prestigioso de América Latina. Basados en la excelencia en nuestros productos y servicios, para la gente con la que convivimos y con el compromiso de nuestro equipo. Siempre con nuestros principios por delante: visión, desafío, innovación y perseverancia.. " 
             <footer class="blockquote-footer" style="margin-top: 10px;margin-right: 5px; text-align: end;" >Plantium <cite title="Source Title">Agricultura de precisión.</cite></footer>
           </blockquote>
+
     </div>
 
     <div fxLayout="row wrap" fxFlex="98" class="products" #top >
@@ -43,9 +49,9 @@
 
     <div fxLayout="row wrap" fxFlex="98" fxLayoutAlign="center center">
         <div class="frame" fxFlex="100" fxLayoutAlign="center center" >
-              <img [src]="imgCelOrDesktop()" fxFlex="100" style="border: 2px solid red;">
+              <img [src]="ecuRow" fxFlex="100">
         <figcaption fxLayout="row wrap" fxLayoutAlign="center center">
-            <button type="button"  class="btnSend mt-5"data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" >Enviar consulta</button>
+            <button type="button"  class="btnSend mt-5" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" >Enviar consulta</button>
         </figcaption>
     </div>
     </div>
@@ -54,7 +60,7 @@
 
 
     <!-- cards ecurow -->
-    <div fxLayout="row wrap" fxLayout.xs="column" fxFlex="98" fxLayoutAlign="space-between"  style="margin-top: 20px;" >
+    <div fxLayout="row wrap" fxLayout.xs="column" fxFlex="98" fxFlex.xs="90" fxLayoutAlign="space-between"  style="margin-top: 20px;" >
 
         <div class="card full"  fxFlex="32" fxFlex.xs="100">
             <img src="assets/plantium/espacio.jpg" class="card-img-top " alt="espaciamiento plantas plantium " >
@@ -135,7 +141,7 @@
     <div fxLayout="row wrap" fxFlex="98" fxLayoutAlign="center center" style="margin-top: 80px;">
         <div class="frame" fxFlex="100" fxLayoutAlign="center center" >
 
-              <img src="assets/plantium/steer.png" >
+              <img [src]="steer" fxFlex="100" >
         <figcaption fxLayout="row wrap" fxLayoutAlign="center center">
             <button type="button"  class="btnSend mt-5" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" >Enviar consulta</button>
         </figcaption>
@@ -150,7 +156,7 @@
     </div>
 
     <!-- cards pilotos -->
-    <div fxLayout="row wrap" fxLayout.xs="column" fxFlex="98" fxLayoutAlign="space-between"  style="margin-top: 40px;">
+    <div fxLayout="row wrap" fxLayout.xs="column" fxFlex="98" fxFlex.xs="90" fxLayoutAlign="space-between"  style="margin-top: 40px;">
 
         <div class="card full"  fxFlex="49" fxFlex.xs="100">
             <div class="card-body">
@@ -201,10 +207,10 @@
             <p class="text"  data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">+ info</p>
         </div>
     </div>
-
+</div>
 
 <!-- Formulario canvas -->
-<div class="offcanvas offcanvas-start" tabindex="-1"  id="formCanvas" aria-labelledby="offcanvasExampleLabel" style="width: 40%;" >
+<div class="offcanvas offcanvas-start" tabindex="-1"  id="formCanvas" aria-labelledby="offcanvasExampleLabel" >
 
    
     <div    fxLayoutAlign="end" fxLayout="row" style="margin-top: 20px; padding: 20px;">
@@ -231,7 +237,7 @@
 
        </div>
   
-        <div fxFlex="90" fxLayoutGap.xs="20px" fxLayoutGap="35px"  fxLayoutAlign.xs="start end" fxLayoutAlign="space-between" style="margin-top: 30px;">
+        <div fxFlex="90" fxLayoutGap.xs="20px" fxLayoutGap="35px"   fxLayoutAlign="space-between" style="margin-top: 30px;">
             <a  href="https://wa.me/+542302623444?text=Hola!!%20" target="blank" > 
              <i class="fab fa-whatsapp" ></i>
            </a>

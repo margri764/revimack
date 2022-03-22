@@ -22,6 +22,7 @@ export class PlantiumComponent implements OnInit {
   horizontal : any;
   toppage : any;
   public ecuRow : string='';
+  public steer : string='';
   public thanks : boolean = true;
 
 
@@ -133,13 +134,12 @@ export class PlantiumComponent implements OnInit {
       }, 0);
   }
 
-  imgCelOrDesktop(){
-    (screen.width>=600) ? this.ecuRow= "assets/plantium/ecuRow_cel.png" : this.ecuRow="assets/platium/ecuRow.png"
-  }
 
   ngOnInit(): void {
     this.goToTop();
-    this.imgCelOrDesktop();
+
+    (screen.width <= 600) ? this.ecuRow= "assets/plantium/ecuRow_cel.png" : this.ecuRow="assets/plantium/ecuRow.png";
+    (screen.width <= 600) ? this.steer= "assets/plantium/steer-phone.png" : this.steer= "assets/plantium/steer.png";
 
 
 
