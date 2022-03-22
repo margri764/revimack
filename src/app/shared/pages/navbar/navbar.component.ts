@@ -11,6 +11,8 @@ export class NavbarComponent implements OnInit {
 
   public navbarOpen : boolean = false;
   public spinnerOn : boolean = false;
+  public phone : boolean = false;
+  
 
   constructor(
             private router : Router
@@ -22,6 +24,8 @@ export class NavbarComponent implements OnInit {
     .subscribe((evt) => {
       this.navbarOpen = false;
     });
+
+    (screen.width <= 600) ? this.phone = true : false; 
   }
 
   toggleNavbar() {

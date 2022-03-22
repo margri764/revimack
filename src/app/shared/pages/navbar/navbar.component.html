@@ -1,7 +1,10 @@
-<br>
-<div fxLayoutAlign="center" fxFlex="100" fxLayout="row wrap" style="margin-top: 20px;">  
 
-<div fxLayout="row wrap"  fxFlex="99" class="customNavbar">  
+
+<div fxLayout="row wrap" fxLayoutAlign="end" fxFlex="100"  style="margin-top: 10px;">  
+
+
+  <!-- start navbar desktop -->
+<div fxLayout="row wrap"  fxFlex="99" class="customNavbar" *ngIf="!phone">  
 
   <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="10px" fxFlex="80" >
 
@@ -27,28 +30,81 @@
 
 
 </div>
+  <!-- end navbar desktop -->
+
+<!-- start phone navbar -->
+<div fxFlex="15" fxLayoutAlign="center" *ngIf="phone">
+    <span   id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-house"></i></span>
+    
+    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2" style="width: 100vw;">
+      
+      <li>
+        <a class="dropdown-item active"class="btnNav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" >Productos</a> 
+        <a class="dropdown-item" class="btnNav">Contactanos</a> &nbsp;
+        <a class="dropdown-item" class="btnNav">Nosotros</a>      
+      </li> &nbsp;
+      
+      <li><a class="dropdown-item" class="btnNav">Promociones</a></li> <br>
+      
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" class="btnNav">Novedades</a></li>
+    </ul>
+  </div>
+
+<div fxFlex="15"  fxLayoutAlign="center center" *ngIf="phone" >
+  <span id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-search"></i></span>
+  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1" style="width: 100vw;">
+    <form class="d-flex">
+      <input class="form-control me-2 btnNav" type="search" placeholder="Search" aria-label="Search" style="color: black;">
+    </form>
+    <!-- <li><a class="dropdown-item active"class="btnNav">Productos</a> </li> -->
+  </ul>
+</div>
+
+<div fxFlex="15" fxLayoutAlign="center" *ngIf="phone">
+  <span   id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-list"></i></span>
+  
+  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2" >
+    
+    <li> <a class="dropdown-item active" class="btnNav">Crear cuenta</a> </li> 
+    <li> <a class="dropdown-item active" class="btnNav">Iniciar sesión</a> </li> 
+
+
+    
+    
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" class="btnNav">Cerrar Sesión</a></li>
+  </ul>
+</div>
+<!-- end start phone navbar -->
+  
+ 
+  
+  
+</div> 
 
 
 
+<!-- canvas -->
 <div class="offcanvas offcanvas-start" tabindex="-1" width="500" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"  >
-
+  
   
     <div class="offcanvas-header" style="margin-top: 30px;">
-
+      
       <div fxLayout="row wrap" fxFlex="90" fxLayoutAlign="center center" class="consulta">
         <div fxFlex="60" fxFlex.xs="60" > <h4>¿Que necesitás?</h4></div> 
         <div fxFlex="40" fxFlex.xs="40" class="dividerGreen"></div>
- </div>
+      </div>
     
       <label type="label" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></label>
     </div>
 
 
-    <div class="offcanvas-body" fxLayout="row wrap" fxLayoutAlign="center" style="margin-top: 100px;">
+    <div class="offcanvas-body" fxLayout="row wrap" fxLayoutAlign="center" style="margin-top: 30px;">
     
-      <div fxLayout="row wrap" fxLayoutAlign="start" fxFlexOffset="20px" fxFlex="80">
+      <div fxLayout="row wrap" fxLayoutAlign="start" fxFlexOffset="20px" fxFlex="80"  >
 
-          <p ><a routerLink="../agro/maquinas"><label data-bs-dismiss="offcanvas">Venta de Maquinaria Agricola</label></a></p>
+          <p ><a routerLink="../agro/maquinas"><label data-bs-dismiss="offcanvas" >Venta de Maquinaria Agricola</label></a></p>
           <p><a routerLink="../implementos/implementos-agricolas" > <label data-bs-dismiss="offcanvas"> Venta de Implementos</label></a></p>
           <p><a routerLink="../eco/plasticos" > <label data-bs-dismiss="offcanvas"> Linea de plásticos</label> </a></p>
           <p><a routerLink="../insumos/repuestos-accesorios" > <label data-bs-dismiss="offcanvas">Repuestos y accesorios</label></a></p>
@@ -61,7 +117,6 @@
    
     
     </div>
+  </div> 
  
 
-</div> 
-</div> 

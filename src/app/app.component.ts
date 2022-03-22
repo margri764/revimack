@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
 
   title = 'revimack';
   public disabled : boolean=false;
+  public phone : boolean = false;
 
   constructor(
             public router : Router
@@ -17,13 +18,16 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit(): void {
+
+
     
     setTimeout(()=>{
 
       this.disabled = true
 
-    },4000)
-  
+    },4000);
+    
+    (screen.width <= 600) ? this.phone= true : false;
   }
 
 

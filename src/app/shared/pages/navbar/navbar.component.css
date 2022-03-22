@@ -138,17 +138,41 @@
     margin-left: 2vw;
   }
 
-
-  .btn{
-    font-size: 3vw;
+  .offcanvas {
+      height: 90vh; 
   }
+
+  .offcanvas-body label{
+    font-family: "Monserrat",sans-serif;
+    font-weight: 100;
+    font-size: 6vw;
+
+  }
+
+  .btnNav{
+    font-size: 5vw;
+  }
+  
+  .bi.bi-house{
+    color: rgb(179, 179, 179);
+    font-size: 8vw;
+  }
+
+  .bi.bi-list{
+    color: rgb(179, 179, 179);
+    font-size: 8vw;
+  }
+
+  .bi.bi-search{
+    color: rgb(179, 179, 179);
+
+    font-size: 7vw;
+  }
+
   a.searchResult {
     font-size: 3vw; 
- }
- .navbar-brand{
-  font-size: 4.6vw;
-   
   }
+ 
 
   .fa-whatsapp{
     font-size: 10vw;

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-pesce',
@@ -7,11 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PesceComponent implements OnInit {
 
+  @ViewChild ("acond" , {static: true} )   acond! : ElementRef;
+  @ViewChild ("abon" , {static: true} )    abon! : ElementRef;
+  @ViewChild ("desterr" , {static: true} ) desterr! : ElementRef;
+  @ViewChild ("rol" , {static: true} )     rol! : ElementRef;
+
   public acondicionador : boolean=false;
   public abono : boolean=false;
   public desterronador : boolean=false;
   public rolo : boolean=false;
-
+  public phone : boolean=false;
 
 
   constructor() { }
@@ -57,7 +62,60 @@ export class PesceComponent implements OnInit {
 
   }
 
+  goToAcondicionador(){
+
+    setTimeout( () => {
+
+      this.acond.nativeElement.scrollIntoView(
+      { 
+        alignToTop: true,
+        behavior: "smooth",
+        block: "center",
+      });
+      }, 0);
+  }
+
+  goToAbono(){
+
+    setTimeout( () => {
+
+      this.abon.nativeElement.scrollIntoView(
+      { 
+        alignToTop: true,
+        behavior: "smooth",
+        block: "center",
+      });
+      }, 0);
+  }
+  
+  goToDesterronador(){
+
+    setTimeout( () => {
+
+      this.desterr.nativeElement.scrollIntoView(
+      { 
+        alignToTop: true,
+        behavior: "smooth",
+        block: "center",
+      });
+      }, 0);
+  }
+
+  goToRolo(){
+
+    setTimeout( () => {
+
+      this.rol.nativeElement.scrollIntoView(
+      { 
+        alignToTop: true,
+        behavior: "smooth",
+        block: "center",
+      });
+      }, 0);
+  }
+
   ngOnInit(): void {
+    (screen.width <= 600) ? this.phone= true : false;
   }
 
 }

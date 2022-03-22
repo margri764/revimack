@@ -27,23 +27,34 @@ h1{
     font-weight: 400;
     }
     
-    .products{
-      margin-top: 20px;
-      margin-bottom: 80px;
-      border-radius: 10px; 
-      padding: 20px;
-      background-color: rgb(251, 251, 251);
-  
-      box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
-      -webkit-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
-      -moz-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
-    }
+.products{
+    margin-top: 20px;
+    margin-bottom: 80px;
+    border-radius: 10px; 
+    padding: 20px;
+    background-color: rgb(251, 251, 251);
+
+    box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+    -webkit-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+    -moz-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+}
 
 
 @media  screen and (max-width: 600px){  
 
+    .products{
 
+    }
+
+    .card-title{
+     
+        font-size: 6vw;
+    }
  
+    .card-text{
+        font-size: 5vw;
+    
+    }
 
 }
 

@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  public phone : boolean=false;
   constructor() { }
 
   ngOnInit(): void {
+
+    (screen.width <= 600) ? this.phone= true : false;
   }
 
 }

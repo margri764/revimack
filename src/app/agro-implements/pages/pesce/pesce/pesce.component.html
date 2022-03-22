@@ -1,13 +1,18 @@
+
+ 
+ <div fxLayout="row wrap" fxLayoutAlign="center">
+ 
+ <div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="100" *ngIf="phone" style="margin-bottom: 10px;">
+    <app-navbar fxFlex="100"></app-navbar>
+    </div>
+
 <div  fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center" style=" background-color: white; margin-top: 10px;">
 
+    <img src="assets/plantium/back.png" routerLink="../../home" id="back"  >
+    
     <div   fxFlex="100" class="animate__animated animate__fadeIn headpesce"> </div>
 
-    <div fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="3px"  style="margin-top: 5px;">
-        <div class="border"   fxFlex="30"></div> 
-        <div class="border2"  fxFlex="5"></div>
-        <div class="border3"  fxFlex="2"></div>
-        
-    </div>    
+  
 
     <div class="card" fxFlex="98"  >
         <div class="card-body">
@@ -29,33 +34,33 @@
     <div fxFlex="98" fxLayout="row wrap" fxLayoutAlign="space-between" style="margin-bottom: 20px;" >
 
         <!-- acondicionador -->
-        <div fxFlex="20" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#acondicionador" aria-expanded="false" aria-controls="acondicionador"  >
+        <div fxFlex="20" fxFlex.xs="50" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#acondicionador" aria-expanded="false" aria-controls="acondicionador" (click)="goToAcondicionador()"  >
             <div class="borderdouble">
-            <img src="assets/pesce/acondicionador.png" alt=""   style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
+                <img src="assets/pesce/acondicionador.png" alt="acondicionador pesce"   style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
             </div>
 
-            <h5>Acondicionador de suelos</h5>
+            <h5 class="text-center">Acondicionador de suelos</h5>
         </div>
 
         <!-- abono -->
-        <div fxFlex="20" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#abono" aria-expanded="false" aria-controls="abono" >
+        <div fxFlex="20" fxFlex.xs="50" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#abono" aria-expanded="false" aria-controls="abono" (click)="goToAbono()" >
                 <div class="borderdouble2"  >
-                    <img src="assets/pesce/abono.png" alt=""   style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
+                    <img src="assets/pesce/abono.png" alt="fertilizante pesce"   style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
                 </div>
     
                     <h5 class="text-center">Distribuidor de Abonos y Fertilizantes</h5>
             </div>
         
         <!-- rastron desterronador -->
-        <div fxFlex="20" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#desterronador" aria-expanded="false" aria-controls="desterronador">
+        <div fxFlex="20"  fxFlex.xs="50" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#desterronador" aria-expanded="false" aria-controls="desterronador" (click)="goToDesterronador()">
             <div class="borderdouble3"  >
                 <img src="assets/pesce/rastron-desterronador.png" alt=""   style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
             </div>
-                <h5 fxLayoutAlign="center">Rastron Desterronador</h5>
+                <h5 class="text-center">Rastron Desterronador</h5>
         </div>
 
          <!-- rolo picador -->
-         <div fxFlex="20" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#desterronador" aria-expanded="false" aria-controls="desterronador" >
+         <div fxFlex="20" fxFlex.xs="50" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#rolo" aria-expanded="false" aria-controls="desterronador" (click)="goToRolo()">
             <div class="borderdouble2"  >
                 <img src="assets/pesce/rolo-picador.png" alt=""   style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
             </div>
@@ -64,12 +69,12 @@
         </div>
 
             <!-- + -->
-            <div fxFlex="20" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#desterronador" aria-expanded="false" aria-controls="desterronador" >
+            <div fxFlex="20" fxFlex.xs="50" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#desterronador" aria-expanded="false" aria-controls="desterronador" >
             <div class="borderdouble" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">
-                <img src="assets/mas.png" alt="" class="plus"   style="border-radius: 300px; cursor: pointer; padding: 2px; width: 180px;opacity: 0.2;" fxFlex="100">
+                <img src="assets/mas.png" alt="" class="plus"   fxFlex="100">
             </div>
 
-            <h5 >mas info... </h5>
+            <h5 class="text-center">mas info... </h5>
         </div>
 
     </div>
@@ -77,56 +82,65 @@
     <!-- COLLAPSES -->
 
 
-    <div class="collapse" id="acondicionador" fxFlex="98" style="margin-bottom: 50px;" >
+    <div class="collapse" id="acondicionador" fxFlex="98" style="margin-bottom: 50px;" #acond>
 
-        <div fxLayout="row wrap"  fxLayoutAlign="center "  class="products">
+        <div fxLayout="row wrap"  fxLayoutAlign="center"  class="products">
  
             <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-between center" style="margin-top: 80px;">
-                <div fxFlex="40" fxFlex.xs="60" > <h1 >Acondicionador de suelos</h1></div> 
-                <div fxFlex="45" fxFlex.xs="40" class="divider"></div>
-                <div fxFlex="5" fxFlex.xs="40" data-bs-toggle="collapse" data-bs-target="#acondicionador" aria-expanded="false" aria-controls="acondicionador"  ><img src="assets/cerrar.svg" style="cursor: pointer;opacity: 0.2"></div>
+                <div fxFlex="40" fxFlex.xs="40" > <h1 >Acondicionador de suelos</h1></div> 
+                <div fxFlex="45" fxFlex.xs="35" class="divider"></div>
+                <div fxFlex="5" fxFlex.xs="5" data-bs-toggle="collapse" data-bs-target="#acondicionador" aria-expanded="false" aria-controls="acondicionador"  ><img src="assets/cerrar.svg" style="cursor: pointer;opacity: 0.2"></div>
             </div>
         </div>
   
         <div fxLayout="row wrap"  >
-        <div  fxFlex="50">
+
+        <div  fxFlex="50" fxFlex.xs="98" fxLayoutAlign="center">
            
-                <img src="assets/pesce/acondicionador.png" alt=""   style="padding: 2px;" fxFlex="80" >
+                <img src="assets/pesce/acondicionador.png" alt="acondicionador pesce"   style="padding: 2px;" fxFlex="90" >
                 
             </div>
 
 
-            <div  fxFlex="50" fxLayout="row wrap" fxLayoutAlign="start space-between" >
+        <div  fxFlex="50" fxFlex.xs="95" fxLayout="row wrap" fxLayoutAlign="center space-between" >
             
-            <div fxFlex="100">
+            <div fxFlex="90" >
             
-            <li>Acondicionador de suelos multipropósito.</li>
+                <li>Acondicionador de suelos multipropósito.</li>
 
-            <li> Ancho de labor: 6,00 metros</li>
-            
-            <li>Velocidad de trabajo 12-18 km/h</li>
-            
-            <li>Discos dentados de 22” con regulación de la separación entre ambos trenes de discos.</li>
-                    
-            <li>Accionamiento hidráulico mediante cilindros de 3 1/2” x 12” </li>
-                    
-           <li>Cubiertas 400 x 600 15.5”</li>
-
-           <li>Potencia requerida:  220 - 240 HP.</li>
+                <li> Ancho de labor: 6,00 metros</li>
+                
+                <li>Velocidad de trabajo 12-18 km/h</li>
+                
+                <li>Discos dentados de 22” con regulación de la separación entre ambos trenes de discos.</li>
                         
-           <li>  Ancho de transporte: 3,30 metros.</li>
-        </div>
-        <div fxFlex="100"> 
-            <div style="margin-top: 15px;"> <button class="btnContact" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Necesito mas información</button></div>
-            <div style="margin-top: 15px;"> <img src="assets/revimack-texto.png" alt="logo revimack" width="30%"></div>
+                <li>Accionamiento hidráulico mediante cilindros de 3 1/2” x 12” </li>
+                        
+            <li>Cubiertas 400 x 600 15.5”</li>
+
+            <li>Potencia requerida:  220 - 240 HP.</li>
+                            
+            <li>  Ancho de transporte: 3,30 metros.</li>
+          </div>
+
+        <div fxLayout="row wrap " fxFlex="90" style="margin-top: 15px;" > 
+           
+            <div fxFlex="100" fxLayoutAlign="start"> 
+                <button  class="btnContact" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Necesito mas información
+                </button>
+            </div>
+
+            <div fxFlex="100" fxLayoutAlign="start" style="margin-top: 15px;"> 
+                <img src="assets/revimack-texto.png" alt="logo revimack" fxFlex="30">
+            </div>
         </div>
 
-        </div>
+    </div>
       
       </div>
     </div>
 
-    <div class="collapse" id="abono" fxFlex="98" style="margin-bottom: 50px;">
+    <div class="collapse" id="abono" fxFlex="98" style="margin-bottom: 50px;" #abon>
 
         <div fxLayout="row wrap"  fxLayoutAlign="center "  class="products">
  
@@ -178,7 +192,7 @@
       </div>
     </div>
 
-    <div class="collapse" id="desterronador" fxFlex="98" style="margin-bottom: 50px;" [ngClass]="{ 'show': desterronador}">
+    <div class="collapse" id="desterronador" fxFlex="98" style="margin-bottom: 50px;" #desterr>
 
         <div fxLayout="row wrap"  fxLayoutAlign="center "  class="products">
  
@@ -230,7 +244,7 @@
       </div>
     </div>
 
-    <div class="collapse" id="rolo" fxFlex="98" style="margin-bottom: 50px;" [ngClass]="{ 'show': rolo}">
+    <div class="collapse" id="rolo" fxFlex="98" style="margin-bottom: 50px;" #rol>
 
         <div fxLayout="row wrap"  fxLayoutAlign="center "  class="products">
  
@@ -285,7 +299,7 @@
 
 
 <!-- Formulario canvas -->
-<div class="offcanvas offcanvas-start" tabindex="-1"  id="formCanvas" aria-labelledby="offcanvasExampleLabel" style="width: 40%;" >
+<div class="offcanvas offcanvas-start" tabindex="-1"  id="formCanvas" aria-labelledby="offcanvasExampleLabel"  >
    
     <div    fxLayoutAlign="end" fxLayout="row" style="margin-top: 20px; padding: 20px;">
           <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
@@ -311,7 +325,7 @@
 
        </div>
   
-        <div fxFlex="90" fxLayoutGap.xs="20px" fxLayoutGap="35px"  fxLayoutAlign.xs="start end" fxLayoutAlign="space-between" style="margin-top: 30px;">
+        <div fxFlex="90" fxLayoutGap.xs="20px" fxLayoutGap="35px"  fxLayoutAlign.xs="space-between" fxLayoutAlign="space-between" style="margin-top: 30px;">
             <a  href="https://wa.me/+542302623444?text=Hola!!%20" target="blank" > 
              <i class="fab fa-whatsapp" ></i>
            </a>
@@ -379,4 +393,5 @@
 </div>
 <!-- end slider brand -->
 
+</div>
 </div>
