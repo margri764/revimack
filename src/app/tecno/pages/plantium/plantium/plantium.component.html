@@ -4,8 +4,8 @@
 
     <div  fxFlex="100" class="animate__animated animate__fadeIn headerPlantium" fxLayoutAlign="end" #top> </div>
 
-    <img src="assets/plantium/back.png" routerLink="../../home" id="back" width="50px" >
-    <img src="assets/arrow.png" (click)="goToTop()" id="up" width="100px" >
+    <img src="assets/plantium/back.png" routerLink="../../home" id="back" >
+    <img src="assets/arrow.png" (click)="goToTop()" id="up">
     <!-- <img src="assets/plus.png"  data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas"id="plus" width="110px" > -->
 
 
@@ -14,7 +14,7 @@
 
     <div  fxFlex="90"  style="margin-top: 50px;" class="titleHeader"  >
           <!-- <h5 class="card-title">La Empresa</h5> -->
-          <blockquote class="blockquote" >" Nuestra misión consiste en el trabajo constante, el esfuerzo permanente para ser los proveedores de agricultura de precisión más confiable y prestigioso de América Latina. Basados en la excelencia en nuestros productos y servicios, para la gente con la que convivimos y con el compromiso de nuestro equipo. Siempre con nuestros principios por delante: visión, desafío, innovación y perseverancia.. " 
+          <blockquote class="blockquote" fxFlex="100" >" Nuestra misión consiste en el trabajo constante, el esfuerzo permanente para ser los proveedores de agricultura de precisión más confiable y prestigioso de América Latina. Basados en la excelencia en nuestros productos y servicios, para la gente con la que convivimos y con el compromiso de nuestro equipo. Siempre con nuestros principios por delante: visión, desafío, innovación y perseverancia.. " 
             <footer class="blockquote-footer" style="margin-top: 10px;margin-right: 5px; text-align: end;" >Plantium <cite title="Source Title">Agricultura de precisión.</cite></footer>
           </blockquote>
     </div>
@@ -43,8 +43,7 @@
 
     <div fxLayout="row wrap" fxFlex="98" fxLayoutAlign="center center">
         <div class="frame" fxFlex="100" fxLayoutAlign="center center" >
-
-              <img src="assets/plantium/ecuRow.png" >
+              <img [src]="imgCelOrDesktop()" fxFlex="100" style="border: 2px solid red;">
         <figcaption fxLayout="row wrap" fxLayoutAlign="center center">
             <button type="button"  class="btnSend mt-5"data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" >Enviar consulta</button>
         </figcaption>

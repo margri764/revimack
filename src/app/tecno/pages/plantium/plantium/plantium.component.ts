@@ -21,6 +21,7 @@ export class PlantiumComponent implements OnInit {
   antifire : any;
   horizontal : any;
   toppage : any;
+  public ecuRow : string='';
   public thanks : boolean = true;
 
 
@@ -132,8 +133,13 @@ export class PlantiumComponent implements OnInit {
       }, 0);
   }
 
+  imgCelOrDesktop(){
+    (screen.width>=600) ? this.ecuRow= "assets/plantium/ecuRow_cel.png" : this.ecuRow="assets/platium/ecuRow.png"
+  }
+
   ngOnInit(): void {
-    this.goToTop()
+    this.goToTop();
+    this.imgCelOrDesktop();
 
 
 

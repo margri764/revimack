@@ -46,60 +46,57 @@ p{
     font-size: 2vw;
 }
 
+h1{
+font-family:'Roboto Condensed','sans-serif';
+font-weight: 400;
+}
 
+.products{
+  margin-top: 20px;
+  margin-bottom: 80px;
+  border-radius: 10px; 
+  padding: 20px;
+  background-color: rgb(251, 251, 251);
 
-  h1{
-  font-family:'Roboto Condensed','sans-serif';
-  font-weight: 400;
-  }
-  
-  .products{
-    margin-top: 20px;
-    margin-bottom: 80px;
-    border-radius: 10px; 
-    padding: 20px;
-    background-color: rgb(251, 251, 251);
-
-    box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
-    -webkit-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
-    -moz-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
-  }
+  box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+  -webkit-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+  -moz-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+}
 
    
-    .btnNav{
-      background-color: rgb(245, 245, 245);
-      color: rgb(5, 5, 5);
-      font-family:'Roboto Condensed','sans-serif';
-      font-weight: 500;
-      border-radius: 5px;
-      border: none;
+.btnNav{
+  background-color: rgb(245, 245, 245);
+  color: rgb(5, 5, 5);
+  font-family:'Roboto Condensed','sans-serif';
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
 
-      box-shadow: 1px 1px 5px 0px rgb(226, 226, 226);
-      -webkit-box-shadow: 1px 1px 5px 0px rgb(226, 226, 226);
-      -moz-box-shadow: 1px 1px 5px 0px rgb(226, 226, 226);
-      transition: 10ms
-    }
-    .btnNav:hover{
-      transform: scale(1.01);
-    }
+  box-shadow: 1px 1px 5px 0px rgb(226, 226, 226);
+  -webkit-box-shadow: 1px 1px 5px 0px rgb(226, 226, 226);
+  -moz-box-shadow: 1px 1px 5px 0px rgb(226, 226, 226);
+  transition: 10ms
+}
+.btnNav:hover{
+  transform: scale(1.01);
+}
 
-  .divider{
-    height: 5px;
-    background-color:rgb(37, 150, 190); 
-    opacity: 0.6;
+.divider{
+height: 5px;
+background-color:rgb(37, 150, 190); 
+opacity: 0.6;
 }
 
 .plus{
-    border-radius: 300px;
-    padding: 2px;
-    cursor: pointer;
-    width: 180px;
-    opacity: 0.2; 
+  border-radius: 300px;
+  padding: 2px;
+  cursor: pointer;
+  width: 180px;
+  opacity: 0.2; 
 
-    
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease;
-   -ms-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
 }
 .plus:hover{
   -webkit-transform: rotate(90deg);
@@ -107,27 +104,20 @@ p{
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-// @keyframes rotation {
-//   from {
-//     transform: rotate(0deg);
-//   }
-//   to {
-//     transform: rotate(359deg);
-//   }
-// }
 
 .dividerGreen{
   height: 3px;
   background-color: #82b75c; 
   opacity: 0.6;
 }
+
 #back {
   position:absolute; 
   top: 20px; /* Place the button at the bottom of the page */
   left: 10px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   cursor: pointer; /* Add a mouse pointer on hover */
-  // padding:20px; /* Some padding */
+  width: 50px;
   opacity: 0.6;
 }
 
@@ -258,12 +248,13 @@ p{
 
 #up {
   position: fixed; 
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
+  bottom: 10px; /* Place the button at the bottom of the page */
+  right: 10px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
   opacity: 0.6;
+  width: 100px;
 }
 
 #up:hover {
@@ -273,16 +264,11 @@ p{
 #plus {
   position: fixed; 
   bottom: 20px; /* Place the button at the bottom of the page */
-  left: 30px; /* Place the button 30px from the right */
+  left: 5px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
   opacity: 0.4;
-
-  // box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
-  // -webkit-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
-  // -moz-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
-
+  width: 80px;
 }
 
 #plus:hover {
@@ -291,8 +277,39 @@ p{
 
 @media  screen and (max-width: 600px){  
 
-  .fa-whatsapp{
-    font-size: 8vw;   
+.headerRotoplas{
+  height: 50vw;
+  background-image: url(../../../../../assets/rotoplas/headerLogo-phone.png);
+
+}
+
+.offcanvas{
+  width: 90vw;
+}
+
+#up{
+  width: 80px;
+  right: 10px;
+}
+
+#plus{
+  width: 55px;
+}
+
+#back{
+  width: 35px;
+}
+
+.card-title{
+  font-size: 5vw;
+}
+
+.card-text{
+  font-size: 3.5vw;
+}
+
+.fa-whatsapp{
+  font-size: 8vw;   
 }
 
 .fa-instagram{

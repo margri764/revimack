@@ -2,15 +2,18 @@
  
  <div fxLayout="row wrap" fxLayoutAlign="center">
  
- <div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="100" *ngIf="phone" style="margin-bottom: 10px;">
+ <div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="100" *ngIf="phone" style="margin-bottom: 8px;">
     <app-navbar fxFlex="100"></app-navbar>
     </div>
 
 <div  fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center" style=" background-color: white; margin-top: 10px;">
 
     <img src="assets/plantium/back.png" routerLink="../../home" id="back"  >
+    <img src="assets/arrow.png" (click)="goToTop()" id="up"  >
+
     
-    <div   fxFlex="100" class="animate__animated animate__fadeIn headpesce"> </div>
+    <div   fxFlex="100" class="animate__animated animate__fadeIn headpesce" #top> </div>
+    <div fxFlex="100" fxLayoutAlign="center center" class="banner">Industrias Pesce S.A.</div>
 
   
 
@@ -18,7 +21,6 @@
         <div class="card-body">
           <h5 class="card-title">La Empresa</h5>
           <p class="card-text">La Empresa cuenta con una amplia línea de producción dentro de la cual se encuentran las embutidoras de granos secos y extractoras de granos de silo bolsa, adaptando la producción a las necesidades reales de los productores agropecuarios. A partir del año 2020 se ha iniciado la fabricación del acondicionador de suelo disponible en 2 versiones de ancho de trabajo y se continua la producción de el arado terraceador, rastrones desterronadores, rolos picadores de rastrojos, distribuidores de abonos y fertilizantes, mixer de granos y elevadores de granos y fertilizantes a cinta y sinfín. Constituyendo una fuente de trabajo y producción en continuo crecimiento y evolución, que ha permitido mediante experiencia acumulada y la capacitación del personal, un constante desarrollo técnico industrial, aplicando a cada uno de los elementos fabricados los más altos niveles de la técnica actual. </p>
-          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
     </div>
 
@@ -96,10 +98,8 @@
         <div fxLayout="row wrap"  >
 
         <div  fxFlex="50" fxFlex.xs="98" fxLayoutAlign="center">
-           
-                <img src="assets/pesce/acondicionador.png" alt="acondicionador pesce"   style="padding: 2px;" fxFlex="90" >
-                
-            </div>
+            <img src="assets/pesce/acondicionador.png" alt="acondicionador pesce"   style="padding: 2px;" fxFlex="90" >
+        </div>
 
 
         <div  fxFlex="50" fxFlex.xs="95" fxLayout="row wrap" fxLayoutAlign="center space-between" >
@@ -145,22 +145,23 @@
         <div fxLayout="row wrap"  fxLayoutAlign="center "  class="products">
  
             <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-between center" style="margin-top: 80px;">
-                <div fxFlex="40" fxFlex.xs="60" > <h1 >Distribuidor de Abonos y Fertilizantes</h1></div> 
-                <div fxFlex="45" fxFlex.xs="40" class="divider"></div>
-                <div fxFlex="5" fxFlex.xs="40" data-bs-toggle="collapse" data-bs-target="#abono" aria-expanded="false" aria-controls="abono"><img src="assets/cerrar.svg" style="cursor: pointer; opacity: 0.2"></div>
+                <div fxFlex="40" fxFlex.xs="40" > <h1 >Distribuidor de Abonos y Fertilizantes</h1></div> 
+                <div fxFlex="45" fxFlex.xs="35" class="divider"></div>
+                <div fxFlex="5" fxFlex.xs="5" data-bs-toggle="collapse" data-bs-target="#abono" aria-expanded="false" aria-controls="abono"><img src="assets/cerrar.svg" style="cursor: pointer; opacity: 0.2"></div>
             </div>
         </div>
         <div fxLayout="row wrap"  >
-        <div  fxFlex="50">
-           
-                <img src="assets/pesce/abono.png" alt=""   style="border-radius: 5px;" fxFlex="80" >
-                
+       
+            <div  fxFlex="50" fxFlex.xs="98" fxLayoutAlign="center">
+                <img src="assets/pesce/abono.png" alt="acondicionador pesce"   style="padding: 2px;" fxFlex="90" >
             </div>
+    
 
-
-        <div  fxFlex="50" fxLayout="row wrap" fxLayoutAlign="start space-between" >
+       
+        <div  fxFlex="50" fxFlex.xs="95" fxLayout="row wrap" fxLayoutAlign="center space-between" >
             
-         <div fxFlex="100">   
+            
+         <div fxFlex="90">   
             <h3>DESCRIPCION</h3>
             <li> Volumen de carga 6,5m3. sin colmar.</li>
 
@@ -182,10 +183,19 @@
             Opcional:  Boca de descarga regulable mediante cilindro hidráulico.
         </div>
     
-        <div fxFlex="100"> 
-            <div style="margin-top: 15px;"> <button class="btnContact" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Necesito mas información</button></div>
-            <div style="margin-top: 15px;"> <img src="assets/revimack-texto.png" alt="logo revimack" width="30%"></div>
+        <div fxLayout="row wrap " fxFlex="90" style="margin-top: 15px;" > 
+           
+            <div fxFlex="100" fxLayoutAlign="start"> 
+                <button  class="btnContact" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Necesito mas información
+                </button>
+            </div>
+
+            <div fxFlex="100" fxLayoutAlign="start" style="margin-top: 15px;"> 
+                <img src="assets/revimack-texto.png" alt="logo revimack" fxFlex="30">
+            </div>
         </div>
+
+      
 
         </div>
       
@@ -197,47 +207,52 @@
         <div fxLayout="row wrap"  fxLayoutAlign="center "  class="products">
  
             <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-between center" style="margin-top: 80px;">
-                <div fxFlex="40" fxFlex.xs="60" > <h1 >Rastron Desterronador</h1></div> 
-                <div fxFlex="45" fxFlex.xs="40" class="divider"></div>
-                <div fxFlex="5" fxFlex.xs="40" data-bs-toggle="collapse" data-bs-target="#desterronador" aria-expanded="false" aria-controls="desterronador"><img src="assets/cerrar.svg" style="opacity: 0.2;cursor: pointer;"></div>
+                <div fxFlex="40" fxFlex.xs="40" > <h1 >Rastron Desterronador</h1></div> 
+                <div fxFlex="45" fxFlex.xs="35" class="divider"></div>
+                <div fxFlex="5" fxFlex.xs="5" data-bs-toggle="collapse" data-bs-target="#desterronador" aria-expanded="false" aria-controls="desterronador"><img src="assets/cerrar.svg" style="opacity: 0.2;cursor: pointer;"></div>
             </div>
         </div>
         <div fxLayout="row wrap"  >
-        <div  fxFlex="50">
-           
-                <img src="assets/pesce/rastron-desterronador.png" alt=" rastron desterronador"   style="padding: 2px;" fxFlex="80" >
+            <div  fxFlex="50" fxFlex.xs="98" fxLayoutAlign="center">
+                <img src="assets/pesce/rastron-desterronador.png" alt="desterronador pesce"   style="padding: 2px;" fxFlex="90" >
+            </div>
+
+            <div  fxFlex="50" fxFlex.xs="95" fxLayout="row wrap" fxLayoutAlign="center space-between" >
+            
+            <div fxFlex="90">  
+            
+                <h3>DESCRIPCION</h3>
                 
-            </div>
-            <div  fxFlex="50" fxLayout="row wrap" fxLayoutAlign="start space-between" >
+                <li>Ancho de trabajo: 6,40 Mts.</li>
 
- 
-        
-            <div  fxFlex="100" >
-            
-            <h3>DESCRIPCION</h3>
-            
-            <li>Ancho de trabajo: 6,40 Mts.</li>
-
-            <li>Cilindros  Hidráulicos:</li>
-            
-            <li>2 de 3" x 12"</li>
-            
-            <li>1 de 3 1/2" x 8"</li>
-            
-            <li>PESO: 1.750 kgs.</li>
-            
-            <li>RODADO: cubiertas 650 x 16” x 6 telas.</li>
-            
-            <li>POTENCIA REQUERIDA: 120/140 H.P.</li>
-            
-            <li>Cuchillas de acero cambiables (Opcional)</li>
-            <li>Eje trasero con regulación hidráulica (opcional)</li>
-            <li>Cuchillas removedoras</li>
-            <li>Faldon para mayor arrastre de material</li>
+                <li>Cilindros  Hidráulicos:</li>
+                
+                <li>2 de 3" x 12"</li>
+                
+                <li>1 de 3 1/2" x 8"</li>
+                
+                <li>PESO: 1.750 kgs.</li>
+                
+                <li>RODADO: cubiertas 650 x 16” x 6 telas.</li>
+                
+                <li>POTENCIA REQUERIDA: 120/140 H.P.</li>
+                
+                <li>Cuchillas de acero cambiables (Opcional)</li>
+                <li>Eje trasero con regulación hidráulica (opcional)</li>
+                <li>Cuchillas removedoras</li>
+                <li>Faldon para mayor arrastre de material</li>
             </div>
-            <div fxFlex="100"> 
-                <div style="margin-top: 15px;"> <button class="btnContact" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Necesito mas información</button></div>
-                <div style="margin-top: 15px;"> <img src="assets/revimack-texto.png" alt="logo revimack" width="30%"></div>
+
+            <div fxLayout="row wrap " fxFlex="90" style="margin-top: 15px;" > 
+           
+                <div fxFlex="100" fxLayoutAlign="start"> 
+                    <button  class="btnContact" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Necesito mas información
+                    </button>
+                </div>
+    
+                <div fxFlex="100" fxLayoutAlign="start" style="margin-top: 15px;"> 
+                    <img src="assets/revimack-texto.png" alt="logo revimack" fxFlex="30">
+                </div>
             </div>
         </div>
       
@@ -249,38 +264,41 @@
         <div fxLayout="row wrap"  fxLayoutAlign="center "  class="products">
  
             <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-between center" style="margin-top: 80px;">
-                <div fxFlex="40" fxFlex.xs="60" > <h1 >Rolo picador de rastrojos</h1></div> 
-                <div fxFlex="45" fxFlex.xs="40" class="divider"></div>
-                <div fxFlex="5" fxFlex.xs="40" data-bs-toggle="collapse" data-bs-target="#rolo" aria-expanded="false" aria-controls="rolo"><img src="assets/cerrar.svg" style="cursor: pointer;opacity: 0.2"></div>
+                <div fxFlex="40" fxFlex.xs="40" > <h1 >Rolo picador de rastrojos</h1></div> 
+                <div fxFlex="45" fxFlex.xs="35" class="divider"></div>
+                <div fxFlex="5" fxFlex.xs="5" data-bs-toggle="collapse" data-bs-target="#rolo" aria-expanded="false" aria-controls="rolo"><img src="assets/cerrar.svg" style="cursor: pointer;opacity: 0.2"></div>
             </div>
         </div>
-        <div fxLayout="row wrap"  >
-        <div  fxFlex="50">
-           
-                <img src="assets/pesce/rolo-picador.png" alt=" rolo picadorr"   style="padding: 2px;" fxFlex="80" >
-                
+        <div fxLayout="row wrap">
+            <div  fxFlex="50" fxFlex.xs="98" fxLayoutAlign="center">
+                <img src="assets/pesce/rolo-picador.png" alt="desterronador pesce"   style="padding: 2px;" fxFlex="90" >
             </div>
-
-
-            <div  fxFlex="50" fxLayout="row wrap" fxLayoutAlign="start space-between" >
+          
+            <div  fxFlex="50" fxFlex.xs="95" fxLayout="row wrap" fxLayoutAlign="center space-between" >
             
+            <div fxFlex="90">  
+                <h3>DESCRIPCION</h3>
                 
-            <div  fxFlex="100">
-            <h3>DESCRIPCION</h3>
-            
-            <li>Ancho de trabajo: 6,00mts</li>
-            <li>Ancho de transporte: 3,60mts</li>
-            <li>Peso: 2900Kgs sin lastre</li>
-            <li>Lastre: capacidad para 1000Lts</li>
-            <li>Alerones rebatibles: 2 cilindros de 3 1/2”x12”</li>
-            <li>Elevación del conjunto: 2 cilindros de 3 1/2”x12”</li>
-            <li>Cubiertas: 12.5Lx15"</li>
+                <li>Ancho de trabajo: 6,00mts</li>
+                <li>Ancho de transporte: 3,60mts</li>
+                <li>Peso: 2900Kgs sin lastre</li>
+                <li>Lastre: capacidad para 1000Lts</li>
+                <li>Alerones rebatibles: 2 cilindros de 3 1/2”x12”</li>
+                <li>Elevación del conjunto: 2 cilindros de 3 1/2”x12”</li>
+                <li>Cubiertas: 12.5Lx15"</li>
 
-            <li>Chasis tubular reforzado, rolos montados sobre doble rodamiento, con sistema de tiro flotante en posición de trabajo y fijo para el transporte.</li>
+                <li>Chasis tubular reforzado, rolos montados sobre doble rodamiento, con sistema de tiro flotante en posición de trabajo y fijo para el transporte.</li>
             </div>    
-            <div fxFlex="100"> 
-                <div style="margin-top: 15px;"> <button class="btnContact" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Necesito mas información</button></div>
-                <div style="margin-top: 15px;"> <img src="assets/revimack-texto.png" alt="logo revimack" width="30%"></div>
+            <div fxLayout="row wrap " fxFlex="90" style="margin-top: 15px;" > 
+           
+                <div fxFlex="100" fxLayoutAlign="start"> 
+                    <button  class="btnContact" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Necesito mas información
+                    </button>
+                </div>
+    
+                <div fxFlex="100" fxLayoutAlign="start" style="margin-top: 15px;"> 
+                    <img src="assets/revimack-texto.png" alt="logo revimack" fxFlex="30">
+                </div>
             </div>
         </div>
       

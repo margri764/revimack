@@ -17,9 +17,7 @@
 }
 
 .card-title{
-    /* font-family:'Roboto Condensed','sans-serif'; */
     font-family: "Monserrat",sans-serif;
-    /* font-weight:bold; */
     font-weight: 500;
     font-size: 2vw;
 }
@@ -27,39 +25,42 @@
 h1{
     font-family:'Roboto Condensed','sans-serif';
     font-weight: 400;
-    }
+ }
     
-    .products{
-      margin-top: 20px;
-      margin-bottom: 80px;
-      border-radius: 10px; 
-      padding: 20px;
-      background-color: rgb(251, 251, 251);
-  
-      box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
-      -webkit-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
-      -moz-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
-    }
+.products{
+  margin-top: 20px;
+  margin-bottom: 80px;
+  border-radius: 10px; 
+  padding: 20px;
+  background-color: rgb(251, 251, 251);
 
-    .titleHeader{
-        border-left: 12px solid #82b75c;
-        margin-left: 40px;
-      }
-      
-     
-      .titleHeader > .blockquote {
-        margin-left: 30px;
-      }
-      
-      .titleHeader > p{
-        margin-left: 10px;
-      }
-      
-      .blockquote{
-        font-family:'Roboto Condensed','sans-serif';
-        font-weight: 400;
-        font-size: 1.8vw;
-      }
+  box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+  -webkit-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+  -moz-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+}
+
+.titleHeader{
+    border-left: 12px solid #82b75c;
+    /* margin-left: 40px; */
+  }
+  
+  
+  .titleHeader > .blockquote {
+    margin-left: 30px;
+    font-size: 4vw;
+    font-family: "Monserrat",sans-serif;
+    font-weight: 300;
+  }
+  
+  .titleHeader > p{
+    margin-left: 10px;
+  }
+  
+  .blockquote{
+    font-family:'Roboto Condensed','sans-serif';
+    font-weight: 400;
+    font-size: 1.8vw;
+  }
 
 
    .plantium-link{
@@ -77,6 +78,7 @@ h1{
     z-index: 99; /* Make sure it does not overlap */
     cursor: pointer; /* Add a mouse pointer on hover */
     opacity: 0.6;
+    width: 40px;
   }
   #back:hover {
    transform: scale(1.01);
@@ -87,6 +89,22 @@ h1{
       
 @media  screen and (max-width: 600px){  
 
+.card-title{
+  font-size: 5vw;
+}
+
+.card-text{
+  font-size: 3.5vw;
+}
+
+#back{
+  width: 30px;
+}
+
+.titleHeader > .blockquote {
+  margin-left: 9px;
+  font-size: 3.5vw;
+}
 
  
 
@@ -103,6 +121,9 @@ h1{
 
 @media  screen and (min-width: 961px) and (max-width: 1280px){
  
+  .titleHeader > .blockquote {
+    font-size: 2vw;
+  }
 
 }
 @media  screen and (min-width: 1281px) and (max-width: 1919px){

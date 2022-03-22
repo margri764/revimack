@@ -27,22 +27,44 @@ h1{
     font-weight: 400;
     }
     
-    .products{
-      margin-top: 20px;
-      margin-bottom: 80px;
-      border-radius: 10px; 
-      padding: 20px;
-      background-color: rgb(251, 251, 251);
-  
-      box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
-      -webkit-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
-      -moz-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
-    }
+.products{
+    margin-top: 20px;
+    margin-bottom: 80px;
+    border-radius: 10px; 
+    padding: 20px;
+    background-color: rgb(251, 251, 251);
 
+    box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+    -webkit-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+    -moz-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+}
+
+#back {
+    position:absolute; 
+    top: 20px; /* Place the button at the bottom of the page */
+    left: 10px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    opacity: 0.6;
+    width: 50px;
+  }
+  
+  #back:hover {
+   transform: scale(1.01);
+  }
 
 @media  screen and (max-width: 600px){  
 
+#back{
+    width: 30px;
+}    
+.card-title{
+    font-size: 5vw;
+}
 
+.card-text{
+    font-size: 3.5vw;
+}
  
 
 }

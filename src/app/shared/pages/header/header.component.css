@@ -12,7 +12,7 @@
     background-image: url(../../../../assets/logo.png);
     background-position: center;
     background-repeat: no-repeat;
-    border-bottom: 35px solid #82b75c;
+    /* border-bottom: 35px solid #82b75c; */
 
     /* box-shadow: 10px 10px 17px -8px rgba(56,56,56,0.45);
     -webkit-box-shadow: 10px 10px 17px -8px rgba(56,56,56,0.45);
@@ -22,13 +22,23 @@
 
 @media  screen and (max-width: 600px){  
 
-    .header{
-        height: 70vw;
-        background-image: url(../../../../assets/logoCel2.png);
-        background-position: center;
-        background-size: cover;
-    }
- 
+.header{
+    height: 70vw;
+    background-image: url(../../../../assets/logoCel2.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.banner{
+    background-color: #82b75c;
+    height: 35px;
+    color: white;
+    text-align: center;
+    font-family:'Monserrat',sans-serif;
+    font-weight: 400;
+    font-size: 4vw;
+}
+
 
 }
 

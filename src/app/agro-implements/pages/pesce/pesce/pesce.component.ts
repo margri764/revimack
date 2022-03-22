@@ -11,6 +11,8 @@ export class PesceComponent implements OnInit {
   @ViewChild ("abon" , {static: true} )    abon! : ElementRef;
   @ViewChild ("desterr" , {static: true} ) desterr! : ElementRef;
   @ViewChild ("rol" , {static: true} )     rol! : ElementRef;
+  @ViewChild ("top" , {static: true} )     top! : ElementRef;
+
 
   public acondicionador : boolean=false;
   public abono : boolean=false;
@@ -114,6 +116,18 @@ export class PesceComponent implements OnInit {
       }, 0);
   }
 
+  goToTop(){
+
+    setTimeout( () => {
+
+      this.top.nativeElement.scrollIntoView(
+      { 
+        alignToTop: true,
+        behavior: "smooth",
+        block: "center",
+      });
+      }, 0);
+  }
   ngOnInit(): void {
     (screen.width <= 600) ? this.phone= true : false;
   }
