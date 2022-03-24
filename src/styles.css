@@ -5,10 +5,13 @@
 
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: rgb(41, 41, 41); }
+body {
+   margin: 0; 
+   font-family: Roboto, "Helvetica Neue", sans-serif;
+   background-color: rgb(41, 41, 41);
+   overflow-x: hidden;
+  }
 
-
-/* @font-face {
-    font-family: "spartan";
-    src: local("spartan"), url(./assets/fonts/league-spartan.bold.otf) format("opentype");
-  } */
+  .animate__animated.animate__fadeIn{
+    --animate-duration: 2s;
+  }

@@ -1,0 +1,197 @@
+
+
+
+
+.backWhite{
+    background-color: rgba(250, 250, 250, 0.438);
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+ .text{
+    font-family: 'Monserrat',sans-serif;
+    font-size: 1.6vw;
+    font-weight: 500;
+    color: rgb(70, 70, 70);  
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+
+.material-icons{
+    color: rgb(78, 78, 78);
+}
+
+.fa-whatsapp{
+    font-size: 8vw;   
+    color: rgb(70, 70, 70);  
+}
+.fa-whatsapp:hover{   
+    color: rgb(255, 255, 255);
+}
+
+.fa-instagram{
+    font-size: 8vw;     
+    color: rgb(70, 70, 70);  
+}
+.fa-instagram:hover{
+    color: white;
+}
+
+.fa-facebook-f{
+    color: rgb(70, 70, 70);  
+    font-size: 8vw;
+}
+.fa-facebook-f:hover{
+    color: white;
+} 
+
+.fa-envelope{
+    color: rgb(70, 70, 70);  
+    font-size: 8vw;
+}
+.fa-envelope:hover{
+    color: white;
+}
+
+
+.fa-map-marker-alt{
+    color: rgb(70, 70, 70);  
+    font-size: 8vw;
+}
+.fa-map-marker-alt:hover{
+    color: white;
+}
+
+@media  screen and (max-width: 600px){  
+
+    .contact{
+        height: 100vh;
+        background-image: url(../../../../assets/contacto-1080x2200.png);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .backWhite{
+        height: 350px;
+    }
+    .text{
+        font-size: 5vw;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    
+    .banner{
+        background-color: #82b75c;
+        height: 35px;
+        color: gray;
+        text-align: center;
+        font-family:'Monserrat',sans-serif;
+        font-weight: 400;
+        font-size: 4vw;
+    }
+
+    .fa-whatsapp{
+        font-size: 8vw;   
+    }
+  
+    .fa-instagram{
+        font-size: 8vw;     
+    }
+    
+    .fa-facebook-f{
+        font-size: 8vw;
+    }
+
+    .fa-envelope{
+        font-size: 8vw;
+    }
+
+    .fa-map-marker-alt{
+        font-size: 8vw;
+    }
+
+    .icon-text-footer{
+        font-size: 4vw;
+    }
+
+    
+    }
+    
+    
+    
+    
+    @media screen and (min-width: 601px) and (max-width: 960px){
+    
+     
+    
+    }
+    
+    @media  screen and (min-width: 961px) and (max-width: 1280px){
+
+        .contact{
+            height: 100vh;
+            background-image: url(../../../../assets/contacto-1600x800.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+   
+    
+        .fa-whatsapp{
+            font-size: 3vw;   
+        }
+      
+     
+        .fa-instagram{
+            font-size: 3vw;     
+        }
+        
+        .fa-facebook-f{
+            font-size: 3vw;
+        }
+    
+        .fa-envelope{
+            font-size: 3vw;
+        }
+    
+        .fa-map-marker-alt{
+            font-size: 3vw;
+        }
+    
+    }
+    @media  screen and (min-width: 1281px) and (max-width: 1919px){
+      
+        .contact{
+            height: 100vh;
+            background-image: url(../../../../assets/contacto-1600x800.png);
+            background-position: center;
+            background-size: cover;
+       
+        }
+     
+        .fa-whatsapp{
+            font-size: 3vw;   
+        }
+      
+     
+        .fa-instagram{
+            font-size: 3vw;     
+        }
+        
+        .fa-facebook-f{
+            font-size: 3vw;
+        }
+    
+        .fa-envelope{
+            font-size: 3vw;
+        }
+    
+        .fa-map-marker-alt{
+            font-size: 3vw;
+        }
+    
+    
+    }
+     
+    

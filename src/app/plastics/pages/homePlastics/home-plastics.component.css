@@ -53,6 +53,12 @@ h1{
    transform: scale(1.01);
   }
 
+  img:hover{
+      transform: scale(1.02);
+    
+  }
+
+
 @media  screen and (max-width: 600px){  
 
 #back{

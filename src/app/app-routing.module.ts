@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactUsComponent } from './shared/pages/contact-us/contact-us.component';
 import { HomeComponent } from './shared/pages/home/home.component';
 import { Page404Component } from './shared/pages/page404/page404.component';
 import { ThanksComponent } from './shared/pages/thanks/thanks.component';
@@ -36,6 +37,9 @@ const routes: Routes = [
   },
   {
     path: "gracias", component: ThanksComponent
+  },
+  {
+    path: "contacto", component: ContactUsComponent
   },
   {
     path: '404',

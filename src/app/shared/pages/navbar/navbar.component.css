@@ -50,11 +50,25 @@
    font-family: "Monserrat",sans-serif;
    font-weight: 100;
    font-size: 1.4vw;
+   cursor: pointer;
  }
 
  label{
    cursor: pointer;
  }
+
+ .tooltip-inner{
+   color: red
+ }
+
+ .divider{
+  height: 3px;
+  background-color: #82b75c; 
+  opacity: 0.6;
+}
+
+ 
+
 
  .offcanvas{
   border-bottom : 4px solid #82b75c;

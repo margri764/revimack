@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactUsComponent implements OnInit {
 
+  public showmap : boolean= true;
+  public shownavbar : boolean = false;
   constructor() { }
 
+
   ngOnInit(): void {
+  (screen.width <=600) ? [this.showmap = false, this.shownavbar= true] : [this.showmap= true , this.shownavbar=false];
   }
 
 }

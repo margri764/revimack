@@ -11,13 +11,10 @@
       <img src="assets/logo-hojas2-bg.png" alt="logo" fxFlex="7">
     
       <label class="btnNav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Productos</label>
-
-      <label  class="btnNav" >Promociones</label>
-
-      <label  class="btnNav"> Contactános</label>
-
+      <label  class="btnNav" routerLink="../../contacto"> Contactános</label>
       <label  class="btnNav">Nosotros</label>
-</div>  
+      <label  class="btnNav" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Estamos trabjando en esta sección" >Promociones</label>
+    </div>  
 
 <div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="20">
   <form class="d-flex">
@@ -34,18 +31,19 @@
 <div fxFlex="15" fxLayoutAlign="center" *ngIf="phone">
     <span   id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-house"></i></span>
     
-    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2" style="width: 100vw;">
+    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2" style="width: 100%;">
       
-      <li>
+        <br>
         <a class="dropdown-item active"class="btnNav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" >Productos</a> 
-        <a class="dropdown-item" class="btnNav">Contactanos</a> &nbsp;
+        <a class="dropdown-item" class="btnNav" routerLink="../contacto">Contactanos</a> 
         <a class="dropdown-item" class="btnNav">Nosotros</a>      
-      </li> &nbsp;
-      
-      <li><a class="dropdown-item" class="btnNav">Promociones</a></li> <br>
-      
-      <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" class="btnNav">Novedades</a></li>
+     
+        <br>
+        
+        <li><hr class="dropdown-divider"></li>
+        <br>
+        <li><a class="dropdown-item" class="btnNav">Novedades (proximamente...)</a></li>
+        <li fxLayout="row wrap" fxLayoutAlign="start"><a class="dropdown-item" class="btnNav">Promociones (proximamente...)</a></li> <br>
     </ul>
   </div>
 
@@ -53,7 +51,7 @@
   <span id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-search"></i></span>
   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1" style="width: 100vw;">
     <form class="d-flex">
-      <input class="form-control me-2 btnNav" type="search" placeholder="Search" aria-label="Search" style="color: black;">
+      <input class="form-control me-2 btnNav" type="search" placeholder="Search" aria-label="Buscar" style="color: black;">
     </form>
     <!-- <li><a class="dropdown-item active"class="btnNav">Productos</a> </li> -->
   </ul>
@@ -102,11 +100,16 @@
     
       <div fxLayout="row wrap" fxLayoutAlign="start" fxFlexOffset="20px" fxFlex="80"  >
 
-          <p ><a routerLink="../agro/maquinas"><label data-bs-dismiss="offcanvas" >Venta de Maquinaria Agricola</label></a></p>
-          <p><a routerLink="../implementos/implementos-agricolas" > <label data-bs-dismiss="offcanvas"> Venta de Implementos</label></a></p>
-          <p><a routerLink="../eco/plasticos" > <label data-bs-dismiss="offcanvas"> Linea de plásticos</label> </a></p>
-          <p><a routerLink="../insumos/repuestos-accesorios" > <label data-bs-dismiss="offcanvas">Repuestos y accesorios</label></a></p>
-          <p><a routerLink="../tecno/tecnologia" > <label data-bs-dismiss="offcanvas"> Tecnología Agropecuaria</label></a></p>
+        <p><a routerLink="../implementos/implementos-agricolas" > <label data-bs-dismiss="offcanvas"> Venta de Implementos</label></a></p>
+        <p><a routerLink="../eco/plasticos" > <label data-bs-dismiss="offcanvas"> Linea de plásticos</label> </a></p>
+        <p><a routerLink="../tecno/tecnologia" > <label data-bs-dismiss="offcanvas"> Tecnología Agropecuaria</label></a></p>
+        
+        <div class="divider" fxFlex="100"></div>
+        <p><a><label style="color: rgb(31, 143, 21);">Proximamente:</label></a></p>
+        <p><a > <label >Repuestos y accesorios</label></a></p>
+        <p><a><label >Venta de Maquinaria Agricola</label></a></p>
+        <p><a><label >Servicios Agropecuarios</label></a></p>
+
 
       </div>  
     <div fxFlex="90">
