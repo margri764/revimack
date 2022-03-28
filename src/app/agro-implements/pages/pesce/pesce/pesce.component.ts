@@ -128,8 +128,10 @@ export class PesceComponent implements OnInit {
       });
       }, 0);
   }
+  
   ngOnInit(): void {
-    (screen.width <= 600) ? this.phone= true : false;
+    this.goToTop();
+    (screen.width <= 575) ? this.phone= true : false;
   }
 
 }

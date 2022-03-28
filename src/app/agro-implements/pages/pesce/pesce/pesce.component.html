@@ -1,9 +1,9 @@
 
  
- <div fxLayout="row wrap" fxLayoutAlign="center">
+ <div fxLayout="row wrap" fxLayoutAlign="center" >
  
- <div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="100" *ngIf="phone" style="margin-bottom: 8px;">
-    <app-navbar fxFlex="100"></app-navbar>
+ <div  fxFlex="100" >
+    <app-navbar fxFlex="100" ></app-navbar>
     </div>
 
 <div  fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center" style=" background-color: white; margin-top: 10px;">
@@ -12,7 +12,7 @@
     <img src="assets/arrow.png" (click)="goToTop()" id="up"  >
 
     
-    <div   fxFlex="100" class="animate__animated animate__fadeIn headpesce" #top> </div>
+    <div   fxFlex="100" class="animate__animated animate__fadeIn headpesce" #top > </div>
     <div fxFlex="100" fxLayoutAlign="center center" class="banner">Industrias Pesce S.A.</div>
 
   
@@ -36,7 +36,7 @@
     <div fxFlex="98" fxLayout="row wrap" fxLayoutAlign="space-between" style="margin-bottom: 20px;" >
 
         <!-- acondicionador -->
-        <div fxFlex="20" fxFlex.xs="50" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#acondicionador" aria-expanded="false" aria-controls="acondicionador" (click)="goToAcondicionador()"  >
+        <div fxFlex="20" fxFlex.xs="50" fxFlex.gt-xs="25" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#acondicionador" aria-expanded="false" aria-controls="acondicionador" (click)="goToAcondicionador()"  >
             <div class="borderdouble">
                 <img src="assets/pesce/acondicionador.png" alt="acondicionador pesce"   style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
             </div>
@@ -45,7 +45,7 @@
         </div>
 
         <!-- abono -->
-        <div fxFlex="20" fxFlex.xs="50" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#abono" aria-expanded="false" aria-controls="abono" (click)="goToAbono()" >
+        <div fxFlex="20" fxFlex.xs="50" fxFlex.gt-xs="25" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#abono" aria-expanded="false" aria-controls="abono" (click)="goToAbono()" >
                 <div class="borderdouble2"  >
                     <img src="assets/pesce/abono.png" alt="fertilizante pesce"   style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
                 </div>
@@ -54,7 +54,7 @@
             </div>
         
         <!-- rastron desterronador -->
-        <div fxFlex="20"  fxFlex.xs="50" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#desterronador" aria-expanded="false" aria-controls="desterronador" (click)="goToDesterronador()">
+        <div fxFlex="20"  fxFlex.xs="50" fxFlex.gt-xs="25" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#desterronador" aria-expanded="false" aria-controls="desterronador" (click)="goToDesterronador()">
             <div class="borderdouble3"  >
                 <img src="assets/pesce/rastron-desterronador.png" alt=""   style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
             </div>
@@ -62,18 +62,18 @@
         </div>
 
          <!-- rolo picador -->
-         <div fxFlex="20" fxFlex.xs="50" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#rolo" aria-expanded="false" aria-controls="desterronador" (click)="goToRolo()">
+         <div fxFlex="20" fxFlex.xs="50"  fxFlex.gt-xs="25" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#rolo" aria-expanded="false" aria-controls="desterronador" (click)="goToRolo()">
             <div class="borderdouble2"  >
-                <img src="assets/pesce/rolo-picador.png" alt=""   style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
+                <img src="assets/pesce/rolo-picador.png" alt="rolo picador pesce" style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
             </div>
 
-            <h5 >Rolo picador de rastrojos </h5>
+            <h5 class="text-center">Rolo picador de rastrojos </h5>
         </div>
 
             <!-- + -->
-            <div fxFlex="20" fxFlex.xs="50" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#desterronador" aria-expanded="false" aria-controls="desterronador" >
-            <div class="borderdouble" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">
-                <img src="assets/mas.png" alt="" class="plus"   fxFlex="100">
+        <div fxFlex="18" fxFlex.xs="50"  fxFlex.gt-xs="25" fxLayout="row wrap" fxLayoutAlign="center" >
+           <div class="borderdouble" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">
+                <img src="assets/mas.png" alt="mas info" class="plus" fxFlex="100">
             </div>
 
             <h5 class="text-center">mas info... </h5>
@@ -81,9 +81,8 @@
 
     </div>
 
+
     <!-- COLLAPSES -->
-
-
     <div class="collapse" id="acondicionador" fxFlex="98" style="margin-bottom: 50px;" #acond>
 
         <div fxLayout="row wrap"  fxLayoutAlign="center"  class="products">

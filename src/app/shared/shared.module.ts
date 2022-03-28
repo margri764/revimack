@@ -16,6 +16,7 @@ import { SliderUpComponent } from './pages/sliderUp/slider-up/slider-up.componen
 import { FormCanvasComponent } from './pages/formCanvas/form-canvas/form-canvas.component';
 import { SliderBrandComponent } from './pages/sliderBrand/slider-brand/slider-brand.component';
 import { ThanksComponent } from './pages/thanks/thanks.component';
+import { UsComponent } from './pages/us/us/us.component';
 
 
 
@@ -33,7 +34,8 @@ import { ThanksComponent } from './pages/thanks/thanks.component';
     SliderUpComponent,
     FormCanvasComponent,
     SliderBrandComponent,
-    ThanksComponent  
+    ThanksComponent,
+    UsComponent  
   ],
   
   imports: [
@@ -54,7 +56,9 @@ import { ThanksComponent } from './pages/thanks/thanks.component';
     NavbarComponent,
     SliderUpComponent,
     FormCanvasComponent,
-    SliderBrandComponent 
+    SliderBrandComponent ,
+    UsComponent  
+
 
     
 

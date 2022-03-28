@@ -1,8 +1,15 @@
 
 .message{
     height: 100vh;
-    background-image: url(../../../../assets/gracias-1600x700.png);
+    background-image: url(../../../../assets/gracias-1600x700.jpg);
     background-position: center ;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+@media  screen and (max-width: 600px){  
+    .message{
+    background-image: url(../../../../assets/gracias-540x1100.jpg);
+
+    }
 }

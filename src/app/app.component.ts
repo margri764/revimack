@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
 
     },4000);
     
-    (screen.width <= 600) ? this.phone= true : false;
+    (screen.width <= 575) ? this.phone= true : false;
   }
 
 

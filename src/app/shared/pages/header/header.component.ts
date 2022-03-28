@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
 
-    (screen.width <= 600) ? this.phone= true : false;
+    (screen.width <= 575) ? this.phone= true : false;
   }
 
 }

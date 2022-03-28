@@ -16,14 +16,14 @@ export class PlantiumComponent implements OnInit {
 
 
 
-  exterior : any;
-  interior : any;
-  antifire : any;
-  horizontal : any;
-  toppage : any;
+  // exterior : any;
+  // interior : any;
+  // antifire : any;
+  // horizontal : any;
   public ecuRow : string='';
   public steer : string='';
   public thanks : boolean = true;
+  public phone : boolean = false;
 
 
 
@@ -64,11 +64,10 @@ export class PlantiumComponent implements OnInit {
   }
 
   goToExterior(){
-    this.exterior = this.ext.nativeElement;
 
     setTimeout( () => {
 
-    this.exterior.scrollIntoView(
+      this.ext.nativeElement.scrollIntoView(
       { 
         alignToTop: true,
         behavior: "smooth",
@@ -78,11 +77,10 @@ export class PlantiumComponent implements OnInit {
   }
 
   goToInterior(){
-    this.interior = this.int.nativeElement;
 
     setTimeout( () => {
 
-    this.interior.scrollIntoView(
+      this.int.nativeElement.scrollIntoView(
       { 
         alignToTop: true,
         behavior: "smooth",
@@ -92,11 +90,10 @@ export class PlantiumComponent implements OnInit {
   }
   
   goToFire(){
-    this.antifire = this.fire.nativeElement;
 
     setTimeout( () => {
 
-    this.antifire.scrollIntoView(
+      this.fire.nativeElement.scrollIntoView(
       { 
         alignToTop: true,
         behavior: "smooth",
@@ -106,11 +103,10 @@ export class PlantiumComponent implements OnInit {
   }
 
   goToHorizontal(){
-    this.horizontal = this.hor.nativeElement;
 
     setTimeout( () => {
 
-    this.horizontal.scrollIntoView(
+      this.hor.nativeElement.scrollIntoView(
       { 
         alignToTop: true,
         behavior: "smooth",
@@ -121,11 +117,10 @@ export class PlantiumComponent implements OnInit {
 
   
   goToTop(){
-    this.toppage = this.top.nativeElement;
 
     setTimeout( () => {
 
-    this.toppage.scrollIntoView(
+      this.top.nativeElement.scrollIntoView(
       { 
         alignToTop: true,
         behavior: "smooth",
@@ -138,8 +133,7 @@ export class PlantiumComponent implements OnInit {
   ngOnInit(): void {
     this.goToTop();
 
-    (screen.width <= 600) ? this.ecuRow= "assets/plantium/ecuRow_cel.png" : this.ecuRow="assets/plantium/ecuRow.png";
-    (screen.width <= 600) ? this.steer= "assets/plantium/steer-phone.png" : this.steer= "assets/plantium/steer.png";
+    (screen.width <= 575) ? [this.ecuRow= "assets/plantium/ecuRow_cel.png", this.steer= "assets/plantium/steer-phone.png",this.phone=true] : [this.ecuRow="assets/plantium/ecuRow.png", this.steer= "assets/plantium/steer.png" , this.phone=false];
 
 
 

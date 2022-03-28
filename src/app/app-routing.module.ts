@@ -4,6 +4,7 @@ import { ContactUsComponent } from './shared/pages/contact-us/contact-us.compone
 import { HomeComponent } from './shared/pages/home/home.component';
 import { Page404Component } from './shared/pages/page404/page404.component';
 import { ThanksComponent } from './shared/pages/thanks/thanks.component';
+import { UsComponent } from './shared/pages/us/us/us.component';
 
 const routes: Routes = [
 
@@ -40,6 +41,9 @@ const routes: Routes = [
   },
   {
     path: "contacto", component: ContactUsComponent
+  },
+  {
+    path:'nosotros', component: UsComponent 
   },
   {
     path: '404',

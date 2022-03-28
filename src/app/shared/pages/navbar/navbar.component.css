@@ -6,96 +6,91 @@
 
   img{
       width: 90%;
-    }
+  }
      
-    .fa-whatsapp{
-    margin-left: 10px;
-    font-size: 3vw;
-    color: green;
-    }
+  .fa-whatsapp{
+  margin-left: 10px;
+  font-size: 3vw;
+  color: green;
+  }
 
-    .material-icons-outlined{
-      margin-top: auto ; 
-      margin-bottom: auto;
-    }
+  .material-icons-outlined{
+    margin-top: auto ; 
+    margin-bottom: auto;
+  }
   
 
-   .customNavbar{
-    margin-top: 10px;
-    background-color: rgb(17, 17, 17);
-    border-radius: 10px;
-    padding: 20px;
+  .customNavbar{
+  margin-top: 10px;
+  background-color: rgb(17, 17, 17);
+  border-radius: 10px;
+  padding: 20px;
 
-    box-shadow: 10px 10px 17px -6px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 10px 10px 17px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 17px -6px rgba(0,0,0,0.75);
-
-  }
-  .btnNav{
-    /* background-color: rgb(245, 245, 245); */
-    color: #edf0f1;
-    font-family: "Monserrat",sans-serif;
-    font-weight: 100;
-    font-size: 1.6vw;
-    border-radius: 5px;
-    margin-left: 20px;
-    cursor: pointer;
-  }
-  .btnNav:hover{
-    transform: scale(1.01);
+  box-shadow: 10px 10px 17px -6px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 17px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 17px -6px rgba(0,0,0,0.75);
   }
 
- a{
-   text-decoration: none;
-   font-family: "Monserrat",sans-serif;
-   font-weight: 100;
-   font-size: 1.4vw;
-   cursor: pointer;
- }
-
- label{
-   cursor: pointer;
- }
-
- .tooltip-inner{
-   color: red
- }
-
- .divider{
-  height: 3px;
-  background-color: #82b75c; 
-  opacity: 0.6;
+.btnNav{
+  color: #edf0f1;
+  font-family: "Monserrat",sans-serif;
+  font-weight: 100;
+  font-size: 1.6vw;
+  border-radius: 5px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.btnNav:hover{
+  transform: scale(1.01);
 }
 
- 
-
-
- .offcanvas{
-  border-bottom : 4px solid #82b75c;
-  border-right : 4px solid #82b75c;
-  border-top : 4px solid #82b75c;
-
-
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-
+a{
+  text-decoration: none;
+  font-family: "Monserrat",sans-serif;
+  font-weight: 100;
+  font-size: 1.4vw;
+  cursor: pointer;
 }
 
- .offcanvas-title{
-    text-decoration: none;
-    font-family: "Monserrat",sans-serif;
-    font-weight: 200;
-    font-size: 1.4vw;
+label{
+  cursor: pointer;
+}
+
+.tooltip-inner{
+  color: red
+}
+
+.divider{
+height: 3px;
+background-color: #82b75c; 
+opacity: 0.6;
+}
+
+.offcanvas{
+border-bottom : 4px solid #82b75c;
+border-right : 4px solid #82b75c;
+border-top : 4px solid #82b75c;
+
+
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+}
+
+.offcanvas-title{
+  text-decoration: none;
+  font-family: "Monserrat",sans-serif;
+  font-weight: 200;
+  font-size: 1.4vw;
 }
 
 .consulta{
-  border-radius: 10px; 
-  padding: 10px;
-  background-color: rgb(251, 251, 251);
+border-radius: 10px; 
+padding: 10px;
+background-color: rgb(251, 251, 251);
 
-  box-shadow: 10px 10px 17px -8px rgba(56,56,56,0.45);
-  -webkit-box-shadow: 10px 10px 17px -8px rgba(56,56,56,0.45);
-  -moz-box-shadow: 10px 10px 17px -8px rgba(56,56,56,0.45);
+box-shadow: 10px 10px 17px -8px rgba(56,56,56,0.45);
+-webkit-box-shadow: 10px 10px 17px -8px rgba(56,56,56,0.45);
+-moz-box-shadow: 10px 10px 17px -8px rgba(56,56,56,0.45);
 }
 
 .dividerGreen{
@@ -104,190 +99,196 @@
   opacity: 0.6;
 }
 
-  mat-icon{
-    --animate-duration: 4000ms;
-
-  }
-  .shopping{
-    margin: 10px;
-  }
-  
+.shopping{
+  margin: 10px;
+}
 
 
 
-
-    a.searchResult {
-      cursor: pointer; 
-      color: blue; 
-      font-size: 1.3vw; 
-      font-family: 'Poppins', sans-serif;
-      font-weight: 100;
-      text-decoration: none;
-    }
-    .navbar-collapse{
-      transition: all 500ms linear;
-      margin-left: 25vw;
-  
-    }
-
-/* ------------------------------------@media------------------------------------- */
+input {
+  width:100px ;
+  font-size: 1.5vw;
+}
 
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 574px) {
+@media only screen and (max-width: 575px) {
   
-  input {
-    width:40vw ;
-    font-size: 3.5vw;
-  }
+a{
+  font-size: 2.5vw;
+}
 
-  form {
-    margin-left: 26vw;
-  }
-
-  .suggested{
-    width: 100vw; 
-    margin-top: 1vw;
-    margin-left: 2vw;
-  }
-
-  .offcanvas {
-      height: 90vh; 
-  }
-
-  .offcanvas-body label{
-    font-family: "Monserrat",sans-serif;
-    font-weight: 100;
-    font-size: 6vw;
-
-  }
-
-  .btnNav{
-    font-size: 5vw;
-  }
-  
-  .bi.bi-house{
-    color: rgb(179, 179, 179);
-    font-size: 8vw;
-  }
-
-  .bi.bi-list{
-    color: rgb(179, 179, 179);
-    font-size: 8vw;
-  }
-
-  .bi.bi-search{
-    color: rgb(179, 179, 179);
-
-    font-size: 7vw;
-  }
-
-  a.searchResult {
-    font-size: 3vw; 
-  }
- 
-
-  .fa-whatsapp{
-    font-size: 10vw;
-    margin-left: 0;
-    }
-  
-  #font .dropdown-menu{
-    font-size: 4.6vw;
-    width: auto;
-
-  
- }
-
-  
- .btnCustom{
-  background-color: #ffffff;
-  border: 2px solid #1ccece;
-  color: rgb(0, 0, 0);
-  font-family:'ribeye';
-  border-radius: 1em;
-  line-height: 2em;
+input {
+  width: 150px ;
   font-size: 1.3vw;
 }
 
+form {
+  margin-left: 32vw;
+}
+
+.suggested{
+  width: 100vw; 
+  margin-top: 1vw;
+  margin-left: 2vw;
+}
+
+.offcanvas {
+    /* height: 90vh;  */
+}
+
+.offcanvas-body label{
+  font-family: "Monserrat",sans-serif;
+  font-weight: 100;
+  font-size: 5vw;
+
+}
+
+.btnNav{
+  font-size: 4.6vw;
+}
+
+.bi.bi-house{
+  color: rgb(179, 179, 179);
+  font-size: 8vw;
+}
+
+.bi.bi-list{
+  color: rgb(179, 179, 179);
+  font-size: 8vw;
+}
+
+.bi.bi-search{
+  color: rgb(179, 179, 179);
+
+  font-size: 7vw;
+}
+
+a.searchResult {
+  font-size: 3vw; 
+}
+
+.fa-whatsapp{
+  font-size: 10vw;
+  margin-left: 0;
+}
+
+#font .dropdown-menu{
+  font-size: 4.6vw;
+  width: auto;
+}
+
+.btnCustom{
+background-color: #ffffff;
+border: 2px solid #1ccece;
+color: rgb(0, 0, 0);
+font-family:'ribeye';
+border-radius: 1em;
+line-height: 2em;
+font-size: 1.3vw;
+}
+
 .btnCustom:hover {
-  background-color: #1fdddd;
-  border: 2px solid white;
-  color: rgb(255, 255, 255);
-  
+background-color: #1fdddd;
+border: 2px solid white;
+color: rgb(255, 255, 255);
 }
 
- .whatsapp{
-    font-size: 5vh;
- } 
-
-
+.whatsapp{
+  font-size: 5vh;
+} 
 
 
 }
+@media only screen and (min-width: 576px) {
+  
+a{
+  font-size: 2.8vw;
+}
+
+input{
+  width:100px ;
+  font-size: 2.8vw;
+}
+
+.btnNav{
+  font-size: 2.3vw; 
+}
+
+
+}
   
 
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 575px) and (max-width: 768px) {
-  
-    input{
-      width:30vw ;
-      font-size: 2.8vw;
-      
-    }
-   
-    .suggested{
-      width: 50vw; 
-      margin-top: 1vw;
-      margin-left: 2vw;
-    }
+/* medium devices (tablets, 768 px and up) */ 
+@media only screen and (min-width: 786px) {
 
-    form{
-      margin-left: 30vw;
-    }
+a{
+  font-size: 2vw;
+}
 
+input{
+  width:120px ;
+  font-size: 2vw;
+}
 
-    a.searchResult {
-      font-size: 2.5vw; 
-   }
-
-
-
-
-
-  #font .nav-item{
-    transition: all 500ms linear;
-    font-size: 2.6vw;
-
-   }
-
-
-  }
-  
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 769px) and (max-width: 1280px) {
-
-
+.btnNav{
+  font-size: 2vw; 
+}
   
 }
   
 
-/* Extra Large devices (laptops/desktops, 1280px and up) */ 
-@media only screen and (min-width: 1281px) {
-    
+/* large devices (desktops, 992 px and up) */ 
+@media only screen and (min-width: 992px) {
 
-  .suggested{
-    width: 30vw; 
-    margin-top: 1vw;
-    margin-left: 65vw;
-  }
+a{
+  font-size: 2vw;
+}
+
+input{
+  width:120px ;
+  font-size: 2vw;
+}
+
+.btnNav{
+  font-size: 2vw; 
+}
+
+}
+
+/* W-large devices (desktops, 992 px and up) */ 
+@media only screen and (min-width: 1200px) {
   
-  .btnNav{
-    font-size: 1.3vw;
-  }
+a{
+  font-size: 1.4vw;
+}
 
+.btnNav{
+  font-size: 1.6vw; 
+}
+
+input {
+  width: 150px ;
+  font-size: 1.6vw;
+}
+}
   
-      
+  
 
+
+/* XX- Large devices (larger desktops, 1400px and up) */ 
+@media only screen and (min-width: 1400px) {
+a{
+  font-size: 1.3vw;
+}
+
+.btnNav{
+  font-size: 1.2vw; 
+}
+
+input {
+  width:150px ;
+  font-size: 3.5vw;
+}    
 
 }

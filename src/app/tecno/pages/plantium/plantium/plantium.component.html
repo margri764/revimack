@@ -37,116 +37,126 @@
     </div>
 
 
-    <div fxLayout="row wrap" fxFlex="98" >
  
         <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" style="margin-top: 80px; margin-bottom: 80px;">
             <div fxLayout="row wrap"  > 
                 <h1>Dosificador de siembra adaptable</h1> 
             </div> 
         </div>
-    </div>
 
+    <div fxLayout="row wrap" fxFlex="98" fxLayoutAlign="center" *ngIf="phone">
+        <label fxFlex="100" fxLayoutAlign="center" style="font-size: 2.5vw; font-family: 'Monserrat',sans-serif;"> (para mas info, tocar la imagen)</label>
+    </div>
 
     <div fxLayout="row wrap" fxFlex="98" fxLayoutAlign="center center">
         <div class="frame" fxFlex="100" fxLayoutAlign="center center" >
               <img [src]="ecuRow" fxFlex="100">
+           
         <figcaption fxLayout="row wrap" fxLayoutAlign="center center">
-            <button type="button"  class="btnSend mt-5" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" >Enviar consulta</button>
+            <button type="button" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" >Enviar consulta</button>
         </figcaption>
     </div>
     </div>
+    
+
+   
 
 
 
 
     <!-- cards ecurow -->
-    <div fxLayout="row wrap" fxLayout.xs="column" fxFlex="98" fxFlex.xs="90" fxLayoutAlign="space-between"  style="margin-top: 20px;" >
+    <div fxLayout="row wrap" fxLayout.xs="column" fxFlex="98" fxFlex.xs="90"  fxLayoutGap="1%" style="margin-top: 20px;
+    box-sizing: border-box;
+    display: flex; " >
 
-        <div class="card full"  fxFlex="32" fxFlex.xs="100">
+        <div class="card full" fxFlex.xs="100" fxFlex.gt-xs="49" fxFlex.gt-md="24">
             <img src="assets/plantium/espacio.jpg" class="card-img-top " alt="espaciamiento plantas plantium " >
            
             <div class="card-body">
                
               <h5 class="card-title">Espaciamiento entre plantas</h5>
               <hr>
-              <p class="card-text text">El doble de precisión en la separación entre plantas, a la mitad del tiempo que tomaría con un sistema de siembra convencional.</p>
+              <p class="card-text ">El doble de precisión en la separación entre plantas, a la mitad del tiempo que tomaría con un sistema de siembra convencional.</p>
 
         
             </div>
             </div>
 
             
-            <div class="card full"  fxFlex="32" fxFlex.xs="100">
+            <div class="card full" fxFlex.xs="100" fxFlex.gt-xs="49" fxFlex.gt-md="24" >
             <img src="assets/plantium/positiva-bg.png" class="card-img-top " alt="dsitribucion positiva plantium " >
 
                 <div class="card-body">
                   <h5 class="card-title">Distribución por presión positiva</h5>
                   <hr>
-                  <p class="card-text text">El sistema de presión positiva permite transportar las semillas hasta el surco de manera neumática, evitando rebotes y desviaciones en el tubo de bajada.</p>
+                  <p class="card-text ">El sistema de presión positiva permite transportar las semillas hasta el surco de manera neumática, evitando rebotes y desviaciones en el tubo de bajada.</p>
                 </div>
                 </div>
 
                 
-            <div class="card full "  fxFlex="32" fxFlex.xs="100">
+            <div class="card full" fxFlex.xs="100" fxFlex.gt-xs="49" fxFlex.gt-md="24">
             <img src="assets/plantium/uec.jpg" class="card-img-top " alt="unidad electronica de control plantium " >
 
             <div class="card-body">
                 <h5 class="card-title">Unidad electrónica de control</h5>
                 <hr>
-                <p class="card-text text">Unidad electrónica integrada, para el control del motor y detección de semillas. Con indicadores LED de estado.</p>
+                <p class="card-text ">Unidad electrónica integrada, para el control del motor y detección de semillas. Con indicadores LED de estado.</p>
             </div>
         </div>
 
-        <div class="card full "  fxFlex="32" fxFlex.xs="100">
+        <div class="card full" fxFlex.xs="100" fxFlex.gt-xs="49" fxFlex.gt-md="24">
             <img src="assets/plantium/control-semillas-bg.png" class="card-img-top " alt="Control de semillas plantium " >
 
             <div class="card-body">
                 <h5 class="card-title">Control de semillas</h5>
                 <hr>
-                <p class="card-text text">Compuerta para apertura y cierre del ingreso de semillas, y regulación del nivel de semillas dentro del dosificador. Fácil accionamiento.</p>
+                <p class="card-text ">Compuerta para apertura y cierre del ingreso de semillas, y regulación del nivel de semillas dentro del dosificador. Fácil accionamiento.</p>
             </div>
         </div>
 
-        <div class="card full "  fxFlex="32" fxFlex.xs="100">
+        <div class="card full" fxFlex.xs="100" fxFlex.gt-xs="30" fxFlex.gt-md="24">
             <img src="assets/plantium/inercial.png" class="card-img-top " alt="Unidad de medición inercial plantium " >
 
             <div class="card-body">
                 <h5 class="card-title">Unidad de medición inercial</h5>
                 <hr>
-                <p class="card-text text">Módulo inercial de 6 ejes con acelerómetros y giróscopos, para monitorear la dinámica del cuerpo y la profundidad de siembra.</p>
+                <p class="card-text ">Módulo inercial de 6 ejes con acelerómetros y giróscopos, para monitorear la dinámica del cuerpo y la profundidad de siembra.</p>
             </div>
         </div>
 
-        <div class="card full "  fxFlex="32" fxFlex.xs="100">
+        <div class="card full" fxFlex.xs="100" fxFlex.gt-xs="49" fxFlex.gt-md="24">
             <img src="assets/plantium/asistencia.jpg" class="card-img-top " alt="asistencia tecnica plantium " >
 
             <div class="card-body">
                 <h5 class="card-title">Asistencia 24hs los 365 días al año</h5>
                 <hr>
-                <p class="card-text text">Con PlantiumHelp, disponés de asistencia las 24hs del día los 365 días del año.</p>
+                <p class="card-text ">Con PlantiumHelp, disponés de asistencia las 24hs del día los 365 días del año.</p>
             </div>
         </div>
     </div>
 
     
-    <div fxLayout="row wrap" fxFlex="98" >
+   
  
-        <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" style="margin-top: 80px; margin-bottom: 80px;">
-            <div fxLayout="row wrap" class="item" > 
-                <h1>Pilotos automáticos</h1> 
-            </div> 
-        </div>
+    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" style="margin-top: 80px; margin-bottom: 80px;">
+        <div fxLayout="row wrap" class="item" > 
+            <h1>Pilotos automáticos</h1> 
+        </div> 
     </div>
 
-    <div fxLayout="row wrap" fxFlex="98" fxLayoutAlign="center center" style="margin-top: 80px;">
+    <div fxLayout="row wrap" fxFlex="98" fxLayoutAlign="center" *ngIf="phone">
+        <label fxFlex="100" fxLayoutAlign="center" style="font-size: 2.5vw; font-family: 'Monserrat',sans-serif;"> (para mas info, tocar la imagen)</label>
+    </div>
+    <div fxLayout="row wrap" fxFlex="98" fxLayoutAlign="center center">
         <div class="frame" fxFlex="100" fxLayoutAlign="center center" >
-
-              <img [src]="steer" fxFlex="100" >
+              <img [src]="steer" fxFlex="100">
+           
         <figcaption fxLayout="row wrap" fxLayoutAlign="center center">
-            <button type="button"  class="btnSend mt-5" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" >Enviar consulta</button>
+            <button type="button" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" >Enviar consulta</button>
         </figcaption>
     </div>
     </div>
+
 
     <!-- pilotos -->
     <div fxLayout="row wrap" fxFlex="90" fxLayoutAlign="center center" class="titleHeader" style="margin-bottom: 40px;margin-top: 40px;" >
@@ -193,7 +203,18 @@
     
     </div>
 
-    <div fxLayout="row wrap" fxFlex="98" fxLayoutAlign="space-between center"  style="margin-bottom: 40px;margin-top: 40px;" >
+    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" style="margin-top: 80px; margin-bottom: 80px;">
+        <div fxLayout="row wrap" class="item" > 
+            <h1>Modelos de pilotos automáticos</h1> 
+        </div> 
+    </div>
+    
+    <div fxLayout="row wrap" fxFlex="98" fxLayoutAlign="center" *ngIf="phone">
+        <label fxFlex="100" fxLayoutAlign="center" style="font-size: 2.5vw; font-family: 'Monserrat',sans-serif;"> (para mas info, tocar la imagen)</label>
+    </div>
+
+    <div fxLayout="row wrap" fxFlex="98" fxLayoutAlign="space-between "  style="margin-bottom: 40px; margin-top: 40px;" >
+        
         <div class="div-img" fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="30">
             <img src="assets/plantium/steerDD.png" fxFlex="100" class="img" >
             <p class="text"  data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">+ info</p>
@@ -213,7 +234,7 @@
 <div class="offcanvas offcanvas-start" tabindex="-1"  id="formCanvas" aria-labelledby="offcanvasExampleLabel" >
 
    
-    <div    fxLayoutAlign="end" fxLayout="row" style="margin-top: 20px; padding: 20px;">
+    <div    fxLayoutAlign="end" fxLayout="row" style="margin-top: 35px; padding: 20px;">
           <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
    </div>    
    

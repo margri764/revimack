@@ -1,10 +1,9 @@
 
 .footer{
     background-color: #82b75c;
-
-box-shadow: 0px -14px 17px -5px rgba(138,138,138,0.45);
--webkit-box-shadow: 0px -14px 17px -5px rgba(138,138,138,0.45);
--moz-box-shadow: 0px -14px 17px -5px rgba(138,138,138,0.45);
+    box-shadow: 0px -14px 17px -5px rgba(138,138,138,0.45);
+    -webkit-box-shadow: 0px -14px 17px -5px rgba(138,138,138,0.45);
+    -moz-box-shadow: 0px -14px 17px -5px rgba(138,138,138,0.45);
 
 }
 
@@ -16,6 +15,8 @@ img{
     /* font-family: "poppins"; */
     font-size: 3vw;
     color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .material-icons{
@@ -67,6 +68,7 @@ img{
 .icon-text-footer{
     font-size: 4vw;
     color: white;
+    font-family: 'Monserrat',sans-serif;
 }
 
 
@@ -74,17 +76,10 @@ img{
 
 
   
+@media screen and (max-width: 575px) {
 
-
-
-
-
-
-@media  screen and (max-width: 600px){  
-
-  
     img{
-        width: 20vw;
+        width: 18vw;
     }
 
     .copyrigth{
@@ -96,79 +91,115 @@ img{
     }
   
     .fa-instagram{
-        font-size: 8vw;     
+        font-size: 7vw;     
     }
     
     .fa-facebook-f{
-        font-size: 8vw;
+        font-size: 7vw;
     }
 
     .fa-envelope{
-        font-size: 8vw;
+        font-size: 7vw;
     }
 
     .fa-map-marker-alt{
-        font-size: 8vw;
+        font-size: 7vw;
     }
 
     .icon-text-footer{
         font-size: 4vw;
     }
 
+
 }
 
 
 
 
-@media screen and (min-width: 600px) and (max-width: 960px){
+
+
+@media screen and (min-width: 576px) {
 
     .footer{
-        height: 20vh;
+        /* height: 30vw; */
     }
-    
-
-}
-
-@media  screen and (min-width: 960px) and (max-width: 1280px){
 
     img{
-        width: 10vw;
+        width: 16vw;
     }
-
+    
     .copyrigth{
-        font-size: 1.3vw;
+        font-size: 1.8vw;
     }
 
     .fa-whatsapp{
         font-size: 4vw;   
     }
   
- 
     .fa-instagram{
-        font-size: 3vw;     
+        font-size: 4vw;     
     }
     
     .fa-facebook-f{
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     .fa-envelope{
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     .fa-map-marker-alt{
-        font-size: 3vw;
+        font-size: 4vw;
+    }
+
+    .icon-text-footer{
+        font-size: 2vw;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+
+
+    img{
+        width: 14vw;
+    }
+
+    .copyrigth{
+        font-size: 2vw;
+    }
+
+    .fa-whatsapp{
+        font-size: 3.5vw;   
+    }
+  
+ 
+    .fa-instagram{
+        font-size: 3.5vw;     
+    }
+    
+    .fa-facebook-f{
+        font-size: 3.5vw;
+    }
+
+    .fa-envelope{
+        font-size: 3.5vw;
+    }
+
+    .fa-map-marker-alt{
+        font-size: 3.5vw;
     }
   
     .icon-text-footer{
-        font-size: 1.4vw;
+        font-size: 2vw;
     }
     
    
   
 
 }
-@media  screen and (min-width: 1281px) and (max-width: 1919px){
+@media screen and (min-width: 992px) {
+
   
 
     
@@ -181,24 +212,24 @@ img{
     }
 
     .fa-whatsapp{
-        font-size: 4vw;   
+        font-size: 2.8vw;   
     }
   
  
     .fa-instagram{
-        font-size: 3vw;     
+        font-size: 2.8vw;     
     }
     
     .fa-facebook-f{
-        font-size: 3vw;
+        font-size: 2.8vw;
     }
 
     .fa-envelope{
-        font-size: 3vw;
+        font-size: 2.8vw;
     }
 
     .fa-map-marker-alt{
-        font-size: 3vw;
+        font-size: 2.8vw;
     }
   
     .icon-text-footer{
@@ -208,11 +239,11 @@ img{
 
 }
 
-@media  screen and (min-width: 1920px){
+@media screen and (min-width: 1200px) {
 
        
     img{
-        width: 9vw;
+        width: 11vw;
     }
 
     .copyrigth{
@@ -220,7 +251,7 @@ img{
     }
 
     .fa-whatsapp{
-        font-size: 4vw;   
+        font-size: 3vw;   
     }
   
  
@@ -243,4 +274,41 @@ img{
     .icon-text-footer{
         font-size: 1.4vw;
     }
+}
+
+@media screen and (min-width: 1400px) {
+
+    img{
+        width: 9vw;
+    }
+
+    .copyrigth{
+        font-size: 1.3vw;
+    }
+
+    .fa-whatsapp{
+        font-size: 3vw;   
+    }
+  
+ 
+    .fa-instagram{
+        font-size: 3vw;     
+    }
+    
+    .fa-facebook-f{
+        font-size: 3vw;
+    }
+
+    .fa-envelope{
+        font-size: 3vw;
+    }
+
+    .fa-map-marker-alt{
+        font-size: 3vw;
+    }
+  
+    .icon-text-footer{
+        font-size: 1.4vw;
+    }
+
 }

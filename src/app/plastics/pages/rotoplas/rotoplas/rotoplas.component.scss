@@ -168,10 +168,16 @@ opacity: 0.6;
     border-left: 8px double rgb(37, 150, 190);
   }
 
-  .offcanvas{
-      border: 4px solid #82b75c;
-      border-radius: 20px;
-  }
+ .offcanvas{
+  width: 30vw;
+  border-top: 4px solid #82b75c;
+  border-right: 4px solid #82b75c;
+  border-bottom: 4px solid #82b75c;
+  border-radius: 0px 20px 21px 0px;
+
+ -webkit-border-radius: 0px 20px 21px 0px;
+  -moz-border-radius: 0px 20px 21px 0px;
+ }
 
   .fa-whatsapp{
     font-size: 8vw;   
@@ -339,13 +345,60 @@ opacity: 0.6;
 
 
 
-@media screen and (min-width: 601px) and (max-width: 960px){
+@media screen and (min-width: 576px) {
 
- 
+  .card-title{
+    font-size: 3.5vw;
+  }
+  
+  .card-text{
+    font-size: 3vw;
+  }
+
+  .borderdouble {
+    height: 150px;
+  }
+  
+  .borderdouble2 {
+    height: 150px;
+  }
+  
+  .borderdouble3 {
+    height: 150px;
+  }
+  
+  .plus{
+    width: 135px;
+  }
+  
+.offcanvas{
+  width: 60vw;
+}
+
+.fa-whatsapp{
+  font-size: 7w;   
+}
+
+.fa-instagram{
+    font-size: 7vw;     
+}
+
+.fa-facebook-f{
+    font-size: 7vw;
+}
+
+.fa-envelope{
+    font-size: 7vw;
+}
+
+.fa-map-marker-alt{
+    font-size: 7vw;
+}
+
 
 }
 
-@media  screen and (min-width: 961px) and (max-width: 1280px){
+@media  screen and (min-width: 768px) {
 
 .headpesce{
     height: 40vw;
@@ -356,7 +409,7 @@ opacity: 0.6;
 }
 
 .offcanvas{
-  width: 90vw;
+  width: 45vw;
 }
 
 #up{
@@ -377,17 +430,84 @@ opacity: 0.6;
 }
 
 .card-title{
-  font-size: 3vw;
+  font-size: 2.8vw;
 }
 
 .card-text{
-  font-size: 1.8vw;
+  font-size: 2.5vw;
 }
     
 .fa-whatsapp{
-    font-size: 3vw;   
+    font-size: 4vw;   
 }
 
+
+.fa-instagram{
+    font-size: 4vw;     
+}
+
+.fa-facebook-f{
+    font-size: 4vw;
+}
+
+.fa-envelope{
+    font-size: 4vw;
+}
+
+.fa-map-marker-alt{
+    font-size: 4vw;
+}
+
+
+}
+@media  screen and (min-width: 992px) {
+
+.card-title{
+  font-size: 2.5vw;
+}
+
+.card-text{
+  font-size: 2vw;
+}
+
+.offcanvas{
+  width: 45vw;
+}
+
+.fa-instagram{
+    font-size: 3.5vw;     
+}
+
+.fa-facebook-f{
+    font-size: 3.5vw;
+}
+
+.fa-envelope{
+    font-size: 3.5vw;
+}
+
+.fa-map-marker-alt{
+    font-size: 3.5vw;
+}
+
+.fa-whatsapp{
+    font-size: 3.5vw;   
+}
+
+}
+ 
+@media  screen and (min-width: 1200px) {
+
+.card-title{
+  font-size: 2.3vw;
+}
+
+.card-text{
+  font-size: 1.3vw;
+}
+.offcanvas{
+  width: 45vw;
+}
 
 .fa-instagram{
     font-size: 3vw;     
@@ -405,44 +525,14 @@ opacity: 0.6;
     font-size: 3vw;
 }
 
-
-}
-@media  screen and (min-width: 1281px) and (max-width: 1919px){
-  .fa-whatsapp{
-    font-size: 4vw;   
-}
-
-
-.fa-instagram{
-    font-size: 2.5vw;     
-}
-
-.fa-facebook-f{
-    font-size: 2.5vw;
-}
-
-.fa-envelope{
-    font-size: 2vw;
-}
-
-.fa-map-marker-alt{
-    font-size: 2.5vw;
-}
-
 .fa-whatsapp{
-    font-size: 2.6vw;   
+    font-size: 3vw;   
+}
 }
 
-
-
-
-
- 
-
-
+@media  screen and (min-width: 1400px) {
+  
 }
- 
-
 
 
 

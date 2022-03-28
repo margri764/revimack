@@ -6,14 +6,21 @@
     color: white;
     line-height: 40px;
     font-size: 2vw;
+    font-family: 'Monserrat',sans-serif;
     border-radius: 10px;
-    border: none;
+    border: 2px solid #82b75c;
     margin-bottom: 40px;
 
     box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
     -webkit-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
     -moz-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+}
 
+.btnSend:hover{
+
+    background-color: white;
+    color: rgb(47, 47, 47);
+    border: 2px solid #82b75c;
 }
 
 input{
@@ -21,50 +28,60 @@ input{
     border-color: #82b75c;
 }
 
-@media  screen and (max-width: 600px){  
+textarea{
+    border-radius: 10px;
+    border-color: #82b75c;
+}
 
-    .btnSend{
-        font-size: 5vw;
-        line-height: 40px;
 
-    }
+.animate__animated.animate__flash {
+    --animate-duration: 10s;
+  }
   
-     
+@media  screen and (max-width: 575px){  
+
+.btnSend{
+    font-size: 5vw;
+    line-height: 40px;
+}
+
+}
+
     
-    }
+@media screen and (min-width: 576px){
+
+.btnSend{
+    font-size: 3vw;
+    line-height: 40px;
+}
+
+}
     
+@media  screen and (min-width: 768px){
+
+.btnSend{
+    font-size: 2vw;
+    line-height: 45px;
+}
+
+}
+
+@media  screen and (min-width: 992px) {
+
+.btnSend{
+    font-size: 1.6vw;
+    line-height: 50px;
+}
+
+}
+
+@media  screen and (min-width: 1200px) {
+
+}
     
-    
-    
-    @media screen and (min-width: 601px) and (max-width: 960px){
-    
-     
-    
-    }
-    
-    @media  screen and (min-width: 961px) and (max-width: 1280px){
-  
-        .btnSend{
-            font-size: 3vw;
-           
-        }
-    
-    
-    }
-    @media  screen and (min-width: 1281px) and (max-width: 1919px){
-    
-        .btnSend{
-            font-size: 1.6vw;
-            line-height: 50px;
-          
-        }
-        
-      
-     
-    
-    
-    }
-     
+@media  screen and (min-width: 1400px) {
+
+}
     
     
     

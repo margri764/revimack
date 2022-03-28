@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { EmailService } from 'src/app/services/email/email.service';
 
 @Component({
   selector: 'app-form-canvas',
@@ -17,6 +18,8 @@ export class FormCanvasComponent implements OnInit {
   public invalidName:  boolean  = false;
   public invalidPhone: boolean = false;
   public invalidEmail: boolean = false;
+  public sendingEmail: boolean = true;
+
   
   
 
@@ -29,7 +32,8 @@ export class FormCanvasComponent implements OnInit {
     
   constructor(
                private fb : FormBuilder,
-               private route : Router
+               private route : Router,
+               private _emailservice : EmailService
 
   ) { }
 
@@ -68,20 +72,34 @@ export class FormCanvasComponent implements OnInit {
 
   }
 
+  
+
   sendForm (){
     if ( this.myForm.invalid ) {
       this.myForm.markAllAsTouched();
       return;
     }
-    
-    setTimeout( ()=>{
-      this.route.navigateByUrl("/gracias")
+    this.sendingEmail=false;
+      this._emailservice.sendEmail(this.myForm.value).subscribe(
+        res =>{ if(res == "true"){
+              this.clicked=false; 
+                 
+              setTimeout( ()=>{
+                this.route.navigateByUrl("/gracias")
 
-    },2000)
+              },3000)
+
+
+        }}
+      )
+    
+    
+    // setTimeout( ()=>{
+
+    // },2000)
+  
   
 
-
-    this.clicked=false; 
     // alert(JSON.stringify(this.myForm.value))
   }
 

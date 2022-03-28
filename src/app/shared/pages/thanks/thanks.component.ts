@@ -18,7 +18,7 @@ export class ThanksComponent implements OnInit {
 
       this.route.navigateByUrl("/home")
 
-    },5000)
+    },6000)
   
   }
 

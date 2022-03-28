@@ -41,7 +41,7 @@ constructor()
   ngOnInit(): void {
 
 
-    (screen.width<600) ?  this.imgEcurow="./assets/ecuRow_cel.png" :     this.imgEcurow="./assets/ecuRow-desktop.png";
+    (screen.width<575) ?  this.imgEcurow="./assets/ecuRow_cel.png" :     this.imgEcurow="./assets/ecuRow-desktop.png";
   
     
       
