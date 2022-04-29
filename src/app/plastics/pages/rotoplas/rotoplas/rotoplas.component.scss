@@ -131,16 +131,12 @@ opacity: 0.6;
     height: 200px;
     cursor: pointer;
 
- 
-
     background-color: transparent;
     border-top: 8px double rgb(37, 150, 190);;
     border-right: 8px double rgb(37, 150, 190);;
     border-bottom: 8px double rgb(37, 150, 190);
     border-left: 8px double rgb(37, 150, 190, .2);
   }
-
-
 
   .borderdouble2 {
     border: 2px solid;
@@ -281,7 +277,8 @@ opacity: 0.6;
  transform: scale(1.01);
 }
 
-@media  screen and (max-width: 600px){  
+
+@media  screen and (max-width: 575px){  
 
 .headerRotoplas{
   height: 50vw;
@@ -291,6 +288,22 @@ opacity: 0.6;
 
 .offcanvas{
   width: 90vw;
+}
+
+.borderdouble {
+  height: 150px;
+}
+
+.borderdouble2 {
+  height: 150px;
+}
+
+.borderdouble3 {
+  height: 150px;
+}
+
+.plus{
+  width: 135px;
 }
 
 #up{
@@ -503,8 +516,9 @@ opacity: 0.6;
 }
 
 .card-text{
-  font-size: 1.3vw;
+  font-size: 1.8vw;
 }
+
 .offcanvas{
   width: 45vw;
 }
@@ -531,6 +545,38 @@ opacity: 0.6;
 }
 
 @media  screen and (min-width: 1400px) {
+
+  .card-title{
+    font-size: 1.7vw;
+  }
+  
+  .card-text{
+    font-size: 1.3vw;
+  }
+  
+  .offcanvas{
+    width: 30vw;
+  }
+  
+  .fa-instagram{
+      font-size: 3vw;     
+  }
+  
+  .fa-facebook-f{
+      font-size: 3vw;
+  }
+  
+  .fa-envelope{
+      font-size: 3vw;
+  }
+  
+  .fa-map-marker-alt{
+      font-size: 3vw;
+  }
+  
+  .fa-whatsapp{
+      font-size: 3vw;   
+  }
   
 }
 

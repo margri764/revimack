@@ -30,93 +30,91 @@ h5{
 }
 
 
-@media  screen and (max-width: 600px){  
+@media  screen and (max-width: 575px){  
     
+.card{
+    border-radius: 10px;
+}
 
-    
-    .card{
-        border-radius: 10px;
-    }
-    
-    .card-text{
-        font-size: 4.5vw;
-    }
-    
-    .card-title{
-        font-size: 6vw;
-    }
-    
-    
-   
-   
-    
-    
-    }
-    
-    
-    
-    
-    @media screen and (min-width: 601px) and (max-width: 960px){
-    
+.card-text{
+    font-size: 4.5vw;
+}
 
+.card-title{
+    font-size: 6vw;
+}
+
+}
     
-    }
-    
-    @media  screen and (min-width: 961px) and (max-width: 1280px){
-    
-    
-        .card{
-            border-radius: 20px;
-        }
+@media screen and (min-width: 576px){
+
+.card{
+    border-radius: 10px;
+}
+
+.card-title{
+    font-size: 5vw;
+}
+
+.card-text{
+    font-size: 4.7vw;
+}
+
+
+}
+
+@media  screen and (min-width: 768px){
+
+.card{
+    border-radius: 20px;
+}
+
+.card-title{
+    font-size: 3vw;
+}
+
+.card-text{
+    font-size: 2.8vw;
+}
         
-        .card-text{
-            font-size: 1.3vw;
-        }
-        
-        .card-title{
-            font-size: 1.6vw;
-        }
-        
-        
-      
+}
+
+@media  screen and (min-width: 992px) {
     
-    }
-    @media  screen and (min-width: 1281px) and (max-width: 1919px){
-      
-   
-        
-        .card{
-        }
+.card-title{
+    font-size: 2.5vw;
+}
+
+.card-text{
+    font-size: 2.2vw;
+}
+
+}        
     
-        .card-title{
-            font-size: 1.4vw;
-        }
-    
-        .card-text{
-            font-size: 1.2vw;
-        }
-    
-    }        
-        
-          
-        
-@media  screen and (min-width: 1920px){
+@media  screen and (min-width: 1200px){
     
               
-        .card-text{
-            font-size: 1.2vw;
-        }
-    
-               
-        .card-title{
-            font-size: 0.8vw;
-        }
+.card-title{
+    font-size: 2vw;
+}
         
+.card-text{
+    font-size: 1.6vw;
+}
+
+}
+
+@media  screen and (min-width: 1400px){
+            
     
+.card-title{
+    font-size: 1.6vw;
+}
+
+.card-text{
+    font-size: 1.3vw;
+}
+
+}
         
-    
-    
-    
-    }
-     
     

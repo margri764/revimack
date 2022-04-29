@@ -1,19 +1,13 @@
 
 
-.headpesce{
-    height: 40vw;
-    background-image: url(../../../../../assets/pesce/pesce-header.png);
-    background-position: center;
-    background-size: cover;
-}
 
 .banner{
-  background-color: rgb(199, 11, 11);
+  background-color: rgb(40,67,130);
   color: white;
   font-family:'Roboto Condensed','sans-serif';
   font-weight: 500;
   font-size: 2vw;
-  border-bottom: 6px solid rgb(144, 8, 8);
+  border-bottom: 6px solid rgb(69, 117, 229);
 }
 
 .card{
@@ -56,6 +50,37 @@ font-weight: 400;
   -moz-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
 }
 
+
+
+.plusBernardin{
+  border-radius: 200px;
+  background-color: rgb(40,67,130);
+  border: 2px solid;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  width: 70px;
+  opacity: 0.7; 
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease;
+ -ms-transition: all 0.3s ease;
+}
+.plusBernardin:hover{
+-webkit-transform: rotate(90deg);
+-moz-transform: rotate(90deg);
+-ms-transform: rotate(90deg);
+transform: rotate(90deg);
+}
+
+
+.fa-plus{
+  width: 50px;
+  height: 50px;
+}
+
+
+
+
 .consulta{
     border-radius: 10px; 
     padding: 10px;
@@ -69,7 +94,7 @@ font-weight: 400;
 
 .divider{
   height: 3px;
-  background-color:rgb(199, 11, 11); 
+  background-color:rgb(40,67,130); 
   opacity: 0.6;
 }
 
@@ -245,10 +270,7 @@ transform: rotate(90deg);
 
 @media  screen and (max-width: 575px){  
 
-.headpesce{
-  height: 50vw;
-  background-image: url(../../../../../assets/pesce/pesce-header-phone.png);
-}
+
 
 .banner{
   font-size: 5vw;
@@ -260,16 +282,17 @@ transform: rotate(90deg);
   right: 5px;
 }
 
+
 .btnContact{
   font-size: 5vw;
 }
 
 .card-text{
-    font-size: 3vw;
+    font-size: 5vw;
 }
 
 .card-title{
-    font-size: 4vw;
+    font-size: 6vw;
 }
 
 #back{
@@ -325,10 +348,7 @@ transform: rotate(90deg);
 
 @media screen and (min-width: 576px) {
 
-  .headpesce{
-    height: 50vw;
-    background-image: url(../../../../../assets/pesce/pesce-header-phone.png);
-  }
+
   
   .banner{
     font-size: 3vw;
@@ -403,12 +423,7 @@ transform: rotate(90deg);
 
 @media  screen and (min-width: 768px){
   
-  .headpesce{
-      height: 40vw;
-      background-image: url(../../../../../assets/pesce/pesce-header.png);
-      background-position: center;
-      background-size: cover;
-  }
+
     
    .offcanvas{
      width: 60vw;

@@ -1,0 +1,152 @@
+<div fxLayout="row wrap" fxLayoutAlign="center"  >
+ 
+    <div  fxFlex="100" #top>
+       <app-navbar fxFlex="100" ></app-navbar>
+       </div>
+   
+   <div  fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center" style="background-color: white; margin-top: 10px;"  >
+
+    <img src="assets/plantium/back.png" routerLink="../../home" id="back"  >
+    <img src="assets/arrow.png" (click)="goToTop()" id="up"  >
+    
+    <div  fxFlex="100" class="animate__animated animate__fadeIn" fxLayoutAlign="center"> 
+
+      <img  [src]="getImage()" alt="bernardin imagenes" fxFlex="100" >
+   </div>
+     
+    <div fxFlex="100" fxLayoutAlign="center center" class="banner">Bernardin</div>
+
+
+
+    <div class="card" fxFlex="98"  >
+        <div class="card-body">
+          <h5 class="card-title">La Empresa</h5>
+          <br>
+          <p class="card-text">
+            BERNARDIN empresa pionera en Sudamérica en la fabricación de cosechadoras de granos y otras maquinarias agrícolas, abre sus puertas en 1925 de la mano de su fundador, Don Andrés Bernardin.
+          </p>
+          <p class="card-text">
+          Hijo de inmigrantes italianos, a base de ingenio y esfuerzo, Don Andrés, como se lo llamaba, llevó adelante la fábrica por mas de 25 años. En sus tiempos este hombre fue un verdadero revolucionario de las técnicas de cosecha con múltiples invenciones, algunas de las cuales, como el concepto del cabezal maicero, han tenido vigencia hasta nuestros días en todo el mundo.
+          </p>
+          <p class="card-text">
+            Mucho es lo que se está haciendo de cara a la realidad de mercados cada vez más exigentes: nuevos desarrollos, perfeccionamiento de sus productos, integración de cada avance tecnológico que el campo demanda. Y para que esa repuesta sea cada vez más eficiente, la empresa ha obtenido la certificación de sus Sistemas de Producción, Diseño y Calidad bajo las Normas ISO 9001.
+          </p>
+        </div>
+    </div>
+
+  <div fxLayout="row wrap" fxFlex="98" class="products" >
+ 
+      <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" style="margin-top: 30px;">
+          <div fxFlex="25" fxFlex.xs="60" > <h1 >Productos</h1></div> 
+          <div fxFlex="75" fxFlex.xs="40" class="divider"></div>
+      </div>
+  </div>
+
+  <!-- niveladora -->
+  <div fxFlex="98" fxLayout="row wrap" fxLayoutAlign="space-between" style="margin-bottom: 100px;" >
+
+    <div fxFlex="50" fxFlex.xs="100"  class="niveladora" fxLayoutAlign="center end">
+      <img src="assets/bernardin/niveladora.png" fxFlex="100">
+    </div>
+
+    <div fxFlex="48" fxFlex.xs="100" fxLayout="row wrap" fxLayoutAlign="space-between center">
+
+    <p class="card-text" fxFlex="100"  >
+      "BERNARDIN en su contínua innovación introduce al mercado una moderna línea de niveladoras con el objetivo de contribuir con el mejoramiento de caminos rurales. Estos productos están pensados para los agricultores, pero también para municipios y consorcios camineros..."
+    </p>
+    <div fxFlex="100" class="text-center" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">
+      <i class="fa-thin fa fa-plus fa-lg plusBernardin"></i>
+    </div>
+  </div>
+
+
+  </div>
+  <!-- niveladora -->
+
+  <!-- desmalezadora -->
+  <div fxFlex="98" fxLayout="row wrap" fxLayoutAlign="space-between" style="margin-bottom: 100px;" >
+    <div fxFlex="48" fxFlex.xs="100" fxLayout="row wrap" fxLayoutAlign="space-between center">
+
+      <p class="card-text" fxFlex="100" fxFlex.xs="100" >
+        "La línea de desmalezadoras BERNARDIN cubren un amplio espectro de usos y aplicaciones. Su diversidad en cuanto a anchos de corte, equipos suspendidos o de arrastre permiten satisfacer todas las expectativas en las tareas diarias de corte..."
+      </p>
+      <div fxFlex="100" class="text-center" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">
+        <i class="fa-thin fa fa-plus fa-lg plusBernardin"></i>
+      </div>
+    </div>
+
+    <div fxFlex="49" fxFlex.xs="98"  class="desmalezadora" fxLayoutAlign="center end" >
+      <img src="assets/bernardin/desmalezadora.png" fxFlex="100">
+    </div>
+
+  </div>
+  <!-- desmalezadora -->
+
+  <div fxLayout="row wrap" fxFlex="98" class="products" >
+ 
+    <div fxLayout="row wrap" fxFlex="98" fxLayoutAlign="center center" >
+        <div fxFlex="100"  > <h1 >En Revimack Agro contamos con toda la información, promociones y novedades acerca de los productos Bernardin, consultanos y te contestaremos a la brevedad </h1>
+        </div> 
+        <div fxFlex="100" class="text-center" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" style="margin-top: 40px;">
+          <i class="fa-thin fa fa-plus fa-lg plusBernardin"></i>
+        </div>
+     
+    </div>
+</div>
+
+  </div>
+ </div>
+
+ <!-- Formulario canvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1"  id="formCanvas" aria-labelledby="offcanvasExampleLabel"  >
+   
+  <div    fxLayoutAlign="end" fxLayout="row" style="margin-top: 20px; padding: 20px;">
+        <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+ </div>    
+ 
+ <div class="offcanvas-header" fxLayoutAlign="center center" style="margin-top: 20px;">
+
+      <div fxLayout="row wrap" fxFlex="90" fxLayoutAlign="center center" class="consulta">
+          <div fxFlex="60" fxFlex.xs="60" > <h4>Dejanos tu consulta</h4></div> 
+          <div fxFlex="40" fxFlex.xs="40" class="dividerGreen"></div>
+   </div>
+
+  
+  </div>
+  
+  <div class="offcanvas-body" fxLayout="row wrap"  fxLayoutAlign="center start">
+      <div fxFlex="90" style="margin-top: 30px;">
+      <app-form-canvas></app-form-canvas>
+     </div>
+      
+     <div fxFlex="90" style="margin-top: 20px;">
+         <h4> Te ofrecemos mas medios para encontrarnos..</h4>
+
+     </div>
+
+      <div fxFlex="90" fxLayoutGap.xs="20px" fxLayoutGap="35px"  fxLayoutAlign.xs="space-between" fxLayoutAlign="space-between" style="margin-top: 30px;">
+          <a  href="https://wa.me/+542302623444?text=Hola!!%20" target="blank" > 
+           <i class="fab fa-whatsapp" ></i>
+         </a>
+           
+          <a target="_blank" title="Instagram" href="https://www.instagram.com/re.vi.mack_agro/?hl=es">
+             <i class="fab fa-instagram"></i>
+          </a>
+
+          <a target="_blank" title="Facebook" href="https://www.facebook.com/search/top?q=revimack%20agro">
+             <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <a target="_blank" title="email" href="mailto:revimackventas@gmail.com">
+            <i class="fa fa-envelope"></i>
+         </a>
+
+         <a target="_blank" title="gps" href="https://goo.gl/maps/4indGx9FR3M1qX5b6">
+          <i class="fas fa-map-marker-alt"></i>
+       </a>
+         
+   
+      </div> 
+  </div>
+
+</div> 

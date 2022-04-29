@@ -1,8 +1,8 @@
 
-<app-start *ngIf="!disabled"></app-start>
+<!-- <app-start *ngIf="!disabled"></app-start> -->
 
-      <!-- <div class="page-wrapper animate__animated animate__fadeIn" > -->
-      <div class="page-wrapper animate__animated animate__fadeIn" *ngIf="disabled" >
+      <div class="page-wrapper animate__animated animate__fadeIn" >
+      <!-- <div class="page-wrapper animate__animated animate__fadeIn" *ngIf="disabled" > -->
 
 
         <div class="sticky-header">
@@ -13,11 +13,11 @@
         
             <div class="content">
        
-              <app-header *ngIf="!(router.url === '/implementos/pesce'||router.url === '/eco/rotoplas'
+              <app-header *ngIf="!(router.url === '/implementos/pesce'||router.url === '/implementos/bernardin' ||router.url === '/implementos/metalpaz'||router.url === '/eco/rotoplas'
               ||router.url === '/tecno/plantium' || router.url === '/gracias' || router.url === '/contacto')"></app-header>
   
             
-              <app-navbar  *ngIf="!(router.url === '/implementos/pesce' ||router.url === '/eco/rotoplas'
+              <app-navbar  *ngIf="!(router.url === '/implementos/pesce' || router.url === '/implementos/bernardin' ||router.url === '/implementos/metalpaz'||router.url === '/eco/rotoplas'
               ||router.url === '/tecno/plantium' || router.url === '/gracias' || router.url === '/contacto') && !phone"></app-navbar> 
 
          <!-- <app-slider-up *ngIf="!(router.url === '/agro/maquinas'|| router.url === '/eco/plasticos' 
