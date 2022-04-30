@@ -15,7 +15,7 @@
     // font-weight: 500;
     // font-size: 2vw;
     // border-bottom: 6px solid ;
-  }
+  }n
   
   .card{
       border-radius: 10px;
@@ -31,7 +31,8 @@
       font-size: 1.5vw;
       color: rgb(85, 85, 85);
       opacity: 0.9;
-      // font-family:'Roboto Condensed','sans-serif';
+      font-family:'Roboto Condensed','sans-serif';
+      line-height: 30px;
   }
   
   .card-title{
@@ -59,9 +60,9 @@
   
   
   
-  .plusBernardin{
+  .plusMetalpaz{
     border-radius: 200px;
-    background-color: rgb(40,67,130);
+    background-color: rgb(240,28,36);
     border: 2px solid;
     padding: 10px;
     color: white;
@@ -72,7 +73,7 @@
     -moz-transition: all 0.3s ease;
    -ms-transition: all 0.3s ease;
   }
-  .plusBernardin:hover{
+  .plusMetalpaz:hover{
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
@@ -84,8 +85,6 @@
     width: 50px;
     height: 50px;
   }
-  
-  
   
   
   .consulta{
@@ -101,7 +100,7 @@
   
   .divider{
     height: 3px;
-    background-color:rgb(40,67,130); 
+    background-color: rgb(240,28,36); 
     opacity: 0.6;
   }
   
@@ -277,7 +276,11 @@
   
   @media  screen and (max-width: 575px){  
   
-  
+    .headerMetalpaz{
+      height: 60vw;
+      background-image: url(../../../../../assets/metalpaz/fondo_metalpaz-phone.png);
+
+  }
   
   .banner{
     font-size: 5vw;

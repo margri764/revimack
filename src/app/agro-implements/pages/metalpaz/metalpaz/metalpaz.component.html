@@ -8,13 +8,14 @@
  <div  fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center" style="background-color: white; margin-top: 10px;"  >
   
 <div  fxFlex="100" class="animate__animated animate__fadeIn headerMetalpaz" fxLayoutAlign="center"></div>
-<div fxFlex="100" fxLayoutAlign="space-around center" class="banner">Revimack Agro &nbsp; &nbsp;&nbsp; &nbsp; Revimack Agro &nbsp; &nbsp; &nbsp; &nbsp;Revimack Agro &nbsp; &nbsp; &nbsp; &nbsp;Revimack Agro</div>
+<div fxFlex="99" fxLayoutAlign="space-between center" class="banner" *ngIf="!phone"><span>Revimack Agro </span><span> Revimack Agro</span> <span> Revimack Agro</span> <span> Revimack Agro</span></div>
+<div fxFlex="99" fxLayoutAlign="space-around center" class="banner" *ngIf="phone"><span>Revimack Agro </span><span> Revimack Agro</span></div>
 
   <img src="assets/plantium/back.png" routerLink="../../home" id="back"  >
   <img src="assets/arrow.png" (click)="goToTop()" id="up"  >
 
 
-<div class="card" fxFlex="98"  >
+<div class="card" fxFlex="98" style="margin-top: 80px;">
     <div class="card-body">
       <h5 class="card-title">La Empresa</h5>
       <br>
@@ -36,5 +37,102 @@
         Hoy contamos con 26 modelos de fabricación, gracias a clientes, proveedores y amigos que confiaron en nosotros, a pesar de que tenemos un largo camino por recorrer… hoy podemos decir que nuestro sueño se ha cumplido…depender de nosotros mismos…</p>
     </div>
 </div>
+
+<div fxLayout="row wrap" fxFlex="98" class="products" style="margin-top: 50px;" >
+ 
+  <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" style="margin-top: 30px;">
+      <div fxFlex="25" fxFlex.xs="60" > <h1 >Productos</h1></div> 
+      <div fxFlex="75" fxFlex.xs="40" class="divider"></div>
+  </div>
+</div>
+
+<div  fxLayout="row wrap" fxLayoutAlign="space-between"  fxFlex="98" style="margin-top: 80px; margin-bottom: 80px;">
+  
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="49" fxFlex.xs="98">
+    <span class="card-title">Acoplados Tanque</span>
+    <img src="assets/metalpaz/tolva-10.png" alt="tolva metalpaz" fxFlex="100" >
+    <div fxFlex="100" class="text-center" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" >
+      <i class="fa-thin fa fa-plus fa-lg plusMetalpaz"></i>
+    </div>
+  </div>
+
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="49" fxFlex.xs="98">
+    <span class="card-title">Acoplados Tanque</span>
+    <img src="assets/metalpaz/tanque-de-1500.png" alt="tanque de 1500 metalpaz" fxFlex="100">
+    <div fxFlex="100" class="text-center" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" >
+      <i class="fa-thin fa fa-plus fa-lg plusMetalpaz"></i>
+    </div>
+  </div>
+
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="49" fxFlex.xs="98" >
+    <span class="card-title">Acoplados Playo</span>
+    <img src="assets/metalpaz/carro-playo.png" alt="tanque de 1500 metalpaz" fxFlex="100">
+    <div fxFlex="100" class="text-center" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" >
+      <i class="fa-thin fa fa-plus fa-lg plusMetalpaz"></i>
+    </div>
+  </div>
+
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="49" fxFlex.xs="98"  class="products" style="margin-top: 50px;" >
+    
+        <h2 class="card-text">Metalpaz y Revimack Agro se unen para brindarte productos de calidad, al mejor precio y con todo el servicio post venta que te mereces. En Revimack Agro contamos con toda la información, promociones y novedades acerca de los productos Metalpaz, consultanos y te contestaremos a la brevedad .</h2>
+        <img src="assets/logo-tractor.png" fxFlex="30" fxFlex.xs="70">  
+  </div>
+</div>
+
 </div>
 </div>
+
+
+ <!-- Formulario canvas -->
+ <div class="offcanvas offcanvas-start" tabindex="-1"  id="formCanvas" aria-labelledby="offcanvasExampleLabel"  >
+   
+  <div    fxLayoutAlign="end" fxLayout="row" style="margin-top: 20px; padding: 20px;">
+        <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+ </div>    
+ 
+ <div class="offcanvas-header" fxLayoutAlign="center center" style="margin-top: 20px;">
+
+      <div fxLayout="row wrap" fxFlex="90" fxLayoutAlign="center center" class="consulta">
+          <div fxFlex="60" fxFlex.xs="60" > <h4>Dejanos tu consulta</h4></div> 
+          <div fxFlex="40" fxFlex.xs="40" class="dividerGreen"></div>
+   </div>
+
+  
+  </div>
+  
+  <div class="offcanvas-body" fxLayout="row wrap"  fxLayoutAlign="center start">
+      <div fxFlex="90" style="margin-top: 30px;">
+      <app-form-canvas></app-form-canvas>
+     </div>
+      
+     <div fxFlex="90" style="margin-top: 20px;">
+         <h4> Te ofrecemos mas medios para encontrarnos..</h4>
+
+     </div>
+
+      <div fxFlex="90" fxLayoutGap.xs="20px" fxLayoutGap="35px"  fxLayoutAlign.xs="space-between" fxLayoutAlign="space-between" style="margin-top: 30px;">
+          <a  href="https://wa.me/+542302623444?text=Hola!!%20" target="blank" > 
+           <i class="fab fa-whatsapp" ></i>
+         </a>
+           
+          <a target="_blank" title="Instagram" href="https://www.instagram.com/re.vi.mack_agro/?hl=es">
+             <i class="fab fa-instagram"></i>
+          </a>
+
+          <a target="_blank" title="Facebook" href="https://www.facebook.com/search/top?q=revimack%20agro">
+             <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <a target="_blank" title="email" href="mailto:revimackventas@gmail.com">
+            <i class="fa fa-envelope"></i>
+         </a>
+
+         <a target="_blank" title="gps" href="https://goo.gl/maps/4indGx9FR3M1qX5b6">
+          <i class="fas fa-map-marker-alt"></i>
+       </a>
+         
+   
+      </div> 
+  </div>
+
+</div> 
