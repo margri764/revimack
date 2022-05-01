@@ -5,6 +5,7 @@ import { HomeImplementsComponent } from './pages/homeImplements/home-implements/
 import { PesceComponent } from './pages/pesce/pesce/pesce.component';
 import { BernardinComponent } from './pages/bernardin/bernardin/bernardin.component';
 import { MetalpazComponent } from './pages/metalpaz/metalpaz/metalpaz.component';
+import { CortiComponent } from './pages/corti/corti/corti.component';
 
 
 
@@ -31,8 +32,9 @@ const routes: Routes = [
       path: "metalpaz" , component: MetalpazComponent
      },
      
-     
-     
+     {    
+      path: "corti" , component: CortiComponent
+     },
    
      {
        path: '**',

@@ -1,0 +1,709 @@
+.contain {
+  display: flex;
+  width: 85%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 85vh;
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+}
+
+.box > img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover; 
+  transition: .5s;
+}
+
+.box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+
+.box:hover { flex: 1 1 50%; }
+.box:hover > img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.headerCorti{
+    height: 40vw;
+    background-image: url(../../../../../assets/corti/fondo_corti.png);
+    background-position: center;
+    background-size: cover;
+    opacity: 0.1;
+    // filter: grayscale(90%);
+    // filter: sepia(90%);
+
+    
+}
+
+.banner{
+    background-color:rgb(232,4,28);
+    color: white;
+    margin-top: 15px;
+
+    // font-family:'Roboto Condensed','sans-serif';
+    // font-weight: 500;
+    // font-size: 2vw;
+    // border-bottom: 6px solid ;
+  }n
+  
+  .card{
+      border-radius: 10px;
+      margin-top: 70px;
+      margin-bottom: 70px;
+  
+      box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+      -webkit-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+      -moz-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+  }
+  
+  .card-text{
+    font-size: 1.5vw;
+    color: rgb(85, 85, 85);
+    opacity: 0.9;
+    font-family:'Roboto Condensed','sans-serif';
+    line-height: 30px;
+  }
+  
+  .card-title{
+    font-family:'Roboto Condensed','sans-serif';
+    font-weight:bold;
+    font-size: 2vw;
+  }
+  
+  h1{
+    font-family:'Roboto Condensed','sans-serif';
+    font-weight: 400;
+  }
+  
+  .products{
+    margin-top: 20px;
+    margin-bottom: 80px;
+    border-radius: 10px; 
+    padding: 20px;
+    background-color: rgb(251, 251, 251);
+  
+    box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+    -webkit-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+    -moz-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+  }
+  
+  
+  
+  .plusCorti{
+    border-radius: 200px;
+    background-color: rgb(232,4,28);
+    border: 2px solid;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    width: 70px;
+    opacity: 0.7; 
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease;
+   -ms-transition: all 0.3s ease;
+  }
+  .plusCorti:hover{
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  }
+  
+  
+  .fa-plus{
+    width: 50px;
+    height: 50px;
+  }
+  
+  
+  .consulta{
+      border-radius: 10px; 
+      padding: 10px;
+      background-color: rgb(251, 251, 251);
+  
+      box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+      -webkit-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+      -moz-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+  }
+  
+  
+  .divider{
+    height: 3px;
+    background-color: rgb(232,4,28); 
+    opacity: 0.6;
+  }
+  
+  .dividerGreen{
+    height: 3px;
+    background-color: #82b75c; 
+    opacity: 0.6;
+  }
+  
+  .plus{
+    border-radius: 300px;
+    padding: 2px;
+    cursor: pointer;
+    width: 180px;
+    opacity: 0.2; 
+    width: 180px;
+  
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease;
+   -ms-transition: all 0.3s ease;
+  }
+  .plus:hover{
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  }
+  
+  #back {
+    position:absolute; 
+    top: 20px; /* Place the button at the bottom of the page */
+    left: 10px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    opacity: 0.6;
+    width: 50px;
+  }
+  
+  #back:hover {
+   transform: scale(1.01);
+  }
+  
+  .borderdouble {
+      border: 2px solid;
+      border-radius: 300px; 
+      height: 200px;
+  
+      background-color: transparent;
+      border-top: 8px double rgb(199, 11, 11);
+      border-right: 8px double rgb(199, 11, 11);
+      border-bottom: 8px double rgb(199, 11, 11);
+      border-left: 8px double rgb(199, 11, 11, .2)
+    }
+  .borderdouble:hover{
+      transform: scale(1.01);
+  }  
+  
+    .borderdouble2 {
+      border: 2px solid;
+      border-radius: 300px; 
+      height: 200px;
+  
+      background-color: transparent;
+      border-top: 8px double rgb(199, 11, 11);
+      border-right: 8px double rgb(199, 11, 11);
+      border-bottom: 8px double rgb(199, 11, 11, .2);
+      border-left: 8px double rgb(199, 11, 11, )
+    }
+  
+    .borderdouble3 {
+      border: 2px solid;
+      border-radius: 300px; 
+      height: 200px;
+  
+      background-color: transparent;
+      border-top: 8px double rgb(199, 11, 11);
+      border-right: 8px double rgb(199, 11, 11,0.2);
+      border-bottom: 8px double rgb(199, 11, 11);
+      border-left: 8px double rgb(199, 11, 11)
+    }
+  
+    .offcanvas{
+        width: 30vw;
+        border-top: 4px solid #82b75c;
+        border-right: 4px solid #82b75c;
+        border-bottom: 4px solid #82b75c;
+        border-radius: 0px 20px 21px 0px;
+  
+       -webkit-border-radius: 0px 20px 21px 0px;
+        -moz-border-radius: 0px 20px 21px 0px;
+    }
+  
+    .fa-whatsapp{
+      font-size: 8vw;   
+      color: #82b75c;
+    }
+    .fa-whatsapp:hover{   
+      color: #93f150;
+    }
+    
+    .fa-instagram{
+      font-size: 8vw;     
+      color: #82b75c;
+    }
+    .fa-instagram:hover{
+      color: #93f150;
+    }
+    
+    .fa-facebook-f{
+      color: #82b75c;
+      font-size: 8vw;
+    }
+    .fa-facebook-f:hover{
+      color: #93f150;
+    } 
+    
+    .fa-envelope{
+      color: #82b75c;
+      font-size: 8vw;
+    }
+    .fa-envelope:hover{
+      color: #93f150;
+    }
+    
+    
+    .fa-map-marker-alt{
+      color: #82b75c;
+      font-size: 8vw;
+    }
+    .fa-map-marker-alt:hover{
+      color: #93f150;
+    }
+    
+    .btnContact{
+      background-color: #82b75c;
+      font-family:'Roboto Condensed','sans-serif';
+      font-weight: 500;
+      color: white;
+      border-radius: 5px;
+      border: none;
+      font-size: 2vw;
+      padding: 10px;
+  
+      box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+      -webkit-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+      -moz-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+    }
+    .btnContact:hover{
+      background-color: white;
+      color: #82b75c;
+      border: 2px solid #82b75c;
+    }
+  
+    .collapse {
+      -webkit-transition: none;
+      transition: none;
+  }
+  
+  #up {
+    position: fixed; 
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    opacity: 0.6;
+    width:80px;
+  }
+  
+  #up:hover {
+   transform: scale(1.01);
+  }
+  
+  @media  screen and (max-width: 575px){  
+  
+  //   .headerMetalpaz{
+  //     height: 60vw;
+  //     background-image: url(../../../../../assets/metalpaz/fondo_metalpaz-phone.png);
+
+  // }
+  
+  .banner{
+    font-size: 5vw;
+    height: 35px;
+  }
+  
+  #up{
+    width: 80px;
+    right: 5px;
+  }
+  
+  
+  .btnContact{
+    font-size: 5vw;
+  }
+  
+  .card-text{
+      font-size: 5vw;
+  }
+  
+  .card-title{
+      font-size: 6vw;
+  }
+  
+  #back{
+    width: 30px
+  }
+  
+  .borderdouble {
+    height: 150px;
+  }
+  
+  .borderdouble2 {
+    height: 150px;
+  }
+  
+  .borderdouble3 {
+    height: 150px;
+  }
+  
+  .plus{
+    width: 135px;
+  }
+  
+  .offcanvas{
+    width: 90vw;
+  }
+  
+   .fa-whatsapp{
+      font-size: 8vw;   
+  }
+  
+  .fa-instagram{
+      font-size: 8vw;     
+  }
+  
+  .fa-facebook-f{
+      font-size: 8vw;
+  }
+  
+  .fa-envelope{
+      font-size: 8vw;
+  }
+  
+  .fa-map-marker-alt{
+      font-size: 8vw;
+  }
+  
+   
+  
+  }
+  
+  
+  
+  
+  @media screen and (min-width: 576px) {
+  
+  
+    
+    .banner{
+      font-size: 3vw;
+      height: 35px;
+    }
+    
+    #up{
+      width: 80px;
+      right: 5px;
+    }
+    
+    .btnContact{
+      font-size: 2.8vw;
+    }
+    
+    .card-title{
+        font-size: 2.8vw;
+    }
+  
+    .card-text{
+        font-size: 2.5vw;
+    }
+    
+    #back{
+      width: 30px
+    }
+    
+    .borderdouble {
+      height: 150px;
+    }
+    
+    .borderdouble2 {
+      height: 150px;
+    }
+    
+    .borderdouble3 {
+      height: 150px;
+    }
+    
+    .plus{
+      width: 135px;
+    }
+  
+    
+    .offcanvas{
+      width: 70vw;
+    }
+    
+     .fa-whatsapp{
+        font-size: 6vw;   
+    }
+    
+    .fa-instagram{
+        font-size: 6vw;     
+    }
+    
+    .fa-facebook-f{
+        font-size: 6vw;
+    }
+    
+    .fa-envelope{
+        font-size: 6vw;
+    }
+    
+    .fa-map-marker-alt{
+        font-size: 6vw;
+    }
+    
+     
+  
+  }
+  
+  @media  screen and (min-width: 768px){
+    
+  
+      
+     .offcanvas{
+       width: 60vw;
+     }
+  
+     .btnContact{
+      font-size: 2.8vw;
+    }
+    
+    .card-title{
+        font-size: 2.8vw;
+    }
+    .card-text{
+        font-size: 2.5vw;
+    }
+    
+    .fa-whatsapp{
+        font-size: 3vw;   
+    }
+  
+  
+    .fa-instagram{
+        font-size: 3vw;     
+    }
+    
+    .fa-facebook-f{
+        font-size: 3vw;
+    }
+  
+    .fa-envelope{
+        font-size: 3vw;
+    }
+  
+    .fa-map-marker-alt{
+        font-size: 3vw;
+    }
+  
+  
+  }
+  @media  screen and (min-width: 992px) {
+  
+  
+    .offcanvas{
+      width: 50vw;
+    }
+  
+    .btnContact{
+      font-size: 2.8vw;
+    }
+    
+    .card-title{
+        font-size: 2.8vw;
+    }
+    .card-text{
+        font-size: 2.5vw;
+    }
+    
+    .fa-whatsapp{
+      font-size: 3vw;   
+  }
+  
+  
+  .fa-instagram{
+      font-size: 3vw;     
+  }
+  
+  .fa-facebook-f{
+      font-size: 3vw;
+  }
+  
+  .fa-envelope{
+      font-size: 3vw;
+  }
+  
+  .fa-map-marker-alt{
+      font-size: 3vw;
+  }
+  
+    .fa-instagram{
+        font-size: 3vw;     
+    }
+    
+    .fa-facebook-f{
+        font-size: 3vw;
+    }
+  
+    .fa-envelope{
+        font-size: 3vw;
+    }
+  
+    .fa-map-marker-alt{
+        font-size: 3vw;
+    }
+  
+  
+  }
+   
+  
+  @media  screen and (min-width: 1200px) {
+  
+  
+    .banner{
+      font-size: 1.8vw;
+    }
+  
+    .offcanvas{
+      width: 40vw;
+    }
+  
+    .btnContact{
+      font-size: 2vw;
+    }
+    
+    .borderdouble {
+      height: 150px;
+    }
+    
+    .card-title{
+        font-size: 2vw;
+    }
+    .card-text{
+        font-size: 1.6vw;
+    }
+    
+  
+    .fa-whatsapp{
+      font-size: 3vw;   
+  }
+  
+  
+  .fa-instagram{
+      font-size: 3vw;     
+  }
+  
+  .fa-facebook-f{
+      font-size: 3vw;
+  }
+  
+  .fa-envelope{
+      font-size: 3vw;
+  }
+  
+  .fa-map-marker-alt{
+      font-size: 3vw;
+  }
+  
+    .fa-instagram{
+        font-size: 3vw;     
+    }
+    
+    .fa-facebook-f{
+        font-size: 3vw;
+    }
+  
+    .fa-envelope{
+        font-size: 3vw;
+    }
+  
+    .fa-map-marker-alt{
+        font-size: 3vw;
+    }
+  
+  
+  }
+  
+  @media  screen and (min-width: 1400px) {
+  
+  
+    .banner{
+      font-size: 1.6vw;
+    }
+  
+    .offcanvas{
+      width: 30vw;
+    }
+  
+    .btnContact{
+      font-size: 1.4vw;
+    }
+    
+    .card-title{
+        font-size: 1.6vw;
+    }
+    .card-text{
+        font-size: 1.3vw;
+    }
+    
+  
+    .fa-whatsapp{
+      font-size: 3vw;   
+  }
+  
+  
+  .fa-instagram{
+      font-size: 3vw;     
+  }
+  
+  .fa-facebook-f{
+      font-size: 3vw;
+  }
+  
+  .fa-envelope{
+      font-size: 3vw;
+  }
+  
+  .fa-map-marker-alt{
+      font-size: 3vw;
+  }
+  
+    .fa-instagram{
+        font-size: 3vw;     
+    }
+    
+    .fa-facebook-f{
+        font-size: 3vw;
+    }
+  
+    .fa-envelope{
+        font-size: 3vw;
+    }
+  
+    .fa-map-marker-alt{
+        font-size: 3vw;
+    }
+  
+    
+  }
+  
+  
+  

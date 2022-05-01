@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-corti',
@@ -7,9 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CortiComponent implements OnInit {
 
+  @ViewChild ("top" , {static: true} )     top! : ElementRef;
+
+  phone: boolean=false;
+  
   constructor() { }
-
-  ngOnInit(): void {
+  
+    goToTop(){
+  
+      setTimeout( () => {
+  
+        this.top.nativeElement.scrollIntoView(
+        { 
+          alignToTop: true,
+          behavior: "smooth",
+          block: "center",
+        });
+        }, 0);
+    }
+  
+  
+  
+    ngOnInit(): void {
+      this.goToTop();
+      (screen.width <= 575) ? this.phone= true : false;
+  
+    }
   }
-
-}
+  
