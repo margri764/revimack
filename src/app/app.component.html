@@ -1,8 +1,8 @@
 
-<!-- <app-start *ngIf="!disabled"></app-start> -->
+<app-start *ngIf="!disabled"></app-start>
 
-  <div class="page-wrapper animate__animated animate__fadeIn" >
-  <!-- <div class="page-wrapper animate__animated animate__fadeIn" *ngIf="disabled" > -->
+  <!-- <div class="page-wrapper animate__animated animate__fadeIn" > -->
+  <div class="page-wrapper animate__animated animate__fadeIn" *ngIf="disabled" >
 
 
     <div class="sticky-header">
@@ -22,9 +22,6 @@
           router.url === '/implementos/metalpaz' || router.url === '/implementos/corti' ||router.url === '/eco/rotoplas'
           ||router.url === '/tecno/plantium' || router.url === '/gracias' || router.url === '/contacto') && !phone"></app-navbar> 
 
-      <!-- <app-slider-up *ngIf="!(router.url === '/agro/maquinas'|| router.url === '/eco/plasticos' 
-          || router.url === '/insumos/repuestos-accesorios' || router.url === '/implementos/implementos-agricolas'
-          || router.url === '/tecno/tecnologia')"></app-slider-up> -->
           
           <router-outlet> </router-outlet> 
       

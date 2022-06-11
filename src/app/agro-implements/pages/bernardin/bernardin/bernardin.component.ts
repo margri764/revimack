@@ -12,12 +12,20 @@ export class BernardinComponent implements OnInit {
 phone: boolean=false;
 private currentImage: any;
 
-rotoArray = [
+bernardinArray = [
   { path: "./assets/bernardin/img1-min.png" },
   { path: "./assets/bernardin/img2-min.png" },
   { path: "./assets/bernardin/img3-min.png" },
   { path: "./assets/bernardin/img4-min.png" },
   { path: "./assets/bernardin/img5-min.png" },
+ ];
+
+ bernardinArray2 = [
+  { path: "./assets/bernardin/1-phone.png" },
+  { path: "./assets/bernardin/2-phone.png" },
+  { path: "./assets/bernardin/3-phone.png" },
+  { path: "./assets/bernardin/4-phone.png" },
+  { path: "./assets/bernardin/5-phone.png" },
  ];
   
 
@@ -39,8 +47,13 @@ constructor() {
   }
 
   updateRandomImage() {
-    const showRandomImg= Math.floor(Math.random() * (this.rotoArray.length )) ;
-    return this.rotoArray[showRandomImg];
+    if(this.phone){
+      const showRandomImg= Math.floor(Math.random() * (this.bernardinArray2.length )) ;
+      return this.bernardinArray2[showRandomImg];
+    }else{
+      const showRandomImg= Math.floor(Math.random() * (this.bernardinArray.length )) ;
+      return this.bernardinArray[showRandomImg];
+    }
   }
 
   getImage() {

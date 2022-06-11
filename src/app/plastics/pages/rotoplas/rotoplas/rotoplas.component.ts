@@ -131,9 +131,6 @@ export class RotoplasComponent implements OnInit {
   ngOnInit(): void {
     this.goToTop()
 
-
-
-
     const clear = setInterval(() => {
       this.currentImage = this.updateRandomImage();
     
