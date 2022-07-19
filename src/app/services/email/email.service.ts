@@ -21,7 +21,7 @@ export class EmailService {
    headers.set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS')
    headers.set('Access-Control-Allow-Origin', '*');
 
-    return this.http.post<any> (`${this.baseUrl}api/send-mail`,body, {headers:headers})
+    return this.http.post<any> (`${this.baseUrl}api/send-email/revimack`,body, {headers:headers})
  
   }
 
