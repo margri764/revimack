@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,10 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
 
   title = 'revimack';
-  public disabled : boolean=false;
-  public phone : boolean = false;
+  disabled : boolean=false;
+  phone : boolean = false;
+  scroll! : boolean;
+
 
   constructor(
             public router : Router
@@ -19,13 +22,20 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
 
-
+    this.router.events
+    .pipe(filter(evt => evt instanceof NavigationEnd))  
+    .subscribe((event: any) => {
+     (event.url.includes('/maquinaria-agricola/tractores')) 
+     ?  this.scroll=false : this.scroll=true;
+     
+    });
+  
     
-    setTimeout(()=>{
+    // setTimeout(()=>{
 
-      this.disabled = true
+    //   this.disabled = true
 
-    },4000);
+    // },4000);
     
     (screen.width <= 575) ? this.phone= true : false;
   }

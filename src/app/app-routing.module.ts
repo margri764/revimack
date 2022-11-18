@@ -18,6 +18,10 @@ const routes: Routes = [
     loadChildren: () => import('./agro-implements/agro-implements.module').then( m => m.AgroImplementsModule )
   },
   {
+    path: 'maquinaria-agricola',
+    loadChildren: () => import('./tractors/tractors.module').then( m => m.TractorsModule )
+  },
+  {
     path: 'eco',
     loadChildren: () => import('./plastics/plastics.module').then( m => m.PlasticsModule )
   },
@@ -58,8 +62,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    // RouterModule.forRoot( routes)
-    RouterModule.forRoot( routes, { useHash: true })
+    RouterModule.forRoot( routes)
+    // RouterModule.forRoot( routes, { useHash: true })
 
   ],
   exports: [

@@ -4,6 +4,7 @@
     border-radius: 20px;
     background-color: rgba(34, 34, 34, 0.931);
     margin-bottom: 20px;
+    cursor: pointer;
 
     
     box-shadow: 10px 10px 35px 0px rgba(0,0,0,0.75);

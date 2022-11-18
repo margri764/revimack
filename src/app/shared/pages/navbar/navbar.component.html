@@ -1,8 +1,8 @@
 
 
+<!-- start navbar desktop -->
 <div fxLayout="row wrap"  fxFlex="100"  fxLayoutAlign="center" *ngIf="!phone">  
 
-  <!-- start navbar desktop -->
   <div fxLayout="row wrap"  fxFlex="99" class="customNavbar" fxLayoutAlign="space-between" *ngIf="!phone">  
     
     <div fxLayout="row wrap" fxLayoutAlign="start center"  fxFlex="80"  >
@@ -22,10 +22,10 @@
     </div>
   </div>
     
-  </div>
-  <!-- end navbar desktop -->
+</div>
+<!-- end navbar desktop -->
   
-  <!-- start phone navbar -->
+<!-- start phone navbar -->
 <div fxLayout="row wrap" fxLayoutAlign="end" fxFlex="100"  *ngIf="phone" style="margin-top: 10px;">  
 
 <div fxFlex="15" fxLayoutAlign="center" *ngIf="phone">
@@ -98,13 +98,17 @@
 
         <p><a routerLink="/implementos/implementos-agricolas"> <label data-bs-dismiss="offcanvas"> Venta de Implementos</label></a></p>
         <p><a routerLink="/eco/plasticos"> <label data-bs-dismiss="offcanvas"> Linea de plásticos</label></a></p>
+        <p fxFlex="100"><a routerLink="/maquinaria-agricola/tractores"> <label data-bs-dismiss="offcanvas"> Tractores FarmTrac</label></a></p>
+        <p><a routerLink="/maquinaria-agricola/tractores"> <label data-bs-dismiss="offcanvas"> Linea Vial</label></a></p>
+
+
         
         <div class="divider" fxFlex="100"></div>
         <p><a> <label style="color: rgb(31, 143, 21);">Proximamente:</label></a></p>
         <p><a> <label >Tecnología Agropecuaria</label></a></p>
         <p><a> <label >Repuestos y accesorios</label></a></p>
         <p><a> <label >Venta de Maquinaria Agricola</label></a></p>
-        <p><a> <label >Servicios Agropecuarios</label></a></p>
+        <!-- <p><a> <label >Servicios Agropecuarios</label></a></p> -->
 
 
       </div>  
@@ -114,7 +118,7 @@
    
     
     </div>
-  </div> 
+</div> 
 <!--end  canvas -->
 
  

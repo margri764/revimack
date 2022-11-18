@@ -9,24 +9,17 @@ import { filter } from 'rxjs';
 })
 export class NavbarComponent implements OnInit {
 
-  public navbarOpen : boolean = false;
-  public spinnerOn : boolean = false;
-  public phone : boolean = false;
-  public routerLinkImplements = "";
+  navbarOpen : boolean = false;
+  spinnerOn : boolean = false;
+  phone : boolean = false;
 
   constructor(
             private router : Router,
-            private _activatedRoute: ActivatedRoute,
   ) { }
 
 
-  
-
   ngOnInit(): void {
 
-  
-
- 
     (screen.width <= 575) ? this.phone = true : false; 
   }
 
