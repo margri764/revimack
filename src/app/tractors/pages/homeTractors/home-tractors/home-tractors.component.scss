@@ -35,3 +35,84 @@
 .non-class{
     opacity: 0;
 }
+
+.back-farm{
+    height: 500px;
+    background-image: url(../../../../../assets/farmtrac/back-farm-2.png);
+    background-position: center;
+    background-size: cover;
+    margin-top: 40px;
+}
+
+.back-farm-2{
+    background-image: url(../../../../../assets/farmtrac/back-farm-3.png);
+    background-position: center;
+    background-size: cover;
+    margin-top: 1.5em;
+}
+
+.back-farm-3{
+    background-image: url(../../../../../assets/farmtrac/back-farm-4.gif);
+    background-position: center;
+    background-size: cover;
+    margin-top: 1.5em;
+}
+
+.ft-30{
+    background-image: url(../../../../../assets/farmtrac/ft-30.png);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 575px) {
+  
+ 
+}
+
+@media only screen and (min-width: 576px) {
+
+}
+    
+
+/* medium devices (tablets, 768 px and up) */ 
+@media only screen and (min-width: 786px) {
+
+}
+    
+
+/* large devices (desktops, 992 px and up) */ 
+@media only screen and (min-width: 992px) {
+
+}
+
+
+/* x-large devices (desktops, 1200 px and up) */ 
+@media only screen and (min-width: 1200px) {
+
+.containBack-Farm-2{
+    height: 550px;
+}
+
+}
+    
+
+/* XX- Large devices (larger desktops, 1400px and up) */ 
+@media only screen and (min-width: 1400px) {
+
+.containBack-Farm-2{
+    height: 600px;
+}
+}
+
+/* XX- Large devices (larger desktops, 1400px and up) */ 
+@media only screen and (min-width: 1700px) {
+
+.back-farm{
+    height: 600px;
+}
+.containBack-Farm-2{
+    height: 750px;
+}
+}
