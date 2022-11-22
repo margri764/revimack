@@ -1,46 +1,39 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, HostListener, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { debounceTime, filter, fromEvent, map, Subject, Subscriber, Subscription, takeUntil, tap } from 'rxjs';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home-tractors',
   templateUrl: './home-tractors.component.html',
   styleUrls: ['./home-tractors.component.scss'],
-  
 })
-export class HomeTractorsComponent implements OnInit, OnInit, OnDestroy {
+
+export class HomeTractorsComponent implements OnInit, OnInit{
   
 
 
   @HostListener('window:scroll') onScroll(e: Event): void {
     console.log(this.getYPosition(e));
-    (this.getYPosition(e) >= 400 && this.getYPosition(e) <= 1200 ) ? this.scroll = true : this.scroll = false;
- }
+    (this.getYPosition(e) >= 3 ) ? this.scroll = true : this.scroll = false;
+    (this.getYPosition(e) >= 33 ) ? this.scroll2 = true : this.scroll2 = false;
+    (this.getYPosition(e) >= 50 ) ? this.scroll3 = true : this.scroll3 = false;
+    (this.getYPosition(e) >= 67 ) ? this.scroll4 = true : this.scroll4 = false;
+    (this.getYPosition(e) >= 87 ) ? this.scroll5 = true : this.scroll5 = false;
+    
+  }
 
-  // @HostListener("scroll", ["$event"])
-  
-  //  onScroll ($event: any ) {
-  //   const { scrollTop, scrollHeight, clientHeight } = $event.srcElement;
-  //   let number =( (scrollTop / (scrollHeight - clientHeight)) * 100);
-  //   console.log(number);
 
-  //   (number > 26 && number < 27) ? alert('50') : "";
-  // }
-
-  scrollSubscription! : Subscription;
   scroll : boolean = false;
+  scroll2 : boolean = false;
+  scroll3 : boolean = false;
+  scroll4 : boolean = false;
+  scroll5 : boolean = false;
+  
 
   constructor( 
-              private renderer2: Renderer2
-  ) 
+            ) 
   { 
 
   }
 
-
-  ngOnDestroy(): void {
-
-  }
-  
 
 
   ngOnInit(){
@@ -50,7 +43,8 @@ export class HomeTractorsComponent implements OnInit, OnInit, OnDestroy {
 
 
   getYPosition(e: Event): number {
-    return (e.target as Element).scrollTop;
+    const { scrollTop, scrollHeight, clientHeight } = e.target as Element;
+    return ( (scrollTop / (scrollHeight - clientHeight)) * 100);
   }
 
 

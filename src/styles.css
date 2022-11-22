@@ -9,6 +9,7 @@ body {
    margin: 0; 
    font-family:"Helvetica Neue", sans-serif;
    background-color: rgb(41, 41, 41);
+   overflow-x: hidden;
   }
 
   
@@ -27,33 +28,44 @@ src: url(assets/font/poppins/Poppins-Light.ttf);
 .font{
   font-family:'poppins-light';
 }
+
 .fs-1{
   font-size: 0.5em;
 }
+
 .fs-2{
   font-size: 0.8em;
 }
+
 .fs-3{
   font-size: 1em;
 }
+
 .fs-4{
   font-size: 1.2em;
 }
+
 .fs-5{
   font-size: 1.3em;
 }
+
 .fs-6{
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
+
 .fs-7{
-  font-size: 1.6em;
+  font-size: 1.7em;
 }
+
 .fs-8{
   font-size: 2em;
 }
 
 .f-w{
   color: white;
+}
+.pd-5{
+  padding: 5px;
 }
 
 .btnFilled{
@@ -94,8 +106,16 @@ src: url(assets/font/poppins/Poppins-Light.ttf);
   margin-top: 60px;
 }
 
+.mt-70{
+  margin-top: 70px;
+}
+
 .mt-80{
-  margin-top: 10em;
+  margin-top: 80px;
+}
+
+.mt-100{
+  margin-top: 100px;
 }
 
 .ml-10{
