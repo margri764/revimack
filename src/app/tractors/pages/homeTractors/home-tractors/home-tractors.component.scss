@@ -87,8 +87,30 @@
     padding: 5px;
 }
 
+.animate__animated{
+    --animate-duration: 1s;
+}
 
 
+.btnSend{
+    background-color: #82b75c;
+    color: white;
+    line-height: 40px;
+    font-size: 1em;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+
+    box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+    -webkit-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+    -moz-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+}
+
+.btnSend:hover{
+
+    background-color: white;
+    color: rgb(84, 84, 84);
+    border: 2px solid #82b75c;
+}
 
 // XS!!!!!!
 @media only screen and (max-width: 599px) { 
@@ -99,6 +121,10 @@
   
     }
   
+    // .btnSend{
+    //     font-size:1em ;
+    // }
+
     .component{
         font-size: 1.6em;
         margin-bottom: 2.3em;

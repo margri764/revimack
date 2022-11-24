@@ -8,10 +8,10 @@ import { UsComponent } from './shared/pages/us/us/us.component';
 
 const routes: Routes = [
 
-  {
-    path: 'agro',
-    loadChildren: () => import('./agro-machines/agro-machines.module').then( m => m.AgroMachinesModule )
-  },
+  // {
+  //   path: 'agro',
+  //   loadChildren: () => import('./agro-machines/agro-machines.module').then( m => m.AgroMachinesModule )
+  // },
   
   {
     path: 'implementos',

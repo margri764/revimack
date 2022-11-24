@@ -15,7 +15,7 @@
 <div   fxFlex="100" class="animate__animated animate__fadeIn headTractors" #top > </div>
 
 
-<div  fxLayout="row wrap" fxFlex="97" style="margin-top: 200px;" >
+<div  fxLayout="row wrap" fxFlex="97" style="margin-top: 100px;" >
 
     <h5 class="card-title font fs-7" fxFlex="100">Farmtrac Fabricante Europeo de Tractores Agrícolas.</h5> <br>
     
@@ -86,7 +86,7 @@
 <div fxLayout="row wrap" fxLayoutAlign="space-around center" fxFlex="100" class="back-tractors font" [ngStyle.gt-xs]="{'height':'330px'}" [ngStyle.md]="{'height':'450px'}">
     
   <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50" fxFlex.xs="90" fxFlex.sm="50" [ngClass]="scroll2 ? 'animate__animated animate__fadeInLeftBig':'non-class'">
-    <img src="assets/farmtrac/ft-30.png" alt="tractor farmtrac 30 hp" fxFlex="50" fxFlex.xs="70"  fxFlex.sm="60" fxFlex.md="65" >
+            <img src="assets/farmtrac/ft-30.png" alt="tractor farmtrac 30 hp" fxFlex="50" fxFlex.xs="70"  fxFlex.sm="60" fxFlex.md="65" >
     <h1 fxLayoutAlign="center" fxFlex.sm="100" ><b>FT 30 4WD AGRI</b></h1>
   </div>
     
@@ -95,7 +95,10 @@
     <h1 fxLayoutAlign="center" fxFlex.sm="100" ><b>FT 30 4WD GARDEN</b></h1>
   </div>
   
+
 </div>
+
+
 
 <div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" class="back-tractors font" [ngStyle.xs]="{'height':'200px'}" [ngStyle.sm]="{'height':'150px'}">
 
@@ -109,7 +112,7 @@
 
 <div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" class="back-tractors font" [ngStyle.xs]="{'height':'200px'}" [ngStyle.sm]="{'height':'150px'}">
 
-  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" fxFlex.xs="90" [ngClass]="scroll3 ? 'animate__animated animate__fadeInLeftBig':'non-class'">
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" fxFlex.xs="90" [ngClass]="scroll3 ? 'animate__animated animate__fadeInRightBig':'non-class'">
     <img src="assets/farmtrac/ft-6050-NETS.png" alt="tractor farmtrac 50 hp nets" fxFlex="30" fxFlex.xs="100">
     <h1 fxLayoutAlign="center" [ngStyle.xs]="{'color':'#82b75c'}"><b>FT 6050 NETS 4WD</b></h1>
   </div>
@@ -158,7 +161,7 @@
 
 <div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" class="back-tractors font" [ngStyle.xs]="{'height':'200px'}" [ngStyle.sm]="{'height':'150px'}">
 
-  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" fxFlex.xs="90" [ngClass]="scroll5 ? 'animate__animated animate__fadeInLeftBig':'non-class'">
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" fxFlex.xs="90" [ngClass]="scroll5 ? 'animate__animated animate__fadeInRightBig':'non-class'">
     <img src="assets/farmtrac/ft-90-pro-4wd.png" alt="tractor farmtrac 90 hp pro doble traccion" fxFlex="40" fxFlex.xs="90" fxFlex.gt-md="30">
     <h1 fxLayoutAlign="center" [ngStyle.xs]="{'color':'#82b75c'}"><b>FT 6090 PRO 4WD </b></h1>
   </div>
@@ -168,55 +171,17 @@
 
 <div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" class="back-tractors font" [ngStyle.xs]="{'height':'200px'}" [ngStyle.sm]="{'height':'150px'}">
   
-  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" fxFlex.xs="90">
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" fxFlex.xs="90" [ngClass]="scroll6 ? 'animate__animated animate__fadeIn':'non-class'">
     <img src="assets/farmtrac/ft-110.png" alt="tractor farmtrac 110 hp nets pro" fxFlex="40" fxFlex.xs="90" fxFlex.gt-md="30">
     <h1 fxLayoutAlign="center" [ngStyle.xs]="{'color':'#82b75c'}"><b>FT 7110 NETS PRO</b></h1>
   </div>
   
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="20" fxFlex.xs="40" class="font">
+    <button type="submit"  class="btnSend mt-5" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">mas Información</button>
+  </div> 
+  
 </div>
 
-<!-- slider brabd -->
-<!-- <div fxLayout="row wrap" fxFlex="98" class="mt-80">
-
-
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"   >
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner" > 
-        <div class="carousel-item active" >
-          <img src="assets/pesce/1.png" class="d-block w-100" alt="acondicionador de suelos" >
-         
-        </div>
-         <div class="carousel-item" >
-          <img src="assets/pesce/2.png" class="d-block w-100" alt="distribuidor de abonos y fertilizantes">
-    
-        </div>
-        <div class="carousel-item" >
-          <img src="assets/pesce/3.png" class="d-block w-100" alt="rastron desterronador">
-     
-        </div> 
-        <div class="carousel-item" >
-          <img src="assets/pesce/4.png" class="d-block w-100" alt="rolo picador de">
- 
-        </div> 
-      </div>
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-
-</div> -->
-<!-- end slider brand -->
-   
 
 
 
@@ -224,58 +189,8 @@
 
 
 <!-- Formulario canvas -->
-<div class="offcanvas offcanvas-start" tabindex="-1"  id="formCanvas" aria-labelledby="offcanvasExampleLabel"  >
-   
-    <div    fxLayoutAlign="end" fxLayout="row" style="margin-top: 20px; padding: 20px;">
-          <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
-   </div>    
-   
-   <div class="offcanvas-header" fxLayoutAlign="center center" style="margin-top: 20px;">
 
-        <div fxLayout="row wrap" fxFlex="90" fxLayoutAlign="center center" class="consulta">
-            <div fxFlex="60" fxFlex.xs="60" > <h4>Dejanos tu consulta</h4></div> 
-            <div fxFlex="40" fxFlex.xs="40" class="dividerGreen"></div>
-     </div>
-
-    
-    </div>
-    
-    <div class="offcanvas-body" fxLayout="row wrap"  fxLayoutAlign="center start">
-        <div fxFlex="90" style="margin-top: 30px;">
-        <app-form-canvas></app-form-canvas>
-       </div>
-        
-       <div fxFlex="90" style="margin-top: 20px;">
-           <h4> Te ofrecemos mas medios para encontrarnos..</h4>
-
-       </div>
-  
-        <div fxFlex="90" fxLayoutGap.xs="20px" fxLayoutGap="35px"  fxLayoutAlign.xs="space-between" fxLayoutAlign="space-between" style="margin-top: 30px;">
-            <a  href="https://wa.me/+542302623444?text=Hola!!%20" target="blank" > 
-             <i class="fab fa-whatsapp" ></i>
-           </a>
-             
-            <a target="_blank" title="Instagram" href="https://www.instagram.com/re.vi.mack_agro/?hl=es">
-               <i class="fab fa-instagram"></i>
-            </a>
-
-            <a target="_blank" title="Facebook" href="https://www.facebook.com/search/top?q=revimack%20agro">
-               <i class="fab fa-facebook-f"></i>
-            </a>
-
-            <a target="_blank" title="email" href="mailto:revimackventas@gmail.com">
-              <i class="fa fa-envelope"></i>
-           </a>
-
-           <a target="_blank" title="gps" href="https://goo.gl/maps/4indGx9FR3M1qX5b6">
-            <i class="fas fa-map-marker-alt"></i>
-         </a>
-           
-     
-        </div> 
-    </div>
-
-</div> 
+<app-form-canvas></app-form-canvas>
 
 </div>
 <div  fxFlex="100" >

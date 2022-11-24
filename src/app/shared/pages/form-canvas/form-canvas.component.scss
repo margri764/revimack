@@ -1,0 +1,303 @@
+
+.btnSend{
+    width: 100%;
+    background-color: #82b75c;
+    color: white;
+    line-height: 40px;
+    font-size: 2vw;
+    font-family: 'Monserrat',sans-serif;
+    border-radius: 10px;
+    border: 2px solid #82b75c;
+    margin-bottom: 40px;
+
+    box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+    -webkit-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+    -moz-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+}
+
+.btnSend:hover{
+
+    background-color: white;
+    color: rgb(47, 47, 47);
+    border: 2px solid #82b75c;
+}
+
+input{
+    border-radius: 10px;
+    border-color: #82b75c;
+}
+
+textarea{
+    border-radius: 10px;
+    border-color: #82b75c;
+}
+
+
+.animate__animated.animate__flash {
+    --animate-duration: 10s;
+  }
+
+
+  
+// start canvas
+.consulta{
+    border-radius: 10px; 
+    padding: 10px;
+    background-color: rgb(251, 251, 251);
+
+    box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+    -webkit-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+    -moz-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+    }
+
+  
+
+.dividerGreen{
+  height: 3px;
+  background-color: #C2da34; 
+  opacity: 0.6;
+}
+
+
+  .offcanvas{
+    width: 30vw;
+    border-top: 4px solid #82b75c;
+    border-right: 4px solid #82b75c;
+    border-bottom: 4px solid #82b75c;
+    border-radius: 0px 20px 21px 0px;
+
+   -webkit-border-radius: 0px 20px 21px 0px;
+    -moz-border-radius: 0px 20px 21px 0px;
+  }
+
+  .fa-whatsapp{
+    font-size: 8vw;   
+    color: #82b75c;
+  }
+  .fa-whatsapp:hover{   
+    color: #93f150;
+  }
+  
+  .fa-instagram{
+    font-size: 8vw;     
+    color: #82b75c;
+  }
+  .fa-instagram:hover{
+    color: #93f150;
+  }
+  
+  .fa-facebook-f{
+    color: #82b75c;
+    font-size: 8vw;
+  }
+  .fa-facebook-f:hover{
+    color: #93f150;
+  } 
+  
+  .fa-envelope{
+    color: #82b75c;
+    font-size: 8vw;
+  }
+  .fa-envelope:hover{
+    color: #93f150;
+  }
+  
+  
+  .fa-map-marker-alt{
+    color: #82b75c;
+    font-size: 8vw;
+  }
+  .fa-map-marker-alt:hover{
+    color: #93f150;
+  }
+//    end canvas
+
+@media  screen and (max-width: 575px){  
+
+.btnSend{
+    font-size: 5vw;
+    line-height: 40px;
+}
+
+.offcanvas{
+  width: 90vw;
+}
+
+.fa-whatsapp{
+    font-size: 8vw;   
+}
+
+.fa-instagram{
+    font-size: 8vw;     
+}
+
+.fa-facebook-f{
+    font-size: 8vw;
+}
+
+.fa-envelope{
+    font-size: 8vw;
+}
+
+.fa-map-marker-alt{
+    font-size: 8vw;
+}
+ 
+
+}
+
+
+
+
+@media screen and (min-width: 576px){
+
+
+.btnSend{
+    font-size: 3vw;
+    line-height: 40px;
+}
+
+  .offcanvas{
+    width: 70vw;
+  }
+  
+  .fa-whatsapp{
+      font-size: 6vw;   
+  }
+  
+  .fa-instagram{
+      font-size: 6vw;     
+  }
+  
+  .fa-facebook-f{
+      font-size: 6vw;
+  }
+  
+  .fa-envelope{
+      font-size: 6vw;
+  }
+  
+  .fa-map-marker-alt{
+      font-size: 6vw;
+  }
+
+}
+
+@media  screen and (min-width: 786px){
+
+
+.offcanvas{
+  width: 48vw;
+}
+
+.fa-whatsapp{
+  font-size: 4vw;   
+}
+
+
+.fa-instagram{
+    font-size: 4vw;     
+}
+
+.fa-facebook-f{
+    font-size: 4vw;
+}
+
+.fa-envelope{
+    font-size: 4vw;
+}
+
+.fa-map-marker-alt{
+    font-size: 4vw;
+}
+
+
+}
+@media  screen and (min-width: 992px){
+
+.btnSend{
+    font-size: 1.6vw;
+    line-height: 50px;
+}
+
+.fa-whatsapp{
+    font-size: 3.5vw;   
+}
+
+.fa-instagram{
+    font-size: 3.5vw;     
+}
+
+.fa-facebook-f{
+    font-size: 3.5vw;
+}
+
+.fa-envelope{
+    font-size: 3.5vw;
+}
+
+.fa-map-marker-alt{
+    font-size: 3.5vw;
+}
+
+
+}
+@media  screen and (min-width: 1200px){
+
+  
+  .offcanvas{
+    width: 40vw;
+  }
+  
+  .fa-whatsapp{
+      font-size: 3.5vw;   
+  }
+  
+  .fa-instagram{
+      font-size: 3.5vw;     
+  }
+  
+  .fa-facebook-f{
+      font-size: 3.5vw;
+  }
+  
+  .fa-envelope{
+      font-size: 3.5vw;
+  }
+  
+  .fa-map-marker-alt{
+      font-size: 3.5vw;
+  }
+  
+}
+
+@media  screen and (min-width: 1400px){
+
+  .fa-whatsapp{
+      font-size: 3vw;   
+  }
+  
+  .fa-instagram{
+      font-size: 3vw;     
+  }
+  
+  .fa-facebook-f{
+      font-size: 3vw;
+  }
+  
+  .fa-envelope{
+      font-size: 3vw;
+  }
+  
+  .fa-map-marker-alt{
+      font-size: 3vw;
+  }
+    
+
+}
+
+ 
+
+
+
+

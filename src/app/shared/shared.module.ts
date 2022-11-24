@@ -13,8 +13,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { SliderUpComponent } from './pages/sliderUp/slider-up/slider-up.component';
-import { FormCanvasComponent } from './pages/formCanvas/form-canvas/form-canvas.component';
-import { SliderBrandComponent } from './pages/sliderBrand/slider-brand/slider-brand.component';
+import { FormCanvasComponent } from './pages/form-canvas/form-canvas.component';
 import { ThanksComponent } from './pages/thanks/thanks.component';
 import { UsComponent } from './pages/us/us/us.component';
 
@@ -33,7 +32,6 @@ import { UsComponent } from './pages/us/us/us.component';
     NavbarComponent,
     SliderUpComponent,
     FormCanvasComponent,
-    SliderBrandComponent,
     ThanksComponent,
     UsComponent  
   ],
@@ -56,11 +54,10 @@ import { UsComponent } from './pages/us/us/us.component';
     NavbarComponent,
     SliderUpComponent,
     FormCanvasComponent,
-    SliderBrandComponent ,
     UsComponent  
 
 
   ],
-  // providers:[ FormCanvasComponent]
+  providers:[ FormCanvasComponent]
 })
 export class SharedModule { }
