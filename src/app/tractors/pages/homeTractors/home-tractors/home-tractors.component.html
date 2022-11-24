@@ -8,6 +8,9 @@
 <div  fxFlex="100" style="background-color: black" #top>
     <app-navbar ></app-navbar>
 </div>
+
+<img src="assets/plantium/back.png" routerLink="../../home" id="back"  >
+
  
 <div fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center" style="background-color: rgb(255, 255, 255)">
 
@@ -59,6 +62,7 @@
 </div>
 
 
+
 <div fxLayout="row wrap" fxLayoutAlign="center space-between" fxFlex="97" class="back-farm">
     <div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="100"></div>
    
@@ -76,6 +80,7 @@
 </div>
 
 
+
 <div fxLayout="row wrap" fxLayoutAlign="center"  >
 
   <h1 class="font fs-8" style="color:#82b75c; margin-top: 4em;">Conocé todo lo que tenemos para ofrecerte.</h1>
@@ -83,10 +88,10 @@
 
 
 
-<div fxLayout="row wrap" fxLayoutAlign="space-around center" fxFlex="100" class="back-tractors font" [ngStyle.gt-xs]="{'height':'330px'}" [ngStyle.md]="{'height':'450px'}">
+<div fxLayout="row wrap" fxLayoutAlign="space-around center" fxFlex="100" class="back-tractors font" [ngStyle.gt-xs]="{'height':'330px'}" [ngStyle.md]="{'height':'450px'}" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" style="cursor: pointer;">
     
   <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50" fxFlex.xs="90" fxFlex.sm="50" [ngClass]="scroll2 ? 'animate__animated animate__fadeInLeftBig':'non-class'">
-            <img src="assets/farmtrac/ft-30.png" alt="tractor farmtrac 30 hp" fxFlex="50" fxFlex.xs="70"  fxFlex.sm="60" fxFlex.md="65" >
+    <img src="assets/farmtrac/ft-30.png" alt="tractor farmtrac 30 hp" fxFlex="50" fxFlex.xs="70"  fxFlex.sm="60" fxFlex.md="65" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" style="cursor: pointer;">
     <h1 fxLayoutAlign="center" fxFlex.sm="100" ><b>FT 30 4WD AGRI</b></h1>
   </div>
     
@@ -100,7 +105,7 @@
 
 
 
-<div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" class="back-tractors font" [ngStyle.xs]="{'height':'200px'}" [ngStyle.sm]="{'height':'150px'}">
+<div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" class="back-tractors font" [ngStyle.xs]="{'height':'200px'}" [ngStyle.sm]="{'height':'150px'}" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" style="cursor: pointer;">
 
   <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" fxFlex.xs="90">
     <img src="assets/farmtrac/ft-45.png" alt="tractor farmtrac 45 hp" fxFlex="30" fxFlex.xs="100">
@@ -110,7 +115,7 @@
 </div>
 
 
-<div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" class="back-tractors font" [ngStyle.xs]="{'height':'200px'}" [ngStyle.sm]="{'height':'150px'}">
+<div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" class="back-tractors font" [ngStyle.xs]="{'height':'200px'}" [ngStyle.sm]="{'height':'150px'}" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" style="cursor: pointer;">
 
   <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" fxFlex.xs="90" [ngClass]="scroll3 ? 'animate__animated animate__fadeInRightBig':'non-class'">
     <img src="assets/farmtrac/ft-6050-NETS.png" alt="tractor farmtrac 50 hp nets" fxFlex="30" fxFlex.xs="100">
@@ -120,7 +125,7 @@
 </div>
 
 
-<div fxLayout="row wrap" fxLayoutAlign="space-around center"  fxFlex="100" class="back-tractors font" [ngStyle.sm]="{'height':'250px'}">
+<div fxLayout="row wrap" fxLayoutAlign="space-around center"  fxFlex="100" class="back-tractors font" [ngStyle.sm]="{'height':'250px'}" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" style="cursor: pointer;">
   
   <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50" fxFlex.xs="90">
     <img src="assets/farmtrac/ft-60.png" alt="tractor farmtrac 60 hp traccion simple" fxFlex="50" fxFlex.xs="90" >
@@ -134,7 +139,7 @@
 
 </div>
 
-<div fxLayout="row wrap" fxLayoutAlign="space-around center"  fxFlex="100" class="back-tractors font" [ngStyle.sm]="{'height':'250px'}">
+<div fxLayout="row wrap" fxLayoutAlign="space-around center"  fxFlex="100" class="back-tractors font" [ngStyle.sm]="{'height':'250px'}" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" style="cursor: pointer;">
   
   <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50" fxFlex.xs="90" [ngClass]="scroll4 ? 'animate__animated animate__fadeInLeftBig':'non-class'">
     <img src="assets/farmtrac/ft-75-2wd.png" alt="tractor farmtrac 75 hp traccion simple" fxFlex="50"  fxFlex.xs="90">
@@ -149,7 +154,7 @@
 </div>
   
 
-<div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" class="back-tractors font" [ngStyle.xs]="{'height':'200px'}" [ngStyle.sm]="{'height':'150px'}">
+<div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" class="back-tractors font" [ngStyle.xs]="{'height':'200px'}" [ngStyle.sm]="{'height':'150px'}" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" style="cursor: pointer;">
 
   <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" fxFlex.xs="90">
     <img src="assets/farmtrac/ft-75-narrow.png" alt="tractor farmtrac 75 hp narrow" fxFlex="40" fxFlex.xs="100" fxFlex.gt-md="30">
@@ -159,7 +164,7 @@
 </div>
 
 
-<div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" class="back-tractors font" [ngStyle.xs]="{'height':'200px'}" [ngStyle.sm]="{'height':'150px'}">
+<div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" class="back-tractors font" [ngStyle.xs]="{'height':'200px'}" [ngStyle.sm]="{'height':'150px'}" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" style="cursor: pointer;">
 
   <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" fxFlex.xs="90" [ngClass]="scroll5 ? 'animate__animated animate__fadeInRightBig':'non-class'">
     <img src="assets/farmtrac/ft-90-pro-4wd.png" alt="tractor farmtrac 90 hp pro doble traccion" fxFlex="40" fxFlex.xs="90" fxFlex.gt-md="30">
@@ -169,7 +174,7 @@
 </div>
 
 
-<div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" class="back-tractors font" [ngStyle.xs]="{'height':'200px'}" [ngStyle.sm]="{'height':'150px'}">
+<div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" class="back-tractors font" [ngStyle.xs]="{'height':'200px'}" [ngStyle.sm]="{'height':'150px'}" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" style="cursor: pointer;">
   
   <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" fxFlex.xs="90" [ngClass]="scroll6 ? 'animate__animated animate__fadeIn':'non-class'">
     <img src="assets/farmtrac/ft-110.png" alt="tractor farmtrac 110 hp nets pro" fxFlex="40" fxFlex.xs="90" fxFlex.gt-md="30">
@@ -180,6 +185,26 @@
     <button type="submit"  class="btnSend mt-5" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">mas Información</button>
   </div> 
   
+</div>
+
+
+<div fxLayout="row wrap" fxLayoutAlign="start" fxFlex="100" style="margin:80px 0px 0px 0px;">
+
+  <h1 class="font fs-8" fxFlex="100" style="color:#82b75c; margin-left: 15px;">Revimack Agro & Farmtrac.</h1>
+  <p class="font" style="color:#82b75c; margin-left: 15px; font-size: 1.2em;">Siempre lo mejor para vos.</p>
+
+</div>
+
+<div fxLayout="row wrap" fxLayoutAlign="space-between center" fxFlex="99" style="margin:80px 0px 80px 0px;">
+  
+  <img src="assets/farmtrac/farmtrac-2.jpg" alt="" fxFlex="49" fxFlex.xs="97" >
+  <img src="assets/farmtrac/farmtrac-5.jpg" alt="" fxFlex="49" fxFlex.xs="97">
+  <img src="assets/farmtrac/farmtrac-1.jpg" alt="" fxFlex="33" fxFlex.xs="97" style="margin-top: 5px;">
+  <img src="assets/farmtrac/farmtrac-7.jpg" alt="" fxFlex="33" fxFlex.xs="97" style="margin-top: 5px;">
+  <img src="assets/farmtrac/farmtrac-3.jpg" alt="" fxFlex="33" fxFlex.xs="97" style="margin-top: 5px;">
+  <img src="assets/farmtrac/farmtrac-6.jpg" alt="" fxFlex="49" fxFlex.xs="97" style="margin-top: 5px;">
+  <img src="assets/farmtrac/farmtrac-4.jpg" alt="" fxFlex="49" fxFlex.xs="97" style="margin-top: 5px;">
+
 </div>
 
 

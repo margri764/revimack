@@ -72,14 +72,16 @@
 }
 
 .back-tractors{
-     margin-top: 130px; 
-     margin-bottom: 160px; 
-     background-color: #82b75c;
-     height: 220px;
-     color: white;
-     font-size: 1.4em;
+    margin-top: 130px; 
+    margin-bottom: 160px; 
+    background-color: #82b75c;
+    height: 220px;
+    color: white;
+    font-size: 1.4em;
 
 }
+
+
 
 .back-tractors > div h1{
     font-size: 1.4em;
@@ -112,6 +114,17 @@
     border: 2px solid #82b75c;
 }
 
+
+#back {
+    position:absolute; 
+    top: 20px; /* Place the button at the bottom of the page */
+    left: 10px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    opacity: 0.6;
+    width: 50px;
+  }
+
 // XS!!!!!!
 @media only screen and (max-width: 599px) { 
 
@@ -121,10 +134,10 @@
   
     }
   
-    // .btnSend{
-    //     font-size:1em ;
-    // }
-
+    #back{
+        width: 30px
+      }
+     
     .component{
         font-size: 1.6em;
         margin-bottom: 2.3em;
@@ -153,7 +166,7 @@
     }
 
    .back-tractors > div h1{
-    font-size: 1.2em;
+    font-size: 1em;
    }
 }
     
