@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: "https://dulce-alma-deco.herokuapp.com/"
+  baseUrl: 'https://dulcealmadeco.com/',
 };
 
 /*

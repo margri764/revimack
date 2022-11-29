@@ -82,7 +82,7 @@ export class FormCanvasComponent implements OnInit {
     this.sendingEmail=false;
       this._emailservice.sendEmail(this.myForm.value).subscribe(
         res =>{ if(res == "true"){
-              this.clicked=false; 
+               this.sendingEmail=true;
                  
               setTimeout( ()=>{
                 this.route.navigateByUrl("/gracias")
