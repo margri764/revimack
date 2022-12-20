@@ -1,0 +1,69 @@
+
+<div  fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center">
+
+    <div fxFlex="100">
+        <app-navbar></app-navbar>
+    </div>
+
+
+<div class="contact" fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center start"> 
+
+
+
+<div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="100"  style="margin-top: 70px;">
+
+    <div fxFlex.gt-sm="48" fxFlex.xs="90" fxFlex.gt-xs="90"  fxLayout="row wrap" fxLayoutAlign="center space-between" class="backWhite">
+
+       
+
+                <div fxLayout="row wrap"  fxLayoutAlign="center"  class="text-contain">
+                  
+                    <span class="text"  fxFlex="100" style="margin-top: 30px;"> Selecciona el medio de contacto que prefieras</span>
+                    
+                    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-around"  style="margin-top: 20px;">
+
+                        <a  href="https://wa.me/+542302623444?text=Hola!!%20" target="blank"  > 
+                        <i class="fab fa-whatsapp" ></i>
+                        </a>
+                        
+                        <a target="_blank" title="Instagram" href="https://www.instagram.com/re.vi.mack_agro/?hl=es">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+        
+                        <a target="_blank" title="Facebook" href="https://www.facebook.com/search/top?q=revimack%20agro">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+        
+                        <a target="_blank" title="email"  data-bs-toggle="offcanvas" data-bs-target="#formCanvas">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+        
+                        <a target="_blank" title="gps" href="https://goo.gl/maps/4indGx9FR3M1qX5b6">
+                        <i class="fas fa-map-marker-alt"></i>
+                        </a>
+                    </div> 
+                 </div>
+
+                 <div  fxFlex="100">
+                    <p class="text" fxFlex="100" fxLayoutAlign="start">Calle colectora s/n. Ruta Nacional 188. <br>
+                        revimackventas@gmail.com <br>
+                        cel 2302 623444
+                    </p> 
+                </div>
+
+  
+  
+               
+  
+  
+             
+    </div>
+
+    <div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="48" fxFlex.xs="98" *ngIf="showmap" >
+        <img src="assets/map.png" fxFlex="90" style="border-radius: 10px;">
+    </div>    
+
+</div>
+</div>
+<app-form-canvas></app-form-canvas>
+</div>

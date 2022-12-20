@@ -1,0 +1,125 @@
+
+
+<!-- start navbar desktop -->
+<div fxLayout="row wrap"  fxFlex="100"  fxLayoutAlign="center" *ngIf="!phone">  
+
+  <div fxLayout="row wrap"  fxFlex="99" class="customNavbar" fxLayoutAlign="space-between" *ngIf="!phone">  
+    
+    <div fxLayout="row wrap" fxLayoutAlign="start center"  fxFlex="80"  >
+      
+      <img src="assets/logo-hojas2-bg.png" alt="logo" fxFlex="7" routerLink="../../home" style="cursor: pointer;">
+      
+      <label  class="btnNav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Productos</label>
+      <label  class="btnNav" routerLink="/contacto"> Contactános</label>
+      <label  class="btnNav" routerLink="/nosotros">Nosotros</label>
+      <label  class="btnNav" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Estamos trabjando en esta sección" >Promociones</label>
+    </div>  
+    <div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="20" >
+  
+      <form class="d-flex" >
+        <input class="form-control me-2 btnNav" type="search" placeholder="Buscar" aria-label="Search" style="color: black; font-family: 'Monserrat', sans-serif;">
+      </form>
+    </div>
+  </div>
+    
+</div>
+<!-- end navbar desktop -->
+  
+<!-- start phone navbar -->
+<div fxLayout="row wrap" fxLayoutAlign="end" fxFlex="100"  *ngIf="phone" style="margin-top: 10px;">  
+
+<div fxFlex="15" fxLayoutAlign="center" *ngIf="phone">
+    <span   id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-house"></i></span>
+    
+    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2" style="width: 100%;">
+      
+        <br>
+        <a class="dropdown-item active"class="btnNav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" >Productos</a> 
+        <a class="dropdown-item" class="btnNav" routerLink="../contacto">Contactanos</a> 
+        <a class="dropdown-item" class="btnNav" routerLink="../nosotros">Nosotros</a>      
+     
+        <br>
+        
+        <li><hr class="dropdown-divider"></li>
+        <br>
+        <li><a class="dropdown-item" class="btnNav">Novedades (proximamente...)</a></li>
+        <li fxLayout="row wrap" fxLayoutAlign="start"><a class="dropdown-item" class="btnNav">Promociones (proximamente...)</a></li> <br>
+    </ul>
+  </div>
+
+<div fxFlex="15"  fxLayoutAlign="center center" *ngIf="phone" >
+  <span id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-search"></i></span>
+  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1" style="width: 100vw;">
+    <form class="d-flex">
+      <input class="form-control me-2 btnNav" type="search" placeholder="Buscar" aria-label="Buscar" style="color: black;">
+    </form>
+    <!-- <li><a class="dropdown-item active"class="btnNav">Productos</a> </li> -->
+  </ul>
+</div>
+
+<div fxFlex="15" fxLayoutAlign="center" *ngIf="phone">
+  <span   id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-list"></i></span>
+  
+  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2" >
+    
+    <li> <a class="dropdown-item active" class="btnNav">Crear cuenta</a> </li> 
+    <li> <a class="dropdown-item active" class="btnNav">Iniciar sesión</a> </li> 
+
+
+    
+    
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" class="btnNav">Cerrar Sesión</a></li>
+  </ul>
+</div>
+
+</div> 
+<!-- end start phone navbar -->
+
+
+<!-- start canvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1" width="500" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"  >
+  
+  
+    <div class="offcanvas-header" style="margin-top: 30px;">
+      
+      <div fxLayout="row wrap" fxFlex="90" fxLayoutAlign="center center" class="consulta">
+        <div fxFlex="60" fxFlex.xs="60" > <h4>¿Que necesitás?</h4></div> 
+        <div fxFlex="40" fxFlex.xs="40" class="dividerGreen"></div>
+      </div>
+    
+      <label type="label" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></label>
+    </div>
+
+
+    <div class="offcanvas-body" fxLayout="row wrap" fxLayoutAlign="center" style="margin-top: 30px;">
+    
+      <div fxLayout="row wrap" fxLayoutAlign="start" fxFlexOffset="20px" fxFlex="80"  >
+
+        <p><a routerLink="/implementos/implementos-agricolas"> <label data-bs-dismiss="offcanvas"> <b>Venta de Implementos</b></label></a></p>
+        <p><a routerLink="/eco/plasticos"> <label data-bs-dismiss="offcanvas"> <b>Linea de plásticos</b></label></a></p>
+        <p fxFlex="100"><a routerLink="/maquinaria-agricola/tractores"> <label data-bs-dismiss="offcanvas"> <b>Tractores FarmTrac</b></label></a></p>
+        
+        
+        
+        <div class="divider" fxFlex="100"></div>
+        <p><a> <label style="color: rgb(31, 143, 21);">Proximamente:</label></a></p>
+        <p><a> <label >Tecnología Agropecuaria</label></a></p>
+        <p><a> <label >Repuestos y accesorios</label></a></p>
+        <p><a> <label >Venta de Maquinaria Agricola</label></a></p>
+        <p><a> <label >Linea Vial</label></a></p>
+        <!-- <p><a> <label >Servicios Agropecuarios</label></a></p> -->
+
+
+      </div>  
+    <div fxFlex="90">
+        <img src="assets/revimackBack2.png" alt="logo revimack">
+    </div>  
+   
+    
+    </div>
+</div> 
+<!--end  canvas -->
+
+ 
+

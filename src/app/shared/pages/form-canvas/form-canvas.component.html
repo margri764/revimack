@@ -1,0 +1,111 @@
+
+
+
+<!-- Formulario canvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1"  id="formCanvas" aria-labelledby="offcanvasExampleLabel"  >
+   
+    <div    fxLayoutAlign="end" fxLayout="row" style="margin-top: 20px; padding: 20px;">
+          <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+   </div>    
+   
+   <div class="offcanvas-header" fxLayoutAlign="center center" style="margin-top: 20px;">
+
+        <div fxLayout="row wrap" fxFlex="90" fxLayoutAlign="center center" class="consulta">
+            <div fxFlex="60" fxFlex.xs="60" > <h4>Dejanos tu consulta</h4></div> 
+            <div fxFlex="40" fxFlex.xs="40" class="dividerGreen"></div>
+     </div>
+
+    
+    </div>
+    
+    <div class="offcanvas-body" fxLayout="row wrap"  fxLayoutAlign="center start">
+        <div fxFlex="90" style="margin-top: 30px;">
+      <!-- start form -->
+      <form  autocomplete="off" [formGroup]="myForm" (submit)="sendForm()"> 
+    
+        <div *ngIf="sendingEmail">
+        <div class="form-floating">
+            <input type="text"  class="form-control"  [ngClass]= "{ 'is-invalid': invalidName}" id="floatingInput" formControlName="name" autofocus placeholder="ingrese nombre" > 
+                <span class="form-text text-danger animate__animated animate__tada" *ngIf ="validField ('name')">
+                    Por favor rellena este campo.
+                </span> 
+            <label  for="floatingInput">Nombre y Apellido</label>
+        </div>
+          
+        <br>
+        <div class="form-floating">          
+            <input type="number" class="form-control" [ngClass]="invalidPhone ? 'is-invalid': '' " id="floatphone" formControlName="phone"  placeholder="ingrese telefono" >
+                <span class="form-text text-danger  animate__animated animate__tada" *ngIf ="validField ('phone')">
+                    Este campo es obligatorio
+                </span> 
+            <label for="floatphone">Telefono / Celular</label>
+        </div> 
+        
+        <br>
+        
+        <div class="form-floating">          
+            <input type="email" class="form-control" [ngClass]= "{ 'is-invalid': invalidEmail}" id="floatemail" formControlName="email" placeholder="email" >
+                <span class="form-text text-danger  animate__animated animate__tada" *ngIf ="validField ('email')">
+                  No respeta formato de email 
+              </span> 
+            <label for="floatemail">Correo electronico </label>
+        </div>    
+        
+        <br>
+    
+        <div class="form-floating">          
+            <textarea type="text" class="form-control" [ngClass]= "{ 'is-invalid': invalidEmail}" id="floatmessage" formControlName="message" placeholder="Mensaje" >
+                <span class="form-text text-danger  animate__animated animate__tada" *ngIf ="validField ('message')">
+                  Debe ingresar una consulta 
+              </span> 
+            </textarea>  
+            <label for="floatmessage">Mensaje </label>
+        </div>   
+      
+       <div style="display: block;">
+            <button type="submit"  class="btnSend mt-5" style="width: 100%;">Enviar consulta</button>
+        </div> 
+    </div>    
+    
+    <!-- <div  class="text animate__animated animate__flash"> Enviando email, espere por favor...</div> -->
+    
+    <div class="d-flex justify-content-center" *ngIf="!sendingEmail">
+        <div class="spinner-border text-primary" style="width: 4rem; height: 4rem;" role="status">
+          <span class="visually-hidden"></span>
+        </div>
+      </div>
+    </form> 
+      <!-- end form -->
+    </div>
+        
+       <div fxFlex="90" style="margin-top: 20px;">
+           <h4> Te ofrecemos mas medios para encontrarnos..</h4>
+
+       </div>
+  
+        <div fxFlex="90" fxLayoutGap.xs="20px" fxLayoutGap="35px"  fxLayoutAlign.xs="space-between" fxLayoutAlign="space-between" style="margin-top: 30px;">
+            <a  href="https://wa.me/+542302623444?text=Hola!!%20" target="blank" > 
+             <i class="fab fa-whatsapp" ></i>
+           </a>
+             
+            <a target="_blank" title="Instagram" href="https://www.instagram.com/re.vi.mack_agro/?hl=es">
+               <i class="fab fa-instagram"></i>
+            </a>
+
+            <a target="_blank" title="Facebook" href="https://www.facebook.com/search/top?q=revimack%20agro">
+               <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a target="_blank" title="email" href="mailto:revimackventas@gmail.com">
+              <i class="fa fa-envelope"></i>
+           </a>
+
+           <a target="_blank" title="gps" href="https://goo.gl/maps/4indGx9FR3M1qX5b6">
+            <i class="fas fa-map-marker-alt"></i>
+         </a>
+           
+     
+        </div> 
+    </div>
+
+</div> 

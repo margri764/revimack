@@ -1,0 +1,67 @@
+
+@font-face {
+    font-family:'ribeye';
+    src: url(/assets/font/Ribeye-Regular.ttf);
+     
+  }
+  
+   
+  
+  
+  .carousel{
+  
+      height: 900px;
+       background: rgb(63, 47, 47);
+      color:rgb(255, 251, 251); 
+      /* position:relative;
+      background-size: cover; */
+   }
+
+
+  
+ 
+
+
+  a {
+    line-height: 3.2vw;
+    font-size: 2vw;
+    opacity: 0.8;
+  }
+
+  
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (max-width: 574px) {
+
+  
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 575px)and  (max-width: 768px) {
+         
+
+  
+  }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 769px)and (max-width: 1024px){
+  
+    img{
+      height: 700px;
+    }
+  
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1025px) {
+  
+    img{
+      height: 900px;
+    }
+    
+  
+  }
+  
+  
+  
+  

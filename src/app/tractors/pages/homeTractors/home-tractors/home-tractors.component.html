@@ -1,0 +1,225 @@
+
+
+<!-- <div   fxLayout="row wrap" fxLayoutAlign="center" fxFlex="100" style="background-color: white;"> -->
+
+<div  fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center" class="scroll" (scroll)="onScroll($event)">
+
+ 
+<div  fxFlex="100" style="background-color: black" #top>
+    <app-navbar ></app-navbar>
+</div>
+
+<img src="assets/plantium/back.png" routerLink="../../home" id="back"  >
+
+ 
+<div fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center" style="background-color: rgb(255, 255, 255)">
+
+    <!-- head -->
+<div   fxFlex="100" class="animate__animated animate__fadeIn headTractors" #top > </div>
+
+
+<div  fxLayout="row wrap" fxFlex="97" style="margin-top: 100px;" >
+
+    <h5 class="card-title font fs-7" fxFlex="100">Farmtrac Fabricante Europeo de Tractores Agrícolas.</h5> <br>
+    
+    <blockquote class="blockquote font fs-5 mt-20" style="line-height: 2em;">
+      "Nuestra filosofía es construir tractores cuyo diseño es simple, confiable y se caracteriza por un bajo costo de mantenimiento y de funcionamiento.<br>
+      Los tractores FARMTRAC están fabricados con componentes de clase mundial, esto asegura la durabilidad y fiabilidad, incluso en terrenos difíciles y en condiciones climáticas desfavorables.
+      Todos nuestros tractores se ajustan a estrictas normas mundiales de emisión, siendo galardonados con numerosos premios por su desempeño"  
+      <footer class="blockquote-footer" style="margin-top: 10px;margin-right: 5px; text-align: end;" >Farmtrac <cite title="Source Title">Tecnología confiable.</cite>
+      </footer>
+    </blockquote>
+</div>
+
+
+<div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" style="margin-top: 80px" [ngClass]="scroll ? 'animate__animated animate__fadeInLeftBig':'non-class'" class="font" >
+
+  <p fxLayoutAlign="center" fxFlex="100" class="fs-7" [ngStyle.xs]="{'font-size': '1.45em', 'background-color':'#82b75c', 'color':'white'}">Componentes de clase mundial</p>
+  
+ <div  fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayoutAlign.xs="center center" fxFlex="80" class="mt-30" class="font">  
+
+       <div  fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="26" fxFlex.xs="97">  
+          <img src="assets/farmtrac/logo-carraro.png" fxFlex="100" >
+          <span class="component" >Transmisión </span>
+        </div>
+      
+        <div  fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="26" fxFlex.xs="97">  
+          <img src="assets/farmtrac/logo-bosch.png" fxFlex="100">
+          <span class="component">Bomba Inyectora</span>
+        </div>
+      
+        <div  fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="26" fxFlex.xs="97">  
+          <img src="assets/farmtrac/logo-mita.png" fxFlex="100">
+          <span class="component">Levante de 3 puntos</span>
+        </div>
+      
+  </div >
+
+<div  fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="20" fxFlex.xs="97">  
+      <img src="assets/farmtrac/logo-luk.png" fxFlex="100">
+      <span class="component">Embrague</span>
+    </div>
+</div>
+
+
+
+<div fxLayout="row wrap" fxLayoutAlign="center space-between" fxFlex="97" class="back-farm">
+    <div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="100"></div>
+   
+    <h1 class="font fontSize">Te acompañamos en todos tus proyectos</h1>
+    
+    <div fxLayout="row wrap" fxLayoutAlign="end end" fxFlex="100">
+      <h1 class="font fs-5" style="color: white; padding: 10px;">Revimack Agro</h1>
+    </div>
+</div>
+
+
+<div fxLayout="row wrap" fxLayoutAlign="space-between" fxFlex="97" style="margin-top: 2em;" >
+    <img src="assets/farmtrac/back-farm-3.png" alt="" fxFlex="49" fxFlex.xs="97">
+    <img src="assets/farmtrac/back-farm-4.gif" alt="" fxFlex="49" fxFlex.xs="97" [ngStyle.xs]="{'margin-top': '2em'}">
+</div>
+
+
+
+<div fxLayout="row wrap" fxLayoutAlign="center"  >
+
+  <h1 class="font fs-8" style="color:#82b75c; margin-top: 4em;">Conocé todo lo que tenemos para ofrecerte.</h1>
+</div>
+
+
+
+<div fxLayout="row wrap" fxLayoutAlign="space-around center" fxFlex="100" class="back-tractors font" [ngStyle.gt-xs]="{'height':'330px'}" [ngStyle.md]="{'height':'450px'}" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" style="cursor: pointer;">
+    
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50" fxFlex.xs="90" fxFlex.sm="50" [ngClass]="scroll2 ? 'animate__animated animate__fadeInLeftBig':'non-class'">
+    <img src="assets/farmtrac/ft-30.png" alt="tractor farmtrac 30 hp" fxFlex="50" fxFlex.xs="70"  fxFlex.sm="60" fxFlex.md="65" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" style="cursor: pointer;">
+    <h1 fxLayoutAlign="center" fxFlex.sm="100" ><b>FT 30 4WD AGRI</b></h1>
+  </div>
+    
+  <div fxLayout="row wrap" fxLayoutAlign="center center " fxFlex="50" fxFlex.xs="90" [ngClass]="scroll2 ? 'animate__animated animate__fadeInLeftBig':'non-class'">
+    <img src="assets/farmtrac/ft-30-garden.png" alt="tractor farmtrac 30 hp jardin" fxFlex="50" fxFlex.xs="70" fxFlex.sm="60" fxFlex.md="65" >
+    <h1 fxLayoutAlign="center" fxFlex.sm="100" ><b>FT 30 4WD GARDEN</b></h1>
+  </div>
+  
+
+</div>
+
+
+
+<div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" class="back-tractors font" [ngStyle.xs]="{'height':'200px'}" [ngStyle.sm]="{'height':'150px'}" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" style="cursor: pointer;">
+
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" fxFlex.xs="90">
+    <img src="assets/farmtrac/ft-45.png" alt="tractor farmtrac 45 hp" fxFlex="30" fxFlex.xs="100">
+    <h1 fxLayoutAlign="center" [ngStyle.xs]="{'color':'#82b75c'}"><b>FT 6045 2WD </b></h1>
+  </div>
+
+</div>
+
+
+<div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" class="back-tractors font" [ngStyle.xs]="{'height':'200px'}" [ngStyle.sm]="{'height':'150px'}" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" style="cursor: pointer;">
+
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" fxFlex.xs="90" [ngClass]="scroll3 ? 'animate__animated animate__fadeInRightBig':'non-class'">
+    <img src="assets/farmtrac/ft-6050-NETS.png" alt="tractor farmtrac 50 hp nets" fxFlex="30" fxFlex.xs="100">
+    <h1 fxLayoutAlign="center" [ngStyle.xs]="{'color':'#82b75c'}"><b>FT 6050 NETS 4WD</b></h1>
+  </div>
+
+</div>
+
+
+<div fxLayout="row wrap" fxLayoutAlign="space-around center"  fxFlex="100" class="back-tractors font" [ngStyle.sm]="{'height':'250px'}" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" style="cursor: pointer;">
+  
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50" fxFlex.xs="90">
+    <img src="assets/farmtrac/ft-60.png" alt="tractor farmtrac 60 hp traccion simple" fxFlex="50" fxFlex.xs="90" >
+    <h1 fxLayoutAlign="center"><b>FT 6060 2WD</b></h1>
+  </div>
+  
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50" fxFlex.xs="90">
+    <img src="assets/farmtrac/ft-60-4wd.png" alt="tractor farmtrac 60 hp doble traccion" fxFlex="50" fxFlex.xs="90">
+    <h1 fxLayoutAlign="center"><b>FT 6060 4WD </b></h1>
+  </div>
+
+</div>
+
+<div fxLayout="row wrap" fxLayoutAlign="space-around center"  fxFlex="100" class="back-tractors font" [ngStyle.sm]="{'height':'250px'}" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" style="cursor: pointer;">
+  
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50" fxFlex.xs="90" [ngClass]="scroll4 ? 'animate__animated animate__fadeInLeftBig':'non-class'">
+    <img src="assets/farmtrac/ft-75-2wd.png" alt="tractor farmtrac 75 hp traccion simple" fxFlex="50"  fxFlex.xs="90">
+    <h1 fxLayoutAlign="center"><b>FT 6075 2WD</b></h1>
+  </div>
+
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50" fxFlex.xs="90" [ngClass]="scroll4 ? 'animate__animated animate__fadeInLeftBig':'non-class'">
+    <img src="assets/farmtrac/ft-75-pro-4wd.png" alt="tractor farmtrac 75 hp doble traccion" fxFlex="50"  fxFlex.xs="90">
+    <h1 fxLayoutAlign="center"><b>FT 6075 PRO 4WD </b></h1>
+  </div>
+
+</div>
+  
+
+<div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" class="back-tractors font" [ngStyle.xs]="{'height':'200px'}" [ngStyle.sm]="{'height':'150px'}" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" style="cursor: pointer;">
+
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" fxFlex.xs="90">
+    <img src="assets/farmtrac/ft-75-narrow.png" alt="tractor farmtrac 75 hp narrow" fxFlex="40" fxFlex.xs="100" fxFlex.gt-md="30">
+    <h1 fxLayoutAlign="center" [ngStyle.xs]="{'color':'#82b75c'}"><b>FT 6075 4WD NARROW </b></h1>
+  </div>
+
+</div>
+
+
+<div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" class="back-tractors font" [ngStyle.xs]="{'height':'200px'}" [ngStyle.sm]="{'height':'150px'}" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" style="cursor: pointer;">
+
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" fxFlex.xs="90" [ngClass]="scroll5 ? 'animate__animated animate__fadeInRightBig':'non-class'">
+    <img src="assets/farmtrac/ft-90-pro-4wd.png" alt="tractor farmtrac 90 hp pro doble traccion" fxFlex="40" fxFlex.xs="90" fxFlex.gt-md="30">
+    <h1 fxLayoutAlign="center" [ngStyle.xs]="{'color':'#82b75c'}"><b>FT 6090 PRO 4WD </b></h1>
+  </div>
+
+</div>
+
+
+<div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" class="back-tractors font" [ngStyle.xs]="{'height':'200px'}" [ngStyle.sm]="{'height':'150px'}" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" style="cursor: pointer;">
+  
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" fxFlex.xs="90" [ngClass]="scroll6 ? 'animate__animated animate__fadeIn':'non-class'">
+    <img src="assets/farmtrac/ft-110.png" alt="tractor farmtrac 110 hp nets pro" fxFlex="40" fxFlex.xs="90" fxFlex.gt-md="30">
+    <h1 fxLayoutAlign="center" [ngStyle.xs]="{'color':'#82b75c'}"><b>FT 7110 NETS PRO</b></h1>
+  </div>
+  
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="20" fxFlex.xs="40" class="font">
+    <button type="submit"  class="btnSend mt-5" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">mas Información</button>
+  </div> 
+  
+</div>
+
+
+<div fxLayout="row wrap" fxLayoutAlign="start" fxFlex="100" style="margin:80px 0px 0px 0px;">
+
+  <h1 class="font fs-8" fxFlex="100" style="color:#82b75c; margin-left: 15px;">Revimack Agro & Farmtrac.</h1>
+  <p class="font" style="color:#82b75c; margin-left: 15px; font-size: 1.2em;">Siempre lo mejor para vos.</p>
+
+</div>
+
+<div fxLayout="row wrap" fxLayoutAlign="space-between center" fxFlex="99" style="margin:80px 0px 80px 0px;">
+  
+  <img src="assets/farmtrac/farmtrac-2.jpg" alt="" fxFlex="49" fxFlex.xs="97" >
+  <img src="assets/farmtrac/farmtrac-5.jpg" alt="" fxFlex="49" fxFlex.xs="97">
+  <img src="assets/farmtrac/farmtrac-1.jpg" alt="" fxFlex="33" fxFlex.xs="97" style="margin-top: 5px;">
+  <img src="assets/farmtrac/farmtrac-7.jpg" alt="" fxFlex="33" fxFlex.xs="97" style="margin-top: 5px;">
+  <img src="assets/farmtrac/farmtrac-3.jpg" alt="" fxFlex="33" fxFlex.xs="97" style="margin-top: 5px;">
+  <img src="assets/farmtrac/farmtrac-6.jpg" alt="" fxFlex="49" fxFlex.xs="97" style="margin-top: 5px;">
+  <img src="assets/farmtrac/farmtrac-4.jpg" alt="" fxFlex="49" fxFlex.xs="97" style="margin-top: 5px;">
+
+</div>
+
+
+
+
+
+
+
+<!-- Formulario canvas -->
+
+<app-form-canvas></app-form-canvas>
+
+</div>
+<div  fxFlex="100" >
+    <app-footer></app-footer>
+</div>
+
+</div>

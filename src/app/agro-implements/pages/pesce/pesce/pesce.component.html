@@ -1,0 +1,364 @@
+
+ 
+ <div fxLayout="row wrap" fxLayoutAlign="center" >
+ 
+ <div  fxFlex="100" >
+    <app-navbar fxFlex="100" ></app-navbar>
+ </div>
+
+<div  fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center" style=" background-color: white; margin-top: 10px;">
+
+    <img src="assets/plantium/back.png" routerLink="../../home" id="back"  >
+    <img src="assets/arrow.png" (click)="goToTop()" id="up"  >
+
+    
+    <div   fxFlex="100" class="animate__animated animate__fadeIn headpesce" #top > </div>
+    <div fxFlex="100" fxLayoutAlign="center center" class="banner">Industrias Pesce S.A.</div>
+
+  
+
+    <div class="card" fxFlex="98"  >
+        <div class="card-body">
+          <h5 class="card-title">La Empresa</h5>
+          <p class="card-text">La Empresa cuenta con una amplia línea de producción dentro de la cual se encuentran las embutidoras de granos secos y extractoras de granos de silo bolsa, adaptando la producción a las necesidades reales de los productores agropecuarios. A partir del año 2020 se ha iniciado la fabricación del acondicionador de suelo disponible en 2 versiones de ancho de trabajo y se continua la producción de el arado terraceador, rastrones desterronadores, rolos picadores de rastrojos, distribuidores de abonos y fertilizantes, mixer de granos y elevadores de granos y fertilizantes a cinta y sinfín. Constituyendo una fuente de trabajo y producción en continuo crecimiento y evolución, que ha permitido mediante experiencia acumulada y la capacitación del personal, un constante desarrollo técnico industrial, aplicando a cada uno de los elementos fabricados los más altos niveles de la técnica actual. </p>
+        </div>
+    </div>
+
+    <div fxLayout="row wrap" fxFlex="98" class="products">
+ 
+        <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" style="margin-top: 30px;">
+            <div fxFlex="25" fxFlex.xs="60" > <h1 >Productos</h1></div> 
+            <div fxFlex="75" fxFlex.xs="40" class="divider"></div>
+        </div>
+    </div>
+
+
+    <div fxFlex="98" fxLayout="row wrap" fxLayoutAlign="space-between" style="margin-bottom: 20px;" >
+
+        <!-- acondicionador -->
+        <div fxFlex="20" fxFlex.xs="49" fxFlex.gt-xs="25"  fxFlex.gt-sm="20" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#acondicionador" aria-expanded="false" aria-controls="acondicionador" (click)="goToAcondicionador()"  >
+            <div class="borderdouble">
+                <img src="assets/pesce/acondicionador.png" alt="acondicionador pesce"   style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
+            </div>
+
+            <h5 class="text-center">Acondicionador de suelos</h5>
+        </div>
+
+        <!-- abono -->
+        <div fxFlex="20" fxFlex.xs="49" fxFlex.gt-xs="25"  fxFlex.gt-sm="20" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#abono" aria-expanded="false" aria-controls="abono" (click)="goToAbono()" >
+                <div class="borderdouble2"  >
+                    <img src="assets/pesce/abono.png" alt="fertilizante pesce"   style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
+                </div>
+    
+                    <h5 class="text-center">Distribuidor de Abonos y Fertilizantes</h5>
+            </div>
+        
+        <!-- rastron desterronador -->
+        <div fxFlex="20"  fxFlex.xs="49" fxFlex.gt-xs="25" fxFlex.gt-sm="20"fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#desterronador" aria-expanded="false" aria-controls="desterronador" (click)="goToDesterronador()">
+            <div class="borderdouble3"  >
+                <img src="assets/pesce/rastron-desterronador.png" alt=""   style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
+            </div>
+                <h5 class="text-center">Rastron Desterronador</h5>
+        </div>
+
+         <!-- rolo picador -->
+         <div fxFlex="20" fxFlex.xs="49"  fxFlex.gt-xs="25"  fxFlex.gt-sm="20" fxLayout="row wrap" fxLayoutAlign="center" data-bs-toggle="collapse" data-bs-target="#rolo" aria-expanded="false" aria-controls="desterronador" (click)="goToRolo()">
+            <div class="borderdouble2"  >
+                <img src="assets/pesce/rolo-picador.png" alt="rolo picador pesce" style="border-radius: 300px; cursor: pointer; padding: 2px;" fxFlex="100">
+            </div>
+
+            <h5 class="text-center">Rolo picador de rastrojos </h5>
+        </div>
+
+            <!-- + -->
+            <div fxFlex="20" fxFlex.xs="49" fxFlex.gt-xs="25" fxFlex.gt-sm="20" fxLayout="row wrap" fxLayoutAlign="center" >
+                <div class="borderdouble" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">
+                    <img src="assets/mas.png" alt=""  class="plus" fxFlex="100">
+                </div>
+               
+            <h5 fxFlex="100" fxLayoutAlign="center" >mas info... </h5>
+            </div>
+
+    </div>
+
+
+    <!-- COLLAPSES -->
+    <div class="collapse" id="acondicionador" fxFlex="98" style="margin-bottom: 50px;" #acond>
+
+        <div fxLayout="row wrap"  fxLayoutAlign="center"  class="products">
+ 
+            <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-between center" style="margin-top: 80px;">
+                <div fxFlex="40" fxFlex.xs="40" > <h1 >Acondicionador de suelos</h1></div> 
+                <div fxFlex="45" fxFlex.xs="35" class="divider"></div>
+                <div fxFlex="5" fxFlex.xs="5" data-bs-toggle="collapse" data-bs-target="#acondicionador" aria-expanded="false" aria-controls="acondicionador"  ><img src="assets/cerrar.svg" style="cursor: pointer;opacity: 0.2"></div>
+            </div>
+        </div>
+  
+        <div fxLayout="row wrap"  >
+
+        <div  fxFlex="50" fxFlex.xs="98" fxLayoutAlign="center">
+            <img src="assets/pesce/acondicionador.png" alt="acondicionador pesce"   style="padding: 2px;" fxFlex="90" >
+        </div>
+
+
+        <div  fxFlex="50" fxFlex.xs="95" fxLayout="row wrap" fxLayoutAlign="center space-between" >
+            
+            <div fxFlex="90" >
+            
+                <li>Acondicionador de suelos multipropósito.</li>
+
+                <li> Ancho de labor: 6,00 metros</li>
+                
+                <li>Velocidad de trabajo 12-18 km/h</li>
+                
+                <li>Discos dentados de 22” con regulación de la separación entre ambos trenes de discos.</li>
+                        
+                <li>Accionamiento hidráulico mediante cilindros de 3 1/2” x 12” </li>
+                        
+            <li>Cubiertas 400 x 600 15.5”</li>
+
+            <li>Potencia requerida:  220 - 240 HP.</li>
+                            
+            <li>  Ancho de transporte: 3,30 metros.</li>
+          </div>
+
+        <div fxLayout="row wrap " fxFlex="90" style="margin-top: 15px;" > 
+           
+            <div fxFlex="100" fxLayoutAlign="start"> 
+                <button  class="btnContact" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Necesito mas información
+                </button>
+            </div>
+
+            <div fxFlex="100" fxLayoutAlign="start" style="margin-top: 15px;"> 
+                <img src="assets/revimack-texto.png" alt="logo revimack" fxFlex="30">
+            </div>
+        </div>
+
+    </div>
+      
+      </div>
+    </div>
+
+    <div class="collapse" id="abono" fxFlex="98" style="margin-bottom: 50px;" #abon>
+
+        <div fxLayout="row wrap"  fxLayoutAlign="center "  class="products">
+ 
+            <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-between center" style="margin-top: 80px;">
+                <div fxFlex="40" fxFlex.xs="40" > <h1 >Distribuidor de Abonos y Fertilizantes</h1></div> 
+                <div fxFlex="45" fxFlex.xs="35" class="divider"></div>
+                <div fxFlex="5" fxFlex.xs="5" data-bs-toggle="collapse" data-bs-target="#abono" aria-expanded="false" aria-controls="abono"><img src="assets/cerrar.svg" style="cursor: pointer; opacity: 0.2"></div>
+            </div>
+        </div>
+        <div fxLayout="row wrap"  >
+       
+            <div  fxFlex="50" fxFlex.xs="98" fxLayoutAlign="center">
+                <img src="assets/pesce/abono.png" alt="acondicionador pesce"   style="padding: 2px;" fxFlex="90" >
+            </div>
+    
+
+       
+        <div  fxFlex="50" fxFlex.xs="95" fxLayout="row wrap" fxLayoutAlign="center space-between" >
+            
+            
+         <div fxFlex="90">   
+            <h3>DESCRIPCION</h3>
+            <li> Volumen de carga 6,5m3. sin colmar.</li>
+
+            <li>Acarreador de 3 cadenas con mando reductor.</li>
+            
+            <li>Reductor y cajas en baño de aceite.</li>
+            
+            <li>Chasis de caño reforzado.</li>
+            
+            <li>Boca de descarga regulable manual.</li>
+            
+            <li>Ancho de cobertura 13,00 mts. aprox.</li>
+            
+            <li>Dimensiones:</li>
+            <li>Largo total 5,10 mts.</li>
+            <li>Ancho 2,20 mts.</li>
+            <li>Rodado: 900 x 20" (Sin cubiertas)</li>
+            
+            Opcional:  Boca de descarga regulable mediante cilindro hidráulico.
+        </div>
+    
+        <div fxLayout="row wrap " fxFlex="90" style="margin-top: 15px;" > 
+           
+            <div fxFlex="100" fxLayoutAlign="start"> 
+                <button  class="btnContact" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Necesito mas información
+                </button>
+            </div>
+
+            <div fxFlex="100" fxLayoutAlign="start" style="margin-top: 15px;"> 
+                <img src="assets/revimack-texto.png" alt="logo revimack" fxFlex="30">
+            </div>
+        </div>
+
+      
+
+        </div>
+      
+      </div>
+    </div>
+
+    <div class="collapse" id="desterronador" fxFlex="98" style="margin-bottom: 50px;" #desterr>
+
+        <div fxLayout="row wrap"  fxLayoutAlign="center "  class="products">
+ 
+            <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-between center" style="margin-top: 80px;">
+                <div fxFlex="40" fxFlex.xs="40" > <h1 >Rastron Desterronador</h1></div> 
+                <div fxFlex="45" fxFlex.xs="35" class="divider"></div>
+                <div fxFlex="5" fxFlex.xs="5" data-bs-toggle="collapse" data-bs-target="#desterronador" aria-expanded="false" aria-controls="desterronador"><img src="assets/cerrar.svg" style="opacity: 0.2;cursor: pointer;"></div>
+            </div>
+        </div>
+        <div fxLayout="row wrap"  >
+            <div  fxFlex="50" fxFlex.xs="98" fxLayoutAlign="center">
+                <img src="assets/pesce/rastron-desterronador.png" alt="desterronador pesce"   style="padding: 2px;" fxFlex="90" >
+            </div>
+
+            <div  fxFlex="50" fxFlex.xs="95" fxLayout="row wrap" fxLayoutAlign="center space-between" >
+            
+            <div fxFlex="90">  
+            
+                <h3>DESCRIPCION</h3>
+                
+                <li>Ancho de trabajo: 6,40 Mts.</li>
+
+                <li>Cilindros  Hidráulicos:</li>
+                
+                <li>2 de 3" x 12"</li>
+                
+                <li>1 de 3 1/2" x 8"</li>
+                
+                <li>PESO: 1.750 kgs.</li>
+                
+                <li>RODADO: cubiertas 650 x 16” x 6 telas.</li>
+                
+                <li>POTENCIA REQUERIDA: 120/140 H.P.</li>
+                
+                <li>Cuchillas de acero cambiables (Opcional)</li>
+                <li>Eje trasero con regulación hidráulica (opcional)</li>
+                <li>Cuchillas removedoras</li>
+                <li>Faldon para mayor arrastre de material</li>
+            </div>
+
+            <div fxLayout="row wrap " fxFlex="90" style="margin-top: 15px;" > 
+           
+                <div fxFlex="100" fxLayoutAlign="start"> 
+                    <button  class="btnContact" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Necesito mas información
+                    </button>
+                </div>
+    
+                <div fxFlex="100" fxLayoutAlign="start" style="margin-top: 15px;"> 
+                    <img src="assets/revimack-texto.png" alt="logo revimack" fxFlex="30">
+                </div>
+            </div>
+        </div>
+      
+      </div>
+    </div>
+
+    <div class="collapse" id="rolo" fxFlex="98" style="margin-bottom: 50px;" #rol>
+
+        <div fxLayout="row wrap"  fxLayoutAlign="center "  class="products">
+ 
+            <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-between center" style="margin-top: 80px;">
+                <div fxFlex="40" fxFlex.xs="40" > <h1 >Rolo picador de rastrojos</h1></div> 
+                <div fxFlex="45" fxFlex.xs="35" class="divider"></div>
+                <div fxFlex="5" fxFlex.xs="5" data-bs-toggle="collapse" data-bs-target="#rolo" aria-expanded="false" aria-controls="rolo"><img src="assets/cerrar.svg" style="cursor: pointer;opacity: 0.2"></div>
+            </div>
+        </div>
+        <div fxLayout="row wrap">
+            <div  fxFlex="50" fxFlex.xs="98" fxLayoutAlign="center">
+                <img src="assets/pesce/rolo-picador.png" alt="desterronador pesce"   style="padding: 2px;" fxFlex="90" >
+            </div>
+          
+            <div  fxFlex="50" fxFlex.xs="95" fxLayout="row wrap" fxLayoutAlign="center space-between" >
+            
+            <div fxFlex="90">  
+                <h3>DESCRIPCION</h3>
+                
+                <li>Ancho de trabajo: 6,00mts</li>
+                <li>Ancho de transporte: 3,60mts</li>
+                <li>Peso: 2900Kgs sin lastre</li>
+                <li>Lastre: capacidad para 1000Lts</li>
+                <li>Alerones rebatibles: 2 cilindros de 3 1/2”x12”</li>
+                <li>Elevación del conjunto: 2 cilindros de 3 1/2”x12”</li>
+                <li>Cubiertas: 12.5Lx15"</li>
+
+                <li>Chasis tubular reforzado, rolos montados sobre doble rodamiento, con sistema de tiro flotante en posición de trabajo y fijo para el transporte.</li>
+            </div>    
+            <div fxLayout="row wrap " fxFlex="90" style="margin-top: 15px;" > 
+           
+                <div fxFlex="100" fxLayoutAlign="start"> 
+                    <button  class="btnContact" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Necesito mas información
+                    </button>
+                </div>
+    
+                <div fxFlex="100" fxLayoutAlign="start" style="margin-top: 15px;"> 
+                    <img src="assets/revimack-texto.png" alt="logo revimack" fxFlex="30">
+                </div>
+            </div>
+        </div>
+      
+      </div>
+    </div>
+
+
+
+
+<!-- <div class="container-video" fxFlex="100">
+    <iframe class="responsive-iframe"  src="https://www.youtube.com/embed/dBog0pjSfT0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div> -->
+
+
+
+
+
+<!-- Formulario canvas -->
+<app-form-canvas></app-form-canvas>
+
+
+<!-- slider brand -->
+<div fxLayout="row wrap" fxFlex="98" style="margin-top: 40px; margin-bottom:40px;">
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"   >
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner" > 
+          <div class="carousel-item active" >
+            <img src="assets/pesce/1.png" class="d-block w-100" alt="acondicionador de suelos" >
+           
+          </div>
+           <div class="carousel-item" >
+            <img src="assets/pesce/2.png" class="d-block w-100" alt="distribuidor de abonos y fertilizantes">
+      
+          </div>
+          <div class="carousel-item" >
+            <img src="assets/pesce/3.png" class="d-block w-100" alt="rastron desterronador">
+       
+          </div> 
+          <div class="carousel-item" >
+            <img src="assets/pesce/4.png" class="d-block w-100" alt="rolo picador de">
+   
+          </div> 
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+</div>
+<!-- end slider brand -->
+
+</div>
+</div>

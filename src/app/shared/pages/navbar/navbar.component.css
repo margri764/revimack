@@ -1,0 +1,294 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+
+
+
+  img{
+      width: 90%;
+  }
+     
+  .fa-whatsapp{
+  margin-left: 10px;
+  font-size: 3vw;
+  color: green;
+  }
+
+  .material-icons-outlined{
+    margin-top: auto ; 
+    margin-bottom: auto;
+  }
+  
+
+  .customNavbar{
+  margin-top: 10px;
+  background-color: rgb(17, 17, 17);
+  border-radius: 10px;
+  padding: 20px;
+
+  box-shadow: 10px 10px 17px -6px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 17px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 17px -6px rgba(0,0,0,0.75);
+  }
+
+.btnNav{
+  color: #edf0f1;
+  font-family: "Monserrat",sans-serif;
+  font-weight: 100;
+  font-size: 1.6vw;
+  border-radius: 5px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.btnNav:hover{
+  transform: scale(1.01);
+}
+
+a{
+  text-decoration: none;
+  font-family: "Monserrat",sans-serif;
+  font-weight: 100;
+  font-size: 1.4vw;
+  cursor: pointer;
+}
+
+label{
+  cursor: pointer;
+}
+
+.tooltip-inner{
+  color: red
+}
+
+.divider{
+height: 3px;
+background-color: #82b75c; 
+opacity: 0.6;
+}
+
+.offcanvas{
+border-bottom : 4px solid #82b75c;
+border-right : 4px solid #82b75c;
+border-top : 4px solid #82b75c;
+
+
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+}
+
+.offcanvas-title{
+  text-decoration: none;
+  font-family: "Monserrat",sans-serif;
+  font-weight: 200;
+  font-size: 1.4vw;
+}
+
+.consulta{
+border-radius: 10px; 
+padding: 10px;
+background-color: rgb(251, 251, 251);
+
+box-shadow: 10px 10px 17px -8px rgba(56,56,56,0.45);
+-webkit-box-shadow: 10px 10px 17px -8px rgba(56,56,56,0.45);
+-moz-box-shadow: 10px 10px 17px -8px rgba(56,56,56,0.45);
+}
+
+.dividerGreen{
+  height: 3px;
+  background-color: #82b75c; 
+  opacity: 0.6;
+}
+
+.shopping{
+  margin: 10px;
+}
+
+
+
+input {
+  width:100px ;
+  font-size: 1.5vw;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 575px) {
+  
+a{
+  font-size: 2.5vw;
+}
+
+input {
+  width: 150px ;
+  font-size: 1.3vw;
+}
+
+form {
+  margin-left: 32vw;
+}
+
+.suggested{
+  width: 100vw; 
+  margin-top: 1vw;
+  margin-left: 2vw;
+}
+
+.offcanvas {
+    /* height: 90vh;  */
+}
+
+.offcanvas-body label{
+  font-family: "Monserrat",sans-serif;
+  font-weight: 100;
+  font-size: 5vw;
+
+}
+
+.btnNav{
+  font-size: 4.6vw;
+}
+
+.bi.bi-house{
+  color: rgb(179, 179, 179);
+  font-size: 8vw;
+}
+
+.bi.bi-list{
+  color: rgb(179, 179, 179);
+  font-size: 8vw;
+}
+
+.bi.bi-search{
+  color: rgb(179, 179, 179);
+
+  font-size: 7vw;
+}
+
+a.searchResult {
+  font-size: 3vw; 
+}
+
+.fa-whatsapp{
+  font-size: 10vw;
+  margin-left: 0;
+}
+
+#font .dropdown-menu{
+  font-size: 4.6vw;
+  width: auto;
+}
+
+.btnCustom{
+background-color: #ffffff;
+border: 2px solid #1ccece;
+color: rgb(0, 0, 0);
+font-family:'ribeye';
+border-radius: 1em;
+line-height: 2em;
+font-size: 1.3vw;
+}
+
+.btnCustom:hover {
+background-color: #1fdddd;
+border: 2px solid white;
+color: rgb(255, 255, 255);
+}
+
+.whatsapp{
+  font-size: 5vh;
+} 
+
+
+}
+@media only screen and (min-width: 576px) {
+  
+a{
+  font-size: 2.8vw;
+}
+
+input{
+  width:100px ;
+  font-size: 2.8vw;
+}
+
+.btnNav{
+  font-size: 2.3vw; 
+}
+
+
+}
+  
+
+/* medium devices (tablets, 768 px and up) */ 
+@media only screen and (min-width: 786px) {
+
+a{
+  font-size: 2vw;
+}
+
+input{
+  width:120px ;
+  font-size: 2vw;
+}
+
+.btnNav{
+  font-size: 2vw; 
+}
+  
+}
+  
+
+/* large devices (desktops, 992 px and up) */ 
+@media only screen and (min-width: 992px) {
+
+a{
+  font-size: 2vw;
+}
+
+input{
+  width:120px ;
+  font-size: 2vw;
+}
+
+.btnNav{
+  font-size: 2vw; 
+}
+
+}
+
+/* W-large devices (desktops, 992 px and up) */ 
+@media only screen and (min-width: 1200px) {
+  
+a{
+  font-size: 1.4vw;
+}
+
+.btnNav{
+  font-size: 1.6vw; 
+}
+
+input {
+  width: 150px ;
+  font-size: 1.6vw;
+}
+}
+  
+  
+
+
+/* XX- Large devices (larger desktops, 1400px and up) */ 
+@media only screen and (min-width: 1400px) {
+a{
+  font-size: 1.3vw;
+}
+
+.btnNav{
+  font-size: 1.2vw; 
+}
+
+input {
+  width:150px ;
+  font-size: 3.5vw;
+}    
+
+}
