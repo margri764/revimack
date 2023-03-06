@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  baseUrl: 'https://dulcealmadeco.com/',
+  baseUrl: 'https://barrozoautomotores.com/',
   googleAnalyticsId: ''
 
 };
