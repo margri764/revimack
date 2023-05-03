@@ -11,7 +11,6 @@ export class HomeTractorsComponent implements OnInit, OnInit{
 
 
   @HostListener('window:scroll') onScroll(e: Event): void {
-    console.log(this.getYPosition(e));
     (this.getYPosition(e) >= 3 ) ? this.scroll = true : this.scroll = false;
     (this.getYPosition(e) >= 25 ) ? this.scroll2 = true : this.scroll2 = false;
     (this.getYPosition(e) >= 40 ) ? this.scroll3 = true : this.scroll3 = false;

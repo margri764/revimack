@@ -112,7 +112,6 @@ export class RotoplasComponent implements OnInit {
       });
       }, 0);
   }
-
   
   goToTop(){
     this.toppage = this.top.nativeElement;

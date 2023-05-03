@@ -25,8 +25,21 @@ src: url(assets/font/poppins/Poppins-Light.ttf);
  
 }
 
+@font-face {
+font-family:'bebas-nehue';
+src: url(assets/font/Bebas_Neue/BebasNeue-Regular.ttf);
+ 
+}
+
+@font-face {
+font-family:'luckiestGuy';
+src: url(assets/font/Luckiest_Guy/LuckiestGuy-Regular.ttf);
+ 
+}
+
+
 .font{
-  font-family:'poppins-light';
+  font-family:'bebas-nehue';
 }
 
 .fs-1{

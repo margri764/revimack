@@ -1,0 +1,60 @@
+.headUsed{
+    height: 530px;
+    background-image: url(/assets/usados/1200x500-video1.gif);
+    background-position: center;
+    background-size:cover ;
+    background-repeat: no-repeat;
+}
+
+#back {
+    position:absolute; 
+    top: 20px; /* Place the button at the bottom of the page */
+    left: 10px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    opacity: 0.6;
+    width: 50px;
+  }
+
+
+ 
+//Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 575px) {
+
+
+}
+
+@media only screen and (min-width: 576px) {
+
+}
+    
+
+/* medium devices (tablets, 768 px and up) */ 
+@media only screen and (min-width: 786px) {
+
+}
+    
+
+/* large devices (desktops, 992 px and up) */ 
+@media only screen and (min-width: 992px) {
+
+}
+
+/* x-large devices (desktops, 1200 px and up) */ 
+@media only screen and (min-width: 1200px) {
+    
+ 
+}
+    
+
+/* XX- Large devices (larger desktops, 1400px and up) */ 
+@media only screen and (min-width: 1400px) {
+
+    .headUsed{
+        height: 700px;
+    }
+
+
+}
+    
+
