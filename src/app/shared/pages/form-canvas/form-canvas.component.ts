@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { EmailService } from 'src/app/services/email/email.service';
 
@@ -23,7 +23,7 @@ export class FormCanvasComponent implements OnInit {
   
   
 
-  myForm:FormGroup = this.fb.group({
+  myForm:UntypedFormGroup = this.fb.group({
     name:    ['', [Validators.required]],
     email:   ['', [Validators.required,]],
     phone:   ['', [Validators.required]],
@@ -31,7 +31,7 @@ export class FormCanvasComponent implements OnInit {
     });
     
   constructor(
-               private fb : FormBuilder,
+               private fb : UntypedFormBuilder,
                private route : Router,
                private _emailservice : EmailService
 
