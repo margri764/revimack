@@ -1,39 +1,78 @@
 
-<div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="100" style="background-color: white;"  >
 
+<!-- d -->
+<div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="100"  >
+
+<div fxFlex="100" #top>
+   <app-navbar></app-navbar>
+</div>
+
+<div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="100" style=" margin-bottom: 100px; background: white;">
 <!-- head -->
-    <img src="assets/plantium/back.png" routerLink="../../home" id="back"  >
+    <img src="assets/plantium/back.png" routerLink="../../home" id="back">
 
     <div fxFlex="100" class="animate__animated animate__fadeIn " #top style="margin-bottom: 60px;">
     
-        <img class="img-fluid" [src]="getImage()" width="100%">
+        <img class="img-fluid" [src]="getImage()" width="100%" >
     
     </div>
 
-<div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="100" style="background-color: white;">
+  
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-top: 80px; margin-bottom: 80px; padding: 5px;" >
+    <span class="fontPop fs-9">Los mejores usados seleccionados</span>
+  </div>
 
-    <div id="mainImg">
-        <img fxFlex="100" class="animate__animated animate__fadeIn" id="testImgMove" [src]="img1" alt="">
-      </div>
+
+      <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50" fxFlex.xs="100" style="z-index: 1;">
+      
+        <img [src]="img1"  alt="" fxFlex="100" style="border-radius: 5px;">
     
-      <div >
-        
-        <carousel 
-          [cellWidth]="'100%'" 
-          [cellsToShow]="2"
-          arrowsTheme="dark"  
-          [height]="800"    
-        >
+        <carousel [cellWidth]="'100%'" [cellsToShow]="2" arrowsTheme="dark" [height]="value" >
+           
+          <div class="carousel-cell"> 
+              <img [src]="img2" (click)="goToMainImg('img2')" >
+           </div>
           
-          <!-- [cellsToScroll]="3" -->
-          <div class="carousel-cell"> <img   [src]="img2" (click)="goToMainImg('img2')"></div>
-          <div class="carousel-cell"> <img   [src]="img3" (click)="goToMainImg('img3')"></div>
-          <div class="carousel-cell"> <img   [src]="img4" (click)="goToMainImg('img4')"></div>
-          <div class="carousel-cell"> <img   [src]="img5" (click)="goToMainImg('img5')"></div>
+           <div class="carousel-cell"> 
+              <img [src]="img3" (click)="goToMainImg('img3')">
+           </div>
+          
+           <div class="carousel-cell"> 
+            <img [src]="img4" (click)="goToMainImg('img4')">
+           </div>
         </carousel>
+    
       </div>
 
+      <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex="50" fxFlex.xs="100" style="padding-left: 20px;" >
+      
+          <div fxLayout="row wrap" fxLayoutAlign="start" fxFlex="90" >
+
+              <span class="fontPop fs-8" fxFlex="100"><b> DEUTZ AX 4.120 </b> </span>
+              <span class="fontPop fs-6" style="margin-top: 40px;" > 
+              
+                Datos técnicos: <br> 
+                Doble traccion, rodado trasero 18.4-38. <br>
+                Doble embrague , cabina nacion. <br>
+                Estado general muy bueno.</span>
+          </div>
+
+          <button  class="btnContact fontPop" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" style="margin-bottom: 40px; margin-top: 30px;"  fxFlex="40" fxFlex.xs="60">Más información
+          </button>
+      </div>
+
+    
+
+<div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-bottom: 100px; position: relative;" >
+  <img [src]= "banner" alt="" fxFlex="100">
+
+  <button  class="btnContact fontPop position" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" style="" >Más información
+  </button>
+
+</div>
 </div>
 
 </div>   
-    
+
+<!-- Formulario canvas -->
+<app-form-canvas></app-form-canvas>

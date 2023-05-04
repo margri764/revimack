@@ -42,6 +42,10 @@ src: url(assets/font/Luckiest_Guy/LuckiestGuy-Regular.ttf);
   font-family:'bebas-nehue';
 }
 
+.fontPop{
+  font-family:'poppins-light';
+}
+
 .fs-1{
   font-size: 0.5em;
 }
@@ -72,6 +76,11 @@ src: url(assets/font/Luckiest_Guy/LuckiestGuy-Regular.ttf);
 
 .fs-8{
   font-size: 2em;
+}
+
+
+.fs-9{
+  font-size: 3em;
 }
 
 .f-w{

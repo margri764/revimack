@@ -4,6 +4,7 @@ import { UsedRoutingModule } from './used-routing';
 import { HomeUsedComponent } from './pages/home-used/home-used/home-used.component';
 import { SharedModule } from "../shared/shared.module";
 import { IvyCarouselModule } from 'angular-responsive-carousel2';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -16,7 +17,8 @@ import { IvyCarouselModule } from 'angular-responsive-carousel2';
         CommonModule,
         UsedRoutingModule,
         SharedModule,
-        IvyCarouselModule
+        IvyCarouselModule,
+        FlexLayoutModule
 
     ]
 })

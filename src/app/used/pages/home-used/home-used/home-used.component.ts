@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { log } from 'console';
 
 @Component({
   selector: 'app-home-used',
@@ -7,15 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeUsedComponent implements OnInit {
 
-  private currentImage: any;
+  public currentImage: any;
   value : number = 250;
+  bannerArray : any []=[];
+  currentIndex = 0;
+  banner : string = "" 
 
   arrayUsedCars = [
     {
-      img1: "./assets/usados/micruze1.jpeg",
-      img2: "./assets/usados/micruze2.jpeg",
-      img3: "./assets/usados/micruze3.jpeg",
-      img4: "./assets/usados/micruze4.jpeg",
+      img1: "./assets/usados/revi-1.jpg",
+      img2: "./assets/usados/revi-2.jpg",
+      img3: "./assets/usados/revi-3.jpg",
+      img4: "./assets/usados/revi-4.jpg",
     },
   ]
 
@@ -27,48 +31,38 @@ export class HomeUsedComponent implements OnInit {
 
 
   constructor() {
-    this.currentImage = this.updateRandomImage();
+    this.currentImage = this.showImgBanner();
 
    }
 
   ngOnInit(): void {
-    this.calcQueries();
+
     this.mainImg();
     this.valueToHeightCarousel();
+    this.currentImage = this.bannerArray[0];
+    this.currentIndex = 0;
 
     const clear = setInterval(() => {
-      this.currentImage = this.updateRandomImage();
+      this.currentImage = this.showImgBanner();
     
       if(!window.location.href.includes('home-usados')){ 
         clearInterval(clear)
       }
-      }, 2500);
+      }, 3500);
   
   }
 
-
-  calcQueries(){
-    if(screen.width > 1400 ){
-
-    }
-  }
-
-  rotoArray = [
-    { path: "./assets/usados/1600x600-video1.gif" },
-    { path: "./assets/usados/1600x600-video2.gif" },
-    { path: "./assets/usados/1600x600-video3.gif" },
-  
-   ]
-
-   
   getImage() {
-    return this.currentImage.path;
+    return this.currentImage ? this.currentImage.path : '';
   }
 
-  updateRandomImage() {
-    const showRandomImg= Math.floor(Math.random() * (this.rotoArray.length )) ;
-    return this.rotoArray[showRandomImg];
-  }
+
+showImgBanner() {
+  const nextIndex = (this.currentIndex + 1) % this.bannerArray.length;
+  this.currentIndex = nextIndex;
+  return this.bannerArray[nextIndex];
+}
+
 
   mainImg(){
     this.arrayUsedCars.forEach((item)=>{ 
@@ -78,42 +72,91 @@ export class HomeUsedComponent implements OnInit {
       this.img4 = item.img4;
    
      })
-   }
-
-  goToMainImg (value : string){
- 
-    switch( value ){ 
-      case 'img2' :
-                 this.img1 = this.img2; 
-       break;
-      
-      case 'img3': 
-                this.img1 = this.img3; 
-      break;
-  
-      case 'img4': 
-      this.img1 = this.img4; 
-      break;
-  
-   
-    }
   }
 
+  goToMainImg(value: string) {
+    let selectedImgSrc = '';
+  
+    switch (value) {
+      case "img2":
+        selectedImgSrc = this.img2;
+        this.img2 = this.img1;
+        this.img1 = selectedImgSrc;
+        break;
+  
+      case "img3":
+        selectedImgSrc = this.img3;
+        this.img3 = this.img1;
+        this.img1 = selectedImgSrc;
+        break;
+  
+      case "img4":
+        selectedImgSrc = this.img4;
+        this.img4 = this.img1;
+        this.img1 = selectedImgSrc;
+        break;
+  
+      default:
+        break;
+    }
+  }
+  
   valueToHeightCarousel(){
     if (screen.width > 300 && screen.width < 574){
       this.value = 160;
+      this.bannerArray = [
+        { path: "./assets/usados/500x400-video1.png" },
+        { path: "./assets/usados/500x400-video2.png" },
+        { path: "./assets/usados/500x400-video3.png" },
+       ]
+       this.banner = "./assets/usados/revi-banner-500x400.png" 
       return;
     }
+
     if (screen.width > 574 && screen.width < 768){
       this.value = 180;
+      this.bannerArray = [
+        { path: "./assets/usados/500x400-video1.png" },
+        { path: "./assets/usados/500x400-video2.png" },
+        { path: "./assets/usados/500x400-video3.png" },
+       ]
+       this.banner = "./assets/usados/revi-banner-500x400.png" 
       return;
     }
-    if (screen.width > 768 && screen.width < 1300){
-      this.value = 190;
+
+    if (screen.width > 768 && screen.width < 1200){
+      this.value = 200;
+      this.bannerArray = [
+        { path: "./assets/usados/500x400-video1.png" },
+        { path: "./assets/usados/500x400-video2.png" },
+        { path: "./assets/usados/500x400-video3.png" },
+       ]
+       this.banner = "./assets/usados/revi-banner-500x400.png" 
+      return;
       return;
     }
-    if (screen.width > 1300 ){
-      this.value = 220;
+
+    if (screen.width > 1200 ){
+      this.value = 350;
+      this.bannerArray = [
+        { path: "./assets/usados/1600x600-video1.gif" },
+        { path: "./assets/usados/1600x600-video2.gif" },
+        { path: "./assets/usados/1600x600-video3.gif" },
+       ]
+       this.banner = "./assets/usados/revi-banner.png" 
+    
+      return;
+    }
+
+    if (screen.width > 1600 ){
+      this.value = 350;
+      this.bannerArray = [
+        { path: "./assets/usados/1600x600-video1.gif" },
+        { path: "./assets/usados/1600x600-video2.gif" },
+        { path: "./assets/usados/1600x600-video3.gif" },
+       ]
+       this.banner = "./assets/usados/revi-banner.png" 
+    
       return;
     }
   }
