@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { log } from 'console';
+import { DataService } from 'src/app/services/data/data.service';
 
 @Component({
   selector: 'app-home-used',
@@ -12,7 +14,9 @@ export class HomeUsedComponent implements OnInit {
   value : number = 250;
   bannerArray : any []=[];
   currentIndex = 0;
-  banner : string = "" 
+  banner : string = "";
+  bannerPromo : string = '';
+
 
   arrayUsedCars = [
     {
@@ -30,17 +34,27 @@ export class HomeUsedComponent implements OnInit {
   img5 : string = '';
 
 
-  constructor() {
-    this.currentImage = this.showImgBanner();
+  constructor(
+              private router : Router,
+              private dataService : DataService
+  ) {
+     this.currentImage = this.showImgBanner();
 
    }
 
   ngOnInit(): void {
 
+
+    if (!this.dataService.hasRedirected) {
+      this.dataService.hasRedirected = true;
+      this.router.navigateByUrl('/usados-seleccionados/promo-skf');
+    }
+
     this.mainImg();
     this.valueToHeightCarousel();
-    this.currentImage = this.bannerArray[0];
-    this.currentIndex = 0;
+
+     this.currentImage = this.bannerArray[0];
+     this.currentIndex = 0;
 
     const clear = setInterval(() => {
       this.currentImage = this.showImgBanner();
@@ -109,7 +123,8 @@ showImgBanner() {
         { path: "./assets/usados/500x400-video2.png" },
         { path: "./assets/usados/500x400-video3.png" },
        ]
-       this.banner = "./assets/usados/revi-banner-500x400.png" 
+       this.banner = "./assets/usados/revi-banner-500x400.png";
+       this.bannerPromo = "./assets/usados/banner-skf-phone.png";
       return;
     }
 
@@ -120,7 +135,9 @@ showImgBanner() {
         { path: "./assets/usados/500x400-video2.png" },
         { path: "./assets/usados/500x400-video3.png" },
        ]
-       this.banner = "./assets/usados/revi-banner-500x400.png" 
+       this.banner = "./assets/usados/revi-banner-500x400.png";
+       this.bannerPromo = "./assets/usados/banner-skf-phone.png";
+
       return;
     }
 
@@ -131,7 +148,9 @@ showImgBanner() {
         { path: "./assets/usados/500x400-video2.png" },
         { path: "./assets/usados/500x400-video3.png" },
        ]
-       this.banner = "./assets/usados/revi-banner-500x400.png" 
+       this.banner = "./assets/usados/revi-banner-500x400.png";
+       this.bannerPromo = "./assets/usados/banner-skf-phone.png";
+      
       return;
       return;
     }
@@ -143,7 +162,9 @@ showImgBanner() {
         { path: "./assets/usados/1600x600-video2.gif" },
         { path: "./assets/usados/1600x600-video3.gif" },
        ]
-       this.banner = "./assets/usados/revi-banner.png" 
+       this.banner = "./assets/usados/revi-banner.png";
+       this.bannerPromo = "./assets/usados/banner-skf.png";
+
     
       return;
     }
@@ -155,7 +176,9 @@ showImgBanner() {
         { path: "./assets/usados/1600x600-video2.gif" },
         { path: "./assets/usados/1600x600-video3.gif" },
        ]
-       this.banner = "./assets/usados/revi-banner.png" 
+       this.banner = "./assets/usados/revi-banner.png";
+       this.bannerPromo = "./assets/usados/banner-skf.png";
+
     
       return;
     }

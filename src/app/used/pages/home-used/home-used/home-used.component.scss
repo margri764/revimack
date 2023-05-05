@@ -38,10 +38,38 @@
     color: #82b75c;
     border: 2px solid #82b75c;
   }
+
+  .btnPromo{
+    background-color: #82b75c;
+    font-weight: 500;
+    color: white;
+    border-radius: 7px;
+    border: none;
+    font-size: 1.1em;
+    padding: 10px;
+    border: 2px solid #82b75c;
+
+    box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+    -webkit-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+    -moz-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+  }
+
+  .btnPromo:hover{
+    background-color: white;
+    color: #82b75c;
+    border: 2px solid #82b75c;
+  }
+
   .position{
     position: absolute; 
     top: 60%;
     left: 61%;
+  }
+
+  .positionBanner{
+    position: absolute; 
+    top: 60%;
+    left: 5%;
   }
  
 //Extra small devices (phones, 600px and down) */
@@ -50,13 +78,24 @@
     .btnContact{
         font-size: 1.3em;
         padding: 2px;
+    }
 
+    .btnPromo{
+      font-size: 1em;
+      padding: 1px;
     }
 
     .position{
         position: absolute; 
         top: 60%;
         left: 55%;
+      }
+
+      .positionBanner{
+        position: absolute; 
+        top: 61%;
+        left: 3%;
+      
       }
 
 }

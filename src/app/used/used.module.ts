@@ -5,13 +5,15 @@ import { HomeUsedComponent } from './pages/home-used/home-used/home-used.compone
 import { SharedModule } from "../shared/shared.module";
 import { IvyCarouselModule } from 'angular-responsive-carousel2';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { PromoSkfComponent } from './message/promo-skf/promo-skf/promo-skf.component';
 
 
 
 
 @NgModule({
     declarations: [
-        HomeUsedComponent
+        HomeUsedComponent,
+        PromoSkfComponent
     ],
     imports: [
         CommonModule,

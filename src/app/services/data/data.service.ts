@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment.prod';
 export class DataService {
 
   private baseUrl: string = environment.baseUrl;
-  
+  hasRedirected : boolean = false;
 
   constructor( private http : HttpClient) { }
 
