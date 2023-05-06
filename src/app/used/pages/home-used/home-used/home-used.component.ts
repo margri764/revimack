@@ -12,26 +12,21 @@ export class HomeUsedComponent implements OnInit {
 
   public currentImage: any;
   value : number = 250;
+  celltoShow : number = 3.4;
   bannerArray : any []=[];
   currentIndex = 0;
   banner : string = "";
   bannerPromo : string = '';
+  
+  arrayTractors : any [] = [];
+  arrayFumigadoras : any [] = [];
+  arrayCosechadoras : any [] = [];
+  arraySembradoras : any [] = [];
+  arrayItems : any [] = [];
+  currentDate : Date= new Date();
 
 
-  arrayUsedCars = [
-    {
-      img1: "./assets/usados/revi-1.jpg",
-      img2: "./assets/usados/revi-2.jpg",
-      img3: "./assets/usados/revi-3.jpg",
-      img4: "./assets/usados/revi-4.jpg",
-    },
-  ]
 
-  img1 : string = '';
-  img2 : string = '';
-  img3 : string = '';
-  img4 : string = '';
-  img5 : string = '';
 
 
   constructor(
@@ -45,12 +40,14 @@ export class HomeUsedComponent implements OnInit {
   ngOnInit(): void {
 
 
-    if (!this.dataService.hasRedirected) {
-      this.dataService.hasRedirected = true;
-      this.router.navigateByUrl('/usados-seleccionados/promo-skf');
-    }
+    // if (!this.dataService.hasRedirected) {
+    //   this.dataService.hasRedirected = true;
+    //   this.router.navigateByUrl('/usados-seleccionados/promo-skf');
+    // }
 
-    this.mainImg();
+    this.arrayTractors = this.dataService.arrayTractors;
+    this.returnOnlyOneItem(this.arrayTractors);
+
     this.valueToHeightCarousel();
 
      this.currentImage = this.bannerArray[0];
@@ -66,56 +63,44 @@ export class HomeUsedComponent implements OnInit {
   
   }
 
-  getImage() {
-    return this.currentImage ? this.currentImage.path : '';
+  arrayOneItem : any;
+  returnOnlyOneItem(arrayItem: any) {
+    const uniqueItems = arrayItem.reduce((accumulator: any[], current: { name: any }) => {
+      const found = accumulator.find((item: { name: any }) => item.name === current.name);
+      if (!found) {
+        accumulator.push(current);
+      }
+      return accumulator;
+    }, []);
+  
+    this.arrayOneItem = uniqueItems;
+    console.log(this.arrayOneItem);
   }
+  
+categorySelected( item : string){
 
+  
+  switch (item) {
+    case "tractor":
+                  this.arrayItems = this.arrayOneItem;
+      break;
+  
+    default:
+      break;
+  }
+}
+
+getImage() {
+    return this.currentImage ? this.currentImage.path : '';
+}
 
 showImgBanner() {
   const nextIndex = (this.currentIndex + 1) % this.bannerArray.length;
   this.currentIndex = nextIndex;
   return this.bannerArray[nextIndex];
 }
-
-
-  mainImg(){
-    this.arrayUsedCars.forEach((item)=>{ 
-      this.img1 = item.img1;
-      this.img2 = item.img2;
-      this.img3 = item.img3;
-      this.img4 = item.img4;
-   
-     })
-  }
-
-  goToMainImg(value: string) {
-    let selectedImgSrc = '';
   
-    switch (value) {
-      case "img2":
-        selectedImgSrc = this.img2;
-        this.img2 = this.img1;
-        this.img1 = selectedImgSrc;
-        break;
-  
-      case "img3":
-        selectedImgSrc = this.img3;
-        this.img3 = this.img1;
-        this.img1 = selectedImgSrc;
-        break;
-  
-      case "img4":
-        selectedImgSrc = this.img4;
-        this.img4 = this.img1;
-        this.img1 = selectedImgSrc;
-        break;
-  
-      default:
-        break;
-    }
-  }
-  
-  valueToHeightCarousel(){
+valueToHeightCarousel(){
     if (screen.width > 300 && screen.width < 574){
       this.value = 160;
       this.bannerArray = [
@@ -152,11 +137,12 @@ showImgBanner() {
        this.bannerPromo = "./assets/usados/banner-skf-phone.png";
       
       return;
-      return;
-    }
+        }
 
     if (screen.width > 1200 ){
       this.value = 350;
+      // this.celltoShow = 4.4;
+
       this.bannerArray = [
         { path: "./assets/usados/1600x600-video1.gif" },
         { path: "./assets/usados/1600x600-video2.gif" },
@@ -182,7 +168,7 @@ showImgBanner() {
     
       return;
     }
-  }
+}
  
 
 }

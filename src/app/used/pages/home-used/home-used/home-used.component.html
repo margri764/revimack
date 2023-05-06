@@ -18,66 +18,76 @@
     </div>
 
   
-  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-top: 80px; margin-bottom: 80px; padding: 5px;" >
+  <!-- <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-top: 80px; margin-bottom: 80px; padding: 5px;" >
     <span class="fontPop fs-9">Los mejores usados seleccionados</span>
-  </div>
+  </div> -->
+
+  <carousel [cellWidth]="'100%'" [cellsToShow]="celltoShow"  [height]= "value" [arrows]=false class="mt-30" >
+      <div class="carousel-cell" style="text-align: center"> 
+        <div class="logo" style="margin: auto;" (click)="categorySelected('tractor')">
+          <img src="./assets/usados/tractor-logo.png" alt="" fxFlex="100">
+        </div> 
+       <span class="fontPop">Tractor</span>
+      </div>
+      <div class="carousel-cell" style="text-align: center"> 
+        <div class="logo" style="margin: auto;" (click)="categorySelected('cosechadora')">
+          <img src="./assets/usados/cosechadora-logo.png" alt="" fxFlex="100">
+        </div> 
+       <span class="fontPop" >Cosechadora</span>
+      </div>
+
+      <div class="carousel-cell" style="text-align: center"> 
+        <div class="logo" style="margin: auto;" (click)="categorySelected('fumigador')">
+          <img src="./assets/usados/fumigador-logo.png" alt="" fxFlex="100">
+        </div> 
+       <span class="fontPop" >Fumigadora</span>
+      </div>
+
+      <div class="carousel-cell" style="text-align: center"> 
+        <div class="logo" style="margin: auto;" (click)="categorySelected('sembradora')">
+          <img src="./assets/usados/sembradora-logo.png" alt="" fxFlex="100">
+        </div> 
+       <span class="fontPop" >Sembradora</span>
+      </div>
+
+  </carousel>  
 
 
-  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-top: 80px; margin-bottom: 80px; padding: 5px; position: relative;" >
+
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-top: 20px; margin-bottom: 80px; padding: 5px; position: relative;" >
     <img [src]="bannerPromo" alt="" fxFlex="100">
     <button  class="btnPromo fontPop positionBanner" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas"  >quiero la oferta
     </button>
   </div>
 
+<!-- <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" *ngFor="let item of arrayTractors, index as i"> -->
 
-      <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50" fxFlex.xs="100" style="z-index: 1;">
+ <!-- <span [routerLink]="['/usados-seleccionados/home-usados/',item.category,i]" class="fontPop fs-8" style="cursor: pointer;">link</span>   -->
+
+<div fxLayout="row wrap" fxLayoutAlign="space-between center" fxFlex="97" fxFlex.xs="100"  style="margin-top: 20px; margin-bottom: 80px; padding: 5px;" >
+  
+    <div fxLayout="row wrap" fxLayoutAlign="center center" class="whiteFrame" fxFlex="30" fxFlex.xs="100" style="margin-bottom: 10px; cursor: pointer;" *ngFor="let item of arrayItems, index as i">
       
-        <img [src]="img1"  alt="" fxFlex="100" style="border-radius: 5px;">
-    
-        <carousel [cellWidth]="'100%'" [cellsToShow]="2" arrowsTheme="dark" [height]="value" >
-           
-          <div class="carousel-cell"> 
-              <img [src]="img2" (click)="goToMainImg('img2')" >
-           </div>
-          
-           <div class="carousel-cell"> 
-              <img [src]="img3" (click)="goToMainImg('img3')">
-           </div>
-          
-           <div class="carousel-cell"> 
-            <img [src]="img4" (click)="goToMainImg('img4')">
-           </div>
-        </carousel>
-    
+      <img [src]="item.img" alt="" fxFlex.xs="40" fxFlex="100" [routerLink]="['/usados-seleccionados/home-usados/',item.category,i]">
+      <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex.xs="60" style="padding: 10px;">
+        <span class="fontPop" style="font-size: 1em;" fxFlex="100">{{item.name}}</span>
+        <span class="fontPop" style="font-size: 1em;" fxFlex="95"> Motor indenor </span>
+        <span class="fontPop" style="font-size: 1em;" fxFlex="95"> $ Consultar precio </span>
+        <span class="fontPop" style="font-size: 1em;color: blue; " fxFlex="95"> Publicación: {{currentDate | currentMonthYear}}  </span>
       </div>
-
-      <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex="50" fxFlex.xs="100" style="padding-left: 20px;" >
-      
-          <div fxLayout="row wrap" fxLayoutAlign="start" fxFlex="90" >
-
-              <span class="fontPop fs-8" fxFlex="100"><b> DEUTZ AX 4.120 </b> </span>
-              <span class="fontPop fs-6" style="margin-top: 40px;" > 
-              
-                Datos técnicos: <br> 
-                Doble traccion, rodado trasero 18.4-38. <br>
-                Doble embrague , cabina nacion. <br>
-                Estado general muy bueno.</span>
-          </div>
-
-          <button  class="btnContact fontPop" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" style="margin-bottom: 40px; margin-top: 30px;"  fxFlex="40" fxFlex.xs="60">Más información
-          </button>
-      </div>
-
     
+    </div>
+</div>
 
+<!-- </div> -->
 <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-bottom: 100px; position: relative;" >
   <img [src]= "banner" alt="" fxFlex="100">
 
-  <button  class="btnContact fontPop position" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" style="" >Más información
+  <button  class="btnContact fontPop position" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Más información
   </button>
 
 </div>
-</div>
+     
 
 </div>   
 

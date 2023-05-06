@@ -46,7 +46,7 @@
 
 a{
   text-decoration: none;
-  font-family: "Monserrat",sans-serif;
+  /* font-family: "Monserrat",sans-serif; */
   font-weight: 100;
   font-size: 1.4vw;
   cursor: pointer;
@@ -133,9 +133,7 @@ form {
   margin-left: 2vw;
 }
 
-.offcanvas {
-    /* height: 90vh;  */
-}
+
 
 .offcanvas-body label{
   font-family: "Monserrat",sans-serif;

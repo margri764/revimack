@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   disabled : boolean=false;
   phone : boolean = false;
   scroll! : boolean;
+  id : boolean = false;
 
 
   constructor(
@@ -29,7 +30,13 @@ export class AppComponent implements OnInit {
      (event.url.includes('/maquinaria-agricola/tractores')) 
      ?  this.scroll=false : this.scroll=true;
 
+    });
 
+    this.router.events
+    .pipe(filter(evt => evt instanceof NavigationEnd))  
+    .subscribe((event: any) => {
+     (event.url.includes('/usados-seleccionados/home-usados/')) 
+     ?  this.id = true : this.id = false;
      
     });
   

@@ -6,6 +6,8 @@ import { SharedModule } from "../shared/shared.module";
 import { IvyCarouselModule } from 'angular-responsive-carousel2';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { PromoSkfComponent } from './message/promo-skf/promo-skf/promo-skf.component';
+import { ViewMoreUsedComponent } from './pages/view-more-used/view-more-used/view-more-used.component';
+import { CurrentMonthYearPipe } from './pipe/currentMonthYear';
 
 
 
@@ -13,7 +15,9 @@ import { PromoSkfComponent } from './message/promo-skf/promo-skf/promo-skf.compo
 @NgModule({
     declarations: [
         HomeUsedComponent,
-        PromoSkfComponent
+        PromoSkfComponent,
+        ViewMoreUsedComponent,
+        CurrentMonthYearPipe
     ],
     imports: [
         CommonModule,
