@@ -25,10 +25,6 @@ export class HomeUsedComponent implements OnInit {
   arrayItems : any [] = [];
   currentDate : Date= new Date();
 
-
-
-
-
   constructor(
               private router : Router,
               private dataService : DataService
@@ -46,9 +42,13 @@ export class HomeUsedComponent implements OnInit {
     // }
 
     this.arrayTractors = this.dataService.arrayTractors;
+    this.arrayFumigadoras = this.dataService.arrayFumigador;
+
     this.returnOnlyOneItem(this.arrayTractors);
 
     this.valueToHeightCarousel();
+
+    this.arrayItems = this.arrayOneItem;
 
      this.currentImage = this.bannerArray[0];
      this.currentIndex = 0;
@@ -74,7 +74,6 @@ export class HomeUsedComponent implements OnInit {
     }, []);
   
     this.arrayOneItem = uniqueItems;
-    console.log(this.arrayOneItem);
   }
   
 categorySelected( item : string){
@@ -84,6 +83,11 @@ categorySelected( item : string){
     case "tractor":
                   this.arrayItems = this.arrayOneItem;
       break;
+    case "fumigador":
+                        this.returnOnlyOneItem(this.arrayFumigadoras);
+                        this.arrayItems = this.arrayOneItem;
+                        console.log(this.arrayItems);
+    break;
   
     default:
       break;

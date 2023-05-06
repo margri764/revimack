@@ -41,6 +41,16 @@ export class DataService {
    
 ]
 
+arrayFumigador = [
+  {
+    img: "assets/usados/fumigador/Pla/pla-1.jpeg",
+    name: "Fumigador Pla",
+    category: "fumigadores-usados"
+  },
+  
+ 
+]
+
   private baseUrl: string = environment.baseUrl;
   hasRedirected : boolean = false;
 
@@ -49,9 +59,21 @@ export class DataService {
 
 
 
-  getTractorsByIdName( id: number): any[] {
+  getMachinesById( id: number, category : string) {
+    
+    let fum = this.arrayFumigador[id]
     let item = this.arrayTractors[id];
-    return this.arrayTractors.filter(tractor => item.name === tractor.name );
+
+    switch (category) {
+      case "fumigadores-usados":
+        
+       return  this.arrayFumigador.filter(fumig => fum.name === fumig.name )
+       case "tractores-usados":
+            return this.arrayTractors.filter(tractor => item.name === tractor.name)
+      default:
+        return  this.arrayFumigador.filter(fumig => fum.name === fumig.name )
+        break;
+    }
   }
 
   sendEmail (body : string) {

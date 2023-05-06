@@ -9,10 +9,10 @@ import { DataService } from 'src/app/services/data/data.service';
 })
 export class ViewMoreUsedComponent implements OnInit {
 
-arrItems : any []=[];
+arrItems : any ;
 
 value : number = 250;
-
+banner : string = '';
 img1 : string = '';
 img2 : string = '';
 img3 : string = '';
@@ -25,9 +25,11 @@ img5 : string = '';
   ) { 
 
         this.activatedRoute.params.subscribe(
-          ({id})=>{
-                this.arrItems = this.dataService.getTractorsByIdName(id);
-          }
+          ({id, category})=>{
+            console.log(id, category);
+                this.arrItems = this.dataService.getMachinesById(id, category);
+                console.log(this.arrItems);
+              }
         )
   }
 
@@ -95,21 +97,22 @@ img5 : string = '';
   valueToHeightCarousel(){
     if(screen.width > 300 && screen.width < 574){
        this.value = 160;
+       this.banner = "assets/usados/banner-negocios-phone.png"
        return;
-    }
-
-    if(screen.width > 574 && screen.width < 768){
-      this.value = 180;
-      return;
     }
 
     if(screen.width > 768 && screen.width < 1200){
       this.value = 200;
+      this.banner = "assets/usados/banner-negocios.png"
       return;
     }
 
     if(screen.width > 1200 ){
       this.value = 350;
+      this.banner = "assets/usados/banner-negocios.png"
+
+
+
       return;
     }
 
