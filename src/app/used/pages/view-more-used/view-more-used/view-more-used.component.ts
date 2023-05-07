@@ -10,6 +10,8 @@ import { DataService } from 'src/app/services/data/data.service';
 export class ViewMoreUsedComponent implements OnInit {
 
 arrItems : any ;
+item : any;
+phone : boolean = false;
 
 value : number = 250;
 banner : string = '';
@@ -24,10 +26,11 @@ img5 : string = '';
               private dataService : DataService
   ) { 
 
+        (screen.width <= 575) ? this.phone = true : false; 
         this.activatedRoute.params.subscribe(
           ({id, category})=>{
-            console.log(id, category);
                 this.arrItems = this.dataService.getMachinesById(id, category);
+                this.item = this.arrItems[0];
                 console.log(this.arrItems);
               }
         )

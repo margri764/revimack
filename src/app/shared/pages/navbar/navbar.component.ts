@@ -15,12 +15,14 @@ export class NavbarComponent implements OnInit {
 
   constructor(
             private router : Router,
-  ) { }
+  ) { 
+
+    (screen.width <= 575) ? this.phone = true : false; 
+  }
 
 
   ngOnInit(): void {
 
-    (screen.width <= 575) ? this.phone = true : false; 
   }
 
 

@@ -33,7 +33,7 @@
 
 .btnNav{
   color: #edf0f1;
-  font-family: "Monserrat",sans-serif;
+  font-family: "poppins-light";
   font-weight: 100;
   font-size: 1.6vw;
   border-radius: 5px;
@@ -46,7 +46,6 @@
 
 a{
   text-decoration: none;
-  /* font-family: "Monserrat",sans-serif; */
   font-weight: 100;
   font-size: 1.4vw;
   cursor: pointer;
@@ -136,7 +135,6 @@ form {
 
 
 .offcanvas-body label{
-  font-family: "Monserrat",sans-serif;
   font-weight: 100;
   font-size: 5vw;
 
@@ -180,7 +178,7 @@ a.searchResult {
 background-color: #ffffff;
 border: 2px solid #1ccece;
 color: rgb(0, 0, 0);
-font-family:'ribeye';
+/* font-family:'ribeye'; */
 border-radius: 1em;
 line-height: 2em;
 font-size: 1.3vw;

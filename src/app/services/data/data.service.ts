@@ -38,6 +38,21 @@ export class DataService {
       name: "John Deere 3350 con pala",
       category: "tractores-usados"
     },
+    {
+      img: "./assets/usados/tractores/John_Deere_3350_con_pala/John_Deere_3350_con_pala-2.jpeg",
+      name: "John Deere 3350 con pala",
+      category: "tractores-usados"
+    },
+    {
+      img: "./assets/usados/tractores/John_Deere_3350_con_pala/John_Deere_3350_con_pala-3.jpeg",
+      name: "John Deere 3350 con pala",
+      category: "tractores-usados"
+    },
+    {
+      img: "./assets/usados/tractores/John_Deere_3350_con_pala/John_Deere_3350_con_pala-4.jpeg",
+      name: "John Deere 3350 con pala",
+      category: "tractores-usados"
+    },
    
 ]
 
@@ -45,8 +60,22 @@ arrayFumigador = [
   {
     img: "assets/usados/fumigador/Pla/pla-1.jpeg",
     name: "Fumigador Pla",
+    category: "fumigadores-usados",
+    data: "Año 2013. Sistema de alas actual.28 mts ancho de labor. 3100 lts de tanque aprox en fibra de vidrio. Computadora Sensor con mapeo y corte automático por secciones en 8 vías. Motor Deutz turbo de 6 cilindros con 142 hp. 4500 horas. Cañería de acero inoxidable con picos penta jet a 52 cms combinados con unijet a 35 cm. Gomas al 50% o más... Bomba de pulverización hypro de 390 lts/min con electroimán     Estado generalral muy bueno! Muy cuidada"
+  },
+  {
+    img: "assets/usados/fumigador/Pla/pla-2.jpeg",
+    name: "Fumigador Pla",
     category: "fumigadores-usados"
   },
+
+  {
+    img: "assets/usados/fumigador/Pla/pla-3.jpeg",
+    name: "Fumigador Pla",
+    category: "fumigadores-usados"
+  },
+  
+  
   
  
 ]
@@ -57,24 +86,22 @@ arrayFumigador = [
   constructor( private http : HttpClient) { }
 
 
-
-
-  getMachinesById( id: number, category : string) {
-    
-    let fum = this.arrayFumigador[id]
-    let item = this.arrayTractors[id];
-
+  getMachinesById(name: string, category: string) {
+    const nameSlice = name.replace(/-\d+\.(jpg|png)$/i, "");
+  
     switch (category) {
       case "fumigadores-usados":
+        return this.arrayFumigador.filter(fumig => fumig.name.includes(nameSlice));
         
-       return  this.arrayFumigador.filter(fumig => fum.name === fumig.name )
-       case "tractores-usados":
-            return this.arrayTractors.filter(tractor => item.name === tractor.name)
+      case "tractores-usados":
+        console.log();
+        return this.arrayTractors.filter(tractor => tractor.name.includes(nameSlice));
+        
       default:
-        return  this.arrayFumigador.filter(fumig => fum.name === fumig.name )
-        break;
+        return this.arrayTractors.filter(tractor => tractor.name.includes(nameSlice));
     }
   }
+  
 
   sendEmail (body : string) {
  

@@ -41,14 +41,15 @@ export class HomeUsedComponent implements OnInit {
     //   this.router.navigateByUrl('/usados-seleccionados/promo-skf');
     // }
 
-    this.arrayTractors = this.dataService.arrayTractors;
     this.arrayFumigadoras = this.dataService.arrayFumigador;
-
+    this.arrayTractors = this.dataService.arrayTractors;
     this.returnOnlyOneItem(this.arrayTractors);
+    this.arrayItems = this.arrayOneItem;
+
+
 
     this.valueToHeightCarousel();
 
-    this.arrayItems = this.arrayOneItem;
 
      this.currentImage = this.bannerArray[0];
      this.currentIndex = 0;
@@ -62,6 +63,10 @@ export class HomeUsedComponent implements OnInit {
       }, 3500);
   
   }
+
+test(item : any, i: any){
+console.log(item, i);
+}
 
   arrayOneItem : any;
   returnOnlyOneItem(arrayItem: any) {
@@ -81,12 +86,13 @@ categorySelected( item : string){
   
   switch (item) {
     case "tractor":
+                  this.returnOnlyOneItem(this.arrayTractors);
                   this.arrayItems = this.arrayOneItem;
       break;
     case "fumigador":
-                        this.returnOnlyOneItem(this.arrayFumigadoras);
-                        this.arrayItems = this.arrayOneItem;
-                        console.log(this.arrayItems);
+                  this.returnOnlyOneItem(this.arrayFumigadoras);
+                  this.arrayItems = this.arrayOneItem;
+                  console.log(this.arrayItems);
     break;
   
     default:

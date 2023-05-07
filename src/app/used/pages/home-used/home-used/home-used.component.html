@@ -4,7 +4,7 @@
    <app-navbar></app-navbar>
 </div>
 
-<div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="100" style=" margin-bottom: 100px; background: white;">
+<div fxLayout="row wrap" fxLayoutAlign="center" style="height: 100%; width: 100%; margin-bottom: 100px; background: white;">
 <!-- head -->
     <img src="assets/plantium/back.png" routerLink="../../home" id="back" >
 
@@ -38,6 +38,7 @@
         </div> 
        <span class="fontPop" >Fumigadora</span>
       </div>
+      
       <div class="carousel-cell" style="text-align: center"> 
         <div class="logo" style="margin: auto;" (click)="categorySelected('cosechadora')">
           <img src="./assets/usados/cosechadora-logo.png" alt="" fxFlex="100">
@@ -63,11 +64,11 @@
 
  <!-- <span [routerLink]="['/usados-seleccionados/home-usados/',item.category,i]" class="fontPop fs-8" style="cursor: pointer;">link</span>   -->
 
-<div fxLayout="row wrap" fxLayoutAlign="space-between center" fxFlex="97" fxFlex.xs="100"  style="margin-top: 20px; margin-bottom: 80px; padding: 5px;" >
+<div fxLayout="row wrap" fxLayoutAlign="space-between center" fxFlex="97" fxFlex.xs="100"  style="padding: 5px;" >
   
-    <div fxLayout="row wrap" fxLayoutAlign="center center" class="whiteFrame" fxFlex="30" fxFlex.xs="100" style="margin-bottom: 10px; cursor: pointer;" *ngFor="let item of arrayItems, index as i">
+    <div fxLayout="row wrap" fxLayoutAlign="center center" class="whiteFrame" fxFlex="30" fxFlex.xs="100" style="cursor: pointer;" *ngFor="let item of arrayItems, index as i">
       
-      <img [src]="item.img" alt="" fxFlex.xs="40" fxFlex="100" [routerLink]="['/usados-seleccionados/home-usados/',item.category,i]">
+      <img [src]="item.img" alt="" fxFlex.xs="40" fxFlex="100" [routerLink]="['/usados-seleccionados/home-usados/',item.category,item.name]" (click)="test(item, i)">
       <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex.xs="60" style="padding: 10px;">
         <span class="fontPop" style="font-size: 1em;" fxFlex="100">{{item.name}}</span>
         <span class="fontPop" style="font-size: 1em;" fxFlex="95"> Motor indenor </span>
