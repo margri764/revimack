@@ -4,88 +4,110 @@
    <app-navbar></app-navbar>
 </div>
 
-<div fxLayout="row wrap" fxLayoutAlign="center" style="height: 100%; width: 100%; margin-bottom: 100px; background: white;">
-<!-- head -->
+<div fxLayout="row wrap" fxLayoutAlign="center" style="height: 100%; width: 100%;  background: white;">
     <img src="assets/plantium/back.png" routerLink="../../home" id="back" >
 
-    <div fxFlex="100" class="animate__animated animate__fadeIn " #top style="margin-bottom: 60px;">
-    
-        <img class="img-fluid" [src]="getImage()" width="100%"  class="frame">
-    
+    <div fxFlex="100">
+        <img [src]="getImage()" width="100%"  class="frame">
     </div>
-    <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-top: 20px; margin-bottom: 80px; padding: 5px; position: relative;" >
+
+    <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="position: relative;" >
       <img [src]="bannerPromo" alt="" fxFlex="100">
       <button  class="btnPromo fontPop positionBanner" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas"  >quiero la oferta
       </button>
     </div>
-  
-  
-  <!-- <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-top: 80px; margin-bottom: 80px; padding: 5px;" >
-    <span class="fontPop fs-9">Los mejores usados seleccionados</span>
-  </div> -->
 
   <carousel [cellWidth]="'100%'" [cellsToShow]="celltoShow"  [height]= "value" [arrows]=false class="mt-30"  style="z-index: 1;">
-      <div class="carousel-cell" style="text-align: center"> 
-        <div class="logo" style="margin: auto;" (click)="categorySelected('tractor')">
+      <div class="carousel-cell" style="text-align: center; justify-content: center; align-items: center; display: flex; flex-direction: column;"> 
+        <div class="logo" (click)="categorySelected('tractor')">
           <img src="./assets/usados/tractor-logo.png" alt="" fxFlex="100">
         </div> 
-       <span class="fontPop">Tractor</span>
+       <span class="fontPop span-logo" style="margin-top: 10px;">Tractor</span>
       </div>
 
-      <div class="carousel-cell" style="text-align: center"> 
-        <div class="logo" style="margin: auto;" (click)="categorySelected('fumigador')">
+        <div class="carousel-cell" style="text-align: center; justify-content: center; align-items: center; display: flex; flex-direction: column;"> 
+        <div class="logo" (click)="categorySelected('fumigador')">
           <img src="./assets/usados/fumigador-logo.png" alt="" fxFlex="100">
         </div> 
-       <span class="fontPop" >Fumigadora</span>
+        <span class="span-logo" style="margin-top: 10px;">Fumigadora</span>
       </div>
       
-      <div class="carousel-cell" style="text-align: center"> 
-        <div class="logo" style="margin: auto;" (click)="categorySelected('cosechadora')">
+      <div class="carousel-cell" style="text-align: center; justify-content: center; align-items: center; display: flex; flex-direction: column;"> 
+        <div class="logo"  (click)="categorySelected('cosechadora')">
           <img src="./assets/usados/cosechadora-logo.png" alt="" fxFlex="100">
         </div> 
-       <span class="fontPop" >Cosechadora</span>
+       <span class="span-logo" style="margin-top: 10px;" >Cosechadora</span>
       </div>
 
 
-
-      <div class="carousel-cell" style="text-align: center"> 
-        <div class="logo" style="margin: auto;" (click)="categorySelected('sembradora')">
+      <div class="carousel-cell" style="text-align: center; justify-content: center; align-items: center; display: flex; flex-direction: column;"> 
+        <div class="logo"  (click)="categorySelected('sembradora')">
           <img src="./assets/usados/sembradora-logo.png" alt="" fxFlex="100">
         </div> 
-       <span class="fontPop" >Sembradora</span>
+       <span class="span-logo" style="margin-top: 10px;" >Sembradora</span>
       </div>
 
   </carousel>  
 
-
-
- 
-<!-- <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" *ngFor="let item of arrayTractors, index as i"> -->
-
- <!-- <span [routerLink]="['/usados-seleccionados/home-usados/',item.category,i]" class="fontPop fs-8" style="cursor: pointer;">link</span>   -->
-
-<div fxLayout="row wrap" fxLayoutAlign="space-between center" fxFlex="97" fxFlex.xs="100"  style="padding: 5px;" >
+<div fxLayout="row wrap" fxLayoutAlign="space-around start"  fxFlex="100" >
   
-    <div fxLayout="row wrap" fxLayoutAlign="center center" class="whiteFrame" fxFlex="30" fxFlex.xs="100" style="cursor: pointer;" *ngFor="let item of arrayItems, index as i">
+  <div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="30" fxFlex.xs="100" *ngIf="showBrands">
+
+    <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex="100"  style="padding: 20px"> 
+      <span class="fontPop fs-5" style="margin-bottom: 30px;" fxFlex="100"><b> Marcas destacadas</b></span>
+      <img src="assets/usados/john-deere-logo.png" alt="" fxFlex="60" style="margin-bottom: 30px;">
+      <img src="assets/usados/pauny-logo.png" alt="" fxFlex="60" style="margin-bottom: 30px;">
+      <img src="assets/usados/farmtrac-logo.png" alt="" fxFlex="60" style="margin-bottom: 30px;">
+      <img src="assets/usados/pla-logo.png" alt="" fxFlex="60" style="margin-bottom: 30px;">
+      <img src="assets/usados/metalfor-logo.png" alt="" fxFlex="60" style="margin-bottom: 30px;">
+    </div>
+  </div>
+
+  <!-- start cards -->
+  <div fxLayout="row wrap" fxLayoutAlign="space-between center"  fxFlex="70" fxFlex.xs="100" style="padding: 20px;">
+  
+    <div fxLayout="row wrap" fxLayoutAlign="center center"  class="whiteFrame" fxFlex="30" fxFlex.xs="100" style="cursor: pointer; padding: 10px; margin-bottom: 30px;" *ngFor="let item of arrayItems, index as i">
       
       <img [src]="item.img" alt="" fxFlex.xs="40" fxFlex="100" [routerLink]="['/usados-seleccionados/home-usados/',item.category,item.name]" (click)="test(item, i)">
       <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex.xs="60" style="padding: 10px;">
-        <span class="fontPop" style="font-size: 1em;" fxFlex="100">{{item.name}}</span>
-        <span class="fontPop" style="font-size: 1em;" fxFlex="95"> Motor indenor </span>
+        <span class="fontPop" style="font-size: 1em; margin-bottom: 15px;" fxFlex="100">{{item.name}}</span>
+        <span class="fontPop" style="font-size: 1em;" fxFlex="95"> Realicó - La Pampa </span>
         <span class="fontPop" style="font-size: 1em;" fxFlex="95"> $ Consultar precio </span>
+        <span class="fontPop" style="margin-bottom: 40px;" fxFlex="95"></span>
         <span class="fontPop" style="font-size: 1em;color: blue; " fxFlex="95"> Publicación: {{currentDate | currentMonthYear}}  </span>
       </div>
     
     </div>
-</div>
 
-<!-- </div> -->
-<div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-bottom: 100px; position: relative;" >
-  <img [src]= "banner" alt="" fxFlex="100">
+    <div fxLayout="row wrap" fxLayoutAlign="center center"  class="whiteFrame" fxFlex="30" fxFlex.xs="100" style="cursor: pointer; padding: 10px; margin-bottom: 10px; visibility: hidden;" *ngIf="arrayItems.length % 2 !== 0" >
+      
+      <img src="assets/usados/no-eliminar.jpeg" alt="" fxFlex.xs="40" fxFlex="100" >
+      <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex.xs="60" style="padding: 10px;">
+        <span class="fontPop" style="font-size: 1em;" fxFlex="95"> --------------- </span>
+        <span class="fontPop" style="font-size: 1em;" fxFlex="95"> -------- </span>
+        <span class="fontPop" style="font-size: 1em;color: blue; " fxFlex="95"> Publicación: ----------- </span>
+      </div>
+    
+    </div>
+  </div>
+  <!-- end cards -->
+
+</div>   
+
+
+<div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-bottom: 100px; position: relative; margin-top: 100px;" >
+  <img [src]= "banner" alt="" fxFlex="90">
 
   <button  class="btnContact fontPop position" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Más información
   </button>
 
+</div>
+
+<div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-bottom: 100px; position: relative; margin-top: 100px;" *ngIf="showBrands" >
+  <span class="fontPop fs-9" style="margin-bottom: 30px;">Tenemos los mejores usados para vos</span>
+  <img src= "assets/usados/banner-revimack.png" alt="" fxFlex="100">
+  <button  class="btnContact fontPop" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" style="position: absolute; top: 92%; left: 45%;">Más información
+  </button>
 </div>
      
 

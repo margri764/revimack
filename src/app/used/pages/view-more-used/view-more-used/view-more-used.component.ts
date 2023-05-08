@@ -48,28 +48,39 @@ img5 : string = '';
     if (length > 0) {
       this.img1 = this.arrItems[0].img;
     }
+
     if (length > 1) {
       this.img2 = this.arrItems[1].img;
     } else {
       this.img2 = this.img1;
       this.img3 = this.img1;
       this.img4 = this.img1;
-      return; // Salir del método si solo hay una imagen
+      this.img5 = this.img1;
+      return; 
     }
+
     if (length > 2) {
       this.img3 = this.arrItems[2].img;
     } else {
-      this.img3 = this.img1;
-      this.img4 = this.img1;
-      return; // Salir del método si solo hay dos imágenes
+      this.img3 = this.img2;
+      this.img4 = this.img2;
+      this.img5 = this.img2;
+      return; 
     }
+
     if (length > 3) {
       this.img4 = this.arrItems[3].img;
     } else {
-      this.img4 = this.img1;
+      this.img4 = this.img3;
+      this.img5 = this.img3;
+      return; 
+    }
+    
+    if (length > 4) {
+      this.img5 = this.arrItems[4].img;
     }
   }
-
+  
   goToMainImg(value: string) {
     let selectedImgSrc = '';
   
@@ -91,6 +102,12 @@ img5 : string = '';
         this.img4 = this.img1;
         this.img1 = selectedImgSrc;
         break;
+
+      case "img5":
+        selectedImgSrc = this.img5;
+        this.img5 = this.img1;
+        this.img1 = selectedImgSrc;
+        break;  
   
       default:
         break;

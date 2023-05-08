@@ -83,18 +83,41 @@
     border: 2px solid green;
     border-radius: 100px; 
     color: green;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .logo:hover{
+    transform: scale(1.01);
+
+    box-shadow: 0px 0px 39px -13px rgba(0,0,0,0.54);
+    -webkit-box-shadow: 0px 0px 39px -13px rgba(0,0,0,0.54);
+    -moz-box-shadow: 0px 0px 39px -13px rgba(0,0,0,0.54);
+     }
+
+  .span-logo{
+    font-size: 1.1em;
+    font-family:"poppins-light";
+    // transition: font-size 0.3s ease;
   }
 
-    .whiteFrame{
 
+  .whiteFrame{
       border-radius: 5px;
       padding: 5px;
+      transition: transform 0.3s, box-shadow 0.3s;
       
       box-shadow: 0px 0px 5px 3px rgba(179,179,179,0.32);
       -webkit-box-shadow: 0px 0px 5px 3px rgba(179,179,179,0.32);
       -moz-box-shadow: 0px 0px 5px 3px rgba(179,179,179,0.32);
   }
 
+  .whiteFrame:hover{
+    box-shadow: 0px 22px 39px -1px rgba(0,0,0,0.24);
+    -webkit-box-shadow: 0px 22px 39px -1px rgba(0,0,0,0.24);
+    -moz-box-shadow: 0px 22px 39px -1px rgba(0,0,0,0.24);
+  }
+
+  
   
   .frame{
     box-shadow: 0px 0px 5px 3px rgba(134, 133, 133, 0.72);

@@ -17,6 +17,7 @@ export class HomeUsedComponent implements OnInit {
   currentIndex = 0;
   banner : string = "";
   bannerPromo : string = '';
+  showBrands : boolean = true;
   
   arrayTractors : any [] = [];
   arrayFumigadoras : any [] = [];
@@ -65,7 +66,7 @@ export class HomeUsedComponent implements OnInit {
   }
 
 test(item : any, i: any){
-console.log(item, i);
+    console.log(item, i);
 }
 
   arrayOneItem : any;
@@ -113,6 +114,7 @@ showImgBanner() {
 valueToHeightCarousel(){
     if (screen.width > 300 && screen.width < 574){
       this.value = 160;
+      this.showBrands = false;
       this.bannerArray = [
         { path: "./assets/usados/500x400-video1.png" },
         { path: "./assets/usados/500x400-video2.png" },
@@ -125,6 +127,7 @@ valueToHeightCarousel(){
 
     if (screen.width > 574 && screen.width < 768){
       this.value = 180;
+      this.showBrands = false;
       this.bannerArray = [
         { path: "./assets/usados/500x400-video1.png" },
         { path: "./assets/usados/500x400-video2.png" },
