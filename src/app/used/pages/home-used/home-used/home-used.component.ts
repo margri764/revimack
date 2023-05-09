@@ -39,10 +39,10 @@ export class HomeUsedComponent implements OnInit {
   ngOnInit(): void {
 
 
-    // if (!this.dataService.hasRedirected) {
-    //   this.dataService.hasRedirected = true;
-    //   this.router.navigateByUrl('/usados-seleccionados/promo-skf');
-    // }
+    if (!this.dataService.hasRedirected) {
+      this.dataService.hasRedirected = true;
+      this.router.navigateByUrl('/usados-seleccionados/promo-skf');
+    }
 
     this.arrayFumigadoras = this.dataService.arrayFumigador;
     this.arrayTractors = this.dataService.arrayTractors;
@@ -72,9 +72,6 @@ export class HomeUsedComponent implements OnInit {
   
   }
 
-test(item : any, i: any){
-    console.log(item, i);
-}
 
   arrayOneItem : any;
   returnOnlyOneItem(arrayItem: any) {
