@@ -12,7 +12,7 @@ export class HomeUsedComponent implements OnInit {
 
   public currentImage: any;
   value : number = 250;
-  celltoShow : number = 3.4;
+  celltoShow : number = 5.5;
   bannerArray : any []=[];
   currentIndex = 0;
   banner : string = "";
@@ -23,6 +23,8 @@ export class HomeUsedComponent implements OnInit {
   arrayFumigadoras : any [] = [];
   arrayCosechadoras : any [] = [];
   arraySembradoras : any [] = [];
+  arrayViales : any [] = [];
+  arrayCarros : any [] = [];
   arrayItems : any [] = [];
   currentDate : Date= new Date();
 
@@ -44,6 +46,11 @@ export class HomeUsedComponent implements OnInit {
 
     this.arrayFumigadoras = this.dataService.arrayFumigador;
     this.arrayTractors = this.dataService.arrayTractors;
+    this.arrayCosechadoras = this.dataService.arrayCosechadoras;
+    this.arraySembradoras = this.dataService.arraySembradoras;
+    this.arrayViales = this.dataService.arrayViales;
+    this.arrayCarros = this.dataService.arrayCarros;
+
     this.returnOnlyOneItem(this.arrayTractors);
     this.arrayItems = this.arrayOneItem;
 
@@ -93,8 +100,26 @@ categorySelected( item : string){
     case "fumigador":
                   this.returnOnlyOneItem(this.arrayFumigadoras);
                   this.arrayItems = this.arrayOneItem;
-                  console.log(this.arrayItems);
     break;
+    case "cosechadora":
+                  this.returnOnlyOneItem(this.arrayCosechadoras);
+                  this.arrayItems = this.arrayOneItem;
+    break;
+
+    case "sembradora":
+                  this.returnOnlyOneItem(this.arraySembradoras);
+                  this.arrayItems = this.arrayOneItem;
+    break;
+
+    case "vial":
+                  this.returnOnlyOneItem(this.arrayViales);
+                  this.arrayItems = this.arrayOneItem;
+    break;
+    case "carro":
+                this.returnOnlyOneItem(this.arrayCarros);
+                this.arrayItems = this.arrayOneItem;
+     break;
+
   
     default:
       break;
@@ -113,8 +138,9 @@ showImgBanner() {
   
 valueToHeightCarousel(){
     if (screen.width > 300 && screen.width < 574){
-      this.value = 160;
+      this.value = 130;
       this.showBrands = false;
+      this.celltoShow = 3.3
       this.bannerArray = [
         { path: "./assets/usados/500x400-video1.png" },
         { path: "./assets/usados/500x400-video2.png" },
@@ -128,6 +154,7 @@ valueToHeightCarousel(){
     if (screen.width > 574 && screen.width < 768){
       this.value = 180;
       this.showBrands = false;
+      this.celltoShow = 4.3
       this.bannerArray = [
         { path: "./assets/usados/500x400-video1.png" },
         { path: "./assets/usados/500x400-video2.png" },
@@ -141,6 +168,8 @@ valueToHeightCarousel(){
 
     if (screen.width > 768 && screen.width < 1200){
       this.value = 200;
+      this.celltoShow = 4.3
+      this.showBrands = false;
       this.bannerArray = [
         { path: "./assets/usados/500x400-video1.png" },
         { path: "./assets/usados/500x400-video2.png" },
@@ -153,7 +182,7 @@ valueToHeightCarousel(){
         }
 
     if (screen.width > 1200 ){
-      this.value = 350;
+      this.value = 180;
       // this.celltoShow = 4.4;
 
       this.bannerArray = [
@@ -169,7 +198,7 @@ valueToHeightCarousel(){
     }
 
     if (screen.width > 1600 ){
-      this.value = 350;
+      this.value = 200;
       this.bannerArray = [
         { path: "./assets/usados/1600x600-video1.gif" },
         { path: "./assets/usados/1600x600-video2.gif" },

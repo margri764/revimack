@@ -76,8 +76,8 @@
     font-size: 1em;
     display: flex;
     align-items: center;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     justify-content: center;
     padding: 5px;
     border: 2px solid green;
@@ -117,8 +117,6 @@
     -moz-box-shadow: 0px 22px 39px -1px rgba(0,0,0,0.24);
   }
 
-  
-  
   .frame{
     box-shadow: 0px 0px 5px 3px rgba(134, 133, 133, 0.72);
     -webkit-box-shadow: 0px 0px 5px 3px rgba(134, 133, 133,0.72);
@@ -129,13 +127,22 @@
     border-radius: 7px;
   }
 
+  .whatsapp{
+    position: fixed;
+    bottom: 25%;
+    opacity: 0.7;
+    right: 10px;
+    z-index: 100;
+  }
+
+
 
 
 //Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 575px) {
 
     .btnContact{
-        font-size: 1.3em;
+        font-size: 1.1em;
         padding: 2px;
     }
 
@@ -156,6 +163,9 @@
         left: 3%;
       
       }
+    .span-logo{
+      font-size: 1em;
+    }  
 
 }
 
@@ -178,6 +188,12 @@
 /* medium devices (tablets, 768 px and up) */ 
 @media only screen and (min-width: 786px) {
 
+  .logo {
+    font-size: 1.1em;
+    width: 120px;
+    height: 120px;
+  }
+
 }
     
 
@@ -191,9 +207,8 @@
 
   .logo {
     font-size: 1.1em;
-    width: 200px;
-    height: 200px;
-  
+    width: 120px;
+    height: 120px;
   }
 
     

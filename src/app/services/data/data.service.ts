@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class DataService {
 
-  arrayTractors = [
+arrayTractors = [
 
     // Deutz_85
     {
@@ -140,6 +140,19 @@ arrayFumigador = [
   
  
 ]
+
+arrayCosechadoras = [
+]
+
+arraySembradoras = [
+]
+
+arrayViales = [
+]
+
+arrayCarros = [
+]
+
 
   private baseUrl: string = environment.baseUrl;
   hasRedirected : boolean = false;
