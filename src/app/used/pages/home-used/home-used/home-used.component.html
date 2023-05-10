@@ -87,9 +87,13 @@
   <!-- start cards -->
   <div fxLayout="row wrap" fxLayoutAlign="space-between center"  fxFlex="70" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100"  >
   
-    <div fxLayout="row wrap" fxLayoutAlign="center center"  class="whiteFrame" fxFlex="30" fxFlex.md="30" fxFlex.xs="100" style="cursor: pointer; margin-bottom: 30px;" *ngFor="let item of arrayItems, index as i">
+    <ng-container *ngFor="let item of arrayItems; let i = index">
+
+
+    <div fxLayout="row wrap" fxLayoutAlign="center center"  class="whiteFrame" fxFlex="30" fxFlex.md="30" fxFlex.xs="100" style="cursor: pointer; margin-bottom: 30px;" >
       
-      <img [src]="item.img" alt="" fxFlex.xs="40"  fxFlex="100" [routerLink]="['/usados-seleccionados/home-usados/',item.category,item.name]" *ngIf="arrayItems.length !== 0"  >
+
+      <img [src]="item.img" alt="" fxFlex.xs="40"  fxFlex="100" [routerLink]="['/usados-seleccionados/home-usados/',item.category,item.name]" *ngIf="arrayItems.length !== 0">
       <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex.xs="60" *ngIf="arrayItems.length !== 0" >
         <div fxLayout="row wrap" fxLayoutAlign="center start" style="height: 120px; margin-left: 8px;">
           <span class="fontPop" style="font-size: 1em; margin-bottom: 5px;" fxFlex="100"><b>{{item.name}}</b></span>
@@ -101,25 +105,21 @@
       </div>
     
     </div>
-    <div fxLayout="row wrap" fxLayoutAlign="center center"  fxFlex="100" *ngIf="arrayItems.length == 0">
-      <span class="fontPop fs-7" style="margin-top: 120px; text-align: center;" fxFlex="100"><b>Momentáneamente sin elementos que mostrar</b></span>
-      <span class="fontPop fs-7" style="margin-top: 50px; text-align: center;" fxFlex="100">¿Estás interesado en publicitar tu usado?</span>
-      <button  class="btnContact fontPop" style="margin-top: 30px; padding: 10px;" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Más información
-      </button>
-    
 
-    </div>
 
-    <div fxLayout="row wrap" fxLayoutAlign="center center"  class="whiteFrame" fxFlex="30" fxFlex.xs="100" style="cursor: pointer; padding: 10px; margin-bottom: 10px; visibility: hidden;" *ngIf="arrayItems.length % 2 !== 0" >
+
+
+   <div fxLayout="row wrap" fxLayoutAlign="center center"  class="whiteFrame" fxFlex="30" fxFlex.xs="100" style="cursor: pointer; padding: 10px; margin-bottom: 10px; visibility: hidden; " *ngIf="i === arrayItems.length - 1 && arrayItems.length % 3 !== 0" >
       
-      <img src="assets/usados/no-eliminar.jpeg" alt="" fxFlex.xs="40" fxFlex="100" >
+      <img src="assets/usados/no-image.png" alt="" fxFlex.xs="40" fxFlex="100" >
       <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex.xs="60" style="padding: 10px;">
         <span class="fontPop" style="font-size: 1em;" fxFlex="95"> --------------- </span>
         <span class="fontPop" style="font-size: 1em;" fxFlex="95"> -------- </span>
         <span class="fontPop" style="font-size: 1em;color: blue; " fxFlex="95"> Publicación: ----------- </span>
       </div>
     
-    </div>
+    </div> 
+    </ng-container>
   </div>
   <!-- end cards -->
 

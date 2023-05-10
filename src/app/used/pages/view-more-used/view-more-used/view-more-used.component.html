@@ -1,5 +1,3 @@
-
-
 <div fxLayout="row wrap" fxLayotAlign="center center"  #top *ngIf="phone">
   <app-navbar fxFlex="100"></app-navbar>
 </div>
@@ -17,19 +15,19 @@
         <carousel [cellWidth]="'100%'" [cellsToShow]="2" arrowsTheme="dark" [height]="value">
            
           <div class="carousel-cell"> 
-              <img [src]="img2" (click)="goToMainImg('img2')" >
+              <img [src]="img2" (click)="goToMainImg('img2')" *ngIf="img2 !== ''" >
            </div>
           
            <div class="carousel-cell"> 
-              <img [src]="img3" (click)="goToMainImg('img3')">
+              <img [src]="img3" (click)="goToMainImg('img3')" *ngIf="img3 !== ''">
            </div>
           
            <div class="carousel-cell"> 
-            <img [src]="img4" (click)="goToMainImg('img4')">
+            <img [src]="img4" (click)="goToMainImg('img4')" *ngIf="img4 !== ''">
            </div>
 
            <div class="carousel-cell"> 
-            <img [src]="img5" (click)="goToMainImg('img5')">
+            <img [src]="img5" (click)="goToMainImg('img5')" *ngIf="img5 !== ''">
            </div>
         </carousel>
     
@@ -43,7 +41,7 @@
               <span class="fontPop fs-6" style="margin-top: 40px;" > 
               
                 Datos técnicos: <br> 
-                {{item.data}}
+                {{item.description}}
                 Doble traccion, rodado trasero 18.4-38. <br>
                 Doble embrague , cabina nacion. <br>
                 Estado general muy bueno.</span>
