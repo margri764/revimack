@@ -84,6 +84,8 @@ export class HomeUsedComponent implements OnInit {
     }, []);
   
     this.arrayOneItem = uniqueItems;
+  
+
   }
   
 categorySelected( item : string){

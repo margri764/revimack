@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { log } from 'console';
+import { AgroMachines } from 'src/app/models/products';
 import { DataService } from 'src/app/services/data/data.service';
 
 @Component({
@@ -10,9 +11,10 @@ import { DataService } from 'src/app/services/data/data.service';
 })
 export class ViewMoreUsedComponent implements OnInit {
 
-arrItems : any ;
+arrItems : AgroMachines [] = [];
 item : any;
 phone : boolean = false;
+arrSimilarMachines : AgroMachines [] = [] ;
 
 value : number = 250;
 banner : string = "assets/usados/banner-negocios.png";
@@ -32,10 +34,9 @@ numero!: number;
 
         (screen.width <= 575) ? this.phone = true : false; 
         this.activatedRoute.params.subscribe(
-          ({id, category})=>{
-                this.arrItems = this.dataService.getMachinesById(id, category);
+          ({category, brand, name})=>{
+                this.arrItems = this.dataService.getMachinesById(category, brand, name);
                 this.item = this.arrItems[0];
-                console.log(this.arrItems);
               }
         )
   }
@@ -43,9 +44,11 @@ numero!: number;
   ngOnInit(): void {
     this.mainImg();
     this.valueToHeightCarousel();
-    this.arrItems
+    this.arrSimilarMachines = (this.dataService.returnOnlyOneItem());
 
   }
+
+
   
   mainImg() {
     const length = this.arrItems.length;

@@ -93,7 +93,7 @@
     <div fxLayout="row wrap" fxLayoutAlign="center center"  class="whiteFrame" fxFlex="30" fxFlex.md="30" fxFlex.xs="100" style="cursor: pointer; margin-bottom: 30px;" >
       
 
-      <img [src]="item.img" alt="" fxFlex.xs="40"  fxFlex="100" [routerLink]="['/usados-seleccionados/home-usados/',item.category,item.name]" *ngIf="arrayItems.length !== 0">
+      <img [src]="item.img" alt="" fxFlex.xs="40"  fxFlex="100" [routerLink]="['/usados-seleccionados/home-usados/',item.category, item.brand, item.name]" *ngIf="arrayItems.length !== 0">
       <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex.xs="60" *ngIf="arrayItems.length !== 0" >
         <div fxLayout="row wrap" fxLayoutAlign="center start" style="height: 120px; margin-left: 8px;">
           <span class="fontPop" style="font-size: 1em; margin-bottom: 5px;" fxFlex="100"><b>{{item.name}}</b></span>

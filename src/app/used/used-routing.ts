@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeUsedComponent } from './pages/home-used/home-used/home-used.component';
 import { PromoSkfComponent } from './message/promo-skf/promo-skf/promo-skf.component';
 import { ViewMoreUsedComponent } from './pages/view-more-used/view-more-used/view-more-used.component';
+import { ViewMoreSimilarComponent } from './pages/view-more-similar/view-more-similar/view-more-similar.component';
 
 const routes: Routes = [
   
@@ -16,7 +17,10 @@ const routes: Routes = [
        path: "home-usados" , component: HomeUsedComponent
      },
      {    
-      path: "home-usados/:category/:id" , component: ViewMoreUsedComponent
+      path: "home-usados/:category/:brand/:name" , component: ViewMoreUsedComponent
+     },
+     {    
+      path: "ver-usados-similares/:category/:brand/:name" , component: ViewMoreSimilarComponent
      },
      {    
       path: "promo-skf" , component: PromoSkfComponent

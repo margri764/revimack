@@ -1,0 +1,123 @@
+
+<div fxLayout="row wrap" fxLayotAlign="center center"  #top *ngIf="phone">
+    <app-navbar fxFlex="100"></app-navbar>
+  </div>
+  
+  <div fxLayout="row wrap" fxLayotAlign="center center" style="background-color: white; width: 100%; height: 100%; padding: 30px;">
+  
+    <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-bottom: 100px; position: relative; margin-top: 50px;" >
+      <img [src]="banner" alt="" fxFlex="99">
+    </div>
+      
+    <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50" fxFlex.xs="100" style="z-index: 1;">
+        
+          <img [src]="img1"  alt="" fxFlex="100" style="border-radius: 5px;">
+      
+          <carousel [cellWidth]="'100%'" [cellsToShow]="2" arrowsTheme="dark" [height]="value">
+             
+            <div class="carousel-cell"> 
+                <img [src]="img2" (click)="goToMainImg('img2')" *ngIf="img2 !== ''" >
+             </div>
+            
+             <div class="carousel-cell"> 
+                <img [src]="img3" (click)="goToMainImg('img3')" *ngIf="img3 !== ''">
+             </div>
+            
+             <div class="carousel-cell"> 
+              <img [src]="img4" (click)="goToMainImg('img4')" *ngIf="img4 !== ''">
+             </div>
+  
+             <div class="carousel-cell"> 
+              <img [src]="img5" (click)="goToMainImg('img5')" *ngIf="img5 !== ''">
+             </div>
+          </carousel>
+      
+    </div>
+  
+    <div fxLayout="row wrap" fxLayoutAlign="center start" fxFlex="40" fxFlex.xs="100">
+        
+          <div fxLayout="row wrap" fxLayoutAlign="start" fxFlex="90" style="border: 1px solid  rgb(216, 216, 216); border-radius: 15px; padding: 20px;" >
+  
+            <div fxLayout="row wrap" fxLayoutAlign="start" fxFlex="90" >
+  
+                <span class="fontPop fs-8" fxFlex="100"><b> {{item.name}} </b> </span>
+                <span class="fontPop fs-6" style="margin-top: 40px;" > 
+                
+                  Datos técnicos: <br> 
+                  {{item.description}}
+                  </span>
+            </div>
+  
+            <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxFlex="100" style="margin-top: 100px; margin-bottom: 30px;" >
+              <button  class="btnContact fontPop" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas"  fxFlex="40">Consultar
+              </button>
+  
+              <a class="btnContact fontPop" fxFlex="40" href="https://wa.me/+542302623444?text=Hola!!%20" target="blank" style="text-align: center; text-decoration: none;">    <i class="fab fa-whatsapp" style="transform: scale(1.3);"></i> WhatsApp
+              </a>
+  
+              <a href="https://wa.me/+542302623444?text=Hola!!%20" target="blank">
+                <img src="assets/usados/whatsapp.png" alt="" fxFlex.xs="20" fxFlex="7"  class="whatsapp">
+              </a>
+          </div>
+          <span class="fontPop" style="font-size: 1em;"> ¿Algo parece no estar bien con la publicación? <b  style="color: blue; font-size: 1em; cursor: pointer;" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Dejanos un mensaje</b></span>
+          </div>
+          
+          <div fxLayout="row wrap" fxLayoutAlign="start" fxFlex="90" style="border: 1px solid  rgb(216, 216, 216); border-radius: 15px; padding: 20px; margin-top: 30px;" >
+            <span class="fontPop" fxFlex="100"><b>Consultanos por medios de pago</b></span>
+            <span class="fontPop" style="margin-top: 20px;"><li>Tenemos para vos distintos medios de pago</li></span>
+            <span class="fontPop" style="margin-top: 20px;"><li>Somos representantes oficiales</li></span>
+          </div>
+      
+  
+  
+    </div>
+  
+  <!-- start similar machines -->
+  
+  <!-- start cards -->
+  <div fxLayout="row wrap" fxLayoutAlign="space-between center"  fxFlex="100" style="margin-top: 100px;"  >
+    
+    <span class="fontPop title" fxFlex="100" style="text-align: center; margin-bottom: 100px;"> Productos similares</span>
+        <ng-container *ngFor="let item of arrSimilarMachines; let i = index">
+    
+    
+        <div fxLayout="row wrap" fxLayoutAlign="center center"  class="whiteFrame" fxFlex="23" fxFlex.md="30" fxFlex.xs="100" style="cursor: pointer; margin-bottom: 30px;" >
+          
+    
+          <img [src]="item.img" alt="" fxFlex.xs="40"  fxFlex="100" [routerLink]="['/usados-seleccionados/home-usados/',item.category, item.brand, item.name]" *ngIf="arrSimilarMachines.length !== 0">
+          <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex.xs="60" *ngIf="arrSimilarMachines.length !== 0" >
+            <div fxLayout="row wrap" fxLayoutAlign="center start" style="height: 120px; margin-left: 8px;">
+              <span class="fontPop" style="font-size: 1em; margin-bottom: 5px;" fxFlex="100"><b>{{item.name}}</b></span>
+              <span class="fontPop" style="font-size: 1em;" fxFlex="95"> Realicó - La Pampa </span>
+              <span class="fontPop" style="font-size: 1em;" fxFlex="95"> $ Consultar precio </span>
+              <!-- <span class="fontPop" style="margin-bottom: 40px;" fxFlex="95"></span> -->
+              <!-- <span class="fontPop" style="font-size: 1em; color: blue; margin-top: 12px; " fxFlex="95"> Publicación: {{currentDate | currentMonthYear}}  </span> -->
+            </div>
+          </div>
+        
+        </div>
+    
+    
+    
+    
+       <div fxLayout="row wrap" fxLayoutAlign="center center"  class="whiteFrame" fxFlex="30" fxFlex.xs="100" style="cursor: pointer; padding: 10px; margin-bottom: 10px; visibility: hidden; " *ngIf="i === arrSimilarMachines.length - 1 && arrSimilarMachines.length % 3 !== 0" >
+          
+          <img src="assets/usados/no-image.png" alt="" fxFlex.xs="40" fxFlex="100" >
+          <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex.xs="60" style="padding: 10px;">
+            <span class="fontPop" style="font-size: 1em;" fxFlex="95"> --------------- </span>
+            <span class="fontPop" style="font-size: 1em;" fxFlex="95"> -------- </span>
+            <span class="fontPop" style="font-size: 1em;color: blue; " fxFlex="95"> Publicación: ----------- </span>
+          </div>
+        
+        </div> 
+        </ng-container>
+      </div>
+      <!-- end cards -->
+  <!-- end similar machines -->
+  
+  
+  </div>
+  
+  
+  
+  <app-form-canvas></app-form-canvas>

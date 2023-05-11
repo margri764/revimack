@@ -39,6 +39,17 @@ export class AppComponent implements OnInit {
      ?  this.id = true : this.id = false;
      
     });
+
+    this.router.events
+    .pipe(filter(evt => evt instanceof NavigationEnd))  
+    .subscribe((event: any) => {
+     (event.url.includes('/usados-seleccionados/ver-usados-similares/')) 
+     ?  this.id = true : this.id = false;
+     
+    });
+
+    
+
   
     
     // setTimeout(()=>{

@@ -8,6 +8,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { PromoSkfComponent } from './message/promo-skf/promo-skf/promo-skf.component';
 import { ViewMoreUsedComponent } from './pages/view-more-used/view-more-used/view-more-used.component';
 import { CurrentMonthYearPipe } from './pipe/currentMonthYear';
+import { ViewMoreSimilarComponent } from './pages/view-more-similar/view-more-similar/view-more-similar.component';
 
 
 
@@ -17,7 +18,8 @@ import { CurrentMonthYearPipe } from './pipe/currentMonthYear';
         HomeUsedComponent,
         PromoSkfComponent,
         ViewMoreUsedComponent,
-        CurrentMonthYearPipe
+        CurrentMonthYearPipe,
+        ViewMoreSimilarComponent
     ],
     imports: [
         CommonModule,
