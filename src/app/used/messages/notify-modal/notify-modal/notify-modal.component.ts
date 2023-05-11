@@ -1,38 +1,52 @@
-import { Component, OnInit } from '@angular/core';
-import {  FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
+import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { EmailService } from 'src/app/services/email/email.service';
 
 @Component({
-  selector: 'app-form-canvas',
-  templateUrl: './form-canvas.component.html',
-  styleUrls: ['./form-canvas.component.scss']
+  selector: 'app-notify-modal',
+  templateUrl: './notify-modal.component.html',
+  styleUrls: ['./notify-modal.component.scss']
 })
-export class FormCanvasComponent implements OnInit {
+export class NotifyModalComponent implements OnInit {
 
+  
+  @Input() data: any;
+
+  dataToShow  :  string = '';
   start: boolean =true;  
   array: any []=[] 
   string:any;
   clicked:boolean= false;
   hidden: boolean = true;
+  myForm! : FormGroup;
   public invalidName:  boolean  = false;
   public invalidPhone: boolean = false;
   public invalidEmail: boolean = false;
   public sendingEmail: boolean = true;
 
-  myForm: FormGroup = this.fb.group({
-    name:    ['', [Validators.required]],
-    email:   ['', [Validators.required,]],
-    phone:   ['', [Validators.required]],
-    message :['']
-    });
-    
+
   constructor(
                private fb : FormBuilder,
                private route : Router,
                private _emailservice : EmailService
 
-  ) { }
+  ) { 
+
+ 
+  }
+
+  ngOnInit(): void {
+    // this.dataToShow = this.data.data
+    this.myForm = this.fb.group({
+      name:    ['', [Validators.required]],
+      email:   ['', [Validators.required,]],
+      phone:   ['', [Validators.required]],
+      message :['']
+      });
+      
+  }
+
 
   validField( field: string ) {
  
@@ -41,7 +55,6 @@ export class FormCanvasComponent implements OnInit {
             && this.myForm.controls[field].touched;
   }
 
-  
   isInvalid(field: string){
 
     switch( field ) {
@@ -68,14 +81,12 @@ export class FormCanvasComponent implements OnInit {
     }
 
   }
-
   
-
   sendForm (){
-    if ( this.myForm.invalid ) {
-      this.myForm.markAllAsTouched();
-      return;
-    }
+    // if ( this.myForm.invalid ) {
+    //   this.myForm.markAllAsTouched();
+    //   return;
+    // }
     this.sendingEmail=false;
       this._emailservice.sendEmail(this.myForm.value).subscribe(
         res =>{ if(res == "true"){
@@ -89,25 +100,12 @@ export class FormCanvasComponent implements OnInit {
 
         }}
       )
-    
-    
-    // setTimeout( ()=>{
 
-    // },2000)
-  
-  
-
-    // alert(JSON.stringify(this.myForm.value))
   }
 
   
-onCloseSeguir(){
 
 
-  
-  }
 
-  ngOnInit(): void {
-  }
 
 }

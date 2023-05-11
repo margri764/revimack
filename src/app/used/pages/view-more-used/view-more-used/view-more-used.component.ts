@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { log } from 'console';
 import { AgroMachines } from 'src/app/models/products';
@@ -10,6 +11,8 @@ import { DataService } from 'src/app/services/data/data.service';
   styleUrls: ['./view-more-used.component.scss']
 })
 export class ViewMoreUsedComponent implements OnInit {
+
+@ViewChild ("top" , {static: true} ) top! : ElementRef;
 
 arrItems : AgroMachines [] = [];
 item : any;
@@ -23,13 +26,16 @@ img2 : string = '';
 img3 : string = '';
 img4 : string = '';
 img5 : string = '';
+currentDate : Date = new Date();
+
 
 screenWidth = screen.width;
 numero!: number;
 
   constructor(
               private activatedRoute : ActivatedRoute,
-              private dataService : DataService
+              private dataService : DataService,
+              private viewportScroller: ViewportScroller
   ) { 
 
         (screen.width <= 575) ? this.phone = true : false; 
@@ -45,9 +51,22 @@ numero!: number;
     this.mainImg();
     this.valueToHeightCarousel();
     this.arrSimilarMachines = (this.dataService.returnOnlyOneItem());
+    this.scrollToTop();
 
   }
 
+  scrollToTop(){
+
+    setTimeout( () => {
+      
+      this.top.nativeElement.scrollIntoView(
+      { 
+        alignToTop: true,
+        // behavior: "smooth",
+        block: "center",
+      });
+      }, 0);
+  }
 
   
   mainImg() {

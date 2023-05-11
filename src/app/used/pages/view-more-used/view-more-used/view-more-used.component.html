@@ -1,16 +1,14 @@
-<div fxLayout="row wrap" fxLayotAlign="center center"  #top *ngIf="phone">
-  <app-navbar fxFlex="100"></app-navbar>
-</div>
 
-<div fxLayout="row wrap" fxLayotAlign="center center" style="background-color: white; width: 100%; height: 100%; padding: 30px;">
 
-  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-bottom: 100px; position: relative; margin-top: 50px;" >
-    <img [src]="banner" alt="" fxFlex="99">
-  </div>
+<div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="background-color: rgb(245, 245, 245);" >
+ <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="97" fxFlex.xs="99" fxFlex.gt-md="77" style="background-color: white; padding: 20px;"  >
+
     
-  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50" fxFlex.xs="100" style="z-index: 1;">
+<div fxLayout="row wrap" fxLayoutAlign="space-between start" fxFlex="100" fxFlex.xs="100" style="margin-top: 50px;">
+
+    <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50" fxFlex.xs="100" style="z-index: 1;">
       
-        <img [src]="img1"  alt="" fxFlex="100" style="border-radius: 5px;">
+        <img [src]="img1"  alt="" fxFlex="100" style="border-radius: 5px;"  #top >
     
         <carousel [cellWidth]="'100%'" [cellsToShow]="2" arrowsTheme="dark" [height]="value">
            
@@ -31,27 +29,27 @@
            </div>
         </carousel>
     
-  </div>
+    </div>
 
-  <div fxLayout="row wrap" fxLayoutAlign="center start" fxFlex="40" fxFlex.xs="100">
+    <div fxLayout="row wrap" fxLayoutAlign="center start" fxFlex="42" fxFlex.xs="100">
       
-        <div fxLayout="row wrap" fxLayoutAlign="start" fxFlex="90" style="border: 1px solid  rgb(216, 216, 216); border-radius: 15px; padding: 20px;" >
+        <div fxLayout="row wrap" fxLayoutAlign="start" fxFlex="100" style="border: 1px solid  rgb(216, 216, 216); border-radius: 15px; padding: 20px;" >
 
           <div fxLayout="row wrap" fxLayoutAlign="start" fxFlex="90" >
 
-              <span class="fontPop fs-8" fxFlex="100"><b> {{item.name}} </b> </span>
-              <span class="fontPop fs-6" style="margin-top: 40px;" > 
+              <span class="fontPop title" fxFlex="100"><b> {{item.name}} </b> </span>
+              <span class="fontPop" style="margin-top: 40px;" > 
               
                 Datos técnicos: <br> 
                 {{item.description}}
                 </span>
           </div>
 
-          <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxFlex="100" style="margin-top: 100px; margin-bottom: 30px;" >
-            <button  class="btnContact fontPop" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas"  fxFlex="40">Consultar
+        <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxFlex="100" style="margin-top: 100px; margin-bottom: 30px;" >
+            <button  class="btnContact fontPop" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas"  fxFlex="40" fxFlex.xs="47">Consultar
             </button>
 
-            <a class="btnContact fontPop" fxFlex="40" href="https://wa.me/+542302623444?text=Hola!!%20" target="blank" style="text-align: center; text-decoration: none;">    <i class="fab fa-whatsapp" style="transform: scale(1.3);"></i> WhatsApp
+            <a class="btnContact fontPop" fxFlex="40" fxFlex.xs="47" href="https://wa.me/+542302623444?text=Hola!!%20" target="blank" style="text-align: center; text-decoration: none;">    <i class="fab fa-whatsapp" style="transform: scale(1.3);"></i> WhatsApp
             </a>
 
             <a href="https://wa.me/+542302623444?text=Hola!!%20" target="blank">
@@ -61,22 +59,36 @@
         <span class="fontPop" style="font-size: 1em;"> ¿Algo parece no estar bien con la publicación? <b  style="color: blue; font-size: 1em; cursor: pointer;" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Dejanos un mensaje</b></span>
         </div>
         
-        <div fxLayout="row wrap" fxLayoutAlign="start" fxFlex="90" style="border: 1px solid  rgb(216, 216, 216); border-radius: 15px; padding: 20px; margin-top: 30px;" >
+        <div fxLayout="row wrap" fxLayoutAlign="start" fxFlex="100" style="border: 1px solid  rgb(216, 216, 216); border-radius: 15px; padding: 20px; margin-top: 30px;" >
           <span class="fontPop" fxFlex="100"><b>Consultanos por medios de pago</b></span>
           <span class="fontPop" style="margin-top: 20px;"><li>Tenemos para vos distintos medios de pago</li></span>
-          <span class="fontPop" style="margin-top: 20px;"><li>Somos representantes oficiales</li></span>
+          <span class="fontPop" style="margin-top: 20px;"><li>Contamos con transporte propio</li></span>
+          <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxFlex="100" style="margin-top: 30px;">
+            <img src="assets/usados/visa.png" alt="" fxFlex="20">
+            <img src="assets/usados/mastercard.png" alt="" fxFlex="20">
+            <img src="assets/usados/pampa.png" alt="" fxFlex="20">
+            <img src="assets/usados/santander.png" alt="" fxFlex="20">
+
+          </div>
         </div>
     
 
 
+    </div>
+  
+</div>
+
+  <!-- start banner -->
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-bottom: 100px; position: relative; margin-top: 50px;" >
+    <img [src]="banner" alt="" fxFlex="100">
   </div>
+  <!-- end banner -->
 
 <!-- start similar machines -->
-
 <!-- start cards -->
 <div fxLayout="row wrap" fxLayoutAlign="space-between center"  fxFlex="100" style="margin-top: 100px;"  >
   
-  <span class="fontPop title" fxFlex="100" style="text-align: center; margin-bottom: 100px;"> Productos similares</span>
+  <span class="fontPop title" fxFlex="100" style="text-align: center; margin-bottom: 20px;"> Productos similares</span>
       <ng-container *ngFor="let item of arrSimilarMachines; let i = index">
   
   
@@ -90,7 +102,7 @@
             <span class="fontPop" style="font-size: 1em;" fxFlex="95"> Realicó - La Pampa </span>
             <span class="fontPop" style="font-size: 1em;" fxFlex="95"> $ Consultar precio </span>
             <!-- <span class="fontPop" style="margin-bottom: 40px;" fxFlex="95"></span> -->
-            <!-- <span class="fontPop" style="font-size: 1em; color: blue; margin-top: 12px; " fxFlex="95"> Publicación: {{currentDate | currentMonthYear}}  </span> -->
+            <span class="fontPop" style="font-size: 1em; color: blue; margin-top: 12px; " fxFlex="95"> Publicación: {{currentDate | currentMonthYear}}  </span>
           </div>
         </div>
       
@@ -114,7 +126,7 @@
     <!-- end cards -->
 <!-- end similar machines -->
 
-
+ </div>
 </div>
 
 

@@ -1,0 +1,115 @@
+.bi.bi-envelope {
+    font-size: 3em;
+  }
+  
+.btnSend{
+    width: 100%;
+    background-color: #82b75c;
+    color: white;
+    line-height: 40px;
+    font-size: 2vw;
+    font-family: 'Monserrat',sans-serif;
+    border-radius: 10px;
+    border: 2px solid #82b75c;
+    margin-bottom: 40px;
+
+    box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+    -webkit-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+    -moz-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+}
+
+.btnSend:hover{
+
+    background-color: white;
+    color: rgb(47, 47, 47);
+    border: 2px solid #82b75c;
+}
+
+input{
+    border-radius: 10px;
+    border-color: #82b75c;
+}
+
+textarea{
+    border-radius: 10px;
+    border-color: #82b75c;
+}
+
+  
+// start canvas
+.consulta{
+    border-radius: 10px; 
+    padding: 10px;
+    background-color: rgb(251, 251, 251);
+
+    box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+    -webkit-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+    -moz-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
+    }
+
+  
+
+
+
+
+//    end canvas
+
+@media  screen and (max-width: 575px){  
+
+.btnSend{
+    font-size: 5vw;
+    line-height: 40px;
+}
+
+
+
+}
+
+
+
+
+@media screen and (min-width: 576px){
+
+
+.btnSend{
+    font-size: 3vw;
+    line-height: 40px;
+}
+
+
+
+}
+
+@media  screen and (min-width: 786px){
+
+
+
+
+
+}
+@media  screen and (min-width: 992px){
+
+.btnSend{
+    font-size: 1.6vw;
+    line-height: 50px;
+}
+
+
+
+}
+@media  screen and (min-width: 1200px){
+
+  
+}
+
+@media  screen and (min-width: 1400px){
+
+
+
+}
+
+ 
+
+
+
+

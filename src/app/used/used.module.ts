@@ -9,6 +9,8 @@ import { PromoSkfComponent } from './message/promo-skf/promo-skf/promo-skf.compo
 import { ViewMoreUsedComponent } from './pages/view-more-used/view-more-used/view-more-used.component';
 import { CurrentMonthYearPipe } from './pipe/currentMonthYear';
 import { ViewMoreSimilarComponent } from './pages/view-more-similar/view-more-similar/view-more-similar.component';
+import { NotifyModalComponent } from './messages/notify-modal/notify-modal/notify-modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -19,14 +21,16 @@ import { ViewMoreSimilarComponent } from './pages/view-more-similar/view-more-si
         PromoSkfComponent,
         ViewMoreUsedComponent,
         CurrentMonthYearPipe,
-        ViewMoreSimilarComponent
+        ViewMoreSimilarComponent,
+        NotifyModalComponent
     ],
     imports: [
         CommonModule,
         UsedRoutingModule,
         SharedModule,
         IvyCarouselModule,
-        FlexLayoutModule
+        FlexLayoutModule,
+        ReactiveFormsModule
 
     ]
 })

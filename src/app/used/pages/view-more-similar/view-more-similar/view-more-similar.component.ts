@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AgroMachines } from 'src/app/models/products';
 import { DataService } from 'src/app/services/data/data.service';
@@ -9,6 +9,8 @@ import { DataService } from 'src/app/services/data/data.service';
   styleUrls: ['./view-more-similar.component.scss']
 })
 export class ViewMoreSimilarComponent implements OnInit {
+
+@ViewChild ("top" , {static: true} ) top! : ElementRef;
 
   arrItems : AgroMachines [] = [];
   item : any;
@@ -25,6 +27,8 @@ export class ViewMoreSimilarComponent implements OnInit {
   
   screenWidth = screen.width;
   numero!: number;
+  currentDate : Date = new Date();
+
   
     constructor(
                 private activatedRoute : ActivatedRoute,
@@ -44,7 +48,21 @@ export class ViewMoreSimilarComponent implements OnInit {
       this.mainImg();
       this.valueToHeightCarousel();
       this.arrSimilarMachines = (this.dataService.returnOnlyOneItem());
-  
+      this.scrollToTop()
+    }
+
+
+    scrollToTop(){
+
+      setTimeout( () => {
+        
+        this.top.nativeElement.scrollIntoView(
+        { 
+          alignToTop: true,
+          // behavior: "smooth",
+          block: "center",
+        });
+        }, 0);
     }
   
   

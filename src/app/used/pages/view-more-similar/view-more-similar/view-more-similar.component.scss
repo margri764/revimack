@@ -1,72 +1,78 @@
 .btnContact{
-    background-color: #82b75c;
-    font-weight: 500;
-    color: white;
-    border-radius: 7px;
-    border: none;
-    font-size: 1.3vw;
-    padding: 12px;
-    border: 2px solid #82b75c;
-    width: 150px;
+  background-color: #82b75c;
+  font-weight: 500;
+  color: white;
+  border-radius: 7px;
+  border: none;
+  font-size: 1.3vw;
+  padding: 12px;
+  border: 2px solid #82b75c;
+  width: 150px;
 
-    box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
-    -webkit-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
-    -moz-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
-  }
+  box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+  -webkit-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+  -moz-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
+}
 
-  .btnContact:hover{
-    background-color: white;
-    color: #82b75c;
-    border: 2px solid #82b75c;
-  }
+.btnContact:hover{
+  background-color: white;
+  color: #82b75c;
+  border: 2px solid #82b75c;
+}
 
-  .whatsapp{
-    position: fixed;
-    bottom: 25%;
-    opacity: 0.7;
-    right: 10px;
-    z-index: 100;
-    text-decoration: none;
-  }
+.whatsapp{
+  position: fixed;
+  bottom: 25%;
+  opacity: 0.7;
+  right: 10px;
+  z-index: 100;
+  text-decoration: none;
+}
 
-  .fontPop.title{
-    font-size: 2.5em;
-  }
+.fontPop.title{
+  font-size: 2em;
+}
+
+.fontPop{
+  font-size: 0.9em;
+}
 
 
-  
+
 //Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 575px) {
 
-  .btnContact{
-      font-size: 1.3em;
-      padding: 2px;
-  }
+.btnContact{
+    font-size: 1.1em;
+    padding: 10px;
+}
 
-
+.fontPop.title{
+  font-size: 1.8em;
+}
 
 }
 
 @media only screen and (min-width: 576px) {
 
-  .btnContact{
-      font-size: 1.1em;
-
-  }
+.btnContact{
+    font-size: 1.1em;
 
 }
-  
+
+}
+
 
 /* medium devices (tablets, 768 px and up) */ 
 @media only screen and (min-width: 786px) {
 
-  .btnContact{
-    font-size: 1.1em;
-    
+.btnContact{
+  font-size: 1.1em;
+  
 
 }
 }
-  
+
 
 /* large devices (desktops, 992 px and up) */ 
 @media only screen and (min-width: 992px) {
@@ -77,10 +83,10 @@
 @media only screen and (min-width: 1200px) {
 
 
-  
+
 
 }
-  
+
 
 /* XX- Large devices (larger desktops, 1400px and up) */ 
 @media only screen and (min-width: 1400px) {
@@ -88,5 +94,5 @@
 
 
 }
-  
+
 

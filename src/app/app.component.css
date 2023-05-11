@@ -13,6 +13,8 @@
 
 .sticky-header {
     flex-grow: 0;   
+    padding: 0;
+    margin: 0;
 }
 
 .content-wrapper {
@@ -21,6 +23,7 @@
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+
 }
 
 .content {

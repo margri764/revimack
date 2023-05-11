@@ -19,7 +19,10 @@ export class AppComponent implements OnInit {
 
   constructor(
             public router : Router
-  ){}
+  ){
+    (screen.width <= 600) ? this.phone = true : false;
+
+  }
 
 
   ngOnInit(): void {
@@ -35,30 +38,17 @@ export class AppComponent implements OnInit {
     this.router.events
     .pipe(filter(evt => evt instanceof NavigationEnd))  
     .subscribe((event: any) => {
-     (event.url.includes('/usados-seleccionados/home-usados/')) 
+     (event.url.includes('/usados-seleccionados/home-usados/') || event.url.includes('/usados-seleccionados/ver-usados-similares/')) 
      ?  this.id = true : this.id = false;
      
     });
 
-    this.router.events
-    .pipe(filter(evt => evt instanceof NavigationEnd))  
-    .subscribe((event: any) => {
-     (event.url.includes('/usados-seleccionados/ver-usados-similares/')) 
-     ?  this.id = true : this.id = false;
-     
-    });
-
-    
-
-  
-    
     // setTimeout(()=>{
 
     //   this.disabled = true
 
     // },4000);
     
-    (screen.width <= 575) ? this.phone = true : false;
   }
 
 

@@ -5,7 +5,6 @@
     background-color: rgba(34, 34, 34, 0.931);
     margin-bottom: 20px;
     cursor: pointer;
-
     
     box-shadow: 10px 10px 35px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 10px 10px 35px 0px rgba(0,0,0,0.75);
@@ -13,11 +12,11 @@
 }
 
 .fa-whatsapp{
-    font-size: 50px;   
+    font-size: 70px;   
     color: rgb(39, 149, 11);  
     position:absolute; 
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 20px; /* Place the button 30px from the right */
+    bottom: 70px; /* Place the button at the bottom of the page */
+    right: 35px; /* Place the button 30px from the right */
     z-index: 99; /* Make sure it does not overlap */
     cursor: pointer; /* Add a mouse pointer on hover */
     opacity: 0.6;
@@ -45,13 +44,13 @@
 h1{
     font-family:'Roboto Condensed','sans-serif';
     font-weight: 400;
-    color: white;
+    /* color: white; */
 }
 
 h4{
     font-family:'Roboto Condensed','sans-serif';
     font-weight: 400;
-    color: white;
+    /* color: white; */
 }
 
 .ecurow{
@@ -131,10 +130,7 @@ h4{
         font-size: 5vw;
     }
     
-    
-    h1{
-        color: white;
-    }
+
     
     .ecurow{
         margin-top: 50px;

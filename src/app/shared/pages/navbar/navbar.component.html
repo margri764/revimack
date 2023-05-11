@@ -1,11 +1,10 @@
 
-
 <!-- start navbar desktop -->
-<div fxLayout="row wrap"  fxFlex="100"  fxLayoutAlign="center" *ngIf="!phone">  
+<div fxLayout="row wrap"  fxLayoutAlign="center center" fxFlex="100" *ngIf="!phone">  
 
-  <div fxLayout="row wrap"  fxFlex="99" class="customNavbar" fxLayoutAlign="space-between" *ngIf="!phone">  
+  <div fxLayout="row wrap"  fxFlex="100" class="customNavbar" fxLayoutAlign="space-between" *ngIf="!phone">  
     
-    <div fxLayout="row wrap" fxLayoutAlign="start center"  fxFlex="80"  >
+    <div fxLayout="row wrap" fxLayoutAlign="start center"  fxFlex="80">
       
       <img src="assets/logo-hojas2-bg.png" alt="logo" fxFlex="7" routerLink="../../home" style="cursor: pointer;">
       
@@ -26,12 +25,13 @@
 <!-- end navbar desktop -->
   
 <!-- start phone navbar -->
-<div fxLayout="row wrap" fxLayoutAlign="end" fxFlex="100"  *ngIf="phone" style="margin-top: 10px;">  
+  
+  <div fxLayout="row wrap" fxLayoutAlign="end" fxFlex="100"  *ngIf="phone" style="margin-top: 10px; background-color: rgb(249, 249, 249);">  
 
 <div fxFlex="15" fxLayoutAlign="center" *ngIf="phone">
     <span   id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-house"></i></span>
     
-    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2" style="width: 100%;">
+    <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton2" style="width: 100%;">
       
         <br>
         <a class="dropdown-item active"class="btnNav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" >Productos</a> 

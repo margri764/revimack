@@ -2,6 +2,7 @@
 .logo{
     transition: all 5s 0s ease;
     transform: scale(1.1);
+  
 }
 
 
@@ -22,6 +23,8 @@
         font-family:'Monserrat',sans-serif;
         font-weight: 400;
         font-size: 3.8vw;
+
+
     }
 
 }

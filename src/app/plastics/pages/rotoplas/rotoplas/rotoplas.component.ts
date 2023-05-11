@@ -13,16 +13,11 @@ export class RotoplasComponent implements OnInit {
   @ViewChild ("fire" , {static: true} ) fire! : ElementRef;
   @ViewChild ("hor" , {static: true} ) hor! : ElementRef;
 
-
-
   exterior : any;
   interior : any;
   antifire : any;
   horizontal : any;
   toppage : any;
-
-
-
 
   private currentImage: any;
 

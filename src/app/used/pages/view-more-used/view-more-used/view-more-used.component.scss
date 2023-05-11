@@ -30,7 +30,11 @@
   }
 
   .fontPop.title{
-    font-size: 2.5em;
+    font-size: 2em;
+  }
+
+  .fontPop{
+    font-size: 0.9em;
   }
 
 
@@ -39,11 +43,13 @@
 @media only screen and (max-width: 575px) {
 
   .btnContact{
-      font-size: 1.3em;
-      padding: 2px;
+      font-size: 1.1em;
+      padding: 10px;
   }
 
-
+  .fontPop.title{
+    font-size: 1.8em;
+  }
 
 }
 

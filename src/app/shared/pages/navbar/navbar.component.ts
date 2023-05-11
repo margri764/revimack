@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
             private router : Router,
   ) { 
 
-    (screen.width <= 575) ? this.phone = true : false; 
+    (screen.width <= 600) ? this.phone = true : false; 
   }
 
 

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { log } from 'console';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DataService } from 'src/app/services/data/data.service';
+import { NotifyModalComponent } from 'src/app/used/messages/notify-modal/notify-modal/notify-modal.component';
 
 @Component({
   selector: 'app-home-used',
@@ -18,6 +19,8 @@ export class HomeUsedComponent implements OnInit {
   banner : string = "";
   bannerPromo : string = '';
   showBrands : boolean = true;
+  phone : boolean = false;
+
   
   arrayTractors : any [] = [];
   arrayFumigadoras : any [] = [];
@@ -26,13 +29,15 @@ export class HomeUsedComponent implements OnInit {
   arrayViales : any [] = [];
   arrayCarros : any [] = [];
   arrayItems : any [] = [];
-  currentDate : Date= new Date();
+  currentDate : Date = new Date();
 
   constructor(
               private router : Router,
-              private dataService : DataService
+              private dataService : DataService,
+              private modalService: NgbModal
   ) {
      this.currentImage = this.showImgBanner();
+    (screen.width <= 575) ? this.phone = true : false; 
 
    }
 
@@ -43,7 +48,6 @@ export class HomeUsedComponent implements OnInit {
     //   this.dataService.hasRedirected = true;
     //   this.router.navigateByUrl('/usados-seleccionados/promo-skf');
     // }
-
     this.arrayFumigadoras = this.dataService.arrayFumigador;
     this.arrayTractors = this.dataService.arrayTractors;
     this.arrayCosechadoras = this.dataService.arrayCosechadoras;
@@ -72,6 +76,10 @@ export class HomeUsedComponent implements OnInit {
   
   }
 
+  openModal() {
+     const modalRef =this.modalService.open(NotifyModalComponent);
+     modalRef.componentInstance.data = {data: "cosechadora"};
+  }
 
   arrayOneItem : any;
   returnOnlyOneItem(arrayItem: any) {
