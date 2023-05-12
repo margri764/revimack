@@ -2,6 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
 
+.backMenu{
+    height: 90px;
+    border-bottom: 1.5px solid green;
+    background-color: rgb(244, 244, 244);
+   
+    box-shadow: 0px 0px 5px 3px rgba(134, 133, 133, 0.72);
+   -webkit-box-shadow: 0px 0px 5px 3px rgba(134, 133, 133,0.72);
+   -moz-box-shadow: 0px 0px 5px 3px rgba(134, 133, 133,0.72);
+}
 
 .dropdown-menu{
   background-color: rgb(249, 249, 249);
@@ -140,24 +149,17 @@ form {
 }
 
 .btnNav{
-  font-size: 4.6vw;
+  font-size: 1.2em;
 }
 
-.bi.bi-house{
-  /* color: rgb(179, 179, 179); */
-  font-size: 8vw;
+.bi.bi-three-dots-vertical{
+  font-size: 1.6em;
 }
 
 .bi.bi-list{
-  color: rgb(179, 179, 179);
-  font-size: 8vw;
+  font-size: 2em;
 }
 
-.bi.bi-search{
-  /* color: rgb(179, 179, 179); */
-
-  font-size: 7vw;
-}
 
 a.searchResult {
   font-size: 3vw; 

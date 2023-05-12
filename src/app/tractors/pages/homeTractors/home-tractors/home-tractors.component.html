@@ -1,15 +1,10 @@
 
 
-<!-- <div   fxLayout="row wrap" fxLayoutAlign="center" fxFlex="100" style="background-color: white;"> -->
 
 <div  fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center" class="scroll" (scroll)="onScroll($event)">
 
- 
-<div  fxFlex="100" style="background-color: black" #top>
-    <app-navbar ></app-navbar>
-</div>
 
-<img src="assets/plantium/back.png" routerLink="../../home" id="back"  >
+<img src="assets/plantium/back.png" routerLink="../../home" id="back" #top >
 
  
 <div fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center" style="background-color: rgb(255, 255, 255)">
@@ -22,7 +17,7 @@
 
     <h5 class="card-title font fs-7" fxFlex="100">Farmtrac Fabricante Europeo de Tractores Agrícolas.</h5> <br>
     
-    <blockquote class="blockquote font fs-5 mt-20" style="line-height: 2em;">
+    <blockquote class="blockquote fontPop fs-5 mt-20" style="line-height: 2em;">
       "Nuestra filosofía es construir tractores cuyo diseño es simple, confiable y se caracteriza por un bajo costo de mantenimiento y de funcionamiento.<br>
       Los tractores FARMTRAC están fabricados con componentes de clase mundial, esto asegura la durabilidad y fiabilidad, incluso en terrenos difíciles y en condiciones climáticas desfavorables.
       Todos nuestros tractores se ajustan a estrictas normas mundiales de emisión, siendo galardonados con numerosos premios por su desempeño"  

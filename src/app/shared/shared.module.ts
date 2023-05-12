@@ -16,6 +16,7 @@ import { SliderUpComponent } from './pages/sliderUp/slider-up/slider-up.componen
 import { FormCanvasComponent } from './pages/form-canvas/form-canvas.component';
 import { ThanksComponent } from './pages/thanks/thanks.component';
 import { UsComponent } from './pages/us/us/us.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel2';
 
 
 
@@ -41,7 +42,8 @@ import { UsComponent } from './pages/us/us/us.component';
     SharedRoutingModule,  
     FormsModule,
     FlexLayoutModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    IvyCarouselModule
   ],
   
   exports:[

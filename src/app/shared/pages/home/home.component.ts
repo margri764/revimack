@@ -1,4 +1,4 @@
-import {Component, OnInit  } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild  } from '@angular/core';
 
 
 
@@ -9,17 +9,30 @@ import {Component, OnInit  } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-public imgEcurow : string='';
+@ViewChild ("top" , {static: true} ) top! : ElementRef;
+imgEcurow : string='';
+phone : boolean = false;
     
-constructor()
-{  }
-    	
+constructor() {
+
+  (screen.width <= 600) ? this.phone = true : this.phone = false;
+}  
 
 
   ngOnInit(): void {
 
     // (screen.width<575) ?  this.imgEcurow="./assets/ecuRow_cel.png" :     this.imgEcurow="./assets/ecuRow-desktop.png";
+    this.scrollToTop();
+    console.log('en home');
 
   }
-  
+  scrollToTop(){
+    setTimeout( () => {
+      this.top.nativeElement.scrollIntoView(
+      { 
+        alignToTop: true,
+        block: "center",
+      });
+      }, 0);
+  }
 }

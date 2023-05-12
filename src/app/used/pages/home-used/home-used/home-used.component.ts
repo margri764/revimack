@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DataService } from 'src/app/services/data/data.service';
@@ -10,6 +10,8 @@ import { NotifyModalComponent } from 'src/app/used/messages/notify-modal/notify-
   styleUrls: ['./home-used.component.scss']
 })
 export class HomeUsedComponent implements OnInit {
+
+@ViewChild ("top" , {static: true} ) top! : ElementRef;
 
   public currentImage: any;
   value : number = 250;
@@ -37,12 +39,12 @@ export class HomeUsedComponent implements OnInit {
               private modalService: NgbModal
   ) {
      this.currentImage = this.showImgBanner();
-    (screen.width <= 575) ? this.phone = true : false; 
+     (screen.width <= 575) ? this.phone = true : false; 
+     this.scrollToTop();
 
    }
 
   ngOnInit(): void {
-
 
     // if (!this.dataService.hasRedirected) {
     //   this.dataService.hasRedirected = true;
@@ -58,10 +60,7 @@ export class HomeUsedComponent implements OnInit {
     this.returnOnlyOneItem(this.arrayTractors);
     this.arrayItems = this.arrayOneItem;
 
-
-
     this.valueToHeightCarousel();
-
 
      this.currentImage = this.bannerArray[0];
      this.currentIndex = 0;
@@ -74,7 +73,18 @@ export class HomeUsedComponent implements OnInit {
       }
       }, 3500);
   
-  }
+
+    }
+  
+    scrollToTop(){
+      setTimeout( () => {
+        this.top.nativeElement.scrollIntoView(
+        { 
+          alignToTop: true,
+          block: "center",
+        });
+        }, 0);
+    }
 
   openModal() {
      const modalRef =this.modalService.open(NotifyModalComponent);
@@ -92,6 +102,7 @@ export class HomeUsedComponent implements OnInit {
     }, []);
   
     this.arrayOneItem = uniqueItems;
+    console.log(this.arrayOneItem);
   
 
   }

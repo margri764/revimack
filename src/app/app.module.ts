@@ -11,6 +11,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 //idioma de la app
 import localeEs from '@angular/common/locales/es-AR'; //nombre inventado el AR es por Argentina
 import { registerLocaleData } from '@angular/common';
+import { IvyCarouselModule } from 'angular-responsive-carousel2';
 registerLocaleData( localeEs );
 
 @NgModule({
@@ -26,7 +27,7 @@ registerLocaleData( localeEs );
     SharedModule,
     NgbModule,
     FlexLayoutModule,
-
+    IvyCarouselModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'es-AR' }

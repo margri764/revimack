@@ -1,4 +1,17 @@
 
+.icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 200px;
+    border: 1px solid rgb(217, 217, 217);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fontPop{
+    font-size: 1em;
+}
 
 .card{
     border-radius: 20px;
@@ -12,11 +25,12 @@
 }
 
 .fa-whatsapp{
-    font-size: 70px;   
+    width: 65px;
+    height: 65px;
     color: rgb(39, 149, 11);  
     position:absolute; 
     bottom: 70px; /* Place the button at the bottom of the page */
-    right: 35px; /* Place the button 30px from the right */
+    right: 25px; /* Place the button 30px from the right */
     z-index: 99; /* Make sure it does not overlap */
     cursor: pointer; /* Add a mouse pointer on hover */
     opacity: 0.6;

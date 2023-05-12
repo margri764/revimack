@@ -25,12 +25,10 @@
 <!-- end navbar desktop -->
   
 <!-- start phone navbar -->
+<div fxLayout="row wrap" fxLayoutAlign="space-between center" fxFlex="100"  *ngIf="phone" class="backMenu" routerLink="/home">  
   
-  <div fxLayout="row wrap" fxLayoutAlign="end" fxFlex="100"  *ngIf="phone" style="margin-top: 10px; background-color: rgb(249, 249, 249);">  
-
-<div fxFlex="15" fxLayoutAlign="center" *ngIf="phone">
-    <span   id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-house"></i></span>
-    
+  <div fxFlex="20" fxLayoutAlign="start center" style="margin-left: 10px;" >  
+    <span   id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-list"></i></span>
     <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton2" style="width: 100%;">
       
         <br>
@@ -47,35 +45,23 @@
     </ul>
   </div>
 
-<div fxFlex="15"  fxLayoutAlign="center center" *ngIf="phone" >
-  <span id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-search"></i></span>
-  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1" style="width: 100vw;">
-    <form class="d-flex">
-      <input class="form-control me-2 btnNav" type="search" placeholder="Buscar" aria-label="Buscar" style="color: black;">
-    </form>
-    <!-- <li><a class="dropdown-item active"class="btnNav">Productos</a> </li> -->
-  </ul>
-</div>
-
-<div fxFlex="15" fxLayoutAlign="center" *ngIf="phone">
-  <span   id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-list"></i></span>
+  <img src="assets/logo-app.png" alt="" fxFlex="50">
   
-  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2" >
-    
-    <li> <a class="dropdown-item active" class="btnNav">Crear cuenta</a> </li> 
-    <li> <a class="dropdown-item active" class="btnNav">Iniciar sesión</a> </li> 
+  <div fxFlex="20" fxLayoutAlign="end center" style="margin-right: 10px;" >
+    <span   id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-three-dots-vertical"></i></span>
+    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+      <li> <a class="dropdown-item active" class="btnNav">Crear cuenta</a> </li> 
+      <li> <a class="dropdown-item active" class="btnNav">Iniciar sesión</a> </li> 
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" class="btnNav">Cerrar Sesión</a></li>
+    </ul>
+  </div>
 
 
-    
-    
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" class="btnNav">Cerrar Sesión</a></li>
-  </ul>
-</div>
+  
 
 </div> 
 <!-- end start phone navbar -->
-
 
 <!-- start canvas -->
 <div class="offcanvas offcanvas-start" tabindex="-1" width="500" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"  >

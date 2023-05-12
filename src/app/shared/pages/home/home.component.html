@@ -1,12 +1,45 @@
 
-<div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-bottom: 50px;" >
+<div fxLayout="row wrap" fxLayoutAlign="center center" class="animate__animated animate__fadeIn" fxFlex="100" style="padding: 10px;" >
 
-    <a  href="https://wa.me/+542302623444?text=Hola!!%20" target="blank" > 
-        <i class="fab fa-whatsapp" ></i>
-    </a>
+        <a  href="https://wa.me/+542302623444?text=Hola!!%20" target="blank" > 
+            <i class="fab fa-whatsapp" ></i>
+        </a>
+        <span #top></span>
 
-    <div fxLayout="row wrap" fxFlex="100" style="margin-top: 70px; background-color: rgba(240, 240, 240, 0.37); border-radius: 10px; padding: 20px;">
- 
+        <carousel [cellWidth]="'100%'" [cellsToShow]="3.5"  [height]= "100" [arrows]=false  style="z-index: 1; margin-bottom: 40px; margin-top: 50px;" *ngIf="phone">
+
+            <div class="carousel-cell" style="text-align: center; justify-content: center; align-items: center; display: flex; flex-direction: column;"> 
+                <div class="icon" routerLink="/usados-seleccionados/home-usados" >
+                    <i class="bi bi-arrow-clockwise" style="transform: scale(1.4);"></i>
+                </div>
+                <span  class="fontPop">Usados Premium</span>
+            </div>
+
+            <div class="carousel-cell" style="text-align: center; justify-content: center; align-items: center; display: flex; flex-direction: column;"> 
+                <div class="icon" routerLink="/implementos" >
+                    <i class="bi bi-tools" style="transform: scale(1.4);"></i>
+                </div>
+                <span  class="fontPop">Implementos Agrícolas</span>
+            </div>
+
+            <div class="carousel-cell" style="text-align: center; justify-content: center; align-items: center; display: flex; flex-direction: column;"> 
+                <div class="icon"  routerLink="/eco/plasticos" >
+                    <i class="bi bi-droplet"style="transform: scale(1.4);" ></i>
+                </div>
+                <span  class="fontPop">Linea de plásticos</span>
+            </div>
+            
+         
+            <div class="carousel-cell" style="text-align: center; justify-content: center; align-items: center; display: flex; flex-direction: column;"> 
+                <div class="icon" routerLink="/maquinaria-agricola/tractores">
+                    <img src="assets/icono-tractor.png" fxFlex="60">
+                </div>
+                <span  class="fontPop">Farmtrac Tractores</span>
+            </div>
+
+
+        </carousel>  
+  
         <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" style="margin-top: 30px;">
             <div fxFlex="40" fxFlex.xs="60" > <h1 >ALIANZAS ESTRATEGICAS</h1></div> 
             <div fxFlex="60" fxFlex.xs="40" class="divider"></div>
@@ -59,9 +92,6 @@
             </div>
             </div>
         </div>  
-    </div>
-    
-
 
 
 </div>
