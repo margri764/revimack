@@ -10,7 +10,7 @@ import { ViewMoreUsedComponent } from './pages/view-more-used/view-more-used/vie
 import { CurrentMonthYearPipe } from './pipe/currentMonthYear';
 import { ViewMoreSimilarComponent } from './pages/view-more-similar/view-more-similar/view-more-similar.component';
 import { NotifyModalComponent } from './messages/notify-modal/notify-modal/notify-modal.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -30,7 +30,8 @@ import { ReactiveFormsModule } from '@angular/forms';
         SharedModule,
         IvyCarouselModule,
         FlexLayoutModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        FormsModule
 
     ]
 })

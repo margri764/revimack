@@ -1,7 +1,8 @@
 
 
 <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="background-color: rgb(245, 245, 245);" >
- <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="97" fxFlex.xs="99" fxFlex.gt-md="77" style="background-color: white; padding: 20px;"  >
+
+ <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="97" fxFlex.xs="99" fxFlex.gt-md="85" style="background-color: white; padding: 20px;"  >
 
     
 <div fxLayout="row wrap" fxLayoutAlign="space-between start" fxFlex="100" fxFlex.xs="100" style="margin-top: 50px;">
@@ -35,14 +36,10 @@
       
         <div fxLayout="row wrap" fxLayoutAlign="start" fxFlex="100" style="border: 1px solid  rgb(216, 216, 216); border-radius: 15px; padding: 20px;" >
 
-          <div fxLayout="row wrap" fxLayoutAlign="start" fxFlex="90" >
-
-              <span class="fontPop title" fxFlex="100"><b> {{item.name}} </b> </span>
-              <span class="fontPop" style="margin-top: 40px;" > 
-              
-                Datos técnicos: <br> 
-                {{item.description}}
-                </span>
+          <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex="90" >
+            <span class="fontPop" style="font-size: 0.9em; color: gray;" fxFlex="100">Usado</span>
+            <span class="fontPop title" fxFlex="100"><b> {{item.name}} </b> </span>
+            <span class="fontPop" style="margin-top: 40px;">   Datos técnicos: <br>{{item.description}} </span>
           </div>
 
         <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxFlex="100" style="margin-top: 100px; margin-bottom: 30px;" >
@@ -56,13 +53,13 @@
               <img src="assets/usados/whatsapp.png" alt="" fxFlex.xs="20" fxFlex="7"  class="whatsapp">
             </a>
         </div>
-        <span class="fontPop" style="font-size: 1em;"> ¿Algo parece no estar bien con la publicación? <b  style="color: blue; font-size: 1em; cursor: pointer;" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Dejanos un mensaje</b></span>
+        <span class="fontPop" style="font-size: 0.8em;"> ¿Algo parece no estar bien con la publicación? <b  style="color: blue; font-size: 1em; cursor: pointer;" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Dejanos un mensaje</b></span>
         </div>
         
         <div fxLayout="row wrap" fxLayoutAlign="start" fxFlex="100" style="border: 1px solid  rgb(216, 216, 216); border-radius: 15px; padding: 20px; margin-top: 30px;" >
           <span class="fontPop" fxFlex="100"><b>Consultanos por medios de pago</b></span>
-          <span class="fontPop" style="margin-top: 20px;"><li>Tenemos para vos distintos medios de pago</li></span>
           <span class="fontPop" style="margin-top: 20px;"><li>Contamos con transporte propio</li></span>
+          <span class="fontPop" style="margin-top: 20px;"><li>Tenemos para vos distintos medios de pago</li></span>
           <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxFlex="100" style="margin-top: 30px;">
             <img src="assets/usados/visa.png" alt="" fxFlex="20">
             <img src="assets/usados/mastercard.png" alt="" fxFlex="20">
@@ -86,39 +83,33 @@
 
  <!-- start similar machines -->
  <!-- start cards -->
- <div fxLayout="row wrap" fxLayoutAlign="space-between center"  class="whiteFrame" fxFlex="100" style="margin-top: 100px; margin-bottom: 30px;" >
+ <div fxLayout="row wrap" fxLayoutAlign="space-between center"   fxFlex="100" style="margin-top: 100px; margin-bottom: 30px;" >
    
   <span class="fontPop title" fxFlex="100" style="text-align: center; margin-bottom: 20px;"> Productos similares</span>
-      <ng-container *ngFor="let item of arrSimilarMachines; let i = index">
+
+    <ng-container *ngFor="let item of arrSimilarMachines; let i = index">
   
-      <div fxLayout="row wrap" fxLayoutAlign="center center"  class="whiteFrame" fxFlex="24" fxFlex.md="30" fxFlex.xs="100" style="cursor: pointer; margin-bottom: 30px;" >
+      <div fxLayout="row wrap" fxLayoutAlign="center start"  class="whiteFrame similarCards" fxFlex="24" fxFlex.md="30" fxFlex.xs="100" style="cursor: pointer; margin-bottom: 30px;" >
         
         <img [src]="item.img" alt="" fxFlex.xs="90"  fxFlex="100" [routerLink]="['/usados-seleccionados/ver-usados-similares/',item.category, item.brand, item.name]" *ngIf="arrSimilarMachines.length !== 0" style="border-radius: 7px;">
+
         <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex.xs="90" *ngIf="arrSimilarMachines.length !== 0" >
-          <div fxLayout="row wrap" fxLayoutAlign="center start" style="height: 150px; margin-left: 8px;">
-            <span class="fontPop" style="font-size: 1.3em;margin-top: 10px;" fxFlex="100"><b>{{item.name}}</b></span>
+          <div fxLayout="row wrap" fxLayoutAlign="start start" >
+            <span class="fontPop" style="font-size: 0.9em; color: gray; margin-top: 5px;" fxFlex="100">Usado</span>
+            <span class="fontPop" style="font-size: 1.2em; margin-top: 20px;" fxFlex="100"><b>{{item.name}}</b></span>
             <span class="fontPop" style="font-size: 1em; color: rgb(159, 159, 159);" fxFlex="95"> Realicó - La Pampa </span>
-            <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxFlex="100">
+            <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxFlex="100" style="margin-top: 10px;">
              <span class="fontPop price" style="font-size: 0.8em;" fxFlex="60"> $ Consultar precio </span> 
-             <span class="fontPop price" style="font-size: 0.8em;" fxFlex="40"> <div style="border-radius: 30px; border: 1px solid green; color: white; text-align: center; background-color: green; padding: 5px;" fxFlex.xs="80" fxFlex="100"> Disponible </div> </span> 
+             <span class="fontPop price"  fxFlex="40"> <div style="border-radius: 30px; border: 1px solid green; color: white; text-align: center; background-color: green; padding: 3px; font-size: 0.7em;" fxFlex.xs="80" fxFlex="90"> Disponible </div> </span> 
            </div>
 
-            <!-- <span class="fontPop" style="margin-bottom: 40px;" fxFlex="95"></span> -->
-            <span class="fontPop" style="font-size: 1em; color: blue; margin-top: 12px; " fxFlex="95"> Publicación: {{currentDate | currentMonthYear}}  </span>
+            <span class="fontPop" style="font-size: 0.8em; color: blue; margin-top: 20px;margin-bottom: 10px; " fxFlex="95"> Publicación: {{currentDate | currentMonthYear}}  </span>
           </div>
-        </div>
-
-        <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="90" style="margin-top: 30px;" >
-          <button  class="btnContact fontPop" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas"  fxFlex.xs="50" fxFlex="95" style="padding: 3px;">Consultar
-          </button>
         </div>
       
       </div>
   
-  
-  
-  
-     <div fxLayout="row wrap" fxLayoutAlign="center center"  class="whiteFrame" fxFlex="30" fxFlex.xs="100" style="cursor: pointer; padding: 10px; margin-bottom: 10px; visibility: hidden; " *ngIf="i === arrSimilarMachines.length - 1 && arrSimilarMachines.length % 3 !== 0" >
+     <div fxLayout="row wrap" fxLayoutAlign="center center"  class="whiteFrame" fxFlex="24" fxFlex.md="30" fxFlex.xs="100" style="cursor: pointer; margin-bottom: 10px; visibility: hidden; " *ngIf="i === arrSimilarMachines.length - 1 && arrSimilarMachines.length % 3 !== 0" >
         
         <img src="assets/usados/no-image.png" alt="" fxFlex.xs="40" fxFlex="100" >
         <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex.xs="60" style="padding: 10px;">
@@ -128,10 +119,12 @@
         </div>
       
       </div> 
-      </ng-container>
+    </ng-container>
  </div>
-    <!-- end cards -->
-<!-- end similar machines -->
+     <!-- end cards -->
+ <!-- end similar machines -->
+ 
+
  </div>
 </div>
 

@@ -5,7 +5,7 @@
   border-radius: 7px;
   border: none;
   font-size: 1.3vw;
-  padding: 12px;
+  padding: 5px;
   border: 2px solid #82b75c;
   width: 150px;
 
@@ -30,27 +30,57 @@
 }
 
 .fontPop.title{
-  font-size: 2em;
+  font-size: 1.8em;
+}
+
+.btnContact.fontPop{
+  font-size: 0.9em;
 }
 
 .fontPop{
   font-size: 0.9em;
 }
 
+.whiteFrame{
+  border-radius: 5px;
+  padding: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  
+  box-shadow: 0px 0px 5px 3px rgba(179,179,179,0.32);
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(179,179,179,0.32);
+  -moz-box-shadow: 0px 0px 5px 3px rgba(179,179,179,0.32);
+}
+
+.whiteFrame:hover{
+box-shadow: 0px 22px 39px -1px rgba(0,0,0,0.24);
+-webkit-box-shadow: 0px 22px 39px -1px rgba(0,0,0,0.24);
+-moz-box-shadow: 0px 22px 39px -1px rgba(0,0,0,0.24);
+}
+
+.whiteFrame > img{
+border-radius: 7px;
+}
 
 
+.similarCards{
+  height: 420px;
+}
+
+  
 //Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 575px) {
 
-.btnContact{
-    font-size: 1.1em;
-    padding: 10px;
-}
+  .btnContact{
+      font-size: 1.1em;
+      padding: 8px;
+  }
 
-.fontPop.title{
-  font-size: 1.8em;
-}
-
+  .fontPop.title{
+    font-size: 1.8em;
+  }
+  .similarCards{
+    height: 450px;
+  }
 }
 
 @media only screen and (min-width: 576px) {

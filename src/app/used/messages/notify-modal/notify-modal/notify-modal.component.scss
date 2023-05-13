@@ -3,15 +3,13 @@
   }
   
 .btnSend{
-    width: 100%;
     background-color: #82b75c;
     color: white;
     line-height: 40px;
-    font-size: 2vw;
-    font-family: 'Monserrat',sans-serif;
     border-radius: 10px;
     border: 2px solid #82b75c;
-    margin-bottom: 40px;
+    font-family:'poppins-light';
+    font-size: 1em;
 
     box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
     -webkit-box-shadow: 10px 10px 29px -8px rgba(#82b75c,0.75);
@@ -25,14 +23,12 @@
     border: 2px solid #82b75c;
 }
 
+
+
 input{
     border-radius: 10px;
     border-color: #82b75c;
-}
-
-textarea{
-    border-radius: 10px;
-    border-color: #82b75c;
+    font-family:'poppins-light';
 }
 
   
@@ -47,34 +43,24 @@ textarea{
     -moz-box-shadow: 10px 10px 29px -8px rgba(181,181,181,0.75);
     }
 
-  
-
-
-
-
 //    end canvas
+
+.modal-container{
+    padding: 15px;
+}
 
 @media  screen and (max-width: 575px){  
 
 .btnSend{
-    font-size: 5vw;
-    line-height: 40px;
-}
-
-
+    font-size: 1em;
 
 }
 
-
+}
 
 
 @media screen and (min-width: 576px){
 
-
-.btnSend{
-    font-size: 3vw;
-    line-height: 40px;
-}
 
 
 
@@ -89,17 +75,14 @@ textarea{
 }
 @media  screen and (min-width: 992px){
 
-.btnSend{
-    font-size: 1.6vw;
-    line-height: 50px;
-}
 
 
 
 }
+
 @media  screen and (min-width: 1200px){
 
-  
+
 }
 
 @media  screen and (min-width: 1400px){

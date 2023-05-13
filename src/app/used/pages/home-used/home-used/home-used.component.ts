@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
 import { DataService } from 'src/app/services/data/data.service';
 import { NotifyModalComponent } from 'src/app/used/messages/notify-modal/notify-modal/notify-modal.component';
 
@@ -72,10 +72,9 @@ export class HomeUsedComponent implements OnInit {
         clearInterval(clear)
       }
       }, 3500);
+      
   
-
     }
-  
     scrollToTop(){
       setTimeout( () => {
         this.top.nativeElement.scrollIntoView(
@@ -86,10 +85,15 @@ export class HomeUsedComponent implements OnInit {
         }, 0);
     }
 
-  openModal() {
-     const modalRef =this.modalService.open(NotifyModalComponent);
-     modalRef.componentInstance.data = {data: "cosechadora"};
-  }
+    openModal() {
+      const modalOptions: NgbModalOptions = {
+        // windowClass: 'my-custom-modal' // Aquí puedes establecer la clase CSS personalizada para el ancho del modal
+        centered: true
+      };
+    
+      const modalRef = this.modalService.open(NotifyModalComponent, modalOptions);
+      modalRef.componentInstance.data = { data: "cosechadora" };
+    }
 
   arrayOneItem : any;
   returnOnlyOneItem(arrayItem: any) {

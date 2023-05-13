@@ -4,7 +4,7 @@
     <img [src]="getImage()" width="100%"  class="frame">
   </div>
     
-    <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" fxFlex.xs="100" fxFlex.gt-md="85" style="background-color: white; padding: 5px; margin-top: 7px;" >
+    <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" fxFlex.xs="100" fxFlex.gt-md="90" style="background-color: white; padding: 5px; margin-top: 7px;" >
     
     <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="position: relative; margin-top: 10px;" >
       <img [src]="bannerPromo" alt="" fxFlex="100">
@@ -13,7 +13,7 @@
     </div>
 
     <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-top: 50px;" #top>
-      <span class="fontPop fs-8" style="margin-bottom: 30px;">Elegí una categoría</span>
+      <span class="fontPop title" style="margin-bottom: 30px;">Elegí una categoría</span>
     </div>
          
   <carousel [cellWidth]="'100%'" [cellsToShow]="celltoShow"  [height]= "value" [arrows]=false class="mt-30"  style="z-index: 1; margin-bottom: 40px;">
@@ -66,7 +66,7 @@
 <div fxLayout="row wrap" fxLayoutAlign="space-around start"  fxFlex="100" >
   
   <!-- start brands -->
-  <div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="30" fxFlex.xs="100" *ngIf="showBrands">
+  <div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="25" fxFlex.xs="100" *ngIf="showBrands">
 
     <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex="100"  style="padding: 20px"> 
       <span class="fontPop fs-5" style="margin-bottom: 30px;" fxFlex="100"><b> Marcas destacadas</b></span>
@@ -79,49 +79,53 @@
   </div>
   <!-- end brands -->
 
-  <!-- start cards -->
-  <div fxLayout="row wrap" fxLayoutAlign="space-between center"  fxFlex="70" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" >
-  
+   <!-- start cards -->
+ <div fxLayout="row wrap" fxLayoutAlign.xs="center center"  fxLayoutAlign="space-between center" fxFlex="75"  fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" >
+   
     <ng-container *ngFor="let item of arrayItems; let i = index">
+  
+      <div fxLayout="row wrap" fxLayoutAlign="center start"  class="whiteFrame similarCards" fxFlex="24" fxFlex.md="30" fxFlex.xs="100" style="cursor: pointer; margin-bottom: 30px;" >
+        
+        <img [src]="item.img" alt="" fxFlex.xs="90"  fxFlex="100" [routerLink]="['/usados-seleccionados/home-usados/',item.category, item.brand, item.name]" *ngIf="arrayItems.length !== 0" style="border-radius: 7px;">
 
-    <div fxLayout="row wrap" fxLayoutAlign="center center"  class="whiteFrame" fxFlex="30" fxFlex.md="30" fxFlex.xs="100" style="cursor: pointer; margin-bottom: 30px;" >
-      
-      <img [src]="item.img" alt="" fxFlex.xs="100"  fxFlex="100" [routerLink]="['/usados-seleccionados/home-usados/',item.category, item.brand, item.name]" *ngIf="arrayItems.length !== 0">
-      <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex.xs="100" *ngIf="arrayItems.length !== 0" style="margin: 5px;" >
-        <div fxLayout="row wrap" fxLayoutAlign="center start" style="margin-top: 5px;">
-          <span class="fontPop" style="font-size: 1.3em; margin-bottom: 5px;" fxFlex="100"><b>{{item.name}}</b></span>
-          <span class="fontPop" style="font-size: 1em; color: rgb(159, 159, 159);"  fxFlex="95"> Realicó - La Pampa </span>
-          <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxFlex="100" >
-            <span class="fontPop price" fxFlex="60">Consultar precio </span> 
-            <span class="fontPop price" fxFlex="40"> <div style="border-radius: 30px; border: 1px solid green; color: white; text-align: center; background-color: green; padding: 3px;" fxFlex.xs="80" fxFlex="100"> Disponible </div> </span> 
+        <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex.xs="90" *ngIf="arrayItems.length !== 0" >
+          <div fxLayout="row wrap" fxLayoutAlign="start start" >
+            <span class="fontPop" style="font-size: 0.9em; color: gray; margin-top: 5px;" fxFlex="100">Usado</span>
+            <span class="fontPop" style="margin-top: 20px;" fxFlex="100"><b>{{item.name}}</b></span>
+            <span class="fontPop" style="font-size: 0.9em; color: rgb(159, 159, 159);" fxFlex="95"> Realicó - La Pampa </span>
+            <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxFlex="100" style="margin-top: 10px;">
+             <span class="fontPop price" style="font-size: 0.8em;" fxFlex="60">Consultar precio </span> 
+             <span class="fontPop price"  fxFlex="40"> <div style="border-radius: 30px; border: 1px solid green; color: white; text-align: center; background-color: green; padding: 3px; font-size: 0.7em;" fxFlex.xs="80" fxFlex="90"> Disponible </div> </span> 
+           </div>
+
+            <span class="fontPop" style="font-size: 0.8em; color: blue; margin-top: 20px;margin-bottom: 10px; " fxFlex="95"> Publicación: {{currentDate | currentMonthYear}}  </span>
           </div>
-          <span class="fontPop" style="font-size: 0.8em; color: blue; margin-top: 12px;" fxFlex="95"> Publicación: {{currentDate | currentMonthYear}}  </span>
         </div>
-      </div>
-    
-    </div>
-
-   <div fxLayout="row wrap" fxLayoutAlign="center center"  class="whiteFrame" fxFlex="30" fxFlex.xs="100" style="cursor: pointer; padding: 10px; margin-bottom: 10px; visibility: hidden; " *ngIf="i === arrayItems.length - 1 && arrayItems.length % 3 !== 0" >
       
-      <img src="assets/usados/no-image.png" alt="" fxFlex.xs="40" fxFlex="100" >
-      <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex.xs="60" style="padding: 10px;">
-        <span class="fontPop" style="font-size: 1em;" fxFlex="95"> --------------- </span>
-        <span class="fontPop" style="font-size: 1em;" fxFlex="95"> -------- </span>
-        <span class="fontPop" style="font-size: 1em;color: blue; " fxFlex="95"> Publicación: ----------- </span>
       </div>
-    
-    </div> 
+  
+     <div fxLayout="row wrap" fxLayoutAlign="center center"  class="whiteFrame" fxFlex="24" fxFlex.md="30" fxFlex.xs="100" style="cursor: pointer; margin-bottom: 10px; visibility: hidden; " *ngIf="i === arrayItems.length - 1 && arrayItems.length % 3 !== 0" >
+        
+        <img src="assets/usados/no-image.png" alt="" fxFlex.xs="40" fxFlex="100" >
+        <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex.xs="60" style="padding: 10px;">
+          <span class="fontPop" style="font-size: 1em;" fxFlex="95"> --------------- </span>
+          <span class="fontPop" style="font-size: 1em;" fxFlex="95"> -------- </span>
+          <span class="fontPop" style="font-size: 1em;color: blue; " fxFlex="95"> Publicación: ----------- </span>
+        </div>
+      
+      </div> 
     </ng-container>
 
-    <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" *ngIf="arrayItems.length == 0">
-      <span class="fontPop fs-7" style="margin-top: 50px; text-align: center;" fxFlex="100">Por el momento no tenemos productos publicados. </span>
-      <button  class="btnContact fontPop" style="margin-top: 30px; padding: 10px;" (click)="openModal()">Quiero recibir notificaciones de este producto
+    <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" fxFlex.xs="90" class="whiteFrame" *ngIf="arrayItems.length == 0">
+      <span class="fontPop title" style="margin-top: 50px; text-align: center;" fxFlex="100">En este momento no tenemos productos publicados. </span>
+      <button  class="btnContact fontPop" style="margin-top: 30px; padding: 10px; margin-bottom: 5px;" fxFlex="30" fxFlex.xs="70" (click)="openModal()">Quiero recibir notificaciones de este producto
       </button>
     </div>
-  </div>
+ </div>
+
+</div>
   <!-- end cards -->
 
-</div>   
 
 <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" *ngIf="arrayItems.length !== 0">
   <span class="fontPop fs-7" style="margin-top: 50px; text-align: center;" fxFlex="100">¿Estás interesado en publicitar tu usado?</span>
@@ -140,7 +144,7 @@
 <!-- banner -->
 
 <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-bottom: 100px; position: relative; margin-top: 100px;" *ngIf="showBrands" >
-  <span class="fontPop fs-9" style="margin-bottom: 30px;">Tenemos los mejores usados para vos</span>
+  <span class="fontPop title" style="margin-bottom: 30px;">Tenemos los mejores usados para vos</span>
   <img src= "assets/usados/banner-revimack.png" alt="" fxFlex="100">
   <button  class="btnContact fontPop" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas" style="position: absolute; top: 92%; left: 45%;">Más información
   </button>

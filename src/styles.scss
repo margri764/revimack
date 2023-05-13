@@ -144,17 +144,33 @@ src: url(assets/font/Luckiest_Guy/LuckiestGuy-Regular.ttf);
   margin-left: 10px;
 }
 
-  .animate__animated.animate__fadeIn{
-    --animate-duration: 2s;
-  }
-  .custom-modal {
-    max-width: 90vw !important;
-    max-height: 90vh !important;
-    padding: 20px !important;
-  }
-  
-  .custom-modal .modal-dialog {
-    padding: 0px !important;
-    border-radius: 10px !important;
-    margin: 0 auto;
-  }
+.animate__animated.animate__fadeIn{
+  --animate-duration: 2s;
+}
+
+
+
+// .my-custom-modal {
+//   max-width: 60vw !important;
+//   max-height: 55vh !important;
+//   border-radius: 15px !important;
+//   position: fixed; /* Agrega posición fija */
+//   top: 50%; /* Coloca el modal en el 50% superior */
+//   left: 50%; /* Coloca el modal en el 50% izquierdo */
+//   transform: translate(-50%, -50%); /* Centra verticalmente y horizontalmente */
+//   margin: 0 auto;
+//   background-color: white;
+//   border: none !important;
+//   outline: none;
+//   box-shadow: none;
+
+// }
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 600px) {
+  // .my-custom-modal {
+  //   max-width: 95vw !important;
+  //   max-height: 95vw !important;
+
+  // }
+}

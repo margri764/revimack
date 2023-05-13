@@ -12,6 +12,7 @@ const routes: Routes = [
    path: '',
 
    children: [
+
    
      { 
        path: "home-usados" , component: HomeUsedComponent
