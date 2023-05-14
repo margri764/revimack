@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
 import { DataService } from 'src/app/services/data/data.service';
 import { NotifyModalComponent } from 'src/app/used/messages/notify-modal/notify-modal/notify-modal.component';
+import * as bootstrap from 'bootstrap';
+
 
 @Component({
   selector: 'app-home-used',
@@ -12,8 +14,8 @@ import { NotifyModalComponent } from 'src/app/used/messages/notify-modal/notify-
 export class HomeUsedComponent implements OnInit {
 
 @ViewChild ("top" , {static: true} ) top! : ElementRef;
-
-  public currentImage: any;
+  toastLiveExample! : bootstrap.Toast;
+  currentImage: any;
   value : number = 250;
   celltoShow : number = 5.5;
   bannerArray : any []=[];
@@ -22,6 +24,7 @@ export class HomeUsedComponent implements OnInit {
   bannerPromo : string = '';
   showBrands : boolean = true;
   phone : boolean = false;
+  triggerModalSuccessEmail : boolean = false;
 
   
   arrayTractors : any [] = [];
@@ -32,6 +35,7 @@ export class HomeUsedComponent implements OnInit {
   arrayCarros : any [] = [];
   arrayItems : any [] = [];
   currentDate : Date = new Date();
+  timeDelivered : Date = new Date();
 
   constructor(
               private router : Router,
@@ -44,12 +48,27 @@ export class HomeUsedComponent implements OnInit {
 
    }
 
+  showCustomToast() {
+    const toastElement = document.getElementById('liveToast');
+    if (toastElement) {
+      toastElement.classList.add('custom-toast'); // Agregar la clase custom-toast al elemento
+      this.toastLiveExample = new bootstrap.Toast(toastElement);
+      this.toastLiveExample.show();
+    } else {
+      console.error("No se encontró el elemento 'liveToast'.");
+    }
+  }
+  
   ngOnInit(): void {
 
     // if (!this.dataService.hasRedirected) {
     //   this.dataService.hasRedirected = true;
     //   this.router.navigateByUrl('/usados-seleccionados/promo-skf');
     // }
+
+
+    this.dataService.modalSuccessSendendEmail.subscribe(()=> this.showCustomToast())
+
     this.arrayFumigadoras = this.dataService.arrayFumigador;
     this.arrayTractors = this.dataService.arrayTractors;
     this.arrayCosechadoras = this.dataService.arrayCosechadoras;
@@ -73,8 +92,8 @@ export class HomeUsedComponent implements OnInit {
       }
       }, 3500);
       
-  
-    }
+      }
+    
     scrollToTop(){
       setTimeout( () => {
         this.top.nativeElement.scrollIntoView(
@@ -87,7 +106,8 @@ export class HomeUsedComponent implements OnInit {
 
     openModal() {
       const modalOptions: NgbModalOptions = {
-        // windowClass: 'my-custom-modal' // Aquí puedes establecer la clase CSS personalizada para el ancho del modal
+        // windowClass: 'my-custom-modal',
+        backdrop: "static",
         centered: true
       };
     

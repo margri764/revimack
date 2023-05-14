@@ -12,8 +12,23 @@
       </button>
     </div>
 
-    <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-top: 50px;" #top>
-      <span class="fontPop title" style="margin-bottom: 30px;">Elegí una categoría</span>
+    <!-- start modal -->
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" fxFlex="100">
+      <div class="toast-header">
+        <img src="assets/logo-rev.png" class="rounded me-2" alt="..." fxFlex="10">
+        <strong class="me-auto">Revimack Agro</strong>
+        <small>enviado <b>ahora</b></small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Mensaje enviado correctamente
+      </div>
+    </div>
+    <!-- end modal -->
+
+
+    <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-top: 80px;" #top>
+      <span class="fontPop title">Elegí una categoría</span>
     </div>
          
   <carousel [cellWidth]="'100%'" [cellsToShow]="celltoShow"  [height]= "value" [arrows]=false class="mt-30"  style="z-index: 1; margin-bottom: 40px;">
@@ -123,12 +138,14 @@
     </div>
  </div>
 
+
+
 </div>
   <!-- end cards -->
 
 
 <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" *ngIf="arrayItems.length !== 0">
-  <span class="fontPop fs-7" style="margin-top: 50px; text-align: center;" fxFlex="100">¿Estás interesado en publicitar tu usado?</span>
+  <span class="fontPop title" style="margin-top: 50px; text-align: center;" fxFlex="100">¿Estás interesado en publicitar tu usado?</span>
   <button  class="btnContact fontPop" style="margin-top: 30px; padding: 10px;" data-bs-toggle="offcanvas" data-bs-target="#formCanvas" aria-controls="formCanvas">Más información
   </button>
 </div>
@@ -143,6 +160,9 @@
 </div>
 <!-- banner -->
 
+</div>   
+
+
 <div fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="100" style="margin-bottom: 100px; position: relative; margin-top: 100px;" *ngIf="showBrands" >
   <span class="fontPop title" style="margin-bottom: 30px;">Tenemos los mejores usados para vos</span>
   <img src= "assets/usados/banner-revimack.png" alt="" fxFlex="100">
@@ -155,7 +175,8 @@
 </a>
 
     </div>   
-</div>   
+
+
 
 
 <!-- Formulario canvas -->

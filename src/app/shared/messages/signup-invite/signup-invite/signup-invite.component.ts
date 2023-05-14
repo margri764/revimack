@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -7,12 +7,12 @@ import { EmailService } from 'src/app/services/email/email.service';
 import { ValidatorService } from 'src/app/services/validator/validator.service';
 
 @Component({
-  selector: 'app-notify-modal',
-  templateUrl: './notify-modal.component.html',
-  styleUrls: ['./notify-modal.component.scss']
+  selector: 'app-signup-invite',
+  templateUrl: './signup-invite.component.html',
+  styleUrls: ['./signup-invite.component.scss']
 })
-export class NotifyModalComponent implements OnInit {
-  
+export class SignupInviteComponent implements OnInit {
+
   // @Input() data: any;
 
   // dataToSave : string = '';

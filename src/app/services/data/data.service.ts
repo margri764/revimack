@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
@@ -9,6 +9,7 @@ export class DataService {
 
 private similarItemName : any[]=[];  
 arrayOneItem : any;
+modalSuccessSendendEmail : EventEmitter<any> = new EventEmitter()
 
 
 arrayTractors = [

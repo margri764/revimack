@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,12 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  public phone : boolean=false;
+@ViewChild ("top" , {static: true} ) top! : ElementRef;
+
+  public phone : boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+    console.log('header');
+    this.scrollToTop();
 
     (screen.width <= 575) ? this.phone= true : false;
+  }
+
+  scrollToTop(){
+    setTimeout( () => {
+      this.top.nativeElement.scrollIntoView(
+      { 
+        alignToTop: true,
+        block: "center",
+      });
+      }, 0);
   }
 
 }

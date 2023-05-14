@@ -21,11 +21,9 @@ constructor() {
 
   ngOnInit(): void {
 
-    // (screen.width<575) ?  this.imgEcurow="./assets/ecuRow_cel.png" :     this.imgEcurow="./assets/ecuRow-desktop.png";
     this.scrollToTop();
-    console.log('en home');
-
   }
+
   scrollToTop(){
     setTimeout( () => {
       this.top.nativeElement.scrollIntoView(

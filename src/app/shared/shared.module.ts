@@ -17,6 +17,7 @@ import { FormCanvasComponent } from './pages/form-canvas/form-canvas.component';
 import { ThanksComponent } from './pages/thanks/thanks.component';
 import { UsComponent } from './pages/us/us/us.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel2';
+import { SignupInviteComponent } from './messages/signup-invite/signup-invite/signup-invite.component';
 
 
 
@@ -34,7 +35,8 @@ import { IvyCarouselModule } from 'angular-responsive-carousel2';
     SliderUpComponent,
     FormCanvasComponent,
     ThanksComponent,
-    UsComponent  
+    UsComponent,
+    SignupInviteComponent  
   ],
   
   imports: [
