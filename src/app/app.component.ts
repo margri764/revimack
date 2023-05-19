@@ -60,9 +60,10 @@ export class AppComponent implements OnInit {
     });
     
     if(this.hasRegistered === null){
-    this.subscription = interval(60000).subscribe(() => {
-        this.showCustomToast();
-    });
+      this.subscription = interval(5000).subscribe(() => {
+            console.log('aaa');
+            this.showCustomToast();
+        });
     }
   }
 
