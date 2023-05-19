@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://dulcealmadeco.com/',
+  baseUrl: 'http://localhost:8000/',
+  // baseUrl: 'https://barrozoautomotores.com/',
 };
 
 /*

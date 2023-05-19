@@ -16,9 +16,9 @@
   background-color: rgb(249, 249, 249);
 }
 
-  img{
+  /* img{
       width: 90%;
-  }
+  } */
      
   .fa-whatsapp{
   margin-left: 10px;
@@ -33,7 +33,7 @@
   
 
   .customNavbar{
-    padding: 30px;
+    /* padding: 10px; */
     z-index: 1;
     /* background-color:  rgb(240, 240, 240, 0.37); */
 

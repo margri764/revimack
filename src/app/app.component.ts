@@ -1,9 +1,11 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
-import { filter } from 'rxjs';
+import { Subscription, filter, interval } from 'rxjs';
 import * as bootstrap from 'bootstrap';
 import { SignupInviteComponent } from './shared/messages/signup-invite/signup-invite/signup-invite.component';
+import { DataService } from './services/data/data.service';
+import { log } from 'console';
 
 @Component({
   selector: 'app-root',
@@ -18,16 +20,20 @@ export class AppComponent implements OnInit {
   phone : boolean = false;
   scroll! : boolean;
   id : boolean = false;
-
+  isClicked : boolean = false;
+  intervalId: any;
+  private hasRegistered: any;
+  private subscription!: Subscription;
 
 
   constructor(
             public router : Router,
             private modalService: NgbModal,
+            private dataService : DataService
 
   ){
     (screen.width <= 600) ? this.phone = true : this.phone = false;
-
+    this.hasRegistered = localStorage.getItem("registered") ;
   }
 
 
@@ -48,16 +54,22 @@ export class AppComponent implements OnInit {
      event.url.includes('/home') ?  this.id = true : this.id = false;
     });
     
-    setInterval(()=>{
-
-      this.showCustomToast();
-      
-    }, 10000)
+    this.dataService.modalSuccessSendendEmail.subscribe(() => {
+      localStorage.setItem("registered", "ok")
+      this.subscription.unsubscribe();
+    });
     
+    if(this.hasRegistered === null){
+    this.subscription = interval(60000).subscribe(() => {
+        this.showCustomToast();
+    });
+    }
   }
 
 
   openModal() {
+
+    this.isClicked = !this.isClicked;
     const modalOptions: NgbModalOptions = {
       backdrop: "static",
       centered: true
@@ -67,24 +79,38 @@ export class AppComponent implements OnInit {
     modalRef.componentInstance.data = { data: "cosechadora" };
   }
 
+
   showCustomToast() {
-    const toastElement = document.getElementById('liveToast');
+
+    // if(!this.isClicked){
+      const toastElement = document.getElementById('liveToast');
+      if (toastElement) {
+        toastElement.classList.add('custom-toast'); // Agregar la clase custom-toast al elemento
+        this.toastLiveExample = new bootstrap.Toast(toastElement);
+        this.toastLiveExample.show();
+
+        const tiempoCierre = 10000;
+    
+        // Ocultar el toast después de cierto tiempo
+        setTimeout(() => {
+          this.toastLiveExample.hide();
+        }, tiempoCierre);
+      } else {
+        console.error("No se encontró el elemento 'liveToast'.");
+      }
+  // }
+  }
+  
+  showCustomToastConfirm() {
+    const toastElement = document.getElementById('liveToast-confirm');
     if (toastElement) {
       toastElement.classList.add('custom-toast'); // Agregar la clase custom-toast al elemento
       this.toastLiveExample = new bootstrap.Toast(toastElement);
       this.toastLiveExample.show();
-      // Configurar el tiempo de cierre del toast en milisegundos (ejemplo: 3000 ms = 3 segundos)
-      const tiempoCierre = 3000;
-  
-      // Ocultar el toast después de cierto tiempo
-      setTimeout(() => {
-        this.toastLiveExample.hide();
-      }, tiempoCierre);
     } else {
       console.error("No se encontró el elemento 'liveToast'.");
     }
   }
-  
 
 
 }

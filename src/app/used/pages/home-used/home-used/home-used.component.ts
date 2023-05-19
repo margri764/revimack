@@ -48,16 +48,7 @@ export class HomeUsedComponent implements OnInit {
 
    }
 
-  showCustomToast() {
-    const toastElement = document.getElementById('liveToast');
-    if (toastElement) {
-      toastElement.classList.add('custom-toast'); // Agregar la clase custom-toast al elemento
-      this.toastLiveExample = new bootstrap.Toast(toastElement);
-      this.toastLiveExample.show();
-    } else {
-      console.error("No se encontró el elemento 'liveToast'.");
-    }
-  }
+
   
   ngOnInit(): void {
 
@@ -67,7 +58,6 @@ export class HomeUsedComponent implements OnInit {
     // }
 
 
-    this.dataService.modalSuccessSendendEmail.subscribe(()=> this.showCustomToast())
 
     this.arrayFumigadoras = this.dataService.arrayFumigador;
     this.arrayTractors = this.dataService.arrayTractors;
@@ -104,7 +94,7 @@ export class HomeUsedComponent implements OnInit {
         }, 0);
     }
 
-    openModal() {
+openModal() {
       const modalOptions: NgbModalOptions = {
         // windowClass: 'my-custom-modal',
         backdrop: "static",
@@ -113,10 +103,10 @@ export class HomeUsedComponent implements OnInit {
     
       const modalRef = this.modalService.open(NotifyModalComponent, modalOptions);
       modalRef.componentInstance.data = { data: "cosechadora" };
-    }
+}
 
-  arrayOneItem : any;
-  returnOnlyOneItem(arrayItem: any) {
+arrayOneItem : any;
+returnOnlyOneItem(arrayItem: any) {
     const uniqueItems = arrayItem.reduce((accumulator: any[], current: { name: any }) => {
       const found = accumulator.find((item: { name: any }) => item.name === current.name);
       if (!found) {
@@ -129,7 +119,7 @@ export class HomeUsedComponent implements OnInit {
     console.log(this.arrayOneItem);
   
 
-  }
+}
   
 categorySelected( item : string){
 

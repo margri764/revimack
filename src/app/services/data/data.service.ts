@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment.prod';
+import { map, tap } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,8 @@ export class DataService {
 
 private similarItemName : any[]=[];  
 arrayOneItem : any;
-modalSuccessSendendEmail : EventEmitter<any> = new EventEmitter()
+modalSuccessSendendEmail : EventEmitter<any> = new EventEmitter();
+dontShowModalRegister : EventEmitter<boolean> = new EventEmitter();
 
 
 arrayTractors = [
@@ -19,7 +21,9 @@ arrayTractors = [
       img: "assets/usados/tractores/Deutz_85/deutz85-1.jpeg",
       name: "Tractor Deutz 85",
       category: "tractores-usados",
-      brand: "Deutz"
+      brand: "Deutz",
+      description: "TRACTOR DEUTZ 85 CON MOTOR 2114 105HP. COMANDO Y DIRECCION HIDRAULICA, TDF."
+
     },
     {
       img: "./assets/usados/tractores/Deutz_85/deutz85-2.jpeg",
@@ -66,7 +70,8 @@ arrayTractors = [
       img: "./assets/usados/tractores/John_Deere_3530/John-Deere-3530-1.jpeg",
       name: "Tractor John Deere 3530",
       category: "tractores-usados",
-      brand: "Jonn Deere"
+      brand: "Jonn Deere",
+      description: "4x2 - Cabina - Motor JD 110 Hp. Dirección Hidráulica - TDFI"
     },
     {
       img: "./assets/usados/tractores/John_Deere_3530/John-Deere-3530-2.jpeg",
@@ -86,7 +91,8 @@ arrayTractors = [
       img: "./assets/usados/tractores/John_Deere_3350_con_pala/John_Deere_3350_con_pala-1.jpeg",
       name: "Tractor John Deere 3350 con pala",
       category: "tractores-usados",
-      brand: "Jonn Deere"
+      brand: "Jonn Deere",
+      description: "110 hp – doble comando. Dirección hidráulica. Con pala Fiol, nueva con muy poco uso"
     },
     {
       img: "./assets/usados/tractores/John_Deere_3350_con_pala/John_Deere_3350_con_pala-2.jpeg",
@@ -112,7 +118,8 @@ arrayTractors = [
       img: "./assets/usados/tractores/John_Deere_5705/Jhon_Deere_5705-01.jpeg",
       name: "Tractor John Deere 5705",
       category: "tractores-usados",
-      brand: "Jonn Deere"
+      brand: "Jonn Deere",
+      description: "Motor John Deere, 4045T, Diesel, 4 cilindros, , turboalimentado 85 HP (63KW)."
     },
     {
       img: "./assets/usados/tractores/John_Deere_5705/Jhon_Deere_5705-02.jpeg",
@@ -144,7 +151,7 @@ arrayTractors = [
       img: "./assets/usados/tractores/John_Deere_7505/John_Deere_7505-1.jpg",
       name: "Tractor John Deere 7505",
       category: "tractores-usados",
-      description: "Año 2003. Cabina original. Doble Tracción. Rodado patón trasero. 8000hs UNICO EN SU ESTADO",
+      description: "140 hp doble tracción. Con cabina. Muy buen estado",
       brand: "Jonn Deere"
     },
     {
@@ -348,14 +355,15 @@ arrayCarros = [
 
   }
 
-  sendEmail (body : string) {
- 
-    const headers = new HttpHeaders()
-   headers.set('Content-Type', 'application/json');
-   headers.set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS')
-   headers.set('Access-Control-Allow-Origin', '*');
+  sendEmailRegister (body : string) {
 
-   return this.http.post<any> (`${this.baseUrl}api/send-email/revimack/data`,body, {headers:headers})
+    return this.http.post<any>(`${this.baseUrl}api/send-email/revimack/register`, body)
+    .pipe(
+      tap((res) => {console.log('res desde sendEmailRegister: ', res),
+                    this.modalSuccessSendendEmail.emit()}          
+      ),
+      map((res) => res)
+    )
  
   }
 }

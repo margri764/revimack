@@ -5,6 +5,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DataService } from 'src/app/services/data/data.service';
 import { EmailService } from 'src/app/services/email/email.service';
 import { ValidatorService } from 'src/app/services/validator/validator.service';
+import * as bootstrap from 'bootstrap';
+
 
 @Component({
   selector: 'app-signup-invite',
@@ -28,6 +30,7 @@ export class SignupInviteComponent implements OnInit {
   sendingEmail: boolean = false;
 
   showToast: boolean = false;
+  toastLiveExample! : bootstrap.Toast;
   toastMessage: string = '';
 
 
@@ -46,6 +49,7 @@ export class SignupInviteComponent implements OnInit {
 
   ngOnInit(): void {
     // const dataToSave = this.data.data;
+
 
     this.myForm = this.fb.group({
       name:    ['', [Validators.required, Validators.minLength(2), Validators.maxLength(20)]],
@@ -66,6 +70,7 @@ export class SignupInviteComponent implements OnInit {
   }
 
 
+
   sendForm (){
     
     let check = null;
@@ -75,11 +80,11 @@ export class SignupInviteComponent implements OnInit {
       return;
     }
     this.sendingEmail = true;
-      this.emailService.sendEmail(this.myForm.value).subscribe(
+      this.dataService.sendEmailRegister(this.myForm.value).subscribe(
         res =>{ if(res == "true"){
                this.sendingEmail = false;
-               this.dataService.modalSuccessSendendEmail.emit();
                this.closeModal(); 
+               this.dataService.dontShowModalRegister.emit(false);
         }}
       )
   }

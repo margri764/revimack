@@ -78,7 +78,7 @@ export class NotifyModalComponent implements OnInit {
       this.emailService.sendEmail(this.myForm.value).subscribe(
         res =>{ if(res == "true"){
                this.sendingEmail = false;
-               this.dataService.modalSuccessSendendEmail.emit();
+              //  this.dataService.modalSuccessSendendEmail.emit();
                this.closeModal(); 
         }}
       )

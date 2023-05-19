@@ -64,7 +64,7 @@ input{
         color: inherit;
         cursor: pointer;
         outline: none;
-        pointer-events: none;
+        // pointer-events: none;
       
 }
 .toast-container {
@@ -75,6 +75,13 @@ input{
 .disabledTemplate .buttonContainer{
     pointer-events: auto;
 }
+
+.custom-toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
 
 @media  screen and (max-width: 575px){  
 

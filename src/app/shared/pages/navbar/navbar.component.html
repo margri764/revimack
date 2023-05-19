@@ -4,21 +4,17 @@
 
   <div fxLayout="row wrap"  fxFlex="100" class="customNavbar" fxLayoutAlign="space-between" *ngIf="!phone">  
     
-    <div fxLayout="row wrap" fxLayoutAlign="start center"  fxFlex="80">
-      
-      <img src="assets/logo-hojas2-bg.png" alt="logo" fxFlex="7" routerLink="../../home" style="cursor: pointer;">
-      
+    <div fxLayout="row wrap" fxLayoutAlign="start center"  fxFlex="30">
+      <img src="assets/logo-app.png" alt="logo" fxFlex="50"  routerLink="../../home" style="cursor: pointer;">
+    </div>  
+
+    <div fxLayout="row wrap" fxLayoutAlign="end center" fxFlex="70" >
       <label  class="btnNav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Productos</label>
       <label  class="btnNav" routerLink="/contacto"> Contactános</label>
       <label  class="btnNav" routerLink="/nosotros">Nosotros</label>
-      <label  class="btnNav" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Estamos trabjando en esta sección" >Promociones</label>
-    </div>  
-    <div fxLayout="row wrap" fxLayoutAlign="center" fxFlex="20" >
-  
-      <form class="d-flex" >
-        <input class="form-control me-2 btnNav" type="search" placeholder="Buscar" aria-label="Search" style="color: black; font-family: 'Monserrat', sans-serif;">
-      </form>
+      <label  class="btnNav" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Estamos trabjando en esta sección" style="margin-right: 25px;">Promociones</label>
     </div>
+
   </div>
     
 </div>

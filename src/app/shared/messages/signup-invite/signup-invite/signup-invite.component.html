@@ -6,7 +6,7 @@
     </div>
     
     
-    <span class="fontPop" style="text-align: center; margin-top: 30px; font-size: 1.3em;" fxFlex="100"> Crear Cuenta </span>
+    <span class="fontPop" style="text-align: center; margin-top: 30px; font-size: 1.3em;" fxFlex="100"> Registrate </span>
 
     <form [formGroup]="myForm" fxLayout="row wrap" fxLayoutAlign=" center" fxFlex="100" style="margin-top: 30px;">
     
@@ -45,7 +45,7 @@
       
         
         <div fxLayout="row wrap" fxLayoutAlign="end center" fxFlex="100" style="margin-top: 30px;" class="buttonContainer">
-          <button fxFlex="30" class="no-button"><b style="cursor: pointer; color: blue;" (click)="closeModal()" >No, gracias </b></button>
+          <button fxFlex="30" class="no-button"><b style="color: blue;" (click)="closeModal()" >No, gracias </b></button>
           <button type="button" (click)="sendForm()" class="btnSend" fxFlex="40" [disabled]="sendingEmail">
               <label *ngIf="!sendingEmail"> Enviar </label>
               <i class="fa fa-spin fa-sync" *ngIf="sendingEmail"></i>
@@ -55,4 +55,5 @@
 
 
   </div>
+
 

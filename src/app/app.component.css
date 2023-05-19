@@ -64,4 +64,54 @@
     border: 2px solid #82b75c;
   }
 
+  /* Extra small devices (phones, 600px and down)  */
+@media only screen and (max-width: 575px) {
+
+
+.btnContact{
+  font-size: 1em;
+  padding: 8px;
+}
+
+
+}
+
+@media only screen and (min-width: 576px) {
+
+    .btnContact{
+        font-size: 1.1em;
+        padding: 2px;
+    }
+
   
+}
+    
+
+/* medium devices (tablets, 768 px and up) */ 
+@media only screen and (min-width: 786px) {
+
+
+
+}
+    
+
+/* large devices (desktops, 992 px and up) */ 
+@media only screen and (min-width: 992px) {
+
+}
+
+/* x-large devices (desktops, 1200 px and up) */ 
+@media only screen and (min-width: 1200px) {
+
+    
+ 
+}
+    
+
+/* XX- Large devices (larger desktops, 1400px and up) */ 
+@media only screen and (min-width: 1400px) {
+
+
+    
+}
+
