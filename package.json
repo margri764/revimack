@@ -11,19 +11,19 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^15.2.9",
-    "@angular/cdk": "^14.1.1",
+    "@angular/cdk": "^15.2.9",
     "@angular/common": "^15.2.9",
     "@angular/compiler": "^15.2.9",
     "@angular/core": "^15.2.9",
-    "@angular/flex-layout": "^14.0.0-beta.40",
+    "@angular/flex-layout": "^15.0.0-beta.27",
     "@angular/forms": "^15.2.9",
     "@angular/localize": "^15.2.9",
     "@angular/platform-browser": "^15.2.9",
     "@angular/platform-browser-dynamic": "^15.2.9",
     "@angular/router": "^15.2.9",
-    "@ng-bootstrap/ng-bootstrap": "^13.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^14.0.0-rc.0",
     "@popperjs/core": "^2.10.2",
-    "angular-responsive-carousel2": "^0.0.6",
+    "angular-responsive-carousel": "^2.1.2",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.2.0",
     "bootstrap-icons": "^1.10.5",
@@ -32,6 +32,7 @@
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
+    
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^15.2.8",
