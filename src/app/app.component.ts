@@ -6,7 +6,7 @@ import * as bootstrap from 'bootstrap';
 import { SignupInviteComponent } from './shared/messages/signup-invite/signup-invite/signup-invite.component';
 import { DataService } from './services/data/data.service';
 import { log } from 'console';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ValidatorService } from './services/validator/validator.service';
 
 @Component({
@@ -52,7 +52,7 @@ export class AppComponent implements OnInit {
       skf: [''],
       tractor: [''],
       fumigador: [''],
-      check: [''],
+      check: [ , [Validators.required]],
     })  
   }
 
@@ -96,8 +96,7 @@ export class AppComponent implements OnInit {
 
     setTimeout(()=>{
       this.openSugestionOffCanvas();
-    }, 2000)
-    // }, 40000)
+    }, 4000)
   }
 
   openModal() {
@@ -120,11 +119,11 @@ export class AppComponent implements OnInit {
   sendForm (){
     
     let check = null;
-    // check = (<FormControl>this.myForm.controls['check']).value;
-    // if ( this.myForm.invalid || check === null ) {
-    //   this.myForm.markAllAsTouched();
-    //   return;
-    // }
+    check = (<FormControl>this.myForm.controls['check']).value;
+    if ( this.myForm.invalid || check === null ) {
+      this.myForm.markAllAsTouched();
+      return;
+    }
     console.log(this.myForm.value);
  
   }
