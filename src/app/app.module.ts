@@ -12,6 +12,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import localeEs from '@angular/common/locales/es-AR'; //nombre inventado el AR es por Argentina
 import { registerLocaleData } from '@angular/common';
 import { IvyCarouselModule } from 'angular-responsive-carousel2';
+import { ReactiveFormsModule } from '@angular/forms';
 registerLocaleData( localeEs );
 
 @NgModule({
@@ -26,6 +27,7 @@ registerLocaleData( localeEs );
     HttpClientModule,
     SharedModule,
     NgbModule,
+    ReactiveFormsModule,
     FlexLayoutModule,
     IvyCarouselModule,
   ],

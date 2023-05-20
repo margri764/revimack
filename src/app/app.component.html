@@ -21,8 +21,8 @@
 
         </div>
 
-      <!-- start modal -->
-      <div id="liveToast" class="toast customToast " role="alert" aria-live="assertive" aria-atomic="true" fxFlex="100">
+      <!-- start register modal -->
+      <div id="liveToast" class="toast customToast " role="alert" aria-live="assertive" aria-atomic="true" >
         <div class="toast-header">
           <img src="assets/logo-rev.png" class="rounded me-2" alt="..." fxFlex="10">
           <strong class="me-auto">Revimack Agro</strong>
@@ -35,10 +35,10 @@
         </button>
         </div>
       </div>
-      <!-- end modal -->
+      <!-- end register modal -->
 
-            <!-- start modal -->
-    <div id="liveToast-confirm" class="toast" role="alert" aria-live="assertive" aria-atomic="true" fxFlex="100">
+    <!-- start modal -->
+    <div id="liveToast-confirm" class="toast" role="alert" aria-live="polite" aria-atomic="true">
       <div class="toast-header">
         <img src="assets/logo-rev.png" class="rounded me-2" alt="..." fxFlex="10">
         <strong class="me-auto">Revimack Agro</strong>
@@ -49,15 +49,66 @@
         Mensaje enviado correctamente
       </div>
     </div>
-    <!-- end modal -->
-
+    <!-- end register modal -->
         
-
-
         <div class="footer" >
           <app-footer *ngIf="!(router.url === '/gracias' || router.url === '/contacto' || router.url === '/maquinaria-agricola/tractores' || router.url === '/usados-seleccionados/promo-skf')"></app-footer>
         </div> 
     </div> 
 </div>
+
+<!-- start bottom off-canvas -->
+
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel"  style="height: 450px; padding: 30px; " fxFlex="40" fxFlex.xs="100">
+  <div class="offcanvas-header" style="padding: 0px; ">
+        
+    <img src="assets/logo-app.png" alt="logo" fxFlex="45" style="">
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+
+  <form [formGroup]="myForm" fxLayout="row wrap"class="form-check form-switch" style="padding: 0px;">
+    
+<!--     
+  <div class="form-check form-switch" fxLayout="row wrap" fxLayoutAlign="start"  fxFlex="100" style=""> -->
+    <span class="fontPop title" fxFlex="100" style="text-align: start; align-items: start;">Personalizá tus notificaciones</span>
+    
+    <!-- <img src="assets/skf-logo.png" alt="" fxFlex="7"> -->
+    <div fxLayout="row wrap" fxLayoutAlign="start"  fxFlex="100" style="margin-top: 30px;">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" style="margin-left: 2px;" formControlName="skf" >
+      <label class="form-check-label fontPop" for="flexSwitchCheckDefault" fxFlex="80" style="margin-left: 20px;">Productos SKF</label>
+    </div>
+
+    <div fxLayout="row wrap" fxLayoutAlign="start"  fxFlex="100" style="margin-top: 10px; ">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" style="margin-left: 2px;" formControlName="tractor"  >
+      <label class="form-check-label fontPop" for="flexSwitchCheckDefault" fxFlex="80" style="margin-left: 20px;">Tractores</label>
+    </div>
+  
+    <div fxLayout="row wrap" fxLayoutAlign="start"  fxFlex="100" style="margin-top: 10px; ">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" style="margin-left: 2px;" formControlName="fumigador" >
+      <label class="form-check-label fontPop" for="flexSwitchCheckDefault" fxFlex="80" style="margin-left: 20px;">Fumigadores</label>
+    </div>
+  <!-- </div> -->
+
+  <div class="form-check" fxFlex="100" style="margin-top: 20px; margin-left: 18px;">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" formControlName="check">
+    <label class="form-check-label" for="flexCheckDefault" style="font-size: 0.8em;">
+      Autorizo a Revimack Agro a que me contacte según la <b style="cursor: pointer; color: blue; font-size: 0.9;">Política de Privacidad </b> y acepto <b style="cursor: pointer; color: blue; font-size: 0.9;">Términos y condiciones</b>
+    </label>
+    <span class="form-text text-danger  fontPop" *ngIf="validField('check')">
+      Requerido
+      </span>
+  </div> 
+
+  <div>
+    <button class="fontPop" (click)="sendForm()"> enviar</button>
+  </div>
+  
+  </form>
+
+
+
+</div>
+<!-- end bottom off-canvas -->
+
 
 

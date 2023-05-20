@@ -6,6 +6,8 @@ import * as bootstrap from 'bootstrap';
 import { SignupInviteComponent } from './shared/messages/signup-invite/signup-invite/signup-invite.component';
 import { DataService } from './services/data/data.service';
 import { log } from 'console';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ValidatorService } from './services/validator/validator.service';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +16,9 @@ import { log } from 'console';
 })
 export class AppComponent implements OnInit {
 
-  toastLiveExample! : bootstrap.Toast;
+  toastLiveRegister! : bootstrap.Toast;
+  toastLiveConfirm! : bootstrap.Toast;
+  private offcanvasInstance: bootstrap.Offcanvas | null = null;
   title = 'revimack';
   disabled : boolean=false;
   phone : boolean = false;
@@ -24,16 +28,32 @@ export class AppComponent implements OnInit {
   intervalId: any;
   private hasRegistered: any;
   private subscription!: Subscription;
+  myForm! : FormGroup;
+  invalidName:  boolean  = false;
+  invalidCheck:  boolean  = false;
+  invalidEmail: boolean = false;
+  sendingEmail: boolean = false;
 
 
   constructor(
             public router : Router,
             private modalService: NgbModal,
-            private dataService : DataService
+            private dataService : DataService,
+            private fb : FormBuilder,
+            private validatorService : ValidatorService
+
 
   ){
     (screen.width <= 600) ? this.phone = true : this.phone = false;
     this.hasRegistered = localStorage.getItem("registered") ;
+
+    
+    this.myForm = this.fb.group({
+      skf: [''],
+      tractor: [''],
+      fumigador: [''],
+      check: [''],
+    })  
   }
 
 
@@ -53,20 +73,32 @@ export class AppComponent implements OnInit {
     //  event.url.includes('/usados-seleccionados/home-usados') ?  this.id = true : this.id = false;
      event.url.includes('/home') ?  this.id = true : this.id = false;
     });
-    
+
+    // se dispara al inicio, siempre y cuando no se haya registrado
+    if(this.hasRegistered === null){
+      setTimeout(()=>{
+        this.showCustomToast();
+      }, 5000)
+    }
+
     this.dataService.modalSuccessSendendEmail.subscribe(() => {
       localStorage.setItem("registered", "ok")
       this.subscription.unsubscribe();
+      this.showCustomToastConfirm();
+      this.closeToast();
     });
     
     if(this.hasRegistered === null){
-      this.subscription = interval(5000).subscribe(() => {
-            console.log('aaa');
+      this.subscription = interval(60000).subscribe(() => {
             this.showCustomToast();
         });
     }
-  }
 
+    setTimeout(()=>{
+      this.openSugestionOffCanvas();
+    }, 2000)
+    // }, 40000)
+  }
 
   openModal() {
 
@@ -80,38 +112,64 @@ export class AppComponent implements OnInit {
     modalRef.componentInstance.data = { data: "cosechadora" };
   }
 
-
-  showCustomToast() {
-
-    // if(!this.isClicked){
-      const toastElement = document.getElementById('liveToast');
-      if (toastElement) {
-        toastElement.classList.add('custom-toast'); // Agregar la clase custom-toast al elemento
-        this.toastLiveExample = new bootstrap.Toast(toastElement);
-        this.toastLiveExample.show();
-
-        const tiempoCierre = 10000;
-    
-        // Ocultar el toast después de cierto tiempo
-        setTimeout(() => {
-          this.toastLiveExample.hide();
-        }, tiempoCierre);
-      } else {
-        console.error("No se encontró el elemento 'liveToast'.");
-      }
-  // }
+  validField( field: string ) {
+    return this.myForm.controls[field].errors 
+            && this.myForm.controls[field].touched;
   }
-  
-  showCustomToastConfirm() {
-    const toastElement = document.getElementById('liveToast-confirm');
+
+  sendForm (){
+    
+    let check = null;
+    // check = (<FormControl>this.myForm.controls['check']).value;
+    // if ( this.myForm.invalid || check === null ) {
+    //   this.myForm.markAllAsTouched();
+    //   return;
+    // }
+    console.log(this.myForm.value);
+ 
+  }
+
+
+
+// Método para cerrar el Toast
+closeToast() {
+  if (this.toastLiveRegister) {
+    this.toastLiveRegister.hide();
+  }
+}
+
+showCustomToast() {
+    const toastElement = document.getElementById('liveToast');
     if (toastElement) {
       toastElement.classList.add('custom-toast'); // Agregar la clase custom-toast al elemento
-      this.toastLiveExample = new bootstrap.Toast(toastElement);
-      this.toastLiveExample.show();
+      this.toastLiveRegister = new bootstrap.Toast(toastElement, { delay: 30000 });
+      this.toastLiveRegister.show();
+
     } else {
       console.error("No se encontró el elemento 'liveToast'.");
     }
-  }
+}
 
+showCustomToastConfirm() {
+  const toastElement = document.getElementById('liveToast-confirm');
+  if (toastElement) {
+    toastElement.classList.add('custom-toast'); // Agregar la clase custom-toast al elemento
+    this.toastLiveConfirm = new bootstrap.Toast(toastElement);
+    this.toastLiveConfirm.show();
+  } else {
+    console.error("No se encontró el elemento 'liveToast-confirm'.");
+  }
+}
+
+// Método para abrir el offcanvas
+openSugestionOffCanvas() {
+  const offcanvasElement = document.getElementById('offcanvasBottom');
+  if (offcanvasElement) {
+    this.offcanvasInstance = new bootstrap.Offcanvas(offcanvasElement);
+    this.offcanvasInstance.show();
+  } else {
+    console.error("No se encontró el elemento 'offcanvasBottom'.");
+  }
+}
 
 }

@@ -64,6 +64,13 @@
     border: 2px solid #82b75c;
   }
 
+  .fontPop.title {
+    font-size: 1.3em;
+  }
+
+  .position{
+    transform: translate(100%);
+  }
   /* Extra small devices (phones, 600px and down)  */
 @media only screen and (max-width: 575px) {
 
@@ -72,7 +79,9 @@
   font-size: 1em;
   padding: 8px;
 }
-
+.position{
+    transform: translate(0%);
+  }
 
 }
 
